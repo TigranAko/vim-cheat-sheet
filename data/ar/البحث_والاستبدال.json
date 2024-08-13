@@ -1,0 +1,41 @@
+{
+    "wells": [
+        "البحث في أكثر من ملف"
+    ],
+    "item_1": {
+        "keys": "/pattern",
+        "description": "البحث عن للامام عن نمط"
+    },
+    "item_2": {
+        "keys": "?pattern",
+        "description": "البحث للخلف عن نمط"
+    },
+    "item_3": {
+        "keys": "\\vpattern",
+        "description": "'very magic' البحث عن أنماط بدون الحاجه الي اخذ الحوف الخاصه في الاعتبار"
+    },
+    "item_4": {
+        "keys": "n",
+        "description": "كرر البحث في نفس الاتجاه"
+    },
+    "item_5": {
+        "keys": "N",
+        "description": "كرر البحث في عكس الاتجاه"
+    },
+    "item_6": {
+        "keys": ":%s/old/new/g",
+        "description": "استبدل كلام قديم باخر جديد في جميع انحاء الملف"
+    },
+    "item_7": {
+        "keys": ":%s/old/new/gc",
+        "description": "استبدل كلام جديد باخر جديد في جميع انحاء الملف مع التاكيدات"
+    },
+    "item_8": {
+        "keys": ":noh[lsearch]",
+        "description": "إزالة التظليل"
+    },
+    "item_9": {
+        "keys": ":vim[grep] /pattern/ {`{file}`}",
+        "description": "البحث عن نمط في اكثر من ملف"
+    }
+}

@@ -1,0 +1,38 @@
+{
+    "item_1": {
+        "keys": ":tabnew or :tabnew {page.words.file}",
+        "description": "افتح ملف في نافذة جديده"
+    },
+    "item_2": {
+        "keys": "Ctrl + wT",
+        "description": "حرك الجزء الحالي من النافذة في نافذة خاصه به"
+    },
+    "item_3": {
+        "keys": "gt or :tabn[ext]",
+        "description": "اقفز الي النافذة التاليه"
+    },
+    "item_4": {
+        "keys": "gT or :tabp[revious]",
+        "description": "اقفز الي النافذة السابقه"
+    },
+    "item_5": {
+        "keys": "#gt",
+        "description": "# تحرك الي النافذة رقم"
+    },
+    "item_6": {
+        "keys": ":tabm[ove] #",
+        "description": "حرك النافذة الحاليه الي الموضع # (بدا العد من الصفر)"
+    },
+    "item_7": {
+        "keys": ":tabc[lose]",
+        "description": "اغلق كل النوافذ"
+    },
+    "item_8": {
+        "keys": ":tabo[nly]",
+        "description": "اغلق كل النوافذ باستثاء الحاليه"
+    },
+    "item_9": {
+        "keys": ":tabdo command",
+        "description": "(:tabdo q "
+    }
+}

@@ -1,0 +1,61 @@
+{
+    "wells": [
+        "البحث والاستبدال"
+    ],
+    "item_1": {
+        "keys": ":w",
+        "description": "حفظ الملف بدون الخروج"
+    },
+    "item_2": {
+        "keys": ":w !sudo tee %",
+        "description": "حفظ الملف الحالي باستخدام حساب المستخدم الرئيسي"
+    },
+    "item_3": {
+        "keys": ":wq or :x or ZZ",
+        "description": "حفظ وخروج من الملف"
+    },
+    "item_4": {
+        "keys": ":q",
+        "description": "الخروج (يفشل في حالة عدم وجود اي تغير)"
+    },
+    "item_5": {
+        "keys": ":q! or ZQ",
+        "description": "الخروج مع عدم حفظ اي تغير"
+    },
+    "item_6": {
+        "keys": ":wqa",
+        "description": "خفظ والخروج من كل الملفات الحاليه"
+    },
+    "item_7": {
+        "keys": "/pattern",
+        "description": "البحث عن للامام عن نمط"
+    },
+    "item_8": {
+        "keys": "?pattern",
+        "description": "البحث للخلف عن نمط"
+    },
+    "item_9": {
+        "keys": "\\vpattern",
+        "description": "'very magic' البحث عن أنماط بدون الحاجه الي اخذ الحوف الخاصه في الاعتبار"
+    },
+    "item_10": {
+        "keys": "n",
+        "description": "كرر البحث في نفس الاتجاه"
+    },
+    "item_11": {
+        "keys": "N",
+        "description": "كرر البحث في عكس الاتجاه"
+    },
+    "item_12": {
+        "keys": ":%s/old/new/g",
+        "description": "استبدل كلام قديم باخر جديد في جميع انحاء الملف"
+    },
+    "item_13": {
+        "keys": ":%s/old/new/gc",
+        "description": "استبدل كلام جديد باخر جديد في جميع انحاء الملف مع التاكيدات"
+    },
+    "item_14": {
+        "keys": ":noh[lsearch]",
+        "description": "إزالة التظليل"
+    }
+}

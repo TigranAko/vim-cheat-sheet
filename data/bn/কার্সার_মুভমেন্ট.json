@@ -1,0 +1,181 @@
+{
+    "wells": [
+        "এটি পুনরাবৃত্তি করতে একটি সংখ্যা সহ একটি কার্সার মুভমেন্ট কমান্ডের প্রিফিক্স। উদাহরণ স্বরূপ, 4j4 লাইন নিচে সরানো।"
+    ],
+    "item_1": {
+        "keys": "h",
+        "description": "বাম দিকে কার্সার সরান"
+    },
+    "item_2": {
+        "keys": "j",
+        "description": "নিচের দিকে কার্সার সরান"
+    },
+    "item_3": {
+        "keys": "k",
+        "description": "উপর দিকে কার্সার সরান"
+    },
+    "item_4": {
+        "keys": "l",
+        "description": "ডান দিকে কার্সার সরান"
+    },
+    "item_5": {
+        "keys": "gj",
+        "description": "move cursor down (multi"
+    },
+    "item_6": {
+        "keys": "gk",
+        "description": "move cursor up (multi"
+    },
+    "item_7": {
+        "keys": "H",
+        "description": "স্ক্রিনের শীর্ষে যেতে"
+    },
+    "item_8": {
+        "keys": "M",
+        "description": "স্ক্রিনের মাঝখানে যেতে"
+    },
+    "item_9": {
+        "keys": "L",
+        "description": "স্ক্রিনের শেষে যেতে"
+    },
+    "item_10": {
+        "keys": "w",
+        "description": "একটি শব্দের শুরুতে যেতে"
+    },
+    "item_11": {
+        "keys": "W",
+        "description": "একটি শব্দের শুরুতে যেতে (শব্দ বড় হাতের হতে পারে)"
+    },
+    "item_12": {
+        "keys": "e",
+        "description": "একটি শব্দের শেষে যেতে"
+    },
+    "item_13": {
+        "keys": "E",
+        "description": "একটি শব্দের শেষে যেতে (শব্দ বড় হাতের হতে পারে)"
+    },
+    "item_14": {
+        "keys": "b",
+        "description": "একটি শব্দের শুরুতে ফিরে যেতে"
+    },
+    "item_15": {
+        "keys": "B",
+        "description": "একটি শব্দের শুরুতে ফিরে যেতে (শব্দ বড় হাতের হতে পারে)"
+    },
+    "item_16": {
+        "keys": "ge",
+        "description": "একটি শব্দের শেষে ফিরে যেতে"
+    },
+    "item_17": {
+        "keys": "gE",
+        "description": "একটি শব্দের শেষে ফিরে যেতে (শব্দ বড় হাতের হতে পারে)"
+    },
+    "item_18": {
+        "keys": "%",
+        "description": "মিলানো অক্ষরে সরান  (default supported pairs: '()', '{}', '[]' "
+    },
+    "item_19": {
+        "keys": "0",
+        "description": "লাইনের শুরুতে যেতে"
+    },
+    "item_20": {
+        "keys": "^",
+        "description": "লাইনের প্রথম নন ব্ল্যান্ক অক্ষরে যেতে"
+    },
+    "item_21": {
+        "keys": "$",
+        "description": "লাইনের শেষে যেতে"
+    },
+    "item_22": {
+        "keys": "g_",
+        "description": "লাইনের শেষ নন ব্ল্যান্ক অক্ষরে যেতে"
+    },
+    "item_23": {
+        "keys": "gg",
+        "description": "ডকুমেন্টের প্রথম লাইনে যেতে"
+    },
+    "item_24": {
+        "keys": "G",
+        "description": "ডকুমেন্টের শেষ লাইনে যেতে"
+    },
+    "item_25": {
+        "keys": "5gg or 5G",
+        "description": "লাইন ৫ এ যেতে"
+    },
+    "item_26": {
+        "keys": "gd",
+        "description": "move to local declaration"
+    },
+    "item_27": {
+        "keys": "gD",
+        "description": "move to global declaration"
+    },
+    "item_28": {
+        "keys": "fx",
+        "description": "x অক্ষরের পরের শব্দে যেতে"
+    },
+    "item_29": {
+        "keys": "tx",
+        "description": "x অক্ষরের সামনে শব্দে যেতে"
+    },
+    "item_30": {
+        "keys": "Fx",
+        "description": "x অক্ষরের আগের শব্দে যেতে"
+    },
+    "item_31": {
+        "keys": "Tx",
+        "description": "x অক্ষরের পূর্ববর্তী শব্দে যেতে"
+    },
+    "item_32": {
+        "keys": ";",
+        "description": "আগের পুনরাবৃত্তি f, t, F অথবা T নড়াচড়া"
+    },
+    "item_33": {
+        "keys": ",",
+        "description": "আগের পুনরাবৃত্তি f, t, F অথবা T নড়াচড়া, পিছনে"
+    },
+    "item_34": {
+        "keys": "}",
+        "description": "পরবর্তী অনুচ্ছেদে যেতে (অথবা ফাংশন/ব্লক, কোড সম্পাদনা করার সময়)"
+    },
+    "item_35": {
+        "keys": "{",
+        "description": "আগের অনুচ্ছেদে যেতে (অথবা ফাংশন/ব্লক, কোড সম্পাদনা করার সময়)"
+    },
+    "item_36": {
+        "keys": "zz",
+        "description": "কার্সার স্ক্রিনের কেন্দ্রে"
+    },
+    "item_37": {
+        "keys": "zt",
+        "description": "position cursor on top of the screen"
+    },
+    "item_38": {
+        "keys": "zb",
+        "description": "position cursor on bottom of the screen"
+    },
+    "item_39": {
+        "keys": "Ctrl + e",
+        "description": "স্ক্রিন এক লাইনের নিচে সরানো হচ্ছে (কার্সর না সরিয়ে)"
+    },
+    "item_40": {
+        "keys": "Ctrl + y",
+        "description": "স্ক্রিন এক লাইনের উপরে সরানো হচ্ছে (কার্সর না সরিয়ে)"
+    },
+    "item_41": {
+        "keys": "Ctrl + b",
+        "description": "একটি পূর্ণস্ক্রীন পিছনে সরান"
+    },
+    "item_42": {
+        "keys": "Ctrl + f",
+        "description": "একটি পূর্ণস্ক্রীন এগিয়ে সরান"
+    },
+    "item_43": {
+        "keys": "Ctrl + d",
+        "description": "1/2 একটি পর্দা এগিয়ে যান"
+    },
+    "item_44": {
+        "keys": "Ctrl + u",
+        "description": "1/2 একটি পর্দা পিছনে সরান"
+    }
+}

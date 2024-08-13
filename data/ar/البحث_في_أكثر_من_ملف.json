@@ -1,0 +1,25 @@
+{
+    "wells": [
+        "e.g.\n          :vim[grep] /foo/ **/*"
+    ],
+    "item_1": {
+        "keys": ":vim[grep] /pattern/ {`{file}`}",
+        "description": "البحث عن نمط في اكثر من ملف"
+    },
+    "item_2": {
+        "keys": ":cn[ext]",
+        "description": "اقفز الي نتيجة البحث التاليه"
+    },
+    "item_3": {
+        "keys": ":cp[revious]",
+        "description": "اقفز الي نتيجة البحث السابقه"
+    },
+    "item_4": {
+        "keys": ":cope[n]",
+        "description": "افتح نافذه تحتوي علي نتائج البحث"
+    },
+    "item_5": {
+        "keys": ":ccl[ose]",
+        "description": "اغلق نافذة 'الاصلاح السريع' الحاليه"
+    }
+}

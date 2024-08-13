@@ -1,0 +1,65 @@
+{
+    "wells": [
+        "To jump to a mark you can either use a backtick (`) or an apostrophe ('). Using an apostrophe jumps to the beginning (first non-blank) of the line holding the mark."
+    ],
+    "item_1": {
+        "keys": ":marks",
+        "description": "إعرض قائمة العلامات"
+    },
+    "item_2": {
+        "keys": "ma",
+        "description": "A عين علامة جديدة عن المؤشر الحالي"
+    },
+    "item_3": {
+        "keys": "`a",
+        "description": "A اقفز الي العلامه"
+    },
+    "item_4": {
+        "keys": "y`a",
+        "description": "A انسخ من المؤشر الحالي الي العلامه"
+    },
+    "item_5": {
+        "keys": "`0",
+        "description": "اذهب الي اخر مكان تم الخروج منه"
+    },
+    "item_6": {
+        "keys": "`\"",
+        "description": "اذهب الي المكان الذي تم فيه تعديل الملف"
+    },
+    "item_7": {
+        "keys": "`.",
+        "description": "اذهب الي المكان الذي تم فيه تغير الملف"
+    },
+    "item_8": {
+        "keys": "``",
+        "description": "اذهب الي المكان الذي كان قبل اخر قفزه"
+    },
+    "item_9": {
+        "keys": ":ju[mps]",
+        "description": "اعرض قائمة القفزات"
+    },
+    "item_10": {
+        "keys": "Ctrl + i",
+        "description": "اذهب الي مكان جديد في قائمة القفزات"
+    },
+    "item_11": {
+        "keys": "Ctrl + o",
+        "description": "اذهب الي مكان قديم في قائمة القفزات"
+    },
+    "item_12": {
+        "keys": ":changes",
+        "description": "اعرض كل التغيرات"
+    },
+    "item_13": {
+        "keys": "g,",
+        "description": "اذهب الي مكان جديد في قائمة التغيرات"
+    },
+    "item_14": {
+        "keys": "g;",
+        "description": "اذهب الي مكان قديم في قائمة التغيرات"
+    },
+    "item_15": {
+        "keys": "Ctrl + ]",
+        "description": "اقفز إلى العلامة تحت المؤشر"
+    }
+}

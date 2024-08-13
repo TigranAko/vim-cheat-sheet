@@ -1,0 +1,6 @@
+Run vimtutor in a terminal to learn the first Vim commands.
+:h[elp] keyword,إعرض المساعده باستخدام كلمه مفتاحيه
+:sav[eas] file,حفظ الملف كا
+:clo[se],إغلق الجزءالحالي
+:ter[minal],إفتح نافذ طرفيه
+K,إفتح كتيب التعليمات للكلمه تحت المؤشر

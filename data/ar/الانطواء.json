@@ -1,0 +1,66 @@
+{
+    "wells": [
+        "The commands for folding (e.g. za) operate on one level. To operate on all levels, use uppercase letters (e.g. zA).",
+        "To view the differences of files, one can directly start Vim in diff mode by running vimdiff in a terminal. One can even set this as git difftool."
+    ],
+    "item_1": {
+        "keys": "zf",
+        "description": "عرف انحناء باستخدام أحد الحركات"
+    },
+    "item_2": {
+        "keys": "zd",
+        "description": "احذف انحناء تحت المؤشر"
+    },
+    "item_3": {
+        "keys": "za",
+        "description": "بدل الانحناء تحت المؤشر (افتح/اغلق)"
+    },
+    "item_4": {
+        "keys": "zo",
+        "description": "افتح الانحناء تحت المؤشر"
+    },
+    "item_5": {
+        "keys": "zc",
+        "description": "اغلق الانحناء تحت المؤشر"
+    },
+    "item_6": {
+        "keys": "zr",
+        "description": "افتح كل الانحنات علي مستوي واحد"
+    },
+    "item_7": {
+        "keys": "zm",
+        "description": "عرف المزيد من الانحنات"
+    },
+    "item_8": {
+        "keys": "zi",
+        "description": "بدل وظيفة الانحنات"
+    },
+    "item_9": {
+        "keys": "]c",
+        "description": "اقفز الي الاختلاف التالي"
+    },
+    "item_10": {
+        "keys": "[c",
+        "description": "اقفز الي الاختلاف السابق"
+    },
+    "item_11": {
+        "keys": "do or :diffg[et]",
+        "description": "احضر الاختلاف من ملف اخر الي الملف الحالي"
+    },
+    "item_12": {
+        "keys": "dp or :diffpu[t]",
+        "description": "ضع الاختلاف في الملف الحالي الي ملف اخر"
+    },
+    "item_13": {
+        "keys": ":diffthis",
+        "description": "اجعل النافذة الحاليه جزء من اختلاف جديد"
+    },
+    "item_14": {
+        "keys": ":dif[fupdate]",
+        "description": "حدث الاختلاف"
+    },
+    "item_15": {
+        "keys": ":diffo[ff]",
+        "description": "أغلق وضع الاختلاف للنافذة الحالية"
+    }
+}

@@ -1,0 +1,102 @@
+{
+    "item_1": {
+        "keys": ":e[dit] file",
+        "description": "تعديل الملف في نافذة جديده"
+    },
+    "item_2": {
+        "keys": ":bn[ext]",
+        "description": "الذهاب الي الملف التالي"
+    },
+    "item_3": {
+        "keys": ":bp[revious]",
+        "description": "الذهاب الي الملف السابق"
+    },
+    "item_4": {
+        "keys": ":bd[elete]",
+        "description": "اغلق ملف"
+    },
+    "item_5": {
+        "keys": ":b[uffer]#",
+        "description": "# الذهاب الي الملف بواسطه"
+    },
+    "item_6": {
+        "keys": ":b[uffer] file",
+        "description": "الذهاب الي الملف"
+    },
+    "item_7": {
+        "keys": ":ls or :buffers",
+        "description": "اعرض كل الملفات في قائمة"
+    },
+    "item_8": {
+        "keys": ":sp[lit] file",
+        "description": "افتح ملفًا في مخزن مؤقت جديد واقسم النافذة"
+    },
+    "item_9": {
+        "keys": ":vs[plit] file",
+        "description": "افتح ملفًا في مخزن مؤقت واقسم النافذة بشكل راسي"
+    },
+    "item_10": {
+        "keys": ":vert[ical] ba[ll]",
+        "description": "عدل كل الملفات بشكل راسي"
+    },
+    "item_11": {
+        "keys": ":tab ba[ll]",
+        "description": "عدل كل الملفات علي شكل نوافذ"
+    },
+    "item_12": {
+        "keys": "Ctrl + ws",
+        "description": "اقسم النافذة"
+    },
+    "item_13": {
+        "keys": "Ctrl + wv",
+        "description": "اقسم النافذة بشكل راسي"
+    },
+    "item_14": {
+        "keys": "Ctrl + ww",
+        "description": "حول من النافذة الحاليه الي اخري"
+    },
+    "item_15": {
+        "keys": "Ctrl + wq",
+        "description": "اغلق نافذة"
+    },
+    "item_16": {
+        "keys": "Ctrl + wx",
+        "description": "استبدل النافذة الحاليه بنافذه اخري"
+    },
+    "item_17": {
+        "keys": "Ctrl + w=",
+        "description": "اجعل كل النوافذ متساويه في الوسع والارتفاع"
+    },
+    "item_18": {
+        "keys": "Ctrl + wh",
+        "description": "حرك المؤشر الي النافذة علي اليسار (مع الانقسام الرأسي)"
+    },
+    "item_19": {
+        "keys": "Ctrl + wl",
+        "description": "حرك المؤشر الي النافذة علي اليمين (مع الانقسام الراسي)"
+    },
+    "item_20": {
+        "keys": "Ctrl + wj",
+        "description": "حرك المؤشر الي النافذة السفلي (مع الانقسام الأفقي)"
+    },
+    "item_21": {
+        "keys": "Ctrl + wk",
+        "description": "حرك المؤشر الي النافذة الاعلي (مع الانقسام الأفقي)"
+    },
+    "item_22": {
+        "keys": "Ctrl + wH",
+        "description": "اجعل النافذة الحالية كاملة الارتفاع في أقصى اليسار (نافذة عمودية في أقصى اليسار)"
+    },
+    "item_23": {
+        "keys": "Ctrl + wL",
+        "description": "جعل النافذة الحالية كاملة الارتفاع في أقصى اليمين (نافذة عمودية في أقصى اليمين)"
+    },
+    "item_24": {
+        "keys": "Ctrl + wJ",
+        "description": "اجعل النافذة الحالية بعرض كامل في الأسفل (النافذة الأفقية السفلية)"
+    },
+    "item_25": {
+        "keys": "Ctrl + wK",
+        "description": "جعل النافذة الحالية كاملة العرض في الأعلى (أعلى نافذة أفقية)"
+    }
+}

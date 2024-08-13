@@ -1,0 +1,133 @@
+{
+    "wells": [
+        "تحديد النص"
+    ],
+    "item_1": {
+        "keys": "r",
+        "description": "إستبدل حرف واحد"
+    },
+    "item_2": {
+        "keys": "R",
+        "description": "إستبدل أكثر من حرف"
+    },
+    "item_3": {
+        "keys": "J",
+        "description": "ضم السطر التالي الي السطر الحالي"
+    },
+    "item_4": {
+        "keys": "gJ",
+        "description": "ضم السطر التالي الي السطر الحالي بدون مساحه بينهما"
+    },
+    "item_5": {
+        "keys": "gwip",
+        "description": "اعاده ترتيب الفقره"
+    },
+    "item_6": {
+        "keys": "g~",
+        "description": "إجعل الحرف كبير (uppercase)"
+    },
+    "item_7": {
+        "keys": "gu",
+        "description": "إجعل الحروف صغير (lowercase)"
+    },
+    "item_8": {
+        "keys": "gU",
+        "description": "إجعل الحروف كبيره (uppercase)"
+    },
+    "item_9": {
+        "keys": "cc",
+        "description": "حرر سطر كامل"
+    },
+    "item_10": {
+        "keys": "c$ or C",
+        "description": "حرر من المؤشر الي اخر السطر"
+    },
+    "item_11": {
+        "keys": "ciw",
+        "description": "حرر كلمه كامله"
+    },
+    "item_12": {
+        "keys": "cw or ce",
+        "description": "حرر من اخر الكلمه"
+    },
+    "item_13": {
+        "keys": "s",
+        "description": "إحذف حرف"
+    },
+    "item_14": {
+        "keys": "S",
+        "description": "إحذف سطر كامل"
+    },
+    "item_15": {
+        "keys": "xp",
+        "description": "استبدل مكان  حرفين ببعضيهما"
+    },
+    "item_16": {
+        "keys": "u",
+        "description": "إلغي"
+    },
+    "item_17": {
+        "keys": "U",
+        "description": "إلغي كل العمليات علي سطر"
+    },
+    "item_18": {
+        "keys": "Ctrl + r",
+        "description": "أعد العمليه مره اخري"
+    },
+    "item_19": {
+        "keys": ".",
+        "description": "أعد اخر امر"
+    },
+    "item_20": {
+        "keys": "v",
+        "description": "إبدا وضع التحديد "
+    },
+    "item_21": {
+        "keys": "V",
+        "description": "إبدا وضع التحديد "
+    },
+    "item_22": {
+        "keys": "o",
+        "description": "حرك المؤشر للجهه الثانيه من الكلام المحدد"
+    },
+    "item_23": {
+        "keys": "Ctrl + v",
+        "description": "إبدا وضغ التحديد "
+    },
+    "item_24": {
+        "keys": "O",
+        "description": "حرك المؤشر الي الجهه الثانيه من الكلام المحدد"
+    },
+    "item_25": {
+        "keys": "aw",
+        "description": "حدد كلمه"
+    },
+    "item_26": {
+        "keys": "ab",
+        "description": "() حدد الكلام المحدود ب"
+    },
+    "item_27": {
+        "keys": "aB",
+        "description": "{} حدد الكلام المحدود ب"
+    },
+    "item_28": {
+        "keys": "at",
+        "description": "<> حدد الكلام المحدود ب"
+    },
+    "item_29": {
+        "keys": "ib",
+        "description": "() حدد الكلام بداخل"
+    },
+    "item_30": {
+        "keys": "iB",
+        "description": "{} حدد الكلام بداخل"
+    },
+    "item_31": {
+        "keys": "it",
+        "description": "<> حدد الكلام بداخل"
+    },
+    "item_32": {
+        "keys": "Esc or Ctrl + c",
+        "description": "أخرج من وضع تحديد النص"
+    }
+}

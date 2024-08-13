@@ -1,0 +1,26 @@
+"You can also use the following characters to specify the range: 
+          e.g. 
+
+:.,$d - From the current line to the end of the file 
+:.,1d - From the current line to the beginning of the file 
+:10,1d - From the 10th line to the beginning of the file"
+yy,إنسخ سطر
+2yy,انسخ سطرين
+yw,إنسخ كلمه
+yiw,إنسخ الكلمه تحت المؤشر
+yaw,إنسخ الكلمة تحت المؤشر و المساحه قبلها وبعدها
+y$ or Y,إنسخ من المؤشر الي اخر السطر
+p,إلصق من الحافظه الي مابعد المؤشر
+P,الصق من الحافظه الي ماقبل المؤشر
+gp,إلصق من الحافظه بعد المؤشر مع وضع المؤشر بعد الكلام الجديد
+gP,إلصق من الحافظه قبل المؤشر مع وضع المؤشر قبل الكلام الجديد
+dd,قص السطر الحالي
+2dd,قص سطرين
+dw,قص كلمه
+diw,قص الكلمه تحت المؤشر
+daw,قص الكلمة تحت المؤشر والمساحه قبلها وبعدها
+":3,5d",delete lines starting from 3 to 5
+:g/{pattern}/d,delete all lines containing pattern
+:g!/{pattern}/d,delete all lines not containing pattern
+d$ or D,قص من المؤشر الي نهاية السطر
+x,قص حرف واحد

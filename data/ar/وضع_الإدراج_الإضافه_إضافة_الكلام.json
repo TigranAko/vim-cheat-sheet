@@ -1,0 +1,70 @@
+{
+    "item_1": {
+        "keys": "i",
+        "description": "أضف قبل المؤشر"
+    },
+    "item_2": {
+        "keys": "I",
+        "description": "أضف من أول السطر"
+    },
+    "item_3": {
+        "keys": "a",
+        "description": "أضف بعد المؤشر"
+    },
+    "item_4": {
+        "keys": "A",
+        "description": "أضف الي نهاية السطر"
+    },
+    "item_5": {
+        "keys": "o",
+        "description": "اضف سطر جديد أسفل السطر الحالي"
+    },
+    "item_6": {
+        "keys": "O",
+        "description": "اضف سطر جديد اعلي السطر الحالي"
+    },
+    "item_7": {
+        "keys": "ea",
+        "description": "أضف الي نهاية الكلمه"
+    },
+    "item_8": {
+        "keys": "Ctrl + h",
+        "description": "إحذف الحرف ما قبل المؤشر اثناء وضع الإضافة"
+    },
+    "item_9": {
+        "keys": "Ctrl + w",
+        "description": "إحذف الكلمه ماقبل المؤشر اثناء وضع الإضافة"
+    },
+    "item_10": {
+        "keys": "Ctrl + j",
+        "description": "أضف سطر جديد اثناء وضع الإضافة"
+    },
+    "item_11": {
+        "keys": "Ctrl + t",
+        "description": "أضف الي السطر الأول مساحه بادئة اثناء وضع الإضافة"
+    },
+    "item_12": {
+        "keys": "Ctrl + d",
+        "description": "إحذف من السطر الأول مساحه بادئة اثناء وضع الإضافة"
+    },
+    "item_13": {
+        "keys": "Ctrl + n",
+        "description": "insert (auto"
+    },
+    "item_14": {
+        "keys": "Ctrl + p",
+        "description": "insert (auto"
+    },
+    "item_15": {
+        "keys": "Ctrl + rx",
+        "description": "insert the contents of register x"
+    },
+    "item_16": {
+        "keys": "Ctrl + ox",
+        "description": "Temporarily enter normal mode to issue one normal"
+    },
+    "item_17": {
+        "keys": "Esc or Ctrl + c",
+        "description": "أخرج من وضع الإضافة"
+    }
+}

@@ -1,0 +1,26 @@
+{
+    "wells": [
+        "Registers are being stored in ~/.viminfo, and will be loaded again on next restart of vim.",
+        "تسجيلات من نوع خاص\n          \n             0 - اخر كلام منسوخ\n             \" - تسجيل غير مسمي - يحتوي علي اخر نسخ او لصق\n             % - اسم الملف الحالي\n             # - تغير اسم الملف\n             * - clipboard contents (X11 primary)\n             + - clipboard contents (X11 clipboard)\n             / - اخر ماتم البحث عنه\n             : - CLI اخر امر من \n             . - اخر كلام تم إضافته\n             - - اخر ماتم مسحه (اقل من سطر)\n             = - سجل التعبيرات\n             _ - سجل الثقب الاسود (لا يحتفظ باي شيء)"
+    ],
+    "item_1": {
+        "keys": ":reg[isters]",
+        "description": "إعرض محتوي التسجيلات"
+    },
+    "item_2": {
+        "keys": "\"xy",
+        "description": "X إنسخ الي التسجيل"
+    },
+    "item_3": {
+        "keys": "\"xp",
+        "description": "X الصق المحتوي في التسجيل"
+    },
+    "item_4": {
+        "keys": "\"+y",
+        "description": "clipboard انسخ الي الحافظه"
+    },
+    "item_5": {
+        "keys": "\"+p",
+        "description": "الصق من الحافظه"
+    }
+}

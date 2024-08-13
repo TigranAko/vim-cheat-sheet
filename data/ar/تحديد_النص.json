@@ -1,0 +1,57 @@
+{
+    "wells": [
+        "Instead of b or B one can also use ( or { respectively."
+    ],
+    "item_1": {
+        "keys": "v",
+        "description": "إبدا وضع التحديد "
+    },
+    "item_2": {
+        "keys": "V",
+        "description": "إبدا وضع التحديد "
+    },
+    "item_3": {
+        "keys": "o",
+        "description": "حرك المؤشر للجهه الثانيه من الكلام المحدد"
+    },
+    "item_4": {
+        "keys": "Ctrl + v",
+        "description": "إبدا وضغ التحديد "
+    },
+    "item_5": {
+        "keys": "O",
+        "description": "حرك المؤشر الي الجهه الثانيه من الكلام المحدد"
+    },
+    "item_6": {
+        "keys": "aw",
+        "description": "حدد كلمه"
+    },
+    "item_7": {
+        "keys": "ab",
+        "description": "() حدد الكلام المحدود ب"
+    },
+    "item_8": {
+        "keys": "aB",
+        "description": "{} حدد الكلام المحدود ب"
+    },
+    "item_9": {
+        "keys": "at",
+        "description": "<> حدد الكلام المحدود ب"
+    },
+    "item_10": {
+        "keys": "ib",
+        "description": "() حدد الكلام بداخل"
+    },
+    "item_11": {
+        "keys": "iB",
+        "description": "{} حدد الكلام بداخل"
+    },
+    "item_12": {
+        "keys": "it",
+        "description": "<> حدد الكلام بداخل"
+    },
+    "item_13": {
+        "keys": "Esc or Ctrl + c",
+        "description": "أخرج من وضع تحديد النص"
+    }
+}

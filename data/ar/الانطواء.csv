@@ -1,0 +1,16 @@
+"The commands for folding (e.g. za) operate on one level. To operate on all levels, use uppercase letters (e.g. zA).","To view the differences of files, one can directly start Vim in diff mode by running vimdiff in a terminal. One can even set this as git difftool."
+zf,عرف انحناء باستخدام أحد الحركات
+zd,احذف انحناء تحت المؤشر
+za,بدل الانحناء تحت المؤشر (افتح/اغلق)
+zo,افتح الانحناء تحت المؤشر
+zc,اغلق الانحناء تحت المؤشر
+zr,افتح كل الانحنات علي مستوي واحد
+zm,عرف المزيد من الانحنات
+zi,بدل وظيفة الانحنات
+]c,اقفز الي الاختلاف التالي
+[c,اقفز الي الاختلاف السابق
+do or :diffg[et],احضر الاختلاف من ملف اخر الي الملف الحالي
+dp or :diffpu[t],ضع الاختلاف في الملف الحالي الي ملف اخر
+:diffthis,اجعل النافذة الحاليه جزء من اختلاف جديد
+:dif[fupdate],حدث الاختلاف
+:diffo[ff],أغلق وضع الاختلاف للنافذة الحالية
