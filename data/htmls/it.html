@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="it">
+
+<head>
+  <meta charSet="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Vim Cheat Sheet</title>
+  <link rel="shortcut icon" href="/images/icons/icon-48x48.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#FA4949" />
+  <meta http-equiv="cache-control" content="max-age=600" />
+  <meta name="description" content="Explore vim.rtorr.com for an extensive Vim cheat sheet, offering clear, concise commands and shortcuts for Vim users. Whether you're a beginner or an experienced developer, find tips and tricks to enhance your coding efficiency in Vim.">
+  <link rel="apple-touch-icon" sizes="48x48" href="/images/icons/icon-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="/images/icons/icon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/images/icons/icon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="256x256" href="/images/icons/icon-256x256.png" />
+  <link rel="apple-touch-icon" sizes="384x384" href="/images/icons/icon-384x384.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="/images/icons/icon-512x512.png" />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <div class="sponsor">
+    <div class="container">
+      <span>
+        <a target="_blank" href="https://www.warp.dev">
+          <div class="sponsor-logo-container">
+            <span>Sponsor</span>
+            <img class="sponsor-logo" src="/images/svg/warp-logo.svg" alt="Warp logo">
+          </div>
+          <div class="sponsor-tagline"><span>A new terminal focused on developer productivity</span></div>
+      </span>
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid-block">
+      <div class="grid-1">
+        <h1>
+          <a class="site-title" href="/">
+            Vim Cheat Sheet
+          </a>
+        </h1>
+      </div>
+    </div>
+    <div class="container">
+      <main><div class="container">
+  <div class="commands-container">
+    <div class="grid-block">
+      <div class="grid-lg-1-3">
+        <h2>Globali</h2>
+        <ul>
+          <li>
+            <kbd>:h[elp] parola chiave</kbd> - apri il manuale (di vim) per <code>keyword</code>
+          </li>
+          <li>
+            <kbd>:sav[eas] file</kbd> - salva il file con nome
+          </li>
+          <li>
+            <kbd>:clo[se]</kbd> - chiudi il pannello corrente
+          </li>
+          <li>
+            <kbd>:ter[minal]</kbd> - apri in una finestra di terminale
+          </li>
+          <li>
+            <kbd>K</kbd> - apri la pagina del manuale (man) relativa alla parola sotto al cursore
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Esegui <kbd>vimtutor</kbd> in un terminale per imparare i primi comandi Vim.
+        </div>
+        <h2>Movimento del cursore</h2>
+        <ul>
+          <li>
+            <kbd>h</kbd> - muovi cursore a sinistra
+          </li>
+          <li>
+            <kbd>j</kbd> - muovi cursore in basso
+          </li>
+          <li>
+            <kbd>k</kbd> - muovi cursore in alto
+          </li>
+          <li>
+            <kbd>l</kbd> - muovi cursore a destra
+          </li>
+          <li>
+            <kbd>gj</kbd> - move cursor down (multi-line text)
+          </li>
+          <li>
+            <kbd>gk</kbd> - move cursor up (multi-line text)
+          </li>
+          <li>
+            <kbd>H</kbd> - vai in cima alla schermata
+          </li>
+          <li>
+            <kbd>M</kbd> - vai a metà della schermata
+          </li>
+          <li>
+            <kbd>L</kbd> - vai in fondo alla schermata
+          </li>
+          <li>
+            <kbd>w</kbd> - salta avanti fino all&#x27;inizio di una parola
+          </li>
+          <li>
+            <kbd>W</kbd> - salta avanti fino all&#x27;inizio di una parola (le parole possono contenere punteggiatura)
+          </li>
+          <li>
+            <kbd>e</kbd> - salta avanti fino alla fine di una parola
+          </li>
+          <li>
+            <kbd>E</kbd> - salta avanti fino alla fine di una parola (le parole possono contenere punteggiatura)
+          </li>
+          <li>
+            <kbd>b</kbd> - salta indietro fino all&#x27;inizio di una parola
+          </li>
+          <li>
+            <kbd>B</kbd> - salta indietro fino all&#x27;inizio di una parola (le parole possono contenere punteggiatura)
+          </li>
+          <li>
+            <kbd>ge</kbd> - saòta indietro alla fine della parola
+          </li>
+          <li>
+            <kbd>gE</kbd> - saòta indietro alla fine della parola (le parole possono contenere la punteggiatura)
+          </li>
+          <li>
+            <kbd>%</kbd> - vai al carattere corrispondente (le coppie supportate automaticamente sono: '()', '{}', '[]' - per ulteriori informazioni usa <code>:h matchpairs</code> in vim)
+          </li>
+          <li>
+            <kbd>0</kbd> - salta all&#x27;inizio della linea
+          </li>
+          <li>
+            <kbd>^</kbd> - salta fino al primo carattere non vuoto della linea
+          </li>
+          <li>
+            <kbd>$</kbd> - salta alla fine della linea
+          </li>
+          <li>
+            <kbd>g_</kbd> - salta fino all&#x27;ultimo carattere non vuoto della linea
+          </li>
+          <li>
+            <kbd>gg</kbd> - vai alla prima linea del documento
+          </li>
+          <li>
+            <kbd>G</kbd> - vai all&#x27;ultima linea del documento
+          </li>
+          <li>
+            <kbd>5gg</kbd> or <kbd>5G</kbd> - vai alla linea 5
+          </li>
+          <li>
+            <kbd>gd</kbd> - move to local declaration
+          </li>
+          <li>
+            <kbd>gD</kbd> - move to global declaration
+          </li>
+          <li>
+            <kbd>fx</kbd> - salta alla prossima occorrenza del carattere x
+          </li>
+          <li>
+            <kbd>tx</kbd> - salta a prima della prossima occorrenza del carattere x
+          </li>
+          <li>
+            <kbd>Fx</kbd> - salta all&#x27;occorrenza precedente del carattere x
+          </li>
+          <li>
+            <kbd>Tx</kbd> - salta al carattere successivo alla precedente occorrenza del carattere x
+          </li>
+          <li>
+            <kbd>;</kbd> - ripeti l&#x27;ultimo movimento f, t, F o T
+          </li>
+          <li>
+            <kbd>,</kbd> - ripeti l&#x27;ultimo movimento f, t, F o T, all&#x27;indietro
+          </li>
+          <li>
+            <kbd>}</kbd> - salta al prossimo paragrafo (o funzione/blocco, se si scrive codice)
+          </li>
+          <li>
+            <kbd>{</kbd> - salta al paragrafo precedente (o funzione/blocco, se si scrive codice)
+          </li>
+          <li>
+            <kbd>zz</kbd> - centra il cursore nella schermata
+          </li>
+          <li>
+            <kbd>zt</kbd> - position cursor on top of the screen
+          </li>
+          <li>
+            <kbd>zb</kbd> - position cursor on bottom of the screen
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>e</kbd> - sposta la schermata in basso di una linea (senza muovere il cursore)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>y</kbd> - sposta la schermata in alto di una linea (senza muovere il cursore)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>b</kbd> - sposta indietro di un&#x27;intera schermata
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>f</kbd> - sposta avanti di un&#x27;intera schermata
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - sposta avanti di mezza schermata
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>u</kbd> - sposta indietro di mezza schermata
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong>
+          Anteponi un comando di movimento del cursore con un numero per ripeterlo. Per esempio, <kbd>4j</kbd> muove in basso di 4 linee.
+        </div>
+        <h2>Modalità inserimento - inserisci/aggiungi testo</h2>
+        <ul>
+          <li>
+            <kbd>i</kbd> - inserisci prima del cursore
+          </li>
+          <li>
+            <kbd>I</kbd> - inserisci all&#x27;inizio della linea
+          </li>
+          <li>
+            <kbd>a</kbd> - inserisci (aggiungi) dopo il cursore
+          </li>
+          <li>
+            <kbd>A</kbd> - inserisci (aggiungi) alla fine della linea
+          </li>
+          <li>
+            <kbd>o</kbd> - aggiungi (apri) una nuova linea sotto la linea corrente
+          </li>
+          <li>
+            <kbd>O</kbd> - aggiungi (apri) una nuova linea sopra la linea corrente
+          </li>
+          <li>
+            <kbd>ea</kbd> - inserisci (aggiungi) alla fine della parola
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>h</kbd> - elimina un carattere prima del cursore durante la modalità inserimento
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w</kbd> - elimina una parola prima del cursore durante la modalità inserimento
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>j</kbd> - inizia nuova linea nella fase di inserimento
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>t</kbd> - indenta (spostamento a destra) una linea nella fase di inserimento
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - de-indenta (spostamento a sinistra) una linea nella fase di inserimento
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>n</kbd> - inserimento (auto completamento) nel match successivo prima del cursore nella fase di inserimento
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>p</kbd> - inserimento (auto completamento) nel match precedente prima del cursore nella fase di inserimento
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>rx</kbd> - inserimento del contenuto del registro x
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ox</kbd> - Temporaneamente entra in modalità normale per eseguire un comando x.
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - esci dalla modalità inserimento
+          </li>
+        </ul>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>Modifica</h2>
+        <ul>
+          <li>
+            <kbd>r</kbd> - sostituisci un singolo carattere
+          </li>
+          <li>
+            <kbd>R</kbd> - replace more than one character, until <kbd>ESC</kbd> is pressed.
+          </li>
+          <li>
+            <kbd>J</kbd> - unisci la linea sottostante con quella corrente
+          </li>
+          <li>
+            <kbd>gJ</kbd> - unisci la linea sottostante con quella corrente senza spazi in mezzo
+          </li>
+          <li>
+            <kbd>gwip</kbd> - riformatta paragrafo
+          </li>
+          <li>
+            <kbd>g~</kbd> - cambia carattere maiuscolo in movimento
+          </li>
+          <li>
+            <kbd>gu</kbd> - cambia il carattere minuscolo in maiuscolo, in movimento
+          </li>
+          <li>
+            <kbd>gU</kbd> - cambia il carattere maiuscolo in minuscolo, in movimento
+          </li>
+          <li>
+            <kbd>cc</kbd> - cambia (sostituisci) l&#x27;intera linea
+          </li>
+          <li>
+            <kbd>c$</kbd> or <kbd>C</kbd> - cambia (sostituisci) fino alla fine della linea
+          </li>
+          <li>
+            <kbd>ciw</kbd> - cambia (sostituisci) una parola intera
+          </li>
+          <li>
+            <kbd>cw</kbd> or <kbd>ce</kbd> - cambia (sostituisci) fino alla fine della parola
+          </li>
+          <li>
+            <kbd>s</kbd> - cancella carattere e sostituisci testo
+          </li>
+          <li>
+            <kbd>S</kbd> - cancella linea e sostituisci testo (uguale a cc)
+          </li>
+          <li>
+            <kbd>xp</kbd> - scambia due lettere (cancella e incolla)
+          </li>
+          <li>
+            <kbd>u</kbd> - annulla l&#x27;ultima modifica
+          </li>
+          <li>
+            <kbd>U</kbd> - Recupera (rifai) l&#x27; ultima linea cambiata
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>r</kbd> - ripeti l&#x27;ultima modifica
+          </li>
+          <li>
+            <kbd>.</kbd> - ripeti l&#x27;ultimo comando
+          </li>
+        </ul>
+        <h2>Seleziona testo (modalità visuale)</h2>
+        <ul>
+          <li>
+            <kbd>v</kbd> - inizia modalità visuale, seleziona linee, quindi esegui un comando (per esempio y-copia)
+          </li>
+          <li>
+            <kbd>V</kbd> - inizia modalità visuale su linee intere
+          </li>
+          <li>
+            <kbd>o</kbd> - vai all&#x27;altro capo dell&#x27;area selezionata
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>v</kbd> - inizia modalità visuale su blocchi
+          </li>
+          <li>
+            <kbd>O</kbd> - vai ad un altro angolo del blocco
+          </li>
+          <li>
+            <kbd>aw</kbd> - seleziona una parola
+          </li>
+          <li>
+            <kbd>ab</kbd> - un blocco con ()
+          </li>
+          <li>
+            <kbd>aB</kbd> - un blocco con {}
+          </li>
+          <li>
+            <kbd>at</kbd> - a block with &lt;&gt; tags
+          </li>
+          <li>
+            <kbd>ib</kbd> - un blocco con () (parentesi escluse)
+          </li>
+          <li>
+            <kbd>iB</kbd> - un blocco con {} (parentesi escluse)
+          </li>
+          <li>
+            <kbd>it</kbd> - blocco interno tra &lt;&gt; tags
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - esci dalla modalità visuale
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Invece di <kbd>b</kbd> o <kbd>B</kbd> puoi usare <kbd>(</kbd> o <kbd>{</kbd> rispettivamente.
+        </div>
+        <h2>Comandi della modalità visuale</h2>
+        <ul>
+          <li>
+            <kbd>&#62;</kbd> - scorri testo a destra
+          </li>
+          <li>
+            <kbd>&#60;</kbd> - scorri testo a sinistra
+          </li>
+          <li>
+            <kbd>y</kbd> - copia testo selezionato
+          </li>
+          <li>
+            <kbd>d</kbd> - elimina testo selezionato
+          </li>
+          <li>
+            <kbd>~</kbd> - inverti maiuscole e minuscole
+          </li>
+          <li>
+            <kbd>u</kbd> - cambio marcatore di testo a minuscolo
+          </li>
+          <li>
+            <kbd>U</kbd> - cambio marcatore di testo a maiuscolo
+          </li>
+        </ul>
+        <h2>Registri</h2>
+        <ul>
+          <li>
+            <kbd>:reg[isters]</kbd> - mostra il contenuto dei registri
+          </li>
+          <li>
+            <kbd>"xy</kbd> - copia dentro al registro &lt;code&gt;x&lt;/code&gt;
+          </li>
+          <li>
+            <kbd>"xp</kbd> - incolla il contenuto del registro &lt;code&gt;x&lt;/code&gt;
+          </li>
+          <li>
+            <kbd>"+y</kbd> - taglia dentro il registro della clipboard di sistema
+          </li>
+          <li>
+            <kbd>"+p</kbd> - incolla dal registro della clipboard di sistema
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> I registri sono salvati in ~/.viminfo e saranno ricaricati al prossimo avvio di vim.
+        </div>
+        <div class="well">
+          <strong>Tip</strong> Registri speciali:
+          <p>
+            &emsp;<kbd>0</kbd> - ultimo strappo<br/>
+            &emsp;<kbd>&quot;</kbd> - registri senza nome , ultimo eliminato o tirato<br/>
+            &emsp;<kbd>%</kbd> - nome del file attuale<br/>
+            &emsp;<kbd>#</kbd> - nome del file alternativo<br/>
+            &emsp;<kbd>*</kbd> - contenuto della clipboard (X11 primaria)<br/>
+            &emsp;<kbd>+</kbd> - contenuto della clipboard (X11 clipboard)<br/>
+            &emsp;<kbd>/</kbd> - ultimo pattern di ricerca<br/>
+            &emsp;<kbd>:</kbd> - ultimo comando eseguito<br/>
+            &emsp;<kbd>.</kbd> - ultima linea inserita<br/>
+            &emsp;<kbd>-</kbd> - ultima piccola (più piccola di una riga) cancellazione<br/>
+            &emsp;<kbd>=</kbd> - registro di espressione<br/>
+            &emsp;<kbd>_</kbd> - registro di buco nero<br/>
+          </p>
+        </div>
+        <h2>Segnalibri</h2>
+        <ul>
+          <li>
+            <kbd>:marks</kbd> - elenca i segnalibri
+          </li>
+          <li>
+            <kbd>ma</kbd> - imposta il segnalibro &lt;code&gt;A&lt;/code&gt; alla posizione corrente
+          </li>
+          <li>
+            <kbd>`a</kbd> - salta alla posizione del segnalibro &lt;code&gt;A&lt;/code&gt;
+          </li>
+          <li>
+            <kbd>y`a</kbd> - copia il testo fino alla posizione del segnalibro &lt;code&gt;A&lt;/code&gt;
+          </li>
+          <li>
+            <kbd>`0</kbd> - vai all&#x27; ultima posizione dove vim è uscito
+          </li>
+          <li>
+            <kbd>`"</kbd> - vai alla posizione quando l&#x27; ultima modifica nel file 
+          </li>
+          <li>
+            <kbd>`.</kbd> - vai alla posizione dell&#x27; ultima modifica nel file
+          </li>
+          <li>
+            <kbd>``</kbd> - vai alla posizione prima dell&#x27; ultimo salto
+          </li>
+          <li>
+            <kbd>:ju[mps]</kbd> - lista di salti
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>i</kbd> - vai ad una nuova posizione nella lista dei salti
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>o</kbd> - vai ad una vecchia posizione nella lista dei salti
+          </li>
+          <li>
+            <kbd>:changes</kbd> - lista di cambiamenti
+          </li>
+          <li>
+            <kbd>g,</kbd> - vai ad una nuova posizione nella lista dei cambiamenti
+          </li>
+          <li>
+            <kbd>g;</kbd> - vai ad una vecchia posizione nella lista dei cambiamenti
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>]</kbd> - salta al tag sotto il cursore
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Per saltare ad un punto puoi usare un accento grave (<kbd>`</kbd>) o un apostrofo (<kbd>'</kbd>). Usando un apostrofo salti direttamente all' inizio (primo carattere non vuoto) della linea tenuto dal punto.
+        </div>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>Macro</h2>
+        <ul>
+          <li>
+            <kbd>qa</kbd> - registra la macro &lt;code&gt;a&lt;/code&gt;
+          </li>
+          <li>
+            <kbd>q</kbd> - smetti di registrare macro
+          </li>
+          <li>
+            <kbd>@a</kbd> - esegui la macro &lt;code&gt;a&lt;/code&gt;
+          </li>
+          <li>
+            <kbd>@@</kbd> - esegui di nuovo l&#x27;ultima macro eseguita
+          </li>
+        </ul>
+        <h2>Taglia e incolla</h2>
+        <ul>
+          <li>
+            <kbd>yy</kbd> - copia una linea
+          </li>
+          <li>
+            <kbd>2yy</kbd> - copia due linee
+          </li>
+          <li>
+            <kbd>yw</kbd> - copia una parola
+          </li>
+          <li>
+            <kbd>yiw</kbd> - copia la parola sotto il cursore
+          </li>
+          <li>
+            <kbd>yaw</kbd> - copia la parola sotto il cursore e lo spazio prima o dopo
+          </li>
+          <li>
+            <kbd>y$</kbd> or <kbd>Y</kbd> - copia fino alla fine della linea
+          </li>
+          <li>
+            <kbd>p</kbd> - incolla dopo il cursore
+          </li>
+          <li>
+            <kbd>P</kbd> - incolla prima del cursore
+          </li>
+          <li>
+            <kbd>gp</kbd> - put (paste) the clipboard after cursor and leave cursor after the new text
+          </li>
+          <li>
+            <kbd>gP</kbd> - put (paste) before cursor and leave cursor after the new text
+          </li>
+          <li>
+            <kbd>dd</kbd> - cancella (taglia) una linea
+          </li>
+          <li>
+            <kbd>2dd</kbd> - cancella (taglia) due linee
+          </li>
+          <li>
+            <kbd>dw</kbd> - cancella (taglia) una parola
+          </li>
+          <li>
+            <kbd>diw</kbd> - cancella (taglia) la parola sotto il cursore
+          </li>
+          <li>
+            <kbd>daw</kbd> - cancella (taglia) la parola sotto il cursore e lo spazio prima o dopo
+          </li>
+          <li>
+            <kbd>:3,5d</kbd> - delete lines starting from 3 to 5
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> You can also use the following characters to specify the range: <br>
+          e.g. <br>
+          <p>
+            <kbd>:.,$d</kbd> - From the current line to the end of the file <br>
+            <kbd>:.,1d</kbd> - From the current line to the beginning of the file <br>
+            <kbd>:10,1d</kbd> - From the 10th line to the beginning of the file <br>
+          </p>
+        </div>
+        <ul>
+          <li>
+            <kbd>:g/{pattern}/d</kbd> - delete all lines containing pattern
+          </li>
+          <li>
+            <kbd>:g!/{pattern}/d</kbd> - delete all lines not containing pattern
+          </li>
+          <li>
+            <kbd>d$</kbd> or <kbd>D</kbd> - cancella (taglia) fino alla fine della linea
+          </li>
+          <li>
+            <kbd>x</kbd> - cancella (taglia) carattere
+          </li>
+        </ul>
+        <h2>Indent text</h2>
+        <ul>
+          <li>
+            <kbd>&#62;&#62;</kbd> - indenta una linea ( muovi a destra) shiftwidth
+          </li>
+          <li>
+            <kbd>&#60;&#60;</kbd> - deindenta (muovi a sinistra) una linea shiftwidth
+          </li>
+          <li>
+            <kbd>&#62;%</kbd> - indenta un blocco compreso tra () o {} (cursore nelle parentesi)
+          </li>
+          <li>
+            <kbd>&#60;%</kbd> - de-indent a block with () or {} (cursor on brace)
+          </li>
+          <li>
+            <kbd>&#62;ib</kbd> - indenta un blocco interno compreso tra ()
+          </li>
+          <li>
+            <kbd>&#62;at</kbd> - indenta un blocco compreso tra tag &lt;&gt;
+          </li>
+          <li>
+            <kbd>3==</kbd> - re indenta tre linee
+          </li>
+          <li>
+            <kbd>=%</kbd> - reindenta un blocco compreso tra () o {} (cursore nelle parentesi)
+          </li>
+          <li>
+            <kbd>=iB</kbd> - reindenta il blocco interno compreso tra {}
+          </li>
+          <li>
+            <kbd>gg=G</kbd> - reindenta l&#x27; intero buffer
+          </li>
+          <li>
+            <kbd>]p</kbd> - incolla e aggiusta l&#x27; indenzione della linea attuale
+          </li>
+        </ul>
+        <h2>Uscire</h2>
+        <ul>
+          <li>
+            <kbd>:w</kbd> - scrivi (salva) il file, ma non uscire
+          </li>
+          <li>
+            <kbd>:w !sudo tee %</kbd> - scrivi il file corrente usando sudo
+          </li>
+          <li>
+            <kbd>:wq</kbd> or <kbd>:x</kbd> or <kbd>ZZ</kbd> - scrivi (salva) ed esci
+          </li>
+          <li>
+            <kbd>:q</kbd> - esci (fallisce se ci sono modifiche non salvate)
+          </li>
+          <li>
+            <kbd>:q!</kbd> or <kbd>ZQ</kbd> - esci e ignora modifiche non salvate
+          </li>
+          <li>
+            <kbd>:wqa</kbd> - scrivi (salva) ed esci su tutti i tab
+          </li>
+        </ul>
+        <h2>Cerca e sostituisci</h2>
+        <ul>
+          <li>
+            <kbd>/pattern</kbd> - cerca pattern
+          </li>
+          <li>
+            <kbd>?pattern</kbd> - cerca pattern all&#x27;indietro
+          </li>
+          <li>
+            <kbd>\vpattern</kbd> - pattern &#x27;very magic&#x27;: i caratteri non alfanumerici sono interpretati come simboli speciali di regex (nessun carattere di escape necessario)
+          </li>
+          <li>
+            <kbd>n</kbd> - ripeti ricerca nella stessa direzione
+          </li>
+          <li>
+            <kbd>N</kbd> - ripeti ricerca nella direzione opposta
+          </li>
+          <li>
+            <kbd>:%s/old/new/g</kbd> -
+            sostituisci old con new in tutto il file
+          </li>
+          <li>
+            <kbd>:%s/old/new/gc</kbd> -
+            sostituisci old con new in tutto il file senza chiedere conferma
+          </li>
+          <li>
+            <kbd>:noh[lsearch]</kbd> - rimuove l&#x27;evidenziazione dei risultati della ricerca
+          </li>
+        </ul>
+        <h2>Cerca in più file</h2>
+        <ul>
+          <li>
+            <kbd>:vim[grep] /pattern/ {`{file}`}</kbd> -
+            cerca il pattern in più file
+          </li>
+        </ul>
+        <div class="well">
+          e.g.
+          <kbd>:vim[grep] /foo/ **/*</kbd>
+        </div>
+        <ul>
+          <li>
+            <kbd>:cn[ext]</kbd> - salta al prossimo risultato
+          </li>
+          <li>
+            <kbd>:cp[revious]</kbd> - salta al risultato precedente
+          </li>
+          <li>
+            <kbd>:cope[n]</kbd> - apri una finestra contenente la lista di risultati
+          </li>
+          <li>
+            <kbd>:ccl[ose]</kbd> - close the quickfix window
+          </li>
+        </ul>
+        <h2>Tabs</h2>
+        <ul>
+          <li>
+            <kbd>:tabnew</kbd> or <kbd>:tabnew {page.words.file}</kbd> -
+            apri un file in un nuovo tab
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wT</kbd> - muovi la finestra corrente nel suo proprio tab
+          </li>
+          <li>
+            <kbd>gt</kbd> or <kbd>:tabn[ext]</kbd> - vai al tab successivo
+          </li>
+          <li>
+            <kbd>gT</kbd> or <kbd>:tabp[revious]</kbd> - vai al tab precedente
+          </li>
+          <li>
+            <kbd>#gt</kbd> - vai al tab numero #
+          </li>
+          <li>
+            <kbd>:tabm[ove] #</kbd> - muovi il tab corrente nella #-esima posizione (l&#x27;indice parte da 0)
+          </li>
+          <li>
+            <kbd>:tabc[lose]</kbd> - chiudi il tab corrente e tutte le sue finestre
+          </li>
+          <li>
+            <kbd>:tabo[nly]</kbd> - chiudi tutti i tab tranne quello corrente
+          </li>
+          <li>
+            <kbd>:tabdo</kbd> command - esegui il <code>comando</code> in tutti i tab (es. <code>:tabdo q</code> - chiude tutti i tab aperti)
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-block">
+      <div class="grid-lg-1-2">
+        <h2>Lavorare con file multipli</h2>
+        <ul>
+          <li>
+            <kbd>:e[dit] file</kbd> - modifica file in un nuovo buffer
+          </li>
+          <li>
+            <kbd>:bn[ext]</kbd> -
+            vai al buffer successivo
+          </li>
+          <li>
+            <kbd>:bp[revious]</kbd> -
+            vai al buffer precedente
+          </li>
+          <li>
+            <kbd>:bd[elete]</kbd> - cancella un buffer (chiudi un file)
+          </li>
+          <li>
+            <kbd>:b[uffer]#</kbd> - vai al buffer numero #
+          </li>
+          <li>
+            <kbd>:b[uffer] file</kbd> - vai al buffer per file
+          </li>
+          <li>
+            <kbd>:ls</kbd> or <kbd>:buffers</kbd> - elenca tutti i buffer aperti
+          </li>
+          <li>
+            <kbd>:sp[lit] file</kbd> - apri file in un nuovo buffer e dividi la finestra
+          </li>
+          <li>
+            <kbd>:vs[plit] file</kbd> - apri file in un nuovo buffer e dividi la finestra verticalmente
+          </li>
+          <li>
+            <kbd>:vert[ical] ba[ll]</kbd> - rendi i buffer come schermate verticali
+          </li>
+          <li>
+            <kbd>:tab ba[ll]</kbd> - rendi i buffer come delle tab
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ws</kbd> - dividi finestra
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wv</kbd> - dividi finestra verticalmente
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ww</kbd> - cambia finestra
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wq</kbd> - esci da una finestra
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wx</kbd> - scambia la finestra attuale con la prossima
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w=</kbd> - rendi tutte le finestre con uguale altezza e larghezza
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wh</kbd> - muovi cursore sul buffer successivo (a destra)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wl</kbd> - muovi cursore sul buffer precedente (a sinistra)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wj</kbd> - muovi cursore sul buffer inferiore (divisione orizzontale)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wk</kbd> - muovi cursore sul buffer superiore (divisione orizzontale)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wH</kbd> - rendi la finestra attuale a tutta altezza nell&#x27; estrema sinistra (finestra verticale più a sinistra)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wL</kbd> - rendi la finestra attuale a tutta altezza nell&#x27; estrema destra (finestra verticale più a destra)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wJ</kbd> - rendi la finestra attuale a tutta larghezza in fondo (finestra orizzontale più in basso)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wK</kbd> - rendi la finestra attuale a tutta larghezza in cima (finestra orizzontale più in alto)
+          </li>
+        </ul>
+        </ul>
+        </ul>
+        </ul>
+      </div>
+      <div class="grid-lg-1-2">
+        <h2>Diff</h2>
+        <ul>
+          <li>
+            <kbd>zf</kbd> - definisci manualmente la piegatura in movimento
+          </li>
+          <li>
+            <kbd>zd</kbd> - elimina la piegatura sotto il cursore
+          </li>
+          <li>
+            <kbd>za</kbd> - apri/chiudi la piegatura sotto il cursore
+          </li>
+          <li>
+            <kbd>zo</kbd> - apri la piegatura sotto il cursore
+          </li>
+          <li>
+            <kbd>zc</kbd> - chiudi la piegatura sotto il cursore
+          </li>
+          <li>
+            <kbd>zr</kbd> - riduci le piegature ad un livello
+          </li>
+          <li>
+            <kbd>zm</kbd> - piegare di più (close) tutte le pieghe ad un livello
+          </li>
+          <li>
+            <kbd>zi</kbd> - attiva/disattiva la modalità di piegatura
+          </li>
+          <li>
+            <kbd>]c</kbd> - salta all&#x27; inizio della modifica successiva
+          </li>
+          <li>
+            <kbd>[c</kbd> - salta all&#x27; inizio della precedente modifica
+          </li>
+          <li>
+            <kbd>do</kbd> or <kbd>:diffg[et]</kbd> - ottieni le differenze da un altro buffer
+          </li>
+          <li>
+            <kbd>dp</kbd> or <kbd>:diffpu[t]</kbd> - inserisci le differenze in un altro buffer
+          </li>
+          <li>
+            <kbd>:diffthis</kbd> - rendi la finestra corrente parte del diff
+          </li>
+          <li>
+            <kbd>:dif[fupdate]</kbd> - aggiorna differenze
+          </li>
+          <li>
+            <kbd>:diffo[ff]</kbd> - spegni la modalità diff per la finestra corrente
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> The commands per piegare (per esempio <kbd>za</kbd>) opera ad un livello. Per lavorare con tutti i livelli, usa i caratteri maiuscoli (per esempio <kbd>zA</kbd>).
+        </div>
+        <div class="well">
+          <strong>Tip</strong> Per vedere la differenza dei files, si può entrare in modalità diff eseguendo il comando <kbd>vimdiff</kbd> nel terminale. È possibile aprirla anche con il comando <kbd>git difftool</kbd>.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+      <div>
+        <div id="footer" class="grid-block">
+          <div class="box">
+            <div class="box-header">
+              <h2>Additional Resources</h2>
+            </div>
+            <div class="box-body">
+              <div class="grid-block">
+                <div class="grid-lg-1-2">
+                  <h3 id="languages">Languages</h3>
+                  <ul>
+                    <li>
+                      <a href="/lang/ar" lang="ar">العربية</a>
+                    </li>
+                    <li>
+                      <a href="/lang/bn" lang="bn">বাংলা</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ca" lang="ca">Català</a>
+                    </li>
+                    <li>
+                      <a href="/lang/cs" lang="cs">Čeština</a>
+                    </li>
+                    <li>
+                      <a href="/lang/da_DK" lang="da">Dansk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/de_de" lang="de">Deutsch</a>
+                    </li>
+                    <li>
+                      <a href="/lang/el_gr" lang="el">Ελληνικά</a>
+                    </li>
+                    <li>
+                      <a href="/lang/en_us" lang="en">English</a>
+                    </li>
+                    <li>
+                      <a href="/lang/eo" lang="eo">Esperanto</a>
+                    </li>
+                    <li>
+                      <a href="/lang/es_es" lang="es">Español</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fa_ir" lang="fa">Persian</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fi" lang="fi">Suomi</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fr_fr" lang="fr">Français</a>
+                    </li>
+                    <li>
+                      <a href="/lang/he" lang="he">עברית</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hr" lang="hr">Hrvatski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hu_hu" lang="hu">Magyar</a>
+                    </li>
+                    <li>
+                      <a href="/lang/id" lang="id">Bahasa Indonesia</a>
+                    </li>
+                    <li>
+                      <a href="/lang/it" lang="it">Italiano</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ja" lang="ja">日本語</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ko" lang="ko">한국어</a>
+                    </li>
+                    <li>
+                      <a href="/lang/my" lang="my">မြန်မာ</a>
+                    </li>
+                    <li>
+                      <a href="/lang/nl_nl" lang="nl">Nederlands</a>
+                    </li>
+                    <li>
+                      <a href="/lang/no_nb" lang="no">Norsk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pl_pl" lang="pl">Polski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_br" lang="pt">Português - Brasil</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_pt" lang="pt">Português - Portugal</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ro" lang="ro">Romana</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ru" lang="ru">Русский</a>
+                    </li>
+                    <li>
+                      <a href="/lang/si_lk" lang="si">සිංහල</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sk" lang="sk">Slovenčina</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sv" lang="sv">Svenska</a>
+                    </li>
+                    <li>
+                      <a href="/lang/th" lang="th">ภาษาไทย</a>
+                    </li>
+                    <li>
+                      <a href="/lang/tr" lang="tr">Türkçe</a>
+                    </li>
+                    <li>
+                      <a href="/lang/uk" lang="uk">Українська</a>
+                    </li>
+                    <li>
+                      <a href="/lang/vi_vn" lang="vi">Tiếng Việt</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_cn" lang="zh">简体中文</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_tw" lang="zh">中文 (台灣)</a>
+                    </li>
+                  </ul>                </div>
+                <div class="grid-lg-1-2">
+                  <h3>About the vim cheat sheet</h3>
+                  <p>
+                    This project aims to be one of the most accessible vim guides available. We
+                    made sure to support mobile, desktop, and other
+                    <a href="#languages" aria-label="Jump to languages section">languages</a>.
+                  </p>
+                  <p>
+                    <a target="_blank" href="https://github.com/sponsors/rtorr" aria-label="Sponsor this project on GitHub">❤️ Please consider sponsoring this
+                      project ❤️</a>!
+                  </p>
+                  <p>
+                    You can read about how to contribute (and help improve) by viewing our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/README.md" target="_blank"
+                      rel="noopener noreferrer" aria-label="Read the README on GitHub">
+                      README
+                    </a>
+                    . There you can see how to set up this project, or how to contribute a new
+                    language. Here is a big thank you to our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/graphs/contributors" target="_blank"
+                      rel="noopener noreferrer" aria-label="View project contributors on GitHub">
+                      contributors!
+                    </a>
+                  </p>
+                  <p>
+                    This project is licensed under
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/License.txt" target="_blank"
+                      rel="noopener noreferrer" aria-label="View the MIT License for this project">
+                      The MIT License (MIT)
+                    </a>
+                    .
+                  </p>
+                  <h3>Other places to find this document</h3>
+                  <p>
+                    This document was embedded in
+                    <a href="https://duckduckgo.com/?q=vim+cheat+sheet" target="_blank" rel="noopener noreferrer" aria-label="Search for this document on DuckDuckGo">
+                      DuckDuckGo
+                    </a>
+                    .
+                  </p>
+                  <h3>More resources</h3>
+                  <p>
+                    Interactive Vim tutorial:
+                    <a href="https://openvim.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Open Vim for an interactive Vim tutorial">
+                      Open Vim
+                    </a>
+                  </p>
+                  <p>
+                    Vim quick reference from Vim help pages:
+                    <a href="https://vimhelp.org/quickref.txt.html" target="_blank" rel="noopener noreferrer" aria-label="Access Vim quick reference"> 
+                      quickref.txt
+                    </a>
+                  </p>
+                  <p>
+                    List of all Vim ex (<kbd>:</kbd>) commands:
+                    <a href="https://vimhelp.org/index.txt.html#ex-cmd-index" target="_blank" rel="noopener noreferrer" aria-label="View list of all Vim ex commands">
+                      ex-cmd-index
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-block link-to-repo">
+          <p>
+            Checkout the source on
+            <a href="https://github.com/rtorr/vim-cheat-sheet" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+          </p>
+          <p>version: 3.2.0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.CACHE_NAME = "3.2.0";
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/javascripts/sw.js?version=3.2.0');
+      });
+    }
+  </script>
+</body>
+
+</html>

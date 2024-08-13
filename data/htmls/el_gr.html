@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="el">
+
+<head>
+  <meta charSet="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Vim Cheat Sheet</title>
+  <link rel="shortcut icon" href="/images/icons/icon-48x48.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#FA4949" />
+  <meta http-equiv="cache-control" content="max-age=600" />
+  <meta name="description" content="Explore vim.rtorr.com for an extensive Vim cheat sheet, offering clear, concise commands and shortcuts for Vim users. Whether you're a beginner or an experienced developer, find tips and tricks to enhance your coding efficiency in Vim.">
+  <link rel="apple-touch-icon" sizes="48x48" href="/images/icons/icon-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="/images/icons/icon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/images/icons/icon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="256x256" href="/images/icons/icon-256x256.png" />
+  <link rel="apple-touch-icon" sizes="384x384" href="/images/icons/icon-384x384.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="/images/icons/icon-512x512.png" />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <div class="sponsor">
+    <div class="container">
+      <span>
+        <a target="_blank" href="https://www.warp.dev">
+          <div class="sponsor-logo-container">
+            <span>Sponsor</span>
+            <img class="sponsor-logo" src="/images/svg/warp-logo.svg" alt="Warp logo">
+          </div>
+          <div class="sponsor-tagline"><span>A new terminal focused on developer productivity</span></div>
+      </span>
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid-block">
+      <div class="grid-1">
+        <h1>
+          <a class="site-title" href="/">
+            Vim Cheat Sheet
+          </a>
+        </h1>
+      </div>
+    </div>
+    <div class="container">
+      <main><div class="container">
+  <div class="commands-container">
+    <div class="grid-block">
+      <div class="grid-lg-1-3">
+        <h2>Global</h2>
+        <ul>
+          <li>
+            <kbd>:h[elp] λέξη-κλειδί</kbd> - ανοίξτε τη βοήθεια για τη λέξη-κλειδί
+          </li>
+          <li>
+            <kbd>:sav[eas] αρχείο</kbd> - αποθήκευση αρχείου ως
+          </li>
+          <li>
+            <kbd>:clo[se]</kbd> - κλείστε το τρέχον παράθυρο
+          </li>
+          <li>
+            <kbd>:ter[minal]</kbd> - ανοίξτε ένα παράθυρο τερματικού
+          </li>
+          <li>
+            <kbd>K</kbd> - ανοίξτε τη σελίδα εγχευριδίου για την λέξη στον κέρσορα
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Εκτελέστε το <kbd>vimtutor</kbd> σε ένα τερματικό για να μάθετε τις πρώτες εντολές Vim.
+        </div>
+        <h2>Κίνηση κέρσορα</h2>
+        <ul>
+          <li>
+            <kbd>h</kbd> - μετακίνηση κέρσορα αριστερά
+          </li>
+          <li>
+            <kbd>j</kbd> - μετακίνηση κέρσορα κάτω
+          </li>
+          <li>
+            <kbd>k</kbd> - μετακίνηση κέρσορα επάνω
+          </li>
+          <li>
+            <kbd>l</kbd> - μετακίνηση κέρσορα δεξιά
+          </li>
+          <li>
+            <kbd>gj</kbd> - μετακίνηση κέρσορα κάτω (κείμενο πολλών γραμμών)
+          </li>
+          <li>
+            <kbd>gk</kbd> - μετακίνηση κέρσορα επάνω (κείμενο πολλών γραμμών)
+          </li>
+          <li>
+            <kbd>H</kbd> - μετακίνηση στην κορυφή της οθόνης
+          </li>
+          <li>
+            <kbd>M</kbd> - μετακίνηση στη μέση της οθόνης
+          </li>
+          <li>
+            <kbd>L</kbd> - μετακίνηση στο κάτω μέρος της οθόνης
+          </li>
+          <li>
+            <kbd>w</kbd> - μεταβείτε προς τα εμπρός στην αρχή μιας λέξης
+          </li>
+          <li>
+            <kbd>W</kbd> - μεταβείτε προς τα εμπρός στην αρχή μιας λέξης (οι λέξεις μπορούν να περιέχουν σημεία στίξης)
+          </li>
+          <li>
+            <kbd>e</kbd> - μεταβείτε προς τα εμπρός στο τέλος μιας λέξης
+          </li>
+          <li>
+            <kbd>E</kbd> - μεταβείτε προς τα εμπρός στο τέλος μιας λέξης (οι λέξεις μπορούν να περιέχουν σημεία στίξης)
+          </li>
+          <li>
+            <kbd>b</kbd> - μεταβείτε προς τα πίσω στην αρχή μιας λέξης
+          </li>
+          <li>
+            <kbd>B</kbd> - μεταβείτε προς τα πίσω στην αρχή μιας λέξης (οι λέξεις μπορούν να περιέχουν σημεία στίξης)
+          </li>
+          <li>
+            <kbd>ge</kbd> - μεταβείτε προς τα πίσω στο τέλος μιας λέξης
+          </li>
+          <li>
+            <kbd>gE</kbd> - μεταβείτε προς τα πίσω στο τέλος μιας λέξης (οι λέξεις μπορούν να περιέχουν σημεία στίξης)
+          </li>
+          <li>
+            <kbd>%</kbd> - μετακίνηση του κέρσορα στον αντίστοιχο χαρακτήρα (προεπιλεγμένα υποστηριζόμενα ζεύγη: '()', '{}', '[]' - χρησιμοποιήστε <code>:h matchpairs</code> στο vim για περισσότερες πληροφορίες)
+          </li>
+          <li>
+            <kbd>0</kbd> - μεταβείτε στην αρχή της γραμμής
+          </li>
+          <li>
+            <kbd>^</kbd> - μεταβείτε στον πρώτο μη κενό χαρακτήρα της γραμμής
+          </li>
+          <li>
+            <kbd>$</kbd> - μεταβείτε στο τέλος της γραμμής
+          </li>
+          <li>
+            <kbd>g_</kbd> - μεταβείτε στον τελευταίο μη κενό χαρακτήρα της γραμμής
+          </li>
+          <li>
+            <kbd>gg</kbd> - μεταβείτε στην πρώτη γραμμή του εγγράφου
+          </li>
+          <li>
+            <kbd>G</kbd> - μεταβείτε στην τελευταία γραμμή του εγγράφου
+          </li>
+          <li>
+            <kbd>5gg</kbd> or <kbd>5G</kbd> - μεταβείτε στη γραμμή 5
+          </li>
+          <li>
+            <kbd>gd</kbd> - μεταβείτε στην τοπική δήλωση
+          </li>
+          <li>
+            <kbd>gD</kbd> - μετάβαση σε παγκόσμια δήλωση
+          </li>
+          <li>
+            <kbd>fx</kbd> - μεταβείτε στην επόμενη εμφάνιση του χαρακτήρα x
+          </li>
+          <li>
+            <kbd>tx</kbd> - μετάβαση στο πριν από την επόμενη εμφάνιση του χαρακτήρα x
+          </li>
+          <li>
+            <kbd>Fx</kbd> - μεταβείτε στην προηγούμενη εμφάνιση του χαρακτήρα x
+          </li>
+          <li>
+            <kbd>Tx</kbd> - μετάβαση σε μετά από προηγούμενη εμφάνιση του χαρακτήρα x
+          </li>
+          <li>
+            <kbd>;</kbd> - επαναλάβετε την προηγούμενη κίνηση f, t, F ή T
+          </li>
+          <li>
+            <kbd>,</kbd> - επαναλάβετε την προηγούμενη κίνηση f, t, F ή T, προς τα πίσω
+          </li>
+          <li>
+            <kbd>}</kbd> - μετάβαση στην επόμενη παράγραφο (ή μεθοδο/μπλοκ, κατά την επεξεργασία του κώδικα)
+          </li>
+          <li>
+            <kbd>{</kbd> - μετάβαση στην προηγούμενη παράγραφο (ή μεθοδο/μπλοκ, κατά την επεξεργασία κώδικα)
+          </li>
+          <li>
+            <kbd>zz</kbd> - τοποθετηση δρομεα στο μέσο της οθόνης
+          </li>
+          <li>
+            <kbd>zt</kbd> - τοποθετήστε τον κέρσορα στο πάνω μέρος της οθόνης
+          </li>
+          <li>
+            <kbd>zb</kbd> - τοποθετήστε τον κέρσορα στο κάτω μέρος της οθόνης
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>e</kbd> - μετακίνηση της οθόνης κάτω μια γραμμή (χωρίς κίνηση του κέρσορα)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>y</kbd> - μετακίνηση της οθόνης επάνω μια γραμμή (χωρίς κίνηση του κέρσορα)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>b</kbd> - μετακίνηση της οθόνης επάνω μια σελίδα (κέρσορας στην τελευταία γραμμή)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>f</kbd> - μετακίνηση της οθόνης κάτω μια σελίδα (κέρσορας στην πρώτη γραμμή)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - μετακίνηση του κέρσορα και της οθόνης κάτω 1/2 της σελίδας
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>u</kbd> - μετακίνηση του κέρσορα και της οθόνης επάνω 1/2 της σελίδας
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong>
+          Προσθέστε ένα πρόθεμα μιας εντολής κίνησης του κέρσορα με έναν αριθμό για να την επαναλάβετε. Για παράδειγμα, το <kbd>4j</kbd> μετακινεί κάτω 4 γραμμές.
+        </div>
+        <h2>Λειτουργία εισαγωγής - εισαγωγή/προσάρτηση κειμένου</h2>
+        <ul>
+          <li>
+            <kbd>i</kbd> - εισάγετε πριν από τον κέρσορα
+          </li>
+          <li>
+            <kbd>I</kbd> - εισάγετε στην αρχή της γραμμής
+          </li>
+          <li>
+            <kbd>a</kbd> - εισαγωγή (προσάρτηση) μετά τον κέρσορα
+          </li>
+          <li>
+            <kbd>A</kbd> - εισάγετε (προσάρτηση) στο τέλος της γραμμής
+          </li>
+          <li>
+            <kbd>o</kbd> - προσάρτηση (άνοιγμα) μιας νέας γραμμής κάτω από την τρέχουσα γραμμή
+          </li>
+          <li>
+            <kbd>O</kbd> - προσάρτηση (άνοιγμα) μιας νέας γραμμής πάνω από την τρέχουσα γραμμή
+          </li>
+          <li>
+            <kbd>ea</kbd> - εισάγετε (παράρτημα) στο τέλος της λέξης
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>h</kbd> - διαγράψτε τον χαρακτήρα πριν από τον κέρσορα κατά τη λειτουργία εισαγωγής
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w</kbd> - διαγράψτε λέξη πριν από τον κέρσορα κατά τη λειτουργία εισαγωγής
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>j</kbd> - προσθέστε μια αλλαγή γραμμής στη θέση του κέρσορα κατά τη λειτουργία εισαγωγής
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>t</kbd> - εσοχή (μετακίνηση δεξιά) γραμμή κατά πλάτος μετατόπισης κατά τη λειτουργία εισαγωγής
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - αφαίρεση εσοχής (μετακίνηση αριστερά) γραμμή κατά πλάτος μετατόπισης κατά τη λειτουργία εισαγωγής
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>n</kbd> - εισαγάγετε (αυτόματη συμπλήρωση) την επόμενη αντιστοίχιση πριν από τον κέρσορα κατά τη λειτουργία εισαγωγής
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>p</kbd> - εισαγωγή (αυτόματη συμπλήρωση) προηγούμενης αντιστοίχισης πριν από τον κέρσορα κατά τη λειτουργία εισαγωγής
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>rx</kbd> - εισάγετε τα περιεχόμενα του καταχωρητή x
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ox</kbd> - εισαχθείτε προσωρινά σε κανονική λειτουργία για να εκδώσετε μία εντολή κανονικής λειτουργίας x.
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - έξοδος από τη λειτουργία εισαγωγής
+          </li>
+        </ul>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>Επεξεργασία</h2>
+        <ul>
+          <li>
+            <kbd>r</kbd> - αντικαταστήστε έναν μεμονωμένο χαρακτήρα.
+          </li>
+          <li>
+            <kbd>R</kbd> - αντικαταστήστε περισσότερους από έναν χαρακτήρες, μέχρι να πατήσετε <kbd>ESC</kbd>.
+          </li>
+          <li>
+            <kbd>J</kbd> - ενώστε τη γραμμή παρακάτω με την τρέχουσα με ένα ενδιάμεσα κενό
+          </li>
+          <li>
+            <kbd>gJ</kbd> - ενώστε τη γραμμή παρακάτω με την τρέχουσα χωρίς ενδιάμεσα κενό
+          </li>
+          <li>
+            <kbd>gwip</kbd> - ανανεωμένη παράγραφος
+          </li>
+          <li>
+            <kbd>g~</kbd> - εναλλαγή χαρακτήρων σε κεφαλαια ή πεζά κατα την κίνηση
+          </li>
+          <li>
+            <kbd>gu</kbd> - αλλαγή σε πεζούς χαρακτήρες κατα την κίνηση
+          </li>
+          <li>
+            <kbd>gU</kbd> - αλλαγή σε κεφαλαίους χαρακτήρες κατα την κίνηση
+          </li>
+          <li>
+            <kbd>cc</kbd> - αλλαξε (αντικατέστησε) ολόκληρη γραμμή
+          </li>
+          <li>
+            <kbd>c$</kbd> or <kbd>C</kbd> - αλλαξε (αντικατέστησε) ως το τέλος της γραμμής
+          </li>
+          <li>
+            <kbd>ciw</kbd> - αλλαξε (αντικατέστησε) ολόκληρη λέξη
+          </li>
+          <li>
+            <kbd>cw</kbd> or <kbd>ce</kbd> - αλλαξε (αντικατέστησε) ως το τελος της λέξης
+          </li>
+          <li>
+            <kbd>s</kbd> - διέγραψε χαρακτήρα και αντικατάστασε το κειμένο (ίδιο με το cl)
+          </li>
+          <li>
+            <kbd>S</kbd> - διέγραψε τη γραμμή και αντικατάστασε το κειμένο (ίδιο με cc)
+          </li>
+          <li>
+            <kbd>xp</kbd> - μετέφερε δύο γραμμάτα (διαγραφή και επικόλληση)
+          </li>
+          <li>
+            <kbd>u</kbd> - αναίρεση
+          </li>
+          <li>
+            <kbd>U</kbd> - επανέφερε (αναίρεση) τελευταίας αλλαγής γραμμής
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>r</kbd> - επανάληψη
+          </li>
+          <li>
+            <kbd>.</kbd> - επανάληψη τελευταιας εντολής
+          </li>
+        </ul>
+        <h2>Επισήμανση κειμένου (οπτική λειτουργία)</h2>
+        <ul>
+          <li>
+            <kbd>v</kbd> - ξεκινήστε την οπτική λειτουργία, σημειώστε γραμμές και κάντε μια εντολή (όπως y-yank)
+          </li>
+          <li>
+            <kbd>V</kbd> - εκκίνηση οπτικής λειτουργίας κατά γραμμή
+          </li>
+          <li>
+            <kbd>o</kbd> - μετακινηθείτε στο άλλο άκρο της σημειωμένης περιοχής
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>v</kbd> - έναρξη λειτουργίας οπτικού μπλοκ
+          </li>
+          <li>
+            <kbd>O</kbd> - μετακινηθείτε σε άλλη γωνία του μπλοκ
+          </li>
+          <li>
+            <kbd>aw</kbd> - σημειώστε μια λέξη
+          </li>
+          <li>
+            <kbd>ab</kbd> - ένα μπλοκ με ()
+          </li>
+          <li>
+            <kbd>aB</kbd> - ένα μπλοκ με {}
+          </li>
+          <li>
+            <kbd>at</kbd> - ένα μπλοκ με ετικέτες &lt;&gt;
+          </li>
+          <li>
+            <kbd>ib</kbd> - εσωτερικό μπλοκ με ()
+          </li>
+          <li>
+            <kbd>iB</kbd> - εσωτερικό μπλοκ με {}
+          </li>
+          <li>
+            <kbd>it</kbd> - εσωτερικό μπλοκ με ετικέτες &lt;&gt;
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - έξοδος από την οπτική λειτουργία
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Αντί για <kbd>b</kbd> ή <kbd>B</kbd> μπορείτε επίσης να χρησιμοποιήσετε <kbd>(</kbd> ή <kbd>{</kbd> αντίστοιχα.
+        </div>
+        <h2>Οπτικές εντολές</h2>
+        <ul>
+          <li>
+            <kbd>&#62;</kbd> - μετατόπιση κειμένου δεξιά
+          </li>
+          <li>
+            <kbd>&#60;</kbd> - μετατόπιση κειμένου left
+          </li>
+          <li>
+            <kbd>y</kbd> - yank (αντίγραφή) σημειωμένο κείμενο
+          </li>
+          <li>
+            <kbd>d</kbd> - διαγράψτε το επισημασμένο κείμενο
+          </li>
+          <li>
+            <kbd>~</kbd> - αλλαγή κεφαλαίων/πεζών
+          </li>
+          <li>
+            <kbd>u</kbd> - αλλάξτε το επισημασμένο κείμενο σε πεζά
+          </li>
+          <li>
+            <kbd>U</kbd> - αλλάξτε το επισημασμένο κείμενο σε κεφαλαία
+          </li>
+        </ul>
+        <h2>Καταχωρητές</h2>
+        <ul>
+          <li>
+            <kbd>:reg[isters]</kbd> - εμφανίσε το περιεχόμενο των καταχωρητών
+          </li>
+          <li>
+            <kbd>"xy</kbd> - αντιγραφή στον καταχωρητή x
+          </li>
+          <li>
+            <kbd>"xp</kbd> - επικόλληση περιεχομένου του καταχωρητή x
+          </li>
+          <li>
+            <kbd>"+y</kbd> - αντιγραφή στον καταχωρητή του πρόχειρου του λειτουργικού συστήματος
+          </li>
+          <li>
+            <kbd>"+p</kbd> - επικόλληση από τον καταχωρητή του πρόχειρου του λειτουργικού συστήματος
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Οι καταχωρητές αποθηκεύονται στο ~/.viminfo και θα φορτωθούν ξανά στην επόμενη επανεκκίνηση του vim.
+        </div>
+        <div class="well">
+          <strong>Tip</strong> Ειδικοί καταχωρητές:
+          <p>
+            &emsp;<kbd>0</kbd> - τελευταία αντιγραφή<br/>
+            &emsp;<kbd>&quot;</kbd> - ανώνυμοι καταχωρητές, τελευταίοι διαγραφή ή αντιγραφή<br/>
+            &emsp;<kbd>%</kbd> - τρέχον όνομα αρχείου<br/>
+            &emsp;<kbd>#</kbd> - εναλλακτικό όνομα αρχείου<br/>
+            &emsp;<kbd>*</kbd> - περιεχόμενα προχείρου (κύριο X11)<br/>
+            &emsp;<kbd>+</kbd> - περιεχόμενα προχείρου (πρόχειρο X11)<br/>
+            &emsp;<kbd>/</kbd> - τελευταίο μοτίβο αναζήτησης<br/>
+            &emsp;<kbd>:</kbd> - τελευταία γραμμή εντολών<br/>
+            &emsp;<kbd>.</kbd> - κείμενο που εισήχθη τελευταία<br/>
+            &emsp;<kbd>-</kbd> - τελευταία μικρή (λιγότερη από μια γραμμή) διαγραφή<br/>
+            &emsp;<kbd>=</kbd> - καταχωρητής εκφράσεων<br/>
+            &emsp;<kbd>_</kbd> - καταχωρητής μαύρη τρύπα<br/>
+          </p>
+        </div>
+        <h2>Σημεία και θέσεις</h2>
+        <ul>
+          <li>
+            <kbd>:marks</kbd> - λίστα σημείων
+          </li>
+          <li>
+            <kbd>ma</kbd> - ορίστε την τρέχουσα θέση για το σήμα Α
+          </li>
+          <li>
+            <kbd>`a</kbd> - μετάβαση στη θέση του σημείου Α
+          </li>
+          <li>
+            <kbd>y`a</kbd> - αντιγραφή κειμένου στη θέση του σημείου Α
+          </li>
+          <li>
+            <kbd>`0</kbd> - μεταβείτε στη θέση από την οποία είχε βγει προηγουμένως ο Vim
+          </li>
+          <li>
+            <kbd>`"</kbd> - μεταβείτε στη θέση κατά την τελευταία επεξεργασία αυτού του αρχείου
+          </li>
+          <li>
+            <kbd>`.</kbd> - μεταβείτε στη θέση της τελευταίας αλλαγής σε αυτό το αρχείο
+          </li>
+          <li>
+            <kbd>``</kbd> - πηγαίνετε στη θέση πριν από το τελευταίο άλμα
+          </li>
+          <li>
+            <kbd>:ju[mps]</kbd> - λίστα με άλματα
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>i</kbd> - μεταβείτε σε νεότερη θέση στη λίστα μετάβασης
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>o</kbd> - μεταβείτε σε παλαιότερη θέση στη λίστα άλματος
+          </li>
+          <li>
+            <kbd>:changes</kbd> - λίστα αλλαγών
+          </li>
+          <li>
+            <kbd>g,</kbd> - μεταβείτε σε νεότερη θέση στη λίστα αλλαγών
+          </li>
+          <li>
+            <kbd>g;</kbd> - μεταβείτε σε παλαιότερη θέση στη λίστα αλλαγών
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>]</kbd> - μεταβείτε στην ετικέτα κάτω από τον κέρσορα
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Για να μεταβείτε σε ένα σημάδι, μπορείτε είτε να χρησιμοποιήσετε ένα backtick (<kbd>`</kbd>) ή μια απόστροφο (<kbd>'</kbd>). Η χρήση απόστροφου μεταβαίνει στην αρχή (στο πρώτο μη κενό) της γραμμής που κρατά το σημάδι.
+        </div>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>Μακροεντολές</h2>
+        <ul>
+          <li>
+            <kbd>qa</kbd> - εγγραφή μακροεντολής a
+          </li>
+          <li>
+            <kbd>q</kbd> - διακοπή εγγραφής μακροεντολής
+          </li>
+          <li>
+            <kbd>@a</kbd> - εκτέλση μακροεντολής a
+          </li>
+          <li>
+            <kbd>@@</kbd> - επανεκτέλεση της τελευταίας μακροεντολής
+          </li>
+        </ul>
+        <h2>Αποκοπή και επικόλληση</h2>
+        <ul>
+          <li>
+            <kbd>yy</kbd> - yank (αντιγραφή) μιας γραμμής
+          </li>
+          <li>
+            <kbd>2yy</kbd> - yank (αντιγραφή) 2 γραμμών
+          </li>
+          <li>
+            <kbd>yw</kbd> - yank (αντιγραφή) τους χαρακτήρες της λέξης από τη θέση του κέρσορα μέχρι την αρχή της επόμενης λέξης
+          </li>
+          <li>
+            <kbd>yiw</kbd> - yank (αντιγραφή) λέξη κάτω κάτω από τον κέρσορα
+          </li>
+          <li>
+            <kbd>yaw</kbd> - yank (αντιγραφή) λέξη κάτω κάτω από τον κέρσορα και το διάστημα μετά ή πριν από αυτήν
+          </li>
+          <li>
+            <kbd>y$</kbd> or <kbd>Y</kbd> - yank (αντιγραφή) στο τέλος της γραμμής
+          </li>
+          <li>
+            <kbd>p</kbd> - τοποθέτηση (επικόλληση) το πρόχειρο μετά τον κέρσορα
+          </li>
+          <li>
+            <kbd>P</kbd> - τοποθέτηση (επικόλληση) πριν τον κέρσορα
+          </li>
+          <li>
+            <kbd>gp</kbd> - τοποθέτηση (επικόλληση) το πρόχειρο μετά τον κέρσορα και μετακίνησε τον κέρσορα μετά το νέο κείμενο
+          </li>
+          <li>
+            <kbd>gP</kbd> - τοποθέτηση (επικόλληση) πριν τον κέρσορα και μετακίνησε τον κέρσορα μετά το νέο κείμενο
+          </li>
+          <li>
+            <kbd>dd</kbd> - διαγραφή (αποκοπή) μιας γραμμής
+          </li>
+          <li>
+            <kbd>2dd</kbd> - διαγραφή (αποκοπή) 2 γραμμών
+          </li>
+          <li>
+            <kbd>dw</kbd> - διαγραφή (αποκοπή) των χαρακτήρων της λέξης από τη θέση του κέρσορα στην αρχή της επόμενης λέξης
+          </li>
+          <li>
+            <kbd>diw</kbd> - διαγραφή (αποκοπή) της λέξης κάτω από τον κέρσορα
+          </li>
+          <li>
+            <kbd>daw</kbd> - διαγραφή (αποκοπή) της λέξης κάτω απο τον κέρσορα και του κενου πριν ή μετά από αυτόν
+          </li>
+          <li>
+            <kbd>:3,5d</kbd> - διαγραφή γραμμών από το 3 ως το 5
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Μπορείτε επίσης να χρησιμοποιήσετε τους ακόλουθους χαρακτήρες για να καθορίσετε το εύρος: <br>
+          e.g. <br>
+          <p>
+            <kbd>:.,$d</kbd> - Από την τρέχουσα γραμμή μέχρι το τέλος του αρχείου <br>
+            <kbd>:.,1d</kbd> - Από την τρέχουσα γραμμή μέχρι την αρχή του αρχείου <br>
+            <kbd>:10,1d</kbd> - From the 10th line to the beginning of the file <br>
+          </p>
+        </div>
+        <ul>
+          <li>
+            <kbd>:g/{pattern}/d</kbd> - διαγραφή όλων των γραμμών που εμπεριέχουν ένα μοτίβο
+          </li>
+          <li>
+            <kbd>:g!/{pattern}/d</kbd> - διαγραφή όλων των γραμμών που δεν εμπεριέχουν ενα μοτίβο
+          </li>
+          <li>
+            <kbd>d$</kbd> or <kbd>D</kbd> - διαγραφή (αποκοπή) ως το τέλος της γραμμής
+          </li>
+          <li>
+            <kbd>x</kbd> - διαγραφή (αποκοπή) χαρακτήρα
+          </li>
+        </ul>
+        <h2>Εσοχή κειμένου</h2>
+        <ul>
+          <li>
+            <kbd>&#62;&#62;</kbd> - εσοχή (μετακίνηση δεξιά) γραμμής βάσει του shiftwidth
+          </li>
+          <li>
+            <kbd>&#60;&#60;</kbd> - εξοχή (μετακίνηση αριστερά) γραμμής βάσει του shiftwidth
+          </li>
+          <li>
+            <kbd>&#62;%</kbd> - εσοχή ενός μπλοκ με () ή {} (κέρσορας σε αγκύλη)
+          </li>
+          <li>
+            <kbd>&#60;%</kbd> - εξοχή ενός μπλοκ με () ή {} (κέρσορας σε αγκύλη)
+          </li>
+          <li>
+            <kbd>&#62;ib</kbd> - εσοχή εσωτερικού μπλοκ με ()
+          </li>
+          <li>
+            <kbd>&#62;at</kbd> - εσοχή ενός μπλοκ με ετικέτες &lt;&gt;
+          </li>
+          <li>
+            <kbd>3==</kbd> - εκ νέου εσοχή 3 γραμμές
+          </li>
+          <li>
+            <kbd>=%</kbd> - εκ νέου εσοχή ενός μπλοκ με () ή {} (κέρσορας σε αγκύλη)
+          </li>
+          <li>
+            <kbd>=iB</kbd> - εκ νέου εσοχή εσωτερικού μπλοκ με {}
+          </li>
+          <li>
+            <kbd>gg=G</kbd> - εκ νέου εσοχή όλοκληρου αρχείου
+          </li>
+          <li>
+            <kbd>]p</kbd> - επικολλήστε και προσαρμόστε την εσοχή στην τρέχουσα γραμμή
+          </li>
+        </ul>
+        <h2>Εξόδος</h2>
+        <ul>
+          <li>
+            <kbd>:w</kbd> - γράψτε (αποθηκεύστε) το αρχείο, αλλά μην πραγματοποιήσετε έξοδο
+          </li>
+          <li>
+            <kbd>:w !sudo tee %</kbd> - γράψτε το τρέχον αρχείο χρησιμοποιώντας sudo
+          </li>
+          <li>
+            <kbd>:wq</kbd> or <kbd>:x</kbd> or <kbd>ZZ</kbd> - γράψτε (αποθήκευση) και τερματισμός
+          </li>
+          <li>
+            <kbd>:q</kbd> - τερματισμός (αποτυχία εάν υπάρχουν μη αποθηκευμένες αλλαγές)
+          </li>
+          <li>
+            <kbd>:q!</kbd> or <kbd>ZQ</kbd> - τερματισμός και απόρριψη μη αποθηκευμένων αλλαγών
+          </li>
+          <li>
+            <kbd>:wqa</kbd> - γράψτε (αποθήκευση) και τερματίστε όλες τις καρτέλες
+          </li>
+        </ul>
+        <h2>Αναζήτηση και αντικατάσταση</h2>
+        <ul>
+          <li>
+            <kbd>/pattern</kbd> - Αναζήτηση με μοτίβο
+          </li>
+          <li>
+            <kbd>?pattern</kbd> - Αντίστροφη αναζήτηση με μοτίβο
+          </li>
+          <li>
+            <kbd>\vpattern</kbd> - «μαγικό» μοτίβο: οι μη αλφαριθμητικοί χαρακτήρες ερμηνεύονται ως ειδικά σύμβολα regex (δεν απαιτείται διαφυγή)
+          </li>
+          <li>
+            <kbd>n</kbd> - επαναλάβετε την αναζήτηση προς την ίδια κατεύθυνση
+          </li>
+          <li>
+            <kbd>N</kbd> - επαναλάβετε την αναζήτηση προς την αντίθετη κατεύθυνση
+          </li>
+          <li>
+            <kbd>:%s/old/new/g</kbd> -
+            αντικαταστήστε όλα τα παλιά με νέα σε όλο το αρχείο
+          </li>
+          <li>
+            <kbd>:%s/old/new/gc</kbd> -
+            αντικαταστήστε όλα τα παλιά με νέα σε όλο το αρχείο με επιβεβαιώσεις
+          </li>
+          <li>
+            <kbd>:noh[lsearch]</kbd> - αφαιρέστε την επισήμανση των αντιστοιχίσεων αναζήτησης
+          </li>
+        </ul>
+        <h2>Αναζήτηση σε πολλά αρχεία</h2>
+        <ul>
+          <li>
+            <kbd>:vim[grep] /pattern/ {`{file}`}</kbd> -
+            αναζήτηση με μοτίβο σε πολλά αρχεία
+          </li>
+        </ul>
+        <div class="well">
+          e.g.
+          <kbd>:vim[grep] /foo/ **/*</kbd>
+        </div>
+        <ul>
+          <li>
+            <kbd>:cn[ext]</kbd> - μετάβαση στον επόμενο match
+          </li>
+          <li>
+            <kbd>:cp[revious]</kbd> - μετάβαση στο προηγούμενο match
+          </li>
+          <li>
+            <kbd>:cope[n]</kbd> - ανοίξτε ένα παράθυρο το οποίο εμπεριέχει μια λίστα με matches
+          </li>
+          <li>
+            <kbd>:ccl[ose]</kbd> - κλείστε το παράθυρο quickfix
+          </li>
+        </ul>
+        <h2>Καρτέλες</h2>
+        <ul>
+          <li>
+            <kbd>:tabnew</kbd> or <kbd>:tabnew {page.words.file}</kbd> -
+            ανοίξτε ένα αρχείο σε νέα καρτέλα
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wT</kbd> - μετακινήστε το τρέχον παράθυρο διαχωρισμού στη δική του καρτέλα
+          </li>
+          <li>
+            <kbd>gt</kbd> or <kbd>:tabn[ext]</kbd> - μεταβείτε στην επόμενη καρτέλα
+          </li>
+          <li>
+            <kbd>gT</kbd> or <kbd>:tabp[revious]</kbd> - μεταβείτε στην προηγούμενη καρτέλα
+          </li>
+          <li>
+            <kbd>#gt</kbd> - μετακίνηση στον αριθμό καρτέλας #
+          </li>
+          <li>
+            <kbd>:tabm[ove] #</kbd> - μετακινήστε την τρέχουσα καρτέλα στην #η θέση (ξεκινόντας από το 0)
+          </li>
+          <li>
+            <kbd>:tabc[lose]</kbd> - κλείστε την τρέχουσα καρτέλα και όλα τα παράθυρά της
+          </li>
+          <li>
+            <kbd>:tabo[nly]</kbd> - κλείστε όλες τις καρτέλες εκτός από την τρέχουσα
+          </li>
+          <li>
+            <kbd>:tabdo</kbd> command - εκτελέστε την <code>εντολή</code> σε όλες τις καρτέλες (π.χ. <code>:tabdo q</code> - κλείνει όλες τις ανοιχτές καρτέλες)
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-block">
+      <div class="grid-lg-1-2">
+        <h2>Εργασία με πολλά αρχεία</h2>
+        <ul>
+          <li>
+            <kbd>:e[dit] αρχείο</kbd> - επεξεργαστείτε ένα αρχείο σε ένα νέο buffer
+          </li>
+          <li>
+            <kbd>:bn[ext]</kbd> -
+            μεταβείτε στο επόμενο buffer
+          </li>
+          <li>
+            <kbd>:bp[revious]</kbd> -
+            μεταβείτε στο προηγούμενο buffer
+          </li>
+          <li>
+            <kbd>:bd[elete]</kbd> - διαγραφή buffer (κλείσιμο αρχείου)
+          </li>
+          <li>
+            <kbd>:b[uffer]#</kbd> - μεταβείτε σε ένα buffer με το δείκτη #
+          </li>
+          <li>
+            <kbd>:b[uffer] file</kbd> - μεταβείτε σε ένα buffer ανά αρχείο
+          </li>
+          <li>
+            <kbd>:ls</kbd> or <kbd>:buffers</kbd> - λίστα όλων των ανοιχτών buffer
+          </li>
+          <li>
+            <kbd>:sp[lit] αρχείο</kbd> - ανοίξτε ένα αρχείο σε νέο buffer σε διαχωρισμένο το παράθυρο
+          </li>
+          <li>
+            <kbd>:vs[plit] αρχείο</kbd> - ανοίξτε ένα αρχείο σε ένα νέο buffer σε κάθετα διαχωρισμένο παράθυρο
+          </li>
+          <li>
+            <kbd>:vert[ical] ba[ll]</kbd> - επεξεργαστείτε όλα τα buffer ως κατακόρυφα παράθυρα
+          </li>
+          <li>
+            <kbd>:tab ba[ll]</kbd> - επεξεργαστείτε όλα τα buffer ως καρτέλες
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ws</kbd> - διαχωρίστε το παράθυρο
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wv</kbd> - διαχωρίστε το παράθυρο κάθετα
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ww</kbd> - εναλλαγή παραθύρων
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wq</kbd> - τερματισμός παραθύρου
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wx</kbd> - αντάλλαξε το τρέχον παράθυρο με το επόμενο
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w=</kbd> - κάντε όλα τα παράθυρα να έχουν το ιδιο ύψος και πλάτος
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wh</kbd> - μετακίνηση κέρσορα στα παράθυρο αριστερά (κάθετος διαχωρισμός)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wl</kbd> - μετακίνηση κέρσορα στο παράθυρο στα δεξία (κάθετος διαχωρισμός)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wj</kbd> - μετακίνηση κέρσορα στο παράθυρο κάτω (οριζόντιος διαχωρισμός)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wk</kbd> - μετακίνηση κέρσορα στο παράθυρο πάνω (οριζόντιος διαχωρισμός)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wH</kbd> - κάντε το τρέχον παράθυρο σε πλήρες ύψος στο αριστερό άκρο (αριστερό κάθετο παράθυρο)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wL</kbd> - κάντε το τρέχον παράθυρο σε πλήρες ύψος στα δεξιά (δεξιό κάθετο παράθυρο)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wJ</kbd> - κάντε το τρέχον παράθυρο πλήρους πλάτους στο κάτω μέρος (κάτω οριζόντιο παράθυρο)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wK</kbd> - κάντε το τρέχον παράθυρο σε πλήρες πλάτος στο επάνω μέρος (το επάνω οριζόντιο παράθυρο)
+          </li>
+        </ul>
+        </ul>
+        </ul>
+        </ul>
+      </div>
+      <div class="grid-lg-1-2">
+        <h2>Διαφορά</h2>
+        <ul>
+          <li>
+            <kbd>zf</kbd> - ορίστε χειροκίνητα μια πτυχή επάνω στην κίνηση
+          </li>
+          <li>
+            <kbd>zd</kbd> - διαγράψτε μια πτυχή κάτω από τον κέρσορα
+          </li>
+          <li>
+            <kbd>za</kbd> - εναλλαγή πτυχής κάτω από τον κέρσορα
+          </li>
+          <li>
+            <kbd>zo</kbd> - ανοίξτε την πτυχή κάτω από τον κέρσορα
+          </li>
+          <li>
+            <kbd>zc</kbd> - κλείστε την πτυχή κάτω από τον κέρσορα
+          </li>
+          <li>
+            <kbd>zr</kbd> - άνοιξε όλες τις πτυχές κατά ένα επίπεδο
+          </li>
+          <li>
+            <kbd>zm</kbd> - διπλώστε περισσότερο (κλείστε) όλες τις πτυχές κατά ένα επίπεδο
+          </li>
+          <li>
+            <kbd>zi</kbd> - εναλλαγή της λειτουργίας αναδίπλωσης
+          </li>
+          <li>
+            <kbd>]c</kbd> - μεταβείτε στην αρχή της επόμενης αλλαγής
+          </li>
+          <li>
+            <kbd>[c</kbd> - μετάβαση στην αρχή της προηγούμενης αλλαγής
+          </li>
+          <li>
+            <kbd>do</kbd> or <kbd>:diffg[et]</kbd> - λάβετε (πάρτε) τη διαφορά (από άλλο buffer)
+          </li>
+          <li>
+            <kbd>dp</kbd> or <kbd>:diffpu[t]</kbd> - τοποθετήστε τη διαφορά (σε άλλο buffer)
+          </li>
+          <li>
+            <kbd>:diffthis</kbd> - κάντε το τρέχον παράθυρο μέρος της διαφοράς
+          </li>
+          <li>
+            <kbd>:dif[fupdate]</kbd> - ενημέρωση διαφορών
+          </li>
+          <li>
+            <kbd>:diffo[ff]</kbd> - απενεργοποιήστε τη λειτουργία διαφοράς για το τρέχον παράθυρο
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Οι εντολές για αναδίπλωση (π.χ. <kbd>za</kbd>) λειτουργούν σε ένα επίπεδο. Για να λειτουργήσετε σε όλα τα επίπεδα, χρησιμοποιήστε κεφαλαία γράμματα (π.χ. <kbd>zA</kbd>).
+        </div>
+        <div class="well">
+          <strong>Tip</strong> Για να δείτε τις διαφορές των αρχείων, μπορείτε να ξεκινήσετε απευθείας το Vim σε λειτουργία diff εκτελώντας το <kbd>vimdiff</kbd> σε ένα τερματικό. Κάποιος μπορεί να το ορίσει ακόμη και ως <kbd>git difftool</kbd>.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+      <div>
+        <div id="footer" class="grid-block">
+          <div class="box">
+            <div class="box-header">
+              <h2>Additional Resources</h2>
+            </div>
+            <div class="box-body">
+              <div class="grid-block">
+                <div class="grid-lg-1-2">
+                  <h3 id="languages">Languages</h3>
+                  <ul>
+                    <li>
+                      <a href="/lang/ar" lang="ar">العربية</a>
+                    </li>
+                    <li>
+                      <a href="/lang/bn" lang="bn">বাংলা</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ca" lang="ca">Català</a>
+                    </li>
+                    <li>
+                      <a href="/lang/cs" lang="cs">Čeština</a>
+                    </li>
+                    <li>
+                      <a href="/lang/da_DK" lang="da">Dansk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/de_de" lang="de">Deutsch</a>
+                    </li>
+                    <li>
+                      <a href="/lang/el_gr" lang="el">Ελληνικά</a>
+                    </li>
+                    <li>
+                      <a href="/lang/en_us" lang="en">English</a>
+                    </li>
+                    <li>
+                      <a href="/lang/eo" lang="eo">Esperanto</a>
+                    </li>
+                    <li>
+                      <a href="/lang/es_es" lang="es">Español</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fa_ir" lang="fa">Persian</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fi" lang="fi">Suomi</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fr_fr" lang="fr">Français</a>
+                    </li>
+                    <li>
+                      <a href="/lang/he" lang="he">עברית</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hr" lang="hr">Hrvatski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hu_hu" lang="hu">Magyar</a>
+                    </li>
+                    <li>
+                      <a href="/lang/id" lang="id">Bahasa Indonesia</a>
+                    </li>
+                    <li>
+                      <a href="/lang/it" lang="it">Italiano</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ja" lang="ja">日本語</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ko" lang="ko">한국어</a>
+                    </li>
+                    <li>
+                      <a href="/lang/my" lang="my">မြန်မာ</a>
+                    </li>
+                    <li>
+                      <a href="/lang/nl_nl" lang="nl">Nederlands</a>
+                    </li>
+                    <li>
+                      <a href="/lang/no_nb" lang="no">Norsk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pl_pl" lang="pl">Polski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_br" lang="pt">Português - Brasil</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_pt" lang="pt">Português - Portugal</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ro" lang="ro">Romana</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ru" lang="ru">Русский</a>
+                    </li>
+                    <li>
+                      <a href="/lang/si_lk" lang="si">සිංහල</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sk" lang="sk">Slovenčina</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sv" lang="sv">Svenska</a>
+                    </li>
+                    <li>
+                      <a href="/lang/th" lang="th">ภาษาไทย</a>
+                    </li>
+                    <li>
+                      <a href="/lang/tr" lang="tr">Türkçe</a>
+                    </li>
+                    <li>
+                      <a href="/lang/uk" lang="uk">Українська</a>
+                    </li>
+                    <li>
+                      <a href="/lang/vi_vn" lang="vi">Tiếng Việt</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_cn" lang="zh">简体中文</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_tw" lang="zh">中文 (台灣)</a>
+                    </li>
+                  </ul>                </div>
+                <div class="grid-lg-1-2">
+                  <h3>About the vim cheat sheet</h3>
+                  <p>
+                    This project aims to be one of the most accessible vim guides available. We
+                    made sure to support mobile, desktop, and other
+                    <a href="#languages" aria-label="Jump to languages section">languages</a>.
+                  </p>
+                  <p>
+                    <a target="_blank" href="https://github.com/sponsors/rtorr" aria-label="Sponsor this project on GitHub">❤️ Please consider sponsoring this
+                      project ❤️</a>!
+                  </p>
+                  <p>
+                    You can read about how to contribute (and help improve) by viewing our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/README.md" target="_blank"
+                      rel="noopener noreferrer" aria-label="Read the README on GitHub">
+                      README
+                    </a>
+                    . There you can see how to set up this project, or how to contribute a new
+                    language. Here is a big thank you to our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/graphs/contributors" target="_blank"
+                      rel="noopener noreferrer" aria-label="View project contributors on GitHub">
+                      contributors!
+                    </a>
+                  </p>
+                  <p>
+                    This project is licensed under
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/License.txt" target="_blank"
+                      rel="noopener noreferrer" aria-label="View the MIT License for this project">
+                      The MIT License (MIT)
+                    </a>
+                    .
+                  </p>
+                  <h3>Other places to find this document</h3>
+                  <p>
+                    This document was embedded in
+                    <a href="https://duckduckgo.com/?q=vim+cheat+sheet" target="_blank" rel="noopener noreferrer" aria-label="Search for this document on DuckDuckGo">
+                      DuckDuckGo
+                    </a>
+                    .
+                  </p>
+                  <h3>More resources</h3>
+                  <p>
+                    Interactive Vim tutorial:
+                    <a href="https://openvim.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Open Vim for an interactive Vim tutorial">
+                      Open Vim
+                    </a>
+                  </p>
+                  <p>
+                    Vim quick reference from Vim help pages:
+                    <a href="https://vimhelp.org/quickref.txt.html" target="_blank" rel="noopener noreferrer" aria-label="Access Vim quick reference"> 
+                      quickref.txt
+                    </a>
+                  </p>
+                  <p>
+                    List of all Vim ex (<kbd>:</kbd>) commands:
+                    <a href="https://vimhelp.org/index.txt.html#ex-cmd-index" target="_blank" rel="noopener noreferrer" aria-label="View list of all Vim ex commands">
+                      ex-cmd-index
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-block link-to-repo">
+          <p>
+            Checkout the source on
+            <a href="https://github.com/rtorr/vim-cheat-sheet" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+          </p>
+          <p>version: 3.2.0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.CACHE_NAME = "3.2.0";
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/javascripts/sw.js?version=3.2.0');
+      });
+    }
+  </script>
+</body>
+
+</html>

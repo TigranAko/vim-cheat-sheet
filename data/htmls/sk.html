@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="sk">
+
+<head>
+  <meta charSet="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Vim Cheat Sheet</title>
+  <link rel="shortcut icon" href="/images/icons/icon-48x48.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#FA4949" />
+  <meta http-equiv="cache-control" content="max-age=600" />
+  <meta name="description" content="Explore vim.rtorr.com for an extensive Vim cheat sheet, offering clear, concise commands and shortcuts for Vim users. Whether you're a beginner or an experienced developer, find tips and tricks to enhance your coding efficiency in Vim.">
+  <link rel="apple-touch-icon" sizes="48x48" href="/images/icons/icon-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="/images/icons/icon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/images/icons/icon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="256x256" href="/images/icons/icon-256x256.png" />
+  <link rel="apple-touch-icon" sizes="384x384" href="/images/icons/icon-384x384.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="/images/icons/icon-512x512.png" />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <div class="sponsor">
+    <div class="container">
+      <span>
+        <a target="_blank" href="https://www.warp.dev">
+          <div class="sponsor-logo-container">
+            <span>Sponsor</span>
+            <img class="sponsor-logo" src="/images/svg/warp-logo.svg" alt="Warp logo">
+          </div>
+          <div class="sponsor-tagline"><span>A new terminal focused on developer productivity</span></div>
+      </span>
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid-block">
+      <div class="grid-1">
+        <h1>
+          <a class="site-title" href="/">
+            Vim Cheat Sheet
+          </a>
+        </h1>
+      </div>
+    </div>
+    <div class="container">
+      <main><div class="container">
+  <div class="commands-container">
+    <div class="grid-block">
+      <div class="grid-lg-1-3">
+        <h2>Globálne</h2>
+        <ul>
+          <li>
+            <kbd>:h[elp] kľúčové slovo</kbd> - otvorí pomoc pre kľúčové slovo
+          </li>
+          <li>
+            <kbd>:sav[eas] súbor</kbd> - uloží súbor ako
+          </li>
+          <li>
+            <kbd>:clo[se]</kbd> - zatvorí aktuálny panel
+          </li>
+          <li>
+            <kbd>:ter[minal]</kbd> - open a terminal window
+          </li>
+          <li>
+            <kbd>K</kbd> - otvorí manuálovú stránku pre slovo pod kurzorom
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Run <kbd>vimtutor</kbd> in a terminal to learn the first Vim commands.
+        </div>
+        <h2>Presun kurzoru</h2>
+        <ul>
+          <li>
+            <kbd>h</kbd> - presunie kurzor doľava
+          </li>
+          <li>
+            <kbd>j</kbd> - presunie kurzor nadol
+          </li>
+          <li>
+            <kbd>k</kbd> - presunie kurzor hore
+          </li>
+          <li>
+            <kbd>l</kbd> - presunie kurzor doprava
+          </li>
+          <li>
+            <kbd>gj</kbd> - move cursor down (multi-line text)
+          </li>
+          <li>
+            <kbd>gk</kbd> - move cursor up (multi-line text)
+          </li>
+          <li>
+            <kbd>H</kbd> - presunie na hornú časť obrazovky
+          </li>
+          <li>
+            <kbd>M</kbd> - presunie do stredu obrazovky
+          </li>
+          <li>
+            <kbd>L</kbd> - presunie na spodok obrazovky
+          </li>
+          <li>
+            <kbd>w</kbd> - skočí na začiatok slova
+          </li>
+          <li>
+            <kbd>W</kbd> - skočí na začiatok slova (slová môžu obsahovať interpunkciu)
+          </li>
+          <li>
+            <kbd>e</kbd> - skočí na koniec slova
+          </li>
+          <li>
+            <kbd>E</kbd> - skočí na koniec slova (slová môžu obsahovať interpunkciu)
+          </li>
+          <li>
+            <kbd>b</kbd> - skočí späť na začiatok slova
+          </li>
+          <li>
+            <kbd>B</kbd> - skočí späť na začiatok slova (slová môžu obsahovať interpunkciu)
+          </li>
+          <li>
+            <kbd>ge</kbd> - jump backwards to the end of a word
+          </li>
+          <li>
+            <kbd>gE</kbd> - jump backwards to the end of a word (words can contain punctuation)
+          </li>
+          <li>
+            <kbd>%</kbd> - presunie sa na zodpovedajúci znak (predvolené podporované páry: '()', '{}', '[]' - použi <code>:h matchpairs</code> pre viac informácií)
+          </li>
+          <li>
+            <kbd>0</kbd> - skočí na začiatok riadku
+          </li>
+          <li>
+            <kbd>^</kbd> - skočí na prvý znak riadku, ktorý nie je prázdny
+          </li>
+          <li>
+            <kbd>$</kbd> - skočí na koniec riadku
+          </li>
+          <li>
+            <kbd>g_</kbd> - skočí na posledný znak riadku, ktorý nie je prázdny
+          </li>
+          <li>
+            <kbd>gg</kbd> - prejde na prvý riadok dokumentu
+          </li>
+          <li>
+            <kbd>G</kbd> - prejde na posledný riadok dokumentu
+          </li>
+          <li>
+            <kbd>5gg</kbd> or <kbd>5G</kbd> - prejde na riadok 5
+          </li>
+          <li>
+            <kbd>gd</kbd> - move to local declaration
+          </li>
+          <li>
+            <kbd>gD</kbd> - move to global declaration
+          </li>
+          <li>
+            <kbd>fx</kbd> - skočí na ďalší výskyt znaku x
+          </li>
+          <li>
+            <kbd>tx</kbd> - skočí jeden znak pred ďalší výskyt znaku x
+          </li>
+          <li>
+            <kbd>Fx</kbd> - skočí na predchádzajúci výskyt znaku x
+          </li>
+          <li>
+            <kbd>Tx</kbd> - skočí jeden znak pred predchádzajúci výskyt znaku x
+          </li>
+          <li>
+            <kbd>;</kbd> - zopakujte predchádzajúci pohyb f, t, F alebo T
+          </li>
+          <li>
+            <kbd>,</kbd> - zopakujte predchádzajúci pohyb f, t, F alebo T, dozadu
+          </li>
+          <li>
+            <kbd>}</kbd> - skočí na ďalší odsek (alebo funkciu/blok pri úprave kódu)
+          </li>
+          <li>
+            <kbd>{</kbd> - skočí na predchádzajúci odsek (alebo funkciu/blok pri úprave kódu)
+          </li>
+          <li>
+            <kbd>zz</kbd> - centruje kurzor na stred obrazovky
+          </li>
+          <li>
+            <kbd>zt</kbd> - position cursor on top of the screen
+          </li>
+          <li>
+            <kbd>zb</kbd> - position cursor on bottom of the screen
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>e</kbd> - presunie obrazovku dole o jeden riadok (bez posunu kurzoru)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>y</kbd> - presunie obrazovku hore o jeden riadok (bez posunu kurzoru)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>b</kbd> - presunie späť jednu celú obrazovku
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>f</kbd> - presunie dopredu jednu celú obrazovku
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - presunie dopredu o 1/2 obrazovky
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>u</kbd> - presunie späť o 1/2 obrazovky
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong>
+          Vlož číslo pred príkaz na jeho zopakovanie. Napríklad, <kbd>4j</kbd> skočí 4 riadky nadol.
+        </div>
+        <h2>Režim vkladania - vkladanie/pridanie textu</h2>
+        <ul>
+          <li>
+            <kbd>i</kbd> - vlož pred kurzor
+          </li>
+          <li>
+            <kbd>I</kbd> - vlož na začiatok riadku
+          </li>
+          <li>
+            <kbd>a</kbd> - vlož (pripoj) za kurzor
+          </li>
+          <li>
+            <kbd>A</kbd> - vlož (pripoj) na koniec riadku
+          </li>
+          <li>
+            <kbd>o</kbd> - pripoj (vytvor) nový riadok pod kurzorom
+          </li>
+          <li>
+            <kbd>O</kbd> - pripoj (vytvor) nový riadok nad kurzorom
+          </li>
+          <li>
+            <kbd>ea</kbd> - vlož (pripoj) na koniec slova
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>h</kbd> - delete the character before the cursor during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w</kbd> - delete word before the cursor during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>j</kbd> - begin new line during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>t</kbd> - indent (move right) line one shiftwidth during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - de-indent (move left) line one shiftwidth during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>n</kbd> - insert (auto-complete) next match before the cursor during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>p</kbd> - insert (auto-complete) previous match before the cursor during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>rx</kbd> - insert the contents of register x
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ox</kbd> - Temporarily enter normal mode to issue one normal-mode command x.
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - ukonči režim vkladania
+          </li>
+        </ul>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>Editovanie</h2>
+        <ul>
+          <li>
+            <kbd>r</kbd> - nahradí jeden znak
+          </li>
+          <li>
+            <kbd>R</kbd> - replace more than one character, until <kbd>ESC</kbd> is pressed.
+          </li>
+          <li>
+            <kbd>J</kbd> - pripojí riadok nižšie k aktuálnemu s použitím medzery
+          </li>
+          <li>
+            <kbd>gJ</kbd> - pripojí riadok nižšie k aktuálnemu bez použitia medzery
+          </li>
+          <li>
+            <kbd>gwip</kbd> - zarovná paragraf
+          </li>
+          <li>
+            <kbd>g~</kbd> - switch case up to motion
+          </li>
+          <li>
+            <kbd>gu</kbd> - change to lowercase up to motion
+          </li>
+          <li>
+            <kbd>gU</kbd> - change to uppercase up to motion
+          </li>
+          <li>
+            <kbd>cc</kbd> - zmení (nahradí) celý riadok
+          </li>
+          <li>
+            <kbd>c$</kbd> or <kbd>C</kbd> - zmení (nahradí) do konca riadku
+          </li>
+          <li>
+            <kbd>ciw</kbd> - zmení (nahradí) celé slovo
+          </li>
+          <li>
+            <kbd>cw</kbd> or <kbd>ce</kbd> - zmení (nahradí) do konca slova
+          </li>
+          <li>
+            <kbd>s</kbd> - odstráni znak a nahradí textom
+          </li>
+          <li>
+            <kbd>S</kbd> - odstráni riadok a nahradí textom (rovnako ako cc)
+          </li>
+          <li>
+            <kbd>xp</kbd> - prehodí dve písmená (vymazanie a vloženie)
+          </li>
+          <li>
+            <kbd>u</kbd> - krok späť
+          </li>
+          <li>
+            <kbd>U</kbd> - restore (undo) last changed line
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>r</kbd> - vráti krok späť
+          </li>
+          <li>
+            <kbd>.</kbd> - opakuje posledný príkaz
+          </li>
+        </ul>
+        <h2>Označenie textu (vizuálny režim)</h2>
+        <ul>
+          <li>
+            <kbd>v</kbd> - spusti vizuálny režim, označ riadky, potom urob príkaz (napr. y-kopíruj)
+          </li>
+          <li>
+            <kbd>V</kbd> - spusti riadkový vizuálny režim
+          </li>
+          <li>
+            <kbd>o</kbd> - presuň sa na druhý koniec vyznačenej oblasti
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>v</kbd> - spusti blokový vizuálny režim
+          </li>
+          <li>
+            <kbd>O</kbd> - presuň sa na druhý roh bloku
+          </li>
+          <li>
+            <kbd>aw</kbd> - označ slovo
+          </li>
+          <li>
+            <kbd>ab</kbd> - blok s ()
+          </li>
+          <li>
+            <kbd>aB</kbd> - blok s {}
+          </li>
+          <li>
+            <kbd>at</kbd> - a block with &lt;&gt; tags
+          </li>
+          <li>
+            <kbd>ib</kbd> - vnútorný blok s ()
+          </li>
+          <li>
+            <kbd>iB</kbd> - vnútorný blok s {}
+          </li>
+          <li>
+            <kbd>it</kbd> - inner block with &lt;&gt; tags
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - ukonči vizuálny režim
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Instead of <kbd>b</kbd> or <kbd>B</kbd> one can also use <kbd>(</kbd> or <kbd>{</kbd> respectively.
+        </div>
+        <h2>Vizuálne príkazy</h2>
+        <ul>
+          <li>
+            <kbd>&#62;</kbd> - posunie text doprava
+          </li>
+          <li>
+            <kbd>&#60;</kbd> - posunie text doľava
+          </li>
+          <li>
+            <kbd>y</kbd> - vystrihne (skopíruje) označený text
+          </li>
+          <li>
+            <kbd>d</kbd> - zmaže označený text
+          </li>
+          <li>
+            <kbd>~</kbd> - zmení veľkosť textu
+          </li>
+          <li>
+            <kbd>u</kbd> - change marked text to lowercase
+          </li>
+          <li>
+            <kbd>U</kbd> - change marked text to uppercase
+          </li>
+        </ul>
+        <h2>Registre</h2>
+        <ul>
+          <li>
+            <kbd>:reg[isters]</kbd> - zobrazí obsah registra
+          </li>
+          <li>
+            <kbd>"xy</kbd> - skopíruje do registra x
+          </li>
+          <li>
+            <kbd>"xp</kbd> - prilepí obsah registra x
+          </li>
+          <li>
+            <kbd>"+y</kbd> - yank into the system clipboard register
+          </li>
+          <li>
+            <kbd>"+p</kbd> - paste from the system clipboard register
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Registre sa ukladajú do súboru ~/.viminfo a budú načítané znova pri ďalšom reštarte vim.
+        </div>
+        <div class="well">
+          <strong>Tip</strong> Special registers:
+          <p>
+            &emsp;<kbd>0</kbd> - last yank<br/>
+            &emsp;<kbd>&quot;</kbd> - unnamed register, last delete or yank<br/>
+            &emsp;<kbd>%</kbd> - current file name<br/>
+            &emsp;<kbd>#</kbd> - alternate file name<br/>
+            &emsp;<kbd>*</kbd> - clipboard contents (X11 primary)<br/>
+            &emsp;<kbd>+</kbd> - clipboard contents (X11 clipboard)<br/>
+            &emsp;<kbd>/</kbd> - last search pattern<br/>
+            &emsp;<kbd>:</kbd> - last command-line<br/>
+            &emsp;<kbd>.</kbd> - last inserted text<br/>
+            &emsp;<kbd>-</kbd> - last small (less than a line) delete<br/>
+            &emsp;<kbd>=</kbd> - expression register<br/>
+            &emsp;<kbd>_</kbd> - black hole register<br/>
+          </p>
+        </div>
+        <h2>Značky</h2>
+        <ul>
+          <li>
+            <kbd>:marks</kbd> - zoznam značiek
+          </li>
+          <li>
+            <kbd>ma</kbd> - nastaví aktuálnu polohu pre značku A
+          </li>
+          <li>
+            <kbd>`a</kbd> - skočí na polohu značky A
+          </li>
+          <li>
+            <kbd>y`a</kbd> - skopíruje text do polohy značky A
+          </li>
+          <li>
+            <kbd>`0</kbd> - go to the position where Vim was previously exited
+          </li>
+          <li>
+            <kbd>`"</kbd> - go to the position when last editing this file
+          </li>
+          <li>
+            <kbd>`.</kbd> - go to the position of the last change in this file
+          </li>
+          <li>
+            <kbd>``</kbd> - go to the position before the last jump
+          </li>
+          <li>
+            <kbd>:ju[mps]</kbd> - list of jumps
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>i</kbd> - go to newer position in jump list
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>o</kbd> - go to older position in jump list
+          </li>
+          <li>
+            <kbd>:changes</kbd> - list of changes
+          </li>
+          <li>
+            <kbd>g,</kbd> - go to newer position in change list
+          </li>
+          <li>
+            <kbd>g;</kbd> - go to older position in change list
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>]</kbd> - jump to the tag under cursor
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> To jump to a mark you can either use a backtick (<kbd>`</kbd>) or an apostrophe (<kbd>'</kbd>). Using an apostrophe jumps to the beginning (first non-blank) of the line holding the mark.
+        </div>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>Makrá</h2>
+        <ul>
+          <li>
+            <kbd>qa</kbd> - nahraje makro a
+          </li>
+          <li>
+            <kbd>q</kbd> - zastaví nahrávanie makra
+          </li>
+          <li>
+            <kbd>@a</kbd> - spusti makro a
+          </li>
+          <li>
+            <kbd>@@</kbd> - opätovné spustenie posledného spusteného makra
+          </li>
+        </ul>
+        <h2>Vystrihni a prilep</h2>
+        <ul>
+          <li>
+            <kbd>yy</kbd> - skopíruje riadok
+          </li>
+          <li>
+            <kbd>2yy</kbd> - skopíruje 2 riadky
+          </li>
+          <li>
+            <kbd>yw</kbd> - skopíruje znaky slova z polohy kurzora na začiatok ďalšieho slova
+          </li>
+          <li>
+            <kbd>yiw</kbd> - skopíruje slovo pod kurzorom
+          </li>
+          <li>
+            <kbd>yaw</kbd> - skopíruje slovo pod kurzorom a miesto pred alebo za ním
+          </li>
+          <li>
+            <kbd>y$</kbd> or <kbd>Y</kbd> - skopíruje do konca riadku
+          </li>
+          <li>
+            <kbd>p</kbd> - vloží (prilepí) schránku za kurzor
+          </li>
+          <li>
+            <kbd>P</kbd> - vloží (prilepí) schránku pred kurzor
+          </li>
+          <li>
+            <kbd>gp</kbd> - put (paste) the clipboard after cursor and leave cursor after the new text
+          </li>
+          <li>
+            <kbd>gP</kbd> - put (paste) before cursor and leave cursor after the new text
+          </li>
+          <li>
+            <kbd>dd</kbd> - zmaže (vystrihne) riadok
+          </li>
+          <li>
+            <kbd>2dd</kbd> - zmaže (vystrihne) 2 riadky
+          </li>
+          <li>
+            <kbd>dw</kbd> - zmaže (vystrihne) znaky slova z polohy kurzora na začiatok ďalšieho slova
+          </li>
+          <li>
+            <kbd>diw</kbd> - zmaže (vystrihne) slovo pod kurzorom
+          </li>
+          <li>
+            <kbd>daw</kbd> - zmaže (vystrihne) slovo pod kurzorom a miesto pred alebo za ním
+          </li>
+          <li>
+            <kbd>:3,5d</kbd> - delete lines starting from 3 to 5
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> You can also use the following characters to specify the range: <br>
+          e.g. <br>
+          <p>
+            <kbd>:.,$d</kbd> - From the current line to the end of the file <br>
+            <kbd>:.,1d</kbd> - From the current line to the beginning of the file <br>
+            <kbd>:10,1d</kbd> - From the 10th line to the beginning of the file <br>
+          </p>
+        </div>
+        <ul>
+          <li>
+            <kbd>:g/{pattern}/d</kbd> - delete all lines containing pattern
+          </li>
+          <li>
+            <kbd>:g!/{pattern}/d</kbd> - delete all lines not containing pattern
+          </li>
+          <li>
+            <kbd>d$</kbd> or <kbd>D</kbd> - zmaže (vystrihne) do konca riadku
+          </li>
+          <li>
+            <kbd>x</kbd> - zmaže (vystrihne) znak
+          </li>
+        </ul>
+        <h2>Indent text</h2>
+        <ul>
+          <li>
+            <kbd>&#62;&#62;</kbd> - indent (move right) line one shiftwidth
+          </li>
+          <li>
+            <kbd>&#60;&#60;</kbd> - de-indent (move left) line one shiftwidth
+          </li>
+          <li>
+            <kbd>&#62;%</kbd> - indent a block with () or {} (cursor on brace)
+          </li>
+          <li>
+            <kbd>&#60;%</kbd> - de-indent a block with () or {} (cursor on brace)
+          </li>
+          <li>
+            <kbd>&#62;ib</kbd> - indent inner block with ()
+          </li>
+          <li>
+            <kbd>&#62;at</kbd> - indent a block with &lt;&gt; tags
+          </li>
+          <li>
+            <kbd>3==</kbd> - re-indent 3 lines
+          </li>
+          <li>
+            <kbd>=%</kbd> - re-indent a block with () or {} (cursor on brace)
+          </li>
+          <li>
+            <kbd>=iB</kbd> - re-indent inner block with {}
+          </li>
+          <li>
+            <kbd>gg=G</kbd> - re-indent entire buffer
+          </li>
+          <li>
+            <kbd>]p</kbd> - paste and adjust indent to current line
+          </li>
+        </ul>
+        <h2>Ukončenie</h2>
+        <ul>
+          <li>
+            <kbd>:w</kbd> - zapíše (uloží) súbor, ale neukončí
+          </li>
+          <li>
+            <kbd>:w !sudo tee %</kbd> - zapíše aktuálny súbor pomocou sudo
+          </li>
+          <li>
+            <kbd>:wq</kbd> or <kbd>:x</kbd> or <kbd>ZZ</kbd> - zapíše (uloží) a ukončí
+          </li>
+          <li>
+            <kbd>:q</kbd> - ukončí (zlyhá, ak sú neuložené zmeny)
+          </li>
+          <li>
+            <kbd>:q!</kbd> or <kbd>ZQ</kbd> - ukončí a zahodí neuložené zmeny
+          </li>
+          <li>
+            <kbd>:wqa</kbd> - zapíše (uloží) a ukončí všetky karty
+          </li>
+        </ul>
+        <h2>Vyhľadaj a nahraď</h2>
+        <ul>
+          <li>
+            <kbd>/pattern</kbd> - hľadaj vzor
+          </li>
+          <li>
+            <kbd>?pattern</kbd> - hľadaj vzor pozadu
+          </li>
+          <li>
+            <kbd>\vpattern</kbd> - &#x27;very magic&#x27; pattern: nealfanumerické znaky sa interpretujú ako špeciálne symboly regexu (nie je potrebný escape)
+          </li>
+          <li>
+            <kbd>n</kbd> - zopakuje vyhľadávanie rovnakým smerom
+          </li>
+          <li>
+            <kbd>N</kbd> - zopakuje vyhľadávanie opačným smerom
+          </li>
+          <li>
+            <kbd>:%s/old/new/g</kbd> -
+            nahradí všetky &#x27;old&#x27; s &#x27;new&#x27; v celom súbore
+          </li>
+          <li>
+            <kbd>:%s/old/new/gc</kbd> -
+             nahradí všetko &#x27;old&#x27; s &#x27;new&#x27; v celom súbore s potvrdením
+          </li>
+          <li>
+            <kbd>:noh[lsearch]</kbd> - odstráni zvýraznenie vyhľadanej zhody
+          </li>
+        </ul>
+        <h2>Vyhľadávanie vo viacerých súboroch</h2>
+        <ul>
+          <li>
+            <kbd>:vim[grep] /pattern/ {`{file}`}</kbd> -
+            vyhľadávanie vzoru vo viacerých súboroch
+          </li>
+        </ul>
+        <div class="well">
+          e.g.
+          <kbd>:vim[grep] /foo/ **/*</kbd>
+        </div>
+        <ul>
+          <li>
+            <kbd>:cn[ext]</kbd> - skočí na nasledujúcu zhodu
+          </li>
+          <li>
+            <kbd>:cp[revious]</kbd> - skočí na predchodziu zhodu
+          </li>
+          <li>
+            <kbd>:cope[n]</kbd> - otvorí okno obsahujúce zoznam zhôd
+          </li>
+          <li>
+            <kbd>:ccl[ose]</kbd> - close the quickfix window
+          </li>
+        </ul>
+        <h2>Záložky</h2>
+        <ul>
+          <li>
+            <kbd>:tabnew</kbd> or <kbd>:tabnew {page.words.file}</kbd> -
+            otvorí súbor v novej záložke
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wT</kbd> - presunie aktuálne rozdelené okno na vlastnú záložku
+          </li>
+          <li>
+            <kbd>gt</kbd> or <kbd>:tabn[ext]</kbd> - presunie na ďalšiu záložku
+          </li>
+          <li>
+            <kbd>gT</kbd> or <kbd>:tabp[revious]</kbd> - presunie na predchádzajúcu záložku
+          </li>
+          <li>
+            <kbd>#gt</kbd> - prejde na záložku číslo #
+          </li>
+          <li>
+            <kbd>:tabm[ove] #</kbd> - presunie aktuálnu záložku na # polohu (indexovaná od 0)
+          </li>
+          <li>
+            <kbd>:tabc[lose]</kbd> - zatvorí aktuálnu záložku a všetky jej okná
+          </li>
+          <li>
+            <kbd>:tabo[nly]</kbd> - zatvorí všetky záložky okrem aktuálnej
+          </li>
+          <li>
+            <kbd>:tabdo</kbd> command - spusti <code>command</code> na všetkých záložkach (e.g. <code>:tabdo q</code> - zatvorí všetky otvorené záložky)
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-block">
+      <div class="grid-lg-1-2">
+        <h2>Práca s viacerými súbormi</h2>
+        <ul>
+          <li>
+            <kbd>:e[dit] súbor</kbd> - edituje súbor v novom buffri
+          </li>
+          <li>
+            <kbd>:bn[ext]</kbd> -
+            prejde na nasledujúci buffer
+          </li>
+          <li>
+            <kbd>:bp[revious]</kbd> -
+            prejde na predchádzajúci buffer
+          </li>
+          <li>
+            <kbd>:bd[elete]</kbd> - vymaže buffer (zatvorí súbor)
+          </li>
+          <li>
+            <kbd>:b[uffer]#</kbd> - go to a buffer by #
+          </li>
+          <li>
+            <kbd>:b[uffer] file</kbd> - go to a buffer by file
+          </li>
+          <li>
+            <kbd>:ls</kbd> or <kbd>:buffers</kbd> - zoznam všetkých otvorených buffrov
+          </li>
+          <li>
+            <kbd>:sp[lit] súbor</kbd> - otvorí súbor v novom buffri a rozdelí okno
+          </li>
+          <li>
+            <kbd>:vs[plit] súbor</kbd> - otvorí súbor v novom buffri a vertikálne rozdelí okno
+          </li>
+          <li>
+            <kbd>:vert[ical] ba[ll]</kbd> - edit all buffers as vertical windows
+          </li>
+          <li>
+            <kbd>:tab ba[ll]</kbd> - edit all buffers as tabs
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ws</kbd> - rozdelí okno
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wv</kbd> - rozdelí okno vertikálne
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ww</kbd> - prepína medzi oknami
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wq</kbd> - zavrie okno
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wx</kbd> - exchange current window with next one
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w=</kbd> - make all windows equal height &amp; width
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wh</kbd> - presunie kurzor do ľavého okna (vertikálne rozdelenie)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wl</kbd> - presunie kurzor do pravého okna (vertikálne rozdelenie)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wj</kbd> - presunie kurzor do okna pod (horizontálne rozdelenie)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wk</kbd> - presunie kurzor do okna nad (horizontálne rozdelenie)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wH</kbd> - make current window full height at far left (leftmost vertical window)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wL</kbd> - make current window full height at far right (rightmost vertical window)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wJ</kbd> - make current window full width at the very bottom (bottommost horizontal window)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wK</kbd> - make current window full width at the very top (topmost horizontal window)
+          </li>
+        </ul>
+        </ul>
+        </ul>
+        </ul>
+      </div>
+      <div class="grid-lg-1-2">
+        <h2>Diff</h2>
+        <ul>
+          <li>
+            <kbd>zf</kbd> - manually define a fold up to motion
+          </li>
+          <li>
+            <kbd>zd</kbd> - delete fold under the cursor
+          </li>
+          <li>
+            <kbd>za</kbd> - toggle fold under the cursor
+          </li>
+          <li>
+            <kbd>zo</kbd> - open fold under the cursor
+          </li>
+          <li>
+            <kbd>zc</kbd> - close fold under the cursor
+          </li>
+          <li>
+            <kbd>zr</kbd> - reduce (open) all folds by one level
+          </li>
+          <li>
+            <kbd>zm</kbd> - fold more (close) all folds by one level
+          </li>
+          <li>
+            <kbd>zi</kbd> - toggle folding functionality
+          </li>
+          <li>
+            <kbd>]c</kbd> - jump to start of next change
+          </li>
+          <li>
+            <kbd>[c</kbd> - jump to start of previous change
+          </li>
+          <li>
+            <kbd>do</kbd> or <kbd>:diffg[et]</kbd> - obtain (get) difference (from other buffer)
+          </li>
+          <li>
+            <kbd>dp</kbd> or <kbd>:diffpu[t]</kbd> - put difference (to other buffer)
+          </li>
+          <li>
+            <kbd>:diffthis</kbd> - make current window part of diff
+          </li>
+          <li>
+            <kbd>:dif[fupdate]</kbd> - update differences
+          </li>
+          <li>
+            <kbd>:diffo[ff]</kbd> - switch off diff mode for current window
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> The commands for folding (e.g. <kbd>za</kbd>) operate on one level. To operate on all levels, use uppercase letters (e.g. <kbd>zA</kbd>).
+        </div>
+        <div class="well">
+          <strong>Tip</strong> To view the differences of files, one can directly start Vim in diff mode by running <kbd>vimdiff</kbd> in a terminal. One can even set this as <kbd>git difftool</kbd>.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+      <div>
+        <div id="footer" class="grid-block">
+          <div class="box">
+            <div class="box-header">
+              <h2>Additional Resources</h2>
+            </div>
+            <div class="box-body">
+              <div class="grid-block">
+                <div class="grid-lg-1-2">
+                  <h3 id="languages">Languages</h3>
+                  <ul>
+                    <li>
+                      <a href="/lang/ar" lang="ar">العربية</a>
+                    </li>
+                    <li>
+                      <a href="/lang/bn" lang="bn">বাংলা</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ca" lang="ca">Català</a>
+                    </li>
+                    <li>
+                      <a href="/lang/cs" lang="cs">Čeština</a>
+                    </li>
+                    <li>
+                      <a href="/lang/da_DK" lang="da">Dansk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/de_de" lang="de">Deutsch</a>
+                    </li>
+                    <li>
+                      <a href="/lang/el_gr" lang="el">Ελληνικά</a>
+                    </li>
+                    <li>
+                      <a href="/lang/en_us" lang="en">English</a>
+                    </li>
+                    <li>
+                      <a href="/lang/eo" lang="eo">Esperanto</a>
+                    </li>
+                    <li>
+                      <a href="/lang/es_es" lang="es">Español</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fa_ir" lang="fa">Persian</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fi" lang="fi">Suomi</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fr_fr" lang="fr">Français</a>
+                    </li>
+                    <li>
+                      <a href="/lang/he" lang="he">עברית</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hr" lang="hr">Hrvatski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hu_hu" lang="hu">Magyar</a>
+                    </li>
+                    <li>
+                      <a href="/lang/id" lang="id">Bahasa Indonesia</a>
+                    </li>
+                    <li>
+                      <a href="/lang/it" lang="it">Italiano</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ja" lang="ja">日本語</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ko" lang="ko">한국어</a>
+                    </li>
+                    <li>
+                      <a href="/lang/my" lang="my">မြန်မာ</a>
+                    </li>
+                    <li>
+                      <a href="/lang/nl_nl" lang="nl">Nederlands</a>
+                    </li>
+                    <li>
+                      <a href="/lang/no_nb" lang="no">Norsk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pl_pl" lang="pl">Polski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_br" lang="pt">Português - Brasil</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_pt" lang="pt">Português - Portugal</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ro" lang="ro">Romana</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ru" lang="ru">Русский</a>
+                    </li>
+                    <li>
+                      <a href="/lang/si_lk" lang="si">සිංහල</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sk" lang="sk">Slovenčina</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sv" lang="sv">Svenska</a>
+                    </li>
+                    <li>
+                      <a href="/lang/th" lang="th">ภาษาไทย</a>
+                    </li>
+                    <li>
+                      <a href="/lang/tr" lang="tr">Türkçe</a>
+                    </li>
+                    <li>
+                      <a href="/lang/uk" lang="uk">Українська</a>
+                    </li>
+                    <li>
+                      <a href="/lang/vi_vn" lang="vi">Tiếng Việt</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_cn" lang="zh">简体中文</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_tw" lang="zh">中文 (台灣)</a>
+                    </li>
+                  </ul>                </div>
+                <div class="grid-lg-1-2">
+                  <h3>About the vim cheat sheet</h3>
+                  <p>
+                    This project aims to be one of the most accessible vim guides available. We
+                    made sure to support mobile, desktop, and other
+                    <a href="#languages" aria-label="Jump to languages section">languages</a>.
+                  </p>
+                  <p>
+                    <a target="_blank" href="https://github.com/sponsors/rtorr" aria-label="Sponsor this project on GitHub">❤️ Please consider sponsoring this
+                      project ❤️</a>!
+                  </p>
+                  <p>
+                    You can read about how to contribute (and help improve) by viewing our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/README.md" target="_blank"
+                      rel="noopener noreferrer" aria-label="Read the README on GitHub">
+                      README
+                    </a>
+                    . There you can see how to set up this project, or how to contribute a new
+                    language. Here is a big thank you to our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/graphs/contributors" target="_blank"
+                      rel="noopener noreferrer" aria-label="View project contributors on GitHub">
+                      contributors!
+                    </a>
+                  </p>
+                  <p>
+                    This project is licensed under
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/License.txt" target="_blank"
+                      rel="noopener noreferrer" aria-label="View the MIT License for this project">
+                      The MIT License (MIT)
+                    </a>
+                    .
+                  </p>
+                  <h3>Other places to find this document</h3>
+                  <p>
+                    This document was embedded in
+                    <a href="https://duckduckgo.com/?q=vim+cheat+sheet" target="_blank" rel="noopener noreferrer" aria-label="Search for this document on DuckDuckGo">
+                      DuckDuckGo
+                    </a>
+                    .
+                  </p>
+                  <h3>More resources</h3>
+                  <p>
+                    Interactive Vim tutorial:
+                    <a href="https://openvim.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Open Vim for an interactive Vim tutorial">
+                      Open Vim
+                    </a>
+                  </p>
+                  <p>
+                    Vim quick reference from Vim help pages:
+                    <a href="https://vimhelp.org/quickref.txt.html" target="_blank" rel="noopener noreferrer" aria-label="Access Vim quick reference"> 
+                      quickref.txt
+                    </a>
+                  </p>
+                  <p>
+                    List of all Vim ex (<kbd>:</kbd>) commands:
+                    <a href="https://vimhelp.org/index.txt.html#ex-cmd-index" target="_blank" rel="noopener noreferrer" aria-label="View list of all Vim ex commands">
+                      ex-cmd-index
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-block link-to-repo">
+          <p>
+            Checkout the source on
+            <a href="https://github.com/rtorr/vim-cheat-sheet" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+          </p>
+          <p>version: 3.2.0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.CACHE_NAME = "3.2.0";
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/javascripts/sw.js?version=3.2.0');
+      });
+    }
+  </script>
+</body>
+
+</html>

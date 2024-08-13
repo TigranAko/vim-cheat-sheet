@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="si">
+
+<head>
+  <meta charSet="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Vim Cheat Sheet</title>
+  <link rel="shortcut icon" href="/images/icons/icon-48x48.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#FA4949" />
+  <meta http-equiv="cache-control" content="max-age=600" />
+  <meta name="description" content="Explore vim.rtorr.com for an extensive Vim cheat sheet, offering clear, concise commands and shortcuts for Vim users. Whether you're a beginner or an experienced developer, find tips and tricks to enhance your coding efficiency in Vim.">
+  <link rel="apple-touch-icon" sizes="48x48" href="/images/icons/icon-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="/images/icons/icon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/images/icons/icon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="256x256" href="/images/icons/icon-256x256.png" />
+  <link rel="apple-touch-icon" sizes="384x384" href="/images/icons/icon-384x384.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="/images/icons/icon-512x512.png" />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <div class="sponsor">
+    <div class="container">
+      <span>
+        <a target="_blank" href="https://www.warp.dev">
+          <div class="sponsor-logo-container">
+            <span>Sponsor</span>
+            <img class="sponsor-logo" src="/images/svg/warp-logo.svg" alt="Warp logo">
+          </div>
+          <div class="sponsor-tagline"><span>A new terminal focused on developer productivity</span></div>
+      </span>
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid-block">
+      <div class="grid-1">
+        <h1>
+          <a class="site-title" href="/">
+            Vim Cheat Sheet
+          </a>
+        </h1>
+      </div>
+    </div>
+    <div class="container">
+      <main><div class="container">
+  <div class="commands-container">
+    <div class="grid-block">
+      <div class="grid-lg-1-3">
+        <h2>පොදු</h2>
+        <ul>
+          <li>
+            <kbd>:h[elp] විධානය</kbd> - විධානය සඳහා උපකාරය විවෘත කරන්න
+          </li>
+          <li>
+            <kbd>:sav[eas] ගොනුව</kbd> - ගොනුව ලෙස සුරකින්න
+          </li>
+          <li>
+            <kbd>:clo[se]</kbd> - වත්මන් කවුළුව වසන්න
+          </li>
+          <li>
+            <kbd>:ter[minal]</kbd> - open a terminal window
+          </li>
+          <li>
+            <kbd>K</kbd> - කර්සරය යට ඇති වදනට අදාල උපකාරය විවෘත කරන්න 
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Run <kbd>vimtutor</kbd> in a terminal to learn the first Vim commands.
+        </div>
+        <h2>කර්සරය එහා මෙහා ගෙනයාම සහ පැනීම</h2>
+        <ul>
+          <li>
+            <kbd>h</kbd> - කර්සරය වමට ගෙනයන්න
+          </li>
+          <li>
+            <kbd>j</kbd> - කර්සරය පහලට ගෙනයන්න
+          </li>
+          <li>
+            <kbd>k</kbd> - කර්සරය ඉහළට ගෙනයන්න
+          </li>
+          <li>
+            <kbd>l</kbd> - කර්සරය දකුණට ගෙනයන්න
+          </li>
+          <li>
+            <kbd>gj</kbd> - move cursor down (multi-line text)
+          </li>
+          <li>
+            <kbd>gk</kbd> - move cursor up (multi-line text)
+          </li>
+          <li>
+            <kbd>H</kbd> - තිරයේ ඉහළට යන්න
+          </li>
+          <li>
+            <kbd>M</kbd> - තිරයේ මැදට යන්න
+          </li>
+          <li>
+            <kbd>L</kbd> - තිරයේ පහළට යන්න
+          </li>
+          <li>
+            <kbd>w</kbd> - වදනක ආරම්භයක් පාසා ඉදිරියට යන්න 
+          </li>
+          <li>
+            <kbd>W</kbd> - වදනක ආරම්භයක් පාසා ඉදිරියට යන්න (වදන් වලට විරාම ලකුණු තිබිය හැක)
+          </li>
+          <li>
+            <kbd>e</kbd> - වදනක අවසානයක් පාසා ඉදිරියට යෑමට 
+          </li>
+          <li>
+            <kbd>E</kbd> - වදනක අවසානයක් පාසා ඉදිරියට යෑමට (වදන් වලට විරාම ලකුණු තිබිය හැක)
+          </li>
+          <li>
+            <kbd>b</kbd> - වදනක ආරම්භයක් පාසා ආපසු හැරීම
+          </li>
+          <li>
+            <kbd>B</kbd> - වදනක ආරම්භයක් පාසා ආපසු හැරීම (වදන් වලට විරාම ලකුණු තිබිය හැක)
+          </li>
+          <li>
+            <kbd>ge</kbd> - jump backwards to the end of a word
+          </li>
+          <li>
+            <kbd>gE</kbd> - jump backwards to the end of a word (words can contain punctuation)
+          </li>
+          <li>
+            <kbd>%</kbd> - ගැළපුම් අනුලකුණ වෙත මාරු කරන්න (පෙරනිමි ආධාරක යුවල: '()', '{}', '[]' - භාවිතා කරන්න) වැඩි විස්තර සඳහා <code>:h_matchpairs</code>
+          </li>
+          <li>
+            <kbd>0</kbd> - පේළියේ ආරම්භයට පනින්න
+          </li>
+          <li>
+            <kbd>^</kbd> - පේළියේ පළමු හිස් නොවන අනුලකුණ වෙත පනින්න
+          </li>
+          <li>
+            <kbd>$</kbd> - පේළියේ අවසානය දක්වා පැනීම
+          </li>
+          <li>
+            <kbd>g_</kbd> - පේළියේ අන්තිම හිස් නොවන අනුලකුණ වෙත පනින්න
+          </li>
+          <li>
+            <kbd>gg</kbd> - ලේඛනයේ පළමු පේළිය වෙත පනින්න
+          </li>
+          <li>
+            <kbd>G</kbd> - ලේඛනයේ අවසන් පේළිය වෙත පනින්න
+          </li>
+          <li>
+            <kbd>5gg</kbd> or <kbd>5G</kbd> - පස් වැනි පේළිය වෙත පනින්න
+          </li>
+          <li>
+            <kbd>gd</kbd> - move to local declaration
+          </li>
+          <li>
+            <kbd>gD</kbd> - move to global declaration
+          </li>
+          <li>
+            <kbd>fx</kbd> - x අනුලකුණේ ඊලඟ අවස්ථාව වෙත පැනීම
+          </li>
+          <li>
+            <kbd>tx</kbd> - x අනුලකුණේ ඊලඟ අවස්ථාවට පෙර පනින්න
+          </li>
+          <li>
+            <kbd>Fx</kbd> - x අනුලකුණේ පෙර අවස්ථාවට පනින්න
+          </li>
+          <li>
+            <kbd>Tx</kbd> - x අනුලකුණේ පෙර අවස්ථා අනුපිළිවෙලට පනින්න
+          </li>
+          <li>
+            <kbd>;</kbd> - පෙර f, t, F හෝ T විධාන නැවත වරක් කරන්න
+          </li>
+          <li>
+            <kbd>,</kbd> - පෙර f, t, F හෝ T විධාන නැවත වරක් භාවිතා කරන්න
+          </li>
+          <li>
+            <kbd>}</kbd> - ඊළඟ ඡේදයට යන්න (හෝ ක්රියාත්මක කිරීම / බ්ලොක්, කේත සංස්කරණය කරන විට)
+          </li>
+          <li>
+            <kbd>{</kbd> - පෙර ඡේදයට පෙරාතුව (හෝ ක්රියාත්මක කිරීම / අවහිර කිරීම, කේත සංස්කරණය කිරීමේදී)
+          </li>
+          <li>
+            <kbd>zz</kbd> - කර්සරය තිරය මත කේන්ද්රීය පිහිටුවීම
+          </li>
+          <li>
+            <kbd>zt</kbd> - position cursor on top of the screen
+          </li>
+          <li>
+            <kbd>zb</kbd> - position cursor on bottom of the screen
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>e</kbd> - ලේඛනයේ එක් පේළියක තිරය ඉහළට ගෙනයාම (කර්සරය එලෙසම)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>y</kbd> - ලේඛනයේ එක් පේළියක තිරය පහළට ගෙනයාම (කර්සරය එලෙසම)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>b</kbd> - එක් පූර්ණ තිරයක් ආපසු යන්න
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>f</kbd> - එක් පූර්ණ තිරයක් ඉදිරියට ගෙනයයි
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - තිරයෙන් භාගයක් පහළට යන්න
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>u</kbd> - තිරයෙන් භාගයක් ඉහළට යන්න
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong>
+          කර්සරය චලනය නැවත කිරීමට, අංකයක් සමඟ එය පෙරසන්න. උදාහරණයක් ලෙස: <kbd> 4j </ kbd> කර්සරය පේළි 4 ක් පහළට ගෙන එයි.
+        </div>
+        <h2>ඇතුළත් කරන්න - පෙළ ඇතුළත් කරන්න</h2>
+        <ul>
+          <li>
+            <kbd>i</kbd> - කර්සරයට පෙර ඇතුල් කරන්න
+          </li>
+          <li>
+            <kbd>I</kbd> - පේළිය ආරම්භයේදී ඇතුල් කරන්න
+          </li>
+          <li>
+            <kbd>a</kbd> - කර්සරයට පසු ඇතුල් කරන්න (එකතු කරන්න)
+          </li>
+          <li>
+            <kbd>A</kbd> - පේළිය අවසානයේ ඇතුල් කරන්න (එකතු කරන්න)
+          </li>
+          <li>
+            <kbd>o</kbd> - nawa පේළිය (විවෘත කරන්න) වර්තමාන පේළිය පහළින් නව පේළිය
+          </li>
+          <li>
+            <kbd>O</kbd> - වර්තමාන පේළිය ඉහලින් නව පේළිය (විවෘත කරන්න)
+          </li>
+          <li>
+            <kbd>ea</kbd> - වදන අවසානයේ එක් කරන්න
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>h</kbd> - delete the character before the cursor during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w</kbd> - delete word before the cursor during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>j</kbd> - begin new line during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>t</kbd> - indent (move right) line one shiftwidth during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - de-indent (move left) line one shiftwidth during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>n</kbd> - insert (auto-complete) next match before the cursor during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>p</kbd> - insert (auto-complete) previous match before the cursor during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>rx</kbd> - insert the contents of register x
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ox</kbd> - Temporarily enter normal mode to issue one normal-mode command x.
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - ඇතුල් කිරීමේ ප්‍රකාරයෙන් (Insert Mode) පිටවන්න
+          </li>
+        </ul>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>සංස්කරණය කිරීම</h2>
+        <ul>
+          <li>
+            <kbd>r</kbd> - කර්සරය ට යටින් ඇති අනුලකුණ වෙන එකක් මගින් ප්‍රතිස්ථාපනය 
+          </li>
+          <li>
+            <kbd>R</kbd> - replace more than one character, until <kbd>ESC</kbd> is pressed.
+          </li>
+          <li>
+            <kbd>J</kbd> - පහළ පේළිය වත්මන් එකට සම්බන්ධ කරන්න
+          </li>
+          <li>
+            <kbd>gJ</kbd> - පහළ පේළිය වත්මන් එකට සම්බන්ධ කරන්න (හිස්තැනක් නොමැතිව)
+          </li>
+          <li>
+            <kbd>gwip</kbd> - ඡේදය පුනරුච්චාරණය කරන්න
+          </li>
+          <li>
+            <kbd>g~</kbd> - switch case up to motion
+          </li>
+          <li>
+            <kbd>gu</kbd> - change to lowercase up to motion
+          </li>
+          <li>
+            <kbd>gU</kbd> - change to uppercase up to motion
+          </li>
+          <li>
+            <kbd>cc</kbd> - සම්පූර්ණ පේළිය මුල සිටම වෙනස් කරන්න
+          </li>
+          <li>
+            <kbd>c$</kbd> or <kbd>C</kbd> - පේළිය අවසානය වෙනස් කරන්න (ප්‍රතිස්ථාපනය  කරන්න)
+          </li>
+          <li>
+            <kbd>ciw</kbd> - සම්පූර්ණ වදන වෙනස් කරන්න
+          </li>
+          <li>
+            <kbd>cw</kbd> or <kbd>ce</kbd> - වදන අවසානය දක්වා වෙනස් කරන්න (ප්‍රතිස්ථාපනය  කරන්න)
+          </li>
+          <li>
+            <kbd>s</kbd> - අනුලකුණක් මකා දමන්න (ප්‍රතිස්ථාපනය  කරන්න).  
+          </li>
+          <li>
+            <kbd>S</kbd> - සම්පූර්ණ පේළිය ආරම්භයේ සිට වෙනස් කරන්න (cc)
+          </li>
+          <li>
+            <kbd>xp</kbd> - අනුලකුණ දෙකක් හුවමාරුව (මකා ආපසු ඇලවීම)
+          </li>
+          <li>
+            <kbd>u</kbd> - අවලංගු කරන්න
+          </li>
+          <li>
+            <kbd>U</kbd> - restore (undo) last changed line
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>r</kbd> - අවසානට අවලංගු කරන ලද විධානය (u) නැවතත් කරන්න (r)
+          </li>
+          <li>
+            <kbd>.</kbd> - අවසාන විධානය නැවත වරක් ක්රියාත්මක කරන්න
+          </li>
+        </ul>
+        <h2>පේළි ලකුණු කිරීම (දෘශ්‍ය ප්‍රකාරය – Visual Mode)</h2>
+        <ul>
+          <li>
+            <kbd>v</kbd> - දෘශ්‍ය ප්‍රකාරය ආරම්භ කරන්න, පේළි ලකුණු කරන්න, විධානය ක්රියාත්මක කරන්න (y පිටපත් කරන්න) 
+          </li>
+          <li>
+            <kbd>V</kbd> - දෘශ්‍ය ප්‍රකාරයෙන් පේළි ආරම්භ කරන්න
+          </li>
+          <li>
+            <kbd>o</kbd> - ලකුණෙහි අනෙක් කෙළවරට පනින්න
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>v</kbd> - බ්ලොක් සඳහා දෘශ්‍ය ප්‍රකාරය ආරම්භ කරන්න
+          </li>
+          <li>
+            <kbd>O</kbd> - බ්ලොක් එකේ අනෙක් කෙළවරට පනින්න
+          </li>
+          <li>
+            <kbd>aw</kbd> - වදන ලකුණු කරන්න
+          </li>
+          <li>
+            <kbd>ab</kbd> - බ්ලොක් ()
+          </li>
+          <li>
+            <kbd>aB</kbd> - බ්ලොක් {}
+          </li>
+          <li>
+            <kbd>at</kbd> - a block with &lt;&gt; tags
+          </li>
+          <li>
+            <kbd>ib</kbd> - ඇතුළත බ්ලොක් ()
+          </li>
+          <li>
+            <kbd>iB</kbd> - ඇතුළත බ්ලොක් {}
+          </li>
+          <li>
+            <kbd>it</kbd> - inner block with &lt;&gt; tags
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - දෘශ්‍ය ප්‍රකාරයෙන් පිටවීම
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Instead of <kbd>b</kbd> or <kbd>B</kbd> one can also use <kbd>(</kbd> or <kbd>{</kbd> respectively.
+        </div>
+        <h2>දෘශ්‍ය ප්‍රකාරයේ විධාන (Visual Mode Commands)</h2>
+        <ul>
+          <li>
+            <kbd>&#62;</kbd> - පෙළ දකුණට ගෙන යන්න
+          </li>
+          <li>
+            <kbd>&#60;</kbd> - පෙළ වමට ගෙන යන්න
+          </li>
+          <li>
+            <kbd>y</kbd> - තෝරාගත් පෙළ පිටපත් කරන්න
+          </li>
+          <li>
+            <kbd>d</kbd> - තෝරාගත් පෙළ මකන්න
+          </li>
+          <li>
+            <kbd>~</kbd> - මහකුරු / කුඩා අකුරු හුවමාරුව
+          </li>
+          <li>
+            <kbd>u</kbd> - change marked text to lowercase
+          </li>
+          <li>
+            <kbd>U</kbd> - change marked text to uppercase
+          </li>
+        </ul>
+        <h2>රෙජිස්ටර්</h2>
+        <ul>
+          <li>
+            <kbd>:reg[isters]</kbd> - රෙජිස්ටර් අන්තර්ගතය පෙන්වන්න
+          </li>
+          <li>
+            <kbd>"xy</kbd> - රෙජිස්ටරයට පිටපත් කරන්න
+          </li>
+          <li>
+            <kbd>"xp</kbd> - රෙජිස්ටර් අන්තර්ගතය ආදේශ කරන්න
+          </li>
+          <li>
+            <kbd>"+y</kbd> - yank into the system clipboard register
+          </li>
+          <li>
+            <kbd>"+p</kbd> - paste from the system clipboard register
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> ටයිප් රෙජිස්ටර් ~/.viminfo තුල ගබඩා කර ඇත, නැවතත් නැවතත් Vim සමග අලුතෙන් ආරම්භ වේ.
+        </div>
+        <div class="well">
+          <strong>Tip</strong> Special registers:
+          <p>
+            &emsp;<kbd>0</kbd> - last yank<br/>
+            &emsp;<kbd>&quot;</kbd> - unnamed register, last delete or yank<br/>
+            &emsp;<kbd>%</kbd> - current file name<br/>
+            &emsp;<kbd>#</kbd> - alternate file name<br/>
+            &emsp;<kbd>*</kbd> - clipboard contents (X11 primary)<br/>
+            &emsp;<kbd>+</kbd> - clipboard contents (X11 clipboard)<br/>
+            &emsp;<kbd>/</kbd> - last search pattern<br/>
+            &emsp;<kbd>:</kbd> - last command-line<br/>
+            &emsp;<kbd>.</kbd> - last inserted text<br/>
+            &emsp;<kbd>-</kbd> - last small (less than a line) delete<br/>
+            &emsp;<kbd>=</kbd> - expression register<br/>
+            &emsp;<kbd>_</kbd> - black hole register<br/>
+          </p>
+        </div>
+        <h2>සලකුණු කිරීම</h2>
+        <ul>
+          <li>
+            <kbd>:marks</kbd> - සලකුණු ලැයිස්තුව
+          </li>
+          <li>
+            <kbd>ma</kbd> - මෙම ස්ථානය a යනුවෙන් සලකුණු කරන්න
+          </li>
+          <li>
+            <kbd>`a</kbd> - a සලකුණු වෙත යන්න
+          </li>
+          <li>
+            <kbd>y`a</kbd> - a සලකුණ යෙදු ස්ථානයට පිටපත් කරන්න
+          </li>
+          <li>
+            <kbd>`0</kbd> - go to the position where Vim was previously exited
+          </li>
+          <li>
+            <kbd>`"</kbd> - go to the position when last editing this file
+          </li>
+          <li>
+            <kbd>`.</kbd> - go to the position of the last change in this file
+          </li>
+          <li>
+            <kbd>``</kbd> - go to the position before the last jump
+          </li>
+          <li>
+            <kbd>:ju[mps]</kbd> - list of jumps
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>i</kbd> - go to newer position in jump list
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>o</kbd> - go to older position in jump list
+          </li>
+          <li>
+            <kbd>:changes</kbd> - list of changes
+          </li>
+          <li>
+            <kbd>g,</kbd> - go to newer position in change list
+          </li>
+          <li>
+            <kbd>g;</kbd> - go to older position in change list
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>]</kbd> - jump to the tag under cursor
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> To jump to a mark you can either use a backtick (<kbd>`</kbd>) or an apostrophe (<kbd>'</kbd>). Using an apostrophe jumps to the beginning (first non-blank) of the line holding the mark.
+        </div>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>මැක්රෝස්</h2>
+        <ul>
+          <li>
+            <kbd>qa</kbd> - a මැක්රෝව පටිගත කිරීම ආරම්භය
+          </li>
+          <li>
+            <kbd>q</kbd> - මැක්රෝව පටිගත කිරීම නතර කරන්න
+          </li>
+          <li>
+            <kbd>@a</kbd> - මැක්රෝව a නැවත ධාවනය ආරම්භය
+          </li>
+          <li>
+            <kbd>@@</kbd> - අවසන් මැක්රෝව යලි ධාවනය
+          </li>
+        </ul>
+        <h2>පිටපත් කිරීම, කැපීම සහ ඇලවීම</h2>
+        <ul>
+          <li>
+            <kbd>yy</kbd> - පිටපත් කරන්න
+          </li>
+          <li>
+            <kbd>2yy</kbd> - පේළි 2 ක් පිටපත් කරන්න
+          </li>
+          <li>
+            <kbd>yw</kbd> - කර්සරය යටින් ඇති වදන පිටපත් කරන්න.
+          </li>
+          <li>
+            <kbd>yiw</kbd> - වදන පිටපත් කරන්න
+          </li>
+          <li>
+            <kbd>yaw</kbd> - කර්සරය යට වදන පෙර හෝ පසුව පිටපත් කරන්න
+          </li>
+          <li>
+            <kbd>y$</kbd> or <kbd>Y</kbd> - පේළියේ අවසානය දක්වා පිටපත් කරන්න
+          </li>
+          <li>
+            <kbd>p</kbd> - කර්සරයට පසු ඇමිණුම් පිටපත් කරගත් පේළි අලවන්න
+          </li>
+          <li>
+            <kbd>P</kbd> - කර්සරයට පසු ඇමිණුම් පිටපත් කරගත් පේළි අලවන්න
+          </li>
+          <li>
+            <kbd>gp</kbd> - put (paste) the clipboard after cursor and leave cursor after the new text
+          </li>
+          <li>
+            <kbd>gP</kbd> - put (paste) before cursor and leave cursor after the new text
+          </li>
+          <li>
+            <kbd>dd</kbd> - වත්මන් පේළිය මකන්න (කපන්න)
+          </li>
+          <li>
+            <kbd>2dd</kbd> - පේළි 2 ක් (වත්මන් හා පහත) මකන්න (කැපීම)
+          </li>
+          <li>
+            <kbd>dw</kbd> - ඊළඟ වදන ය දක්වා කර්සරය යට අක්ෂර මකා දැමීම (කැපීම)
+          </li>
+          <li>
+            <kbd>diw</kbd> - වදන මකන්න (කැපීම)
+          </li>
+          <li>
+            <kbd>daw</kbd> - කර්සරය යටින් ඇති වදන ය සහ මකා දැමීම පෙර හෝ පසුව (අවහිර කිරීම්) අවකාශය
+          </li>
+          <li>
+            <kbd>:3,5d</kbd> - delete lines starting from 3 to 5
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> You can also use the following characters to specify the range: <br>
+          e.g. <br>
+          <p>
+            <kbd>:.,$d</kbd> - From the current line to the end of the file <br>
+            <kbd>:.,1d</kbd> - From the current line to the beginning of the file <br>
+            <kbd>:10,1d</kbd> - From the 10th line to the beginning of the file <br>
+          </p>
+        </div>
+        <ul>
+          <li>
+            <kbd>:g/{pattern}/d</kbd> - delete all lines containing pattern
+          </li>
+          <li>
+            <kbd>:g!/{pattern}/d</kbd> - delete all lines not containing pattern
+          </li>
+          <li>
+            <kbd>d$</kbd> or <kbd>D</kbd> - පේළි අවසානය දක්වා මකන්න (කැපීම)
+          </li>
+          <li>
+            <kbd>x</kbd> - අක්ෂර ඉවත් කරන්න (කැපීම)
+          </li>
+        </ul>
+        <h2>Indent text</h2>
+        <ul>
+          <li>
+            <kbd>&#62;&#62;</kbd> - indent (move right) line one shiftwidth
+          </li>
+          <li>
+            <kbd>&#60;&#60;</kbd> - de-indent (move left) line one shiftwidth
+          </li>
+          <li>
+            <kbd>&#62;%</kbd> - indent a block with () or {} (cursor on brace)
+          </li>
+          <li>
+            <kbd>&#60;%</kbd> - de-indent a block with () or {} (cursor on brace)
+          </li>
+          <li>
+            <kbd>&#62;ib</kbd> - indent inner block with ()
+          </li>
+          <li>
+            <kbd>&#62;at</kbd> - indent a block with &lt;&gt; tags
+          </li>
+          <li>
+            <kbd>3==</kbd> - re-indent 3 lines
+          </li>
+          <li>
+            <kbd>=%</kbd> - re-indent a block with () or {} (cursor on brace)
+          </li>
+          <li>
+            <kbd>=iB</kbd> - re-indent inner block with {}
+          </li>
+          <li>
+            <kbd>gg=G</kbd> - re-indent entire buffer
+          </li>
+          <li>
+            <kbd>]p</kbd> - paste and adjust indent to current line
+          </li>
+        </ul>
+        <h2>සුරකින්න සහ පිටවීම</h2>
+        <ul>
+          <li>
+            <kbd>:w</kbd> - ගොනුව ලියන්න, නමුත් වසා නොගන්න
+          </li>
+          <li>
+            <kbd>:w !sudo tee %</kbd> - වර්තමාන ගොනුව sudo සමග ලියන්න 
+          </li>
+          <li>
+            <kbd>:wq</kbd> or <kbd>:x</kbd> or <kbd>ZZ</kbd> - ගොනුව ලියන්න සහ වසන්න
+          </li>
+          <li>
+            <kbd>:q</kbd> - ගොනුවේ වසන්න ( සුරකිය යුතු යුතු වෙනස්කම් ඇතිනම් මෙම විධානය අනතුරු අඟවයි)
+          </li>
+          <li>
+            <kbd>:q!</kbd> or <kbd>ZQ</kbd> - ගොනුවේ වසන්න සහ වෙනස්කිරීම් ඉවත් කරන්න
+          </li>
+          <li>
+            <kbd>:wqa</kbd> - සියලු ටැබ් සුරකින්න සහ වසා දමන්න
+          </li>
+        </ul>
+        <h2>සෙවීම සහ ප්‍රතිස්ථාපනය </h2>
+        <ul>
+          <li>
+            <kbd>/pattern</kbd> - රටාව (ඉදිරියට) සොයන්න
+          </li>
+          <li>
+            <kbd>?pattern</kbd> - රටාව (පසුපසට) සොයන්න
+          </li>
+          <li>
+            <kbd>\vpattern</kbd> - අකුරු නොවන අනුලකුණු සහිත රටා :  අකුරු නොවන අකුරු අකුරු සංකේත ලෙස අර්ථ දැක්විය හැකිය (විශේෂ කිරීමක් නොමැති සෙවීමකට)
+          </li>
+          <li>
+            <kbd>n</kbd> - නැවත සෙවීම (එකම දිශාව)
+          </li>
+          <li>
+            <kbd>N</kbd> - නැවත සෙවීම (ප්‍රතිවිරුද්ධ දිශාව)
+          </li>
+          <li>
+            <kbd>:%s/old/new/g</kbd> -
+            සම්පූර්ණ ලේඛනයේ යෙදෙන අවස්ථා ප්‍රතිස්ථාපනය කරන්න
+          </li>
+          <li>
+            <kbd>:%s/old/new/gc</kbd> -
+            සම්පූර්ණ ලේඛනයේ යෙදෙන අවස්ථා ප්‍රතිස්ථාපනය කරන්න, ස්ථිර කිරීම
+          </li>
+          <li>
+            <kbd>:noh[lsearch]</kbd> - සෙවුම් ප්‍රතිපල වලින් සියලු ලකුණු ඉවත් කරන්න
+          </li>
+        </ul>
+        <h2>ගොනු කිහිපයක් තුල සෙවීම</h2>
+        <ul>
+          <li>
+            <kbd>:vim[grep] /pattern/ {`{file}`}</kbd> -
+            ගොනු කිහිපයක් තුල සෙවීම
+          </li>
+        </ul>
+        <div class="well">
+          e.g.
+          <kbd>:vim[grep] /foo/ **/*</kbd>
+        </div>
+        <ul>
+          <li>
+            <kbd>:cn[ext]</kbd> - රටාවේ ඊළඟ යෙදුමට (ඉදිරියට) යන්න
+          </li>
+          <li>
+            <kbd>:cp[revious]</kbd> - රටාවේ ඊළඟ යෙදුමට (පසුපසට) යන්න
+          </li>
+          <li>
+            <kbd>:cope[n]</kbd> - රටාවේ සියලු යෙදීම් ලැයිස්තුව සහිත කවුළුව විවෘත කරන්න
+          </li>
+          <li>
+            <kbd>:ccl[ose]</kbd> - close the quickfix window
+          </li>
+        </ul>
+        <h2>ටැබ්</h2>
+        <ul>
+          <li>
+            <kbd>:tabnew</kbd> or <kbd>:tabnew {page.words.file}</kbd> -
+            නව ටැබයක ලිපිගොනුව විවෘත කරන්න
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wT</kbd> - වත්මන් කැඩී කවුළුව ටැබ් එකට ගෙනයාම
+          </li>
+          <li>
+            <kbd>gt</kbd> or <kbd>:tabn[ext]</kbd> - ඊළඟ ටැබයට මාරු වන්න
+          </li>
+          <li>
+            <kbd>gT</kbd> or <kbd>:tabp[revious]</kbd> - පෙර ටැබයට මාරුවීම
+          </li>
+          <li>
+            <kbd>#gt</kbd> - # වන ටැබයට මාරුවීම
+          </li>
+          <li>
+            <kbd>:tabm[ove] #</kbd> - වත්මන් ටැබ් # වන ස්ථානයට (දර්ශකය 0  සිට)
+          </li>
+          <li>
+            <kbd>:tabc[lose]</kbd> - වත්මන් ටැබය සහ එහි සියළු කවුළු වසා දමන්න
+          </li>
+          <li>
+            <kbd>:tabo[nly]</kbd> - වත්මන් ටැබය හැර සියලු ටැබ් වසා දමන්න
+          </li>
+          <li>
+            <kbd>:tabdo</kbd> command - සියලු ටැබ් මත විධානය ක්‍රියාත්මක කරන්න (උ.දා. :tabdo q - විවෘත කළ සියලු ටැබ් වසා දමයි)
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-block">
+      <div class="grid-lg-1-2">
+        <h2>ගොනු කිහිපයක් සමඟ වැඩ කිරීම</h2>
+        <ul>
+          <li>
+            <kbd>:e[dit] ගොනුව</kbd> - නව බෆරයක ගොනුවක් සංස්කරණය කරන්න
+          </li>
+          <li>
+            <kbd>:bn[ext]</kbd> -
+            ඊළඟ බෆරය වෙත යන්න
+          </li>
+          <li>
+            <kbd>:bp[revious]</kbd> -
+            පෙර බෆරය වෙත යන්න
+          </li>
+          <li>
+            <kbd>:bd[elete]</kbd> - බෆරයක් මකන්න (ගොනුව වසා දමන්න)
+          </li>
+          <li>
+            <kbd>:b[uffer]#</kbd> - go to a buffer by #
+          </li>
+          <li>
+            <kbd>:b[uffer] file</kbd> - go to a buffer by file
+          </li>
+          <li>
+            <kbd>:ls</kbd> or <kbd>:buffers</kbd> - සියලු විවෘත බෆර් ලැයිස්තුගත කරන්න
+          </li>
+          <li>
+            <kbd>:sp[lit] ගොනුව</kbd> - නව බෆර් සහ ද්විත්ව කවුළුවක ගොනුව විවෘත කරන්න
+          </li>
+          <li>
+            <kbd>:vs[plit] ගොනුව</kbd> - නව බෆරයක ගොනුවක් විවෘත කර සිරස් වින්යාස සහිත කවුළුවක විවෘත කරන්න
+          </li>
+          <li>
+            <kbd>:vert[ical] ba[ll]</kbd> - edit all buffers as vertical windows
+          </li>
+          <li>
+            <kbd>:tab ba[ll]</kbd> - edit all buffers as tabs
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ws</kbd> - කවුළුව භේදනය (තිරස් භේදය)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wv</kbd> - කවුළුව භේදනය (සිරස් භේදය)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ww</kbd> -  ඊළඟ කවුළුව වෙත යන්න 
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wq</kbd> - කවුළුව වසන්න
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wx</kbd> - exchange current window with next one
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w=</kbd> - make all windows equal height &amp; width
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wh</kbd> - වම් කවුළුව වෙත කර්සරය ගෙනයාම (සිරස් භේදය)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wl</kbd> - දකුණු කවුළුව වෙත කර්සරය ගෙනයාම (සිරස් භේදය)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wj</kbd> - පහත දැක්වෙන කවුළුව කර්සරය ගෙනයාම (තිරස් භේදය)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wk</kbd> - ඉහළ කවුළුව වෙත ගෙන යාම (තිරස් භේදය)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wH</kbd> - make current window full height at far left (leftmost vertical window)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wL</kbd> - make current window full height at far right (rightmost vertical window)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wJ</kbd> - make current window full width at the very bottom (bottommost horizontal window)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wK</kbd> - make current window full width at the very top (topmost horizontal window)
+          </li>
+        </ul>
+        </ul>
+        </ul>
+        </ul>
+      </div>
+      <div class="grid-lg-1-2">
+        <h2>Diff</h2>
+        <ul>
+          <li>
+            <kbd>zf</kbd> - manually define a fold up to motion
+          </li>
+          <li>
+            <kbd>zd</kbd> - delete fold under the cursor
+          </li>
+          <li>
+            <kbd>za</kbd> - toggle fold under the cursor
+          </li>
+          <li>
+            <kbd>zo</kbd> - open fold under the cursor
+          </li>
+          <li>
+            <kbd>zc</kbd> - close fold under the cursor
+          </li>
+          <li>
+            <kbd>zr</kbd> - reduce (open) all folds by one level
+          </li>
+          <li>
+            <kbd>zm</kbd> - fold more (close) all folds by one level
+          </li>
+          <li>
+            <kbd>zi</kbd> - toggle folding functionality
+          </li>
+          <li>
+            <kbd>]c</kbd> - jump to start of next change
+          </li>
+          <li>
+            <kbd>[c</kbd> - jump to start of previous change
+          </li>
+          <li>
+            <kbd>do</kbd> or <kbd>:diffg[et]</kbd> - obtain (get) difference (from other buffer)
+          </li>
+          <li>
+            <kbd>dp</kbd> or <kbd>:diffpu[t]</kbd> - put difference (to other buffer)
+          </li>
+          <li>
+            <kbd>:diffthis</kbd> - make current window part of diff
+          </li>
+          <li>
+            <kbd>:dif[fupdate]</kbd> - update differences
+          </li>
+          <li>
+            <kbd>:diffo[ff]</kbd> - switch off diff mode for current window
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> The commands for folding (e.g. <kbd>za</kbd>) operate on one level. To operate on all levels, use uppercase letters (e.g. <kbd>zA</kbd>).
+        </div>
+        <div class="well">
+          <strong>Tip</strong> To view the differences of files, one can directly start Vim in diff mode by running <kbd>vimdiff</kbd> in a terminal. One can even set this as <kbd>git difftool</kbd>.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+      <div>
+        <div id="footer" class="grid-block">
+          <div class="box">
+            <div class="box-header">
+              <h2>Additional Resources</h2>
+            </div>
+            <div class="box-body">
+              <div class="grid-block">
+                <div class="grid-lg-1-2">
+                  <h3 id="languages">Languages</h3>
+                  <ul>
+                    <li>
+                      <a href="/lang/ar" lang="ar">العربية</a>
+                    </li>
+                    <li>
+                      <a href="/lang/bn" lang="bn">বাংলা</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ca" lang="ca">Català</a>
+                    </li>
+                    <li>
+                      <a href="/lang/cs" lang="cs">Čeština</a>
+                    </li>
+                    <li>
+                      <a href="/lang/da_DK" lang="da">Dansk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/de_de" lang="de">Deutsch</a>
+                    </li>
+                    <li>
+                      <a href="/lang/el_gr" lang="el">Ελληνικά</a>
+                    </li>
+                    <li>
+                      <a href="/lang/en_us" lang="en">English</a>
+                    </li>
+                    <li>
+                      <a href="/lang/eo" lang="eo">Esperanto</a>
+                    </li>
+                    <li>
+                      <a href="/lang/es_es" lang="es">Español</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fa_ir" lang="fa">Persian</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fi" lang="fi">Suomi</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fr_fr" lang="fr">Français</a>
+                    </li>
+                    <li>
+                      <a href="/lang/he" lang="he">עברית</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hr" lang="hr">Hrvatski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hu_hu" lang="hu">Magyar</a>
+                    </li>
+                    <li>
+                      <a href="/lang/id" lang="id">Bahasa Indonesia</a>
+                    </li>
+                    <li>
+                      <a href="/lang/it" lang="it">Italiano</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ja" lang="ja">日本語</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ko" lang="ko">한국어</a>
+                    </li>
+                    <li>
+                      <a href="/lang/my" lang="my">မြန်မာ</a>
+                    </li>
+                    <li>
+                      <a href="/lang/nl_nl" lang="nl">Nederlands</a>
+                    </li>
+                    <li>
+                      <a href="/lang/no_nb" lang="no">Norsk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pl_pl" lang="pl">Polski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_br" lang="pt">Português - Brasil</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_pt" lang="pt">Português - Portugal</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ro" lang="ro">Romana</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ru" lang="ru">Русский</a>
+                    </li>
+                    <li>
+                      <a href="/lang/si_lk" lang="si">සිංහල</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sk" lang="sk">Slovenčina</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sv" lang="sv">Svenska</a>
+                    </li>
+                    <li>
+                      <a href="/lang/th" lang="th">ภาษาไทย</a>
+                    </li>
+                    <li>
+                      <a href="/lang/tr" lang="tr">Türkçe</a>
+                    </li>
+                    <li>
+                      <a href="/lang/uk" lang="uk">Українська</a>
+                    </li>
+                    <li>
+                      <a href="/lang/vi_vn" lang="vi">Tiếng Việt</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_cn" lang="zh">简体中文</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_tw" lang="zh">中文 (台灣)</a>
+                    </li>
+                  </ul>                </div>
+                <div class="grid-lg-1-2">
+                  <h3>About the vim cheat sheet</h3>
+                  <p>
+                    This project aims to be one of the most accessible vim guides available. We
+                    made sure to support mobile, desktop, and other
+                    <a href="#languages" aria-label="Jump to languages section">languages</a>.
+                  </p>
+                  <p>
+                    <a target="_blank" href="https://github.com/sponsors/rtorr" aria-label="Sponsor this project on GitHub">❤️ Please consider sponsoring this
+                      project ❤️</a>!
+                  </p>
+                  <p>
+                    You can read about how to contribute (and help improve) by viewing our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/README.md" target="_blank"
+                      rel="noopener noreferrer" aria-label="Read the README on GitHub">
+                      README
+                    </a>
+                    . There you can see how to set up this project, or how to contribute a new
+                    language. Here is a big thank you to our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/graphs/contributors" target="_blank"
+                      rel="noopener noreferrer" aria-label="View project contributors on GitHub">
+                      contributors!
+                    </a>
+                  </p>
+                  <p>
+                    This project is licensed under
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/License.txt" target="_blank"
+                      rel="noopener noreferrer" aria-label="View the MIT License for this project">
+                      The MIT License (MIT)
+                    </a>
+                    .
+                  </p>
+                  <h3>Other places to find this document</h3>
+                  <p>
+                    This document was embedded in
+                    <a href="https://duckduckgo.com/?q=vim+cheat+sheet" target="_blank" rel="noopener noreferrer" aria-label="Search for this document on DuckDuckGo">
+                      DuckDuckGo
+                    </a>
+                    .
+                  </p>
+                  <h3>More resources</h3>
+                  <p>
+                    Interactive Vim tutorial:
+                    <a href="https://openvim.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Open Vim for an interactive Vim tutorial">
+                      Open Vim
+                    </a>
+                  </p>
+                  <p>
+                    Vim quick reference from Vim help pages:
+                    <a href="https://vimhelp.org/quickref.txt.html" target="_blank" rel="noopener noreferrer" aria-label="Access Vim quick reference"> 
+                      quickref.txt
+                    </a>
+                  </p>
+                  <p>
+                    List of all Vim ex (<kbd>:</kbd>) commands:
+                    <a href="https://vimhelp.org/index.txt.html#ex-cmd-index" target="_blank" rel="noopener noreferrer" aria-label="View list of all Vim ex commands">
+                      ex-cmd-index
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-block link-to-repo">
+          <p>
+            Checkout the source on
+            <a href="https://github.com/rtorr/vim-cheat-sheet" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+          </p>
+          <p>version: 3.2.0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.CACHE_NAME = "3.2.0";
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/javascripts/sw.js?version=3.2.0');
+      });
+    }
+  </script>
+</body>
+
+</html>

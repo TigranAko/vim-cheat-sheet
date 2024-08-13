@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="fi">
+
+<head>
+  <meta charSet="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Vim Cheat Sheet</title>
+  <link rel="shortcut icon" href="/images/icons/icon-48x48.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#FA4949" />
+  <meta http-equiv="cache-control" content="max-age=600" />
+  <meta name="description" content="Explore vim.rtorr.com for an extensive Vim cheat sheet, offering clear, concise commands and shortcuts for Vim users. Whether you're a beginner or an experienced developer, find tips and tricks to enhance your coding efficiency in Vim.">
+  <link rel="apple-touch-icon" sizes="48x48" href="/images/icons/icon-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="/images/icons/icon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/images/icons/icon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="256x256" href="/images/icons/icon-256x256.png" />
+  <link rel="apple-touch-icon" sizes="384x384" href="/images/icons/icon-384x384.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="/images/icons/icon-512x512.png" />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <div class="sponsor">
+    <div class="container">
+      <span>
+        <a target="_blank" href="https://www.warp.dev">
+          <div class="sponsor-logo-container">
+            <span>Sponsor</span>
+            <img class="sponsor-logo" src="/images/svg/warp-logo.svg" alt="Warp logo">
+          </div>
+          <div class="sponsor-tagline"><span>A new terminal focused on developer productivity</span></div>
+      </span>
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid-block">
+      <div class="grid-1">
+        <h1>
+          <a class="site-title" href="/">
+            Vim Cheat Sheet
+          </a>
+        </h1>
+      </div>
+    </div>
+    <div class="container">
+      <main><div class="container">
+  <div class="commands-container">
+    <div class="grid-block">
+      <div class="grid-lg-1-3">
+        <h2>Yleiset</h2>
+        <ul>
+          <li>
+            <kbd>:h[elp] avainsana</kbd> - näytä apu avainsanalle
+          </li>
+          <li>
+            <kbd>:sav[eas] tiedosto</kbd> - tallenna nimellä
+          </li>
+          <li>
+            <kbd>:clo[se]</kbd> - sulje nykyinen paneeeli
+          </li>
+          <li>
+            <kbd>:ter[minal]</kbd> - avaa terminaali ikkuna
+          </li>
+          <li>
+            <kbd>K</kbd> - avaa man-sivu kursorin alla olevalle sanalle
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Aja <kbd>vimtutor</kbd> terminaalissa oppiaksesti ensimmäiset Vim komennot.
+        </div>
+        <h2>Kursorin liike</h2>
+        <ul>
+          <li>
+            <kbd>h</kbd> - siirrä kursori vasemmalle
+          </li>
+          <li>
+            <kbd>j</kbd> - siirrä kursori alas
+          </li>
+          <li>
+            <kbd>k</kbd> - siirrä kursori ylös
+          </li>
+          <li>
+            <kbd>l</kbd> - siirrä kursori oikealle
+          </li>
+          <li>
+            <kbd>gj</kbd> - siirrä kursori alas (monirivinen teksti)
+          </li>
+          <li>
+            <kbd>gk</kbd> - siirrä kursori ylös (monirivinen teksti)
+          </li>
+          <li>
+            <kbd>H</kbd> - siirry näytön yläosaan
+          </li>
+          <li>
+            <kbd>M</kbd> - siirry näytön keskelle
+          </li>
+          <li>
+            <kbd>L</kbd> - siirry näytön alaosaan
+          </li>
+          <li>
+            <kbd>w</kbd> - hyppää eteenpäin sanan alkuun
+          </li>
+          <li>
+            <kbd>W</kbd> - hyppää eteenpäin sanan alkuun (sanat voivat sisältää välimerkkejä)
+          </li>
+          <li>
+            <kbd>e</kbd> - hyppää eteenpäin sanan loppuun
+          </li>
+          <li>
+            <kbd>E</kbd> - hyppää eteenpäin sanan loppuun (sanat voivat sisältää välimerkkejä)
+          </li>
+          <li>
+            <kbd>b</kbd> - hyppää taaksepäin sanan alkuun
+          </li>
+          <li>
+            <kbd>B</kbd> - hyppää taaksepäin sanan alkuun (sanat voivat sisältää välimerkkejä)
+          </li>
+          <li>
+            <kbd>ge</kbd> - hyppää taaksepäin sanan loppuun
+          </li>
+          <li>
+            <kbd>gE</kbd> - hyppää taaksepäin sanan loppuun (sanat voivat sisältää välimerkkejä)
+          </li>
+          <li>
+            <kbd>%</kbd> - siirrä kursori merkin pariin (oletuksena tuetut parit: '()', '{}', '[]' - aja <code>:h matchpairs</code> vim:issä saadaksesi lisää tietoa)
+          </li>
+          <li>
+            <kbd>0</kbd> - hyppää rivin alkuun
+          </li>
+          <li>
+            <kbd>^</kbd> - hyppää rivin ensimmäiseen ei-tyhjään merkkiin
+          </li>
+          <li>
+            <kbd>$</kbd> - hyppää rivin loppuun
+          </li>
+          <li>
+            <kbd>g_</kbd> - hyppää rivin viimeiseen ei-tyhjään merkkiin
+          </li>
+          <li>
+            <kbd>gg</kbd> - mene tiedoston ensimmäiselle riville
+          </li>
+          <li>
+            <kbd>G</kbd> - mene tiedoston viimeiselle riville
+          </li>
+          <li>
+            <kbd>5gg</kbd> or <kbd>5G</kbd> - mene riville 5
+          </li>
+          <li>
+            <kbd>gd</kbd> - mene paikalliseen määrittelyyn
+          </li>
+          <li>
+            <kbd>gD</kbd> - mene globaaliin määrittelyyn
+          </li>
+          <li>
+            <kbd>fx</kbd> - hyppää seuraavaan merkin x esiintymään
+          </li>
+          <li>
+            <kbd>tx</kbd> - hyppää merkin x seuraavaa esiintymää edeltävään merkkiin
+          </li>
+          <li>
+            <kbd>Fx</kbd> - hyppää edelliseen merkin x esiintymään
+          </li>
+          <li>
+            <kbd>Tx</kbd> - hyppää merkin x edellistä esiintymää seuraavaan merkkiin
+          </li>
+          <li>
+            <kbd>;</kbd> - toista edellinen f, t, F tai T liike
+          </li>
+          <li>
+            <kbd>,</kbd> - toista edellinen f, t, F tai T liike, takaperin
+          </li>
+          <li>
+            <kbd>}</kbd> - hyppää seuraavaan kappaleeseen (tai funktioon/lohkoon koodia editoidessa))
+          </li>
+          <li>
+            <kbd>{</kbd> - hyppää edelliseen kappaleeseen (tai funktioon/lohkoon koodia editoidessa))
+          </li>
+          <li>
+            <kbd>zz</kbd> - keskitä näyttö kursoriin
+          </li>
+          <li>
+            <kbd>zt</kbd> - sijoita kursori sivun yläosaan
+          </li>
+          <li>
+            <kbd>zb</kbd> - sijoita kursori sivun alaosaan
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>e</kbd> - liikuta näyttöä yksi rivi alas (ilman että kursori liikkuu)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>y</kbd> - liikuta näyttöä yksi rivi ylös (ilman että kursori liikkuu)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>b</kbd> - siirrä näyttöä yksi sivu ylös (kursori viimeiselle riville)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>f</kbd> - siirrä näyttöä yksi sivu alas (kursori ensimmäiselle riville)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - siirrä kursoria ja näyttöä 1/2 sivu alas
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>u</kbd> - siirrä kursoria ja näyttöä 1/2 sivu ylös
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong>
+          Anna kursorin liike komentoa ennen numero toistaaksesi sen useasti. Esimerkiksi, <kbd>4j</kbd> siirtyy alas 4 riviä.
+        </div>
+        <h2>Syöttötila - tekstin syöttäminen/lisääminen</h2>
+        <ul>
+          <li>
+            <kbd>i</kbd> - syötä kursorin eteen
+          </li>
+          <li>
+            <kbd>I</kbd> - syötä rivin alkuun
+          </li>
+          <li>
+            <kbd>a</kbd> - syötä (lisää) kursorin jälkeen
+          </li>
+          <li>
+            <kbd>A</kbd> - syötä (lisää) rivin loppuun
+          </li>
+          <li>
+            <kbd>o</kbd> - lisää (avaa) uusi rivi nykyisen rivin alle
+          </li>
+          <li>
+            <kbd>O</kbd> - lisää (avaa) uusi rivi nykyisen rivin yläpuolelle
+          </li>
+          <li>
+            <kbd>ea</kbd> - syötä (lisää) sanan loppuun
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>h</kbd> - poista kursoria edeltävä merkki syöttytilassa ollessa
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w</kbd> - poista kursoria edeltävä sana syöttötilassa ollessa
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>j</kbd> - lisää rivinvaihto kursin sijaintiin syöttytilassa ollessa
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>t</kbd> - sisennä (siirrä oikealle) yhdellä shiftwidth-arvolla syöttytilassa ollessa
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - vähennä sisennystä (siirrä vasemmalle) yhdellä shiftwidth-arvolla syöttyötilassa ollessa
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>n</kbd> - syötä (täydennä automaattisesti) seuraava osuma ennen kursoria syöttötilassa ollessa
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>p</kbd> - syötä (täydennä automaattisesti) edellinen osuma ennen kursoria syöttötilassa ollessa
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>rx</kbd> - syötä rekisterin x sisältö
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ox</kbd> - Siirry väliaikaisesti normaalitilaan ja syötä yksi normaalin tilan komento x.
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - poistu syöttötilasta
+          </li>
+        </ul>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>Muokkaaminen</h2>
+        <ul>
+          <li>
+            <kbd>r</kbd> - korvaa yksi merkki.
+          </li>
+          <li>
+            <kbd>R</kbd> - korvaa useampi kuin yksi merkki, kunnes <kbd>ESC</kbd> on painettu.
+          </li>
+          <li>
+            <kbd>J</kbd> - liitä alla oleva rivi nykyiseen välilyönnillä
+          </li>
+          <li>
+            <kbd>gJ</kbd> - liitä alla oleva rivi nykyiseen ilman välilyöntiä
+          </li>
+          <li>
+            <kbd>gwip</kbd> - formatoi kappale
+          </li>
+          <li>
+            <kbd>g~</kbd> - muuta kirjaimien koko liikkeen loppuun asti
+          </li>
+          <li>
+            <kbd>gu</kbd> - muuta pieniksi kirjaimiksi liikkeen loppuun asti
+          </li>
+          <li>
+            <kbd>gU</kbd> - muuta isoiksi kirjaimiksi liikeen loppuun asti
+          </li>
+          <li>
+            <kbd>cc</kbd> - muuta (korvaa) koko rivi
+          </li>
+          <li>
+            <kbd>c$</kbd> or <kbd>C</kbd> - muuta (korvaa) rivin loppun asti
+          </li>
+          <li>
+            <kbd>ciw</kbd> - muuta (korvaa) koko sana
+          </li>
+          <li>
+            <kbd>cw</kbd> or <kbd>ce</kbd> - muuta (korvaa) sanan loppuun asti
+          </li>
+          <li>
+            <kbd>s</kbd> - poista merkki ja korvaa tekstillä
+          </li>
+          <li>
+            <kbd>S</kbd> - poista rivi ja kovaa tekstillä (sama kuin cc)
+          </li>
+          <li>
+            <kbd>xp</kbd> - vaihda kahden kirjaimen paikkaa (leikkaa ja liitä)
+          </li>
+          <li>
+            <kbd>u</kbd> - peru
+          </li>
+          <li>
+            <kbd>U</kbd> - palauta (peru) viimeksi muutettu rivi
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>r</kbd> - tee uudelleen
+          </li>
+          <li>
+            <kbd>.</kbd> - toista viimeisin komento
+          </li>
+        </ul>
+        <h2>Tekstin merkintä (visuaalinen tila)</h2>
+        <ul>
+          <li>
+            <kbd>v</kbd> - käynnistä visuaalinen tila, merkitse alue, sitten aja komento (esim. y-nykäise)
+          </li>
+          <li>
+            <kbd>V</kbd> - käynnistä rivikohtainen visuaalinen tila
+          </li>
+          <li>
+            <kbd>o</kbd> - siirry merkityn alueen toiseen päähän
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>v</kbd> - käynnistä lohkokohtainen visuaalinen tila
+          </li>
+          <li>
+            <kbd>O</kbd> - siirry lohkon toiseen kulmaan
+          </li>
+          <li>
+            <kbd>aw</kbd> - merkitse sana
+          </li>
+          <li>
+            <kbd>ab</kbd> - merkitse () lohko
+          </li>
+          <li>
+            <kbd>aB</kbd> - merkitse {} lohko
+          </li>
+          <li>
+            <kbd>at</kbd> - merkitse &lt;&gt; lohko
+          </li>
+          <li>
+            <kbd>ib</kbd> - merkitse () sisempi lohko
+          </li>
+          <li>
+            <kbd>iB</kbd> - merkitse {} sisempi lohko
+          </li>
+          <li>
+            <kbd>it</kbd> - merkitse &lt;&gt; sisempi lohko
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - poistu visuaalisesta tilasta
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> <kbd>b</kbd>:n tai <kbd>B</kbd>:n sijasta voit myös käyttää <kbd>(</kbd>:a tai <kbd>{</kbd>:a.
+        </div>
+        <h2>Visuaaliset komennot</h2>
+        <ul>
+          <li>
+            <kbd>&#62;</kbd> - siirrä tekstiä oikealle
+          </li>
+          <li>
+            <kbd>&#60;</kbd> - siirrä tekstiä vasemmalle
+          </li>
+          <li>
+            <kbd>y</kbd> - nykäise (kopioi) merkitty teksti
+          </li>
+          <li>
+            <kbd>d</kbd> - poista merkitty teksti
+          </li>
+          <li>
+            <kbd>~</kbd> - vaihda kirjaimien koko
+          </li>
+          <li>
+            <kbd>u</kbd> - muuta merkityn tekstin kirjaimet pieneksi
+          </li>
+          <li>
+            <kbd>U</kbd> - muuta merkityn tekstin kirjaimet isoiksi
+          </li>
+        </ul>
+        <h2>Rekisterit</h2>
+        <ul>
+          <li>
+            <kbd>:reg[isters]</kbd> - näytä rekisterien sisältö
+          </li>
+          <li>
+            <kbd>"xy</kbd> - nykäisen rekisteriin x
+          </li>
+          <li>
+            <kbd>"xp</kbd> - liitä rekisterin x sisältö
+          </li>
+          <li>
+            <kbd>"+y</kbd> - nykäisen järjestelmän leikepöydän rekisteriin
+          </li>
+          <li>
+            <kbd>"+p</kbd> - liitä järjestelmän leikepöydän rekisteristä
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Rekisterit ovat tallessa ~/.viminfo-tiedostossa ja ladataan uudestaan seuraavan käynnistyksen yhteydessä.
+        </div>
+        <div class="well">
+          <strong>Tip</strong> Erikois rekisterit:
+          <p>
+            &emsp;<kbd>0</kbd> - viimeisin nykäsy<br/>
+            &emsp;<kbd>&quot;</kbd> - nimeämätön rekisteri, viimeisin poisto tai nykäsy<br/>
+            &emsp;<kbd>%</kbd> - nykyisen tiedoston nimi<br/>
+            &emsp;<kbd>#</kbd> - vaihtoehtoinen tiedoston nimi<br/>
+            &emsp;<kbd>*</kbd> - leikepöydän sisältö (X11 ensisijainen)<br/>
+            &emsp;<kbd>+</kbd> - leikepöydän sisältö (X11 leikepöytä)<br/>
+            &emsp;<kbd>/</kbd> - viimeisin haku kaava<br/>
+            &emsp;<kbd>:</kbd> - viimeisin komento<br/>
+            &emsp;<kbd>.</kbd> - viimeisin syötetty teksti<br/>
+            &emsp;<kbd>-</kbd> - viimeisin pieni (alle rivin) poisto<br/>
+            &emsp;<kbd>=</kbd> - yhtälö rekisteri<br/>
+            &emsp;<kbd>_</kbd> - musta aukko rekisteri<br/>
+          </p>
+        </div>
+        <h2>Merkit ja sijainnit</h2>
+        <ul>
+          <li>
+            <kbd>:marks</kbd> - lista merkeistä
+          </li>
+          <li>
+            <kbd>ma</kbd> - aseta nykyisen sijainti merkkiin A
+          </li>
+          <li>
+            <kbd>`a</kbd> - hyppää merkin A sijantiin
+          </li>
+          <li>
+            <kbd>y`a</kbd> - nykäise teksti merkin A sijaintiin asti
+          </li>
+          <li>
+            <kbd>`0</kbd> - mene sijaintiin, jossa Vim edellisen kerran suljettiin
+          </li>
+          <li>
+            <kbd>`"</kbd> - mene sijaintiin, jossa viimeksi lähdit tiedostosta
+          </li>
+          <li>
+            <kbd>`.</kbd> - mene sijaintiin, jossa viimeisin muutos tehtiin tähän tiedostoon
+          </li>
+          <li>
+            <kbd>``</kbd> - mene edellistä hyppyä edeltävään sijaintiin
+          </li>
+          <li>
+            <kbd>:ju[mps]</kbd> - listaa hypyt
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>i</kbd> - mene uusimpaan sijaintiin hyppy listalla
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>o</kbd> - mene vanhempaan sijantiin hyppy listalla
+          </li>
+          <li>
+            <kbd>:changes</kbd> - muutoslista
+          </li>
+          <li>
+            <kbd>g,</kbd> - mene uudempaan sijantiin muutoslistalla
+          </li>
+          <li>
+            <kbd>g;</kbd> - mene vanhempaan sijaintiin muutoslistalla
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>]</kbd> - hyppää kursorin alla olevaan tägiin
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Voit käyttää backtick- (<kbd>`</kbd>) tai heittomerkkiä (<kbd>'</kbd>) hypätäksesi merkkiin. Heittomerkki hyppää merkin sisältämän rivin alkuun (ensimmäinen ei-tyhjä merkki).
+        </div>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>Makrot</h2>
+        <ul>
+          <li>
+            <kbd>qa</kbd> - tallenna makro a
+          </li>
+          <li>
+            <kbd>q</kbd> - lopeta makron tallennus
+          </li>
+          <li>
+            <kbd>@a</kbd> - aja makro a
+          </li>
+          <li>
+            <kbd>@@</kbd> - aja viimeisin makro uudelleen
+          </li>
+        </ul>
+        <h2>Leikkaa ja liitä</h2>
+        <ul>
+          <li>
+            <kbd>yy</kbd> - nykäise (kopioi) rivi
+          </li>
+          <li>
+            <kbd>2yy</kbd> - nykäise (kopioi) 2 riviä
+          </li>
+          <li>
+            <kbd>yw</kbd> - nykäise (kopioi) sanan merkit kursorin tämän hetkisestä sijainnista seuraavan sanan alkuun
+          </li>
+          <li>
+            <kbd>yiw</kbd> - nykäise (kopioi) kursorin alla oleva sana
+          </li>
+          <li>
+            <kbd>yaw</kbd> - nykäise (kopioi) kursorin alla oleva sana ja väliluönnit sen edessä ja takana
+          </li>
+          <li>
+            <kbd>y$</kbd> or <kbd>Y</kbd> - nykäise (kopioi) rivin loppuun
+          </li>
+          <li>
+            <kbd>p</kbd> - laita (liitä) kursorin jälkeen
+          </li>
+          <li>
+            <kbd>P</kbd> - laita (liitä) kursoria ennen
+          </li>
+          <li>
+            <kbd>gp</kbd> - laita (liitä) kursorin jälkeen ja jätä kursori uuden tekstin perään
+          </li>
+          <li>
+            <kbd>gP</kbd> - laita (liitä) kursorin eteen ja jätä kursori uuden tekstin perään
+          </li>
+          <li>
+            <kbd>dd</kbd> - poista (leikkaa) rivi
+          </li>
+          <li>
+            <kbd>2dd</kbd> - poista (leikkaa) 2 riviä
+          </li>
+          <li>
+            <kbd>dw</kbd> - poista (leikkaa) sanan merkit kursorin sijainnista seuraavan sanan alkuun
+          </li>
+          <li>
+            <kbd>diw</kbd> - poista (leikkaa) kursorin alla oleva sana
+          </li>
+          <li>
+            <kbd>daw</kbd> - poista (leikkaa) kursoin alla oleva sana ja välilyönti sen edestä tai takaa
+          </li>
+          <li>
+            <kbd>:3,5d</kbd> - poista rivit kolme - viisi
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Voit myös käyttää seuraavia merkkejä määritelläksesi alueen: <br>
+          e.g. <br>
+          <p>
+            <kbd>:.,$d</kbd> - Nykyiseltä riviltä tiedoston loppuun <br>
+            <kbd>:.,1d</kbd> - Nykyiseltä riviltä tiedoston alkuun <br>
+            <kbd>:10,1d</kbd> - Kymmenenneltä rivilä tiedoston alkuun <br>
+          </p>
+        </div>
+        <ul>
+          <li>
+            <kbd>:g/{pattern}/d</kbd> - poista kaikki rivit, joissa kaava esiintyy
+          </li>
+          <li>
+            <kbd>:g!/{pattern}/d</kbd> - poista kaikki rivit, joilla kaava ei esiinny
+          </li>
+          <li>
+            <kbd>d$</kbd> or <kbd>D</kbd> - poista (leikkaa) rivin loppuun asti
+          </li>
+          <li>
+            <kbd>x</kbd> - poista (leikkaa) merkki
+          </li>
+        </ul>
+        <h2>Tekstin sisennys</h2>
+        <ul>
+          <li>
+            <kbd>&#62;&#62;</kbd> - sisennä (siirrä oikealle) yhdellä shiftwidth-arvolla
+          </li>
+          <li>
+            <kbd>&#60;&#60;</kbd> - vähennä sisennystä (siirrä vasemmalle) yhdellä shiftwidth-arvolla
+          </li>
+          <li>
+            <kbd>&#62;%</kbd> - sisennä () tai {} lohko (kursori sulkeella)
+          </li>
+          <li>
+            <kbd>&#60;%</kbd> - vähennä sisennystä () tai {} lohkolle (kursori sulkeella)
+          </li>
+          <li>
+            <kbd>&#62;ib</kbd> - sisennä sisempi () lohko
+          </li>
+          <li>
+            <kbd>&#62;at</kbd> - sisennä lohko &lt;&gt; tägeillä
+          </li>
+          <li>
+            <kbd>3==</kbd> - uudelleen sisennä kolme riviä
+          </li>
+          <li>
+            <kbd>=%</kbd> - uudelleen sisennä () tai {} lohko (kursori sulkeella)
+          </li>
+          <li>
+            <kbd>=iB</kbd> - uudelleen sisennä sisempi {} lohko
+          </li>
+          <li>
+            <kbd>gg=G</kbd> - uudelleen sisennä koko bufferi
+          </li>
+          <li>
+            <kbd>]p</kbd> - liitä ja muokkaa sisennystä nykyiselle riville
+          </li>
+        </ul>
+        <h2>Poistuminen</h2>
+        <ul>
+          <li>
+            <kbd>:w</kbd> - kirjoita (tallenna) tiedosto, mutta älä poistu
+          </li>
+          <li>
+            <kbd>:w !sudo tee %</kbd> - kirjoite tiedosto sudolla
+          </li>
+          <li>
+            <kbd>:wq</kbd> or <kbd>:x</kbd> or <kbd>ZZ</kbd> - kirjoita (tallenna) ja poistu
+          </li>
+          <li>
+            <kbd>:q</kbd> - poistu (epäonnistuu, jos tiedostossa on tallentamattomia muutoksia)
+          </li>
+          <li>
+            <kbd>:q!</kbd> or <kbd>ZQ</kbd> - poiustu ja hylkää tallentamattomat muutokset
+          </li>
+          <li>
+            <kbd>:wqa</kbd> - kirjoita (tallenna) ja poistu kaikista välilehdistä
+          </li>
+        </ul>
+        <h2>Etsi ja korvaa</h2>
+        <ul>
+          <li>
+            <kbd>/pattern</kbd> - etsi kaavaa
+          </li>
+          <li>
+            <kbd>?pattern</kbd> - etsi kaavaa taaksepäin
+          </li>
+          <li>
+            <kbd>\vpattern</kbd> - &#x27;very magic&#x27; kaava: ei-alfanumeeriset merkit tulkitaan regex-symboleina (ei tarvetta escapelle)
+          </li>
+          <li>
+            <kbd>n</kbd> - toista haku samaan suuntaan
+          </li>
+          <li>
+            <kbd>N</kbd> - toista haku toiseen suuntaan
+          </li>
+          <li>
+            <kbd>:%s/old/new/g</kbd> -
+            korvaa kaikki old → new koko tiedostossa
+          </li>
+          <li>
+            <kbd>:%s/old/new/gc</kbd> -
+            korvaa kaikki old → new koko tiedostossa varmistuksella
+          </li>
+          <li>
+            <kbd>:noh[lsearch]</kbd> - poista korostus haku osumista
+          </li>
+        </ul>
+        <h2>Etsi useasta tiedostosta</h2>
+        <ul>
+          <li>
+            <kbd>:vim[grep] /pattern/ {`{file}`}</kbd> -
+            etsi kaavaa useasta tiedostosta
+          </li>
+        </ul>
+        <div class="well">
+          e.g.
+          <kbd>:vim[grep] /foo/ **/*</kbd>
+        </div>
+        <ul>
+          <li>
+            <kbd>:cn[ext]</kbd> - hyppää seuraavaan osumaan
+          </li>
+          <li>
+            <kbd>:cp[revious]</kbd> - hyppää edelliseen osumaan
+          </li>
+          <li>
+            <kbd>:cope[n]</kbd> - avaa ikkuna nähdäksesi listan osumista
+          </li>
+          <li>
+            <kbd>:ccl[ose]</kbd> - sulje quickfix ikkuna
+          </li>
+        </ul>
+        <h2>Välilehdet</h2>
+        <ul>
+          <li>
+            <kbd>:tabnew</kbd> or <kbd>:tabnew {page.words.file}</kbd> -
+            avaa tiedosto uudessa välilehdessä
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wT</kbd> - siirrä nykyinen jaettu ikkuna omaan välilehteen
+          </li>
+          <li>
+            <kbd>gt</kbd> or <kbd>:tabn[ext]</kbd> - siirry seuraavaan välilehteen
+          </li>
+          <li>
+            <kbd>gT</kbd> or <kbd>:tabp[revious]</kbd> - siirry edelliseen välilehteen
+          </li>
+          <li>
+            <kbd>#gt</kbd> - siirry välilehteen numero #
+          </li>
+          <li>
+            <kbd>:tabm[ove] #</kbd> - siirrä nykyinen välilehti #:teen sijaintiin (alkaen nollasta)
+          </li>
+          <li>
+            <kbd>:tabc[lose]</kbd> - sulje nykyinen välilehti ja sen kaikki ikkunat
+          </li>
+          <li>
+            <kbd>:tabo[nly]</kbd> - sulje kaikki muut paitsi nykyinen välilehti
+          </li>
+          <li>
+            <kbd>:tabdo</kbd> command - aja <code>komento</code> kaikissa välilehdissä (esim. <code>:tabdo q</code> - sulkee kaikki avatut välilehdet)
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-block">
+      <div class="grid-lg-1-2">
+        <h2>Usean tiedoston työstäminen</h2>
+        <ul>
+          <li>
+            <kbd>:e[dit] tiedosto</kbd> - muokkaa tiedostoa uudessa bufferissa
+          </li>
+          <li>
+            <kbd>:bn[ext]</kbd> -
+            mene seuraavaan bufferiin
+          </li>
+          <li>
+            <kbd>:bp[revious]</kbd> -
+            mene edelliseen bufferiin
+          </li>
+          <li>
+            <kbd>:bd[elete]</kbd> - poista bufferi (sulje tiedosto)
+          </li>
+          <li>
+            <kbd>:b[uffer]#</kbd> - mene bufferiin numero #
+          </li>
+          <li>
+            <kbd>:b[uffer] file</kbd> - mene bufferiin tiedostonimellä
+          </li>
+          <li>
+            <kbd>:ls</kbd> or <kbd>:buffers</kbd> - listaa kaikki avoimet bufferit
+          </li>
+          <li>
+            <kbd>:sp[lit] tiedosto</kbd> - avaa tiedosto uudessa bufferissa ja jaa ikkuna
+          </li>
+          <li>
+            <kbd>:vs[plit] tiedosto</kbd> - avaa tiedosto uudessa bufferissa ja jaa ikkuna vertikaalisesti
+          </li>
+          <li>
+            <kbd>:vert[ical] ba[ll]</kbd> - muokkaa kaikkia buffereita vertikaalisina ikkunoina
+          </li>
+          <li>
+            <kbd>:tab ba[ll]</kbd> - muokkaa kaikki buffereita välilehtinä
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ws</kbd> - jaa ikkuna
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wv</kbd> - jaa ikkuna vertikaalisesti
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ww</kbd> - vaihda ikkunaa
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wq</kbd> - sulje ikkuna
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wx</kbd> - vaihda nykyinen ikkuna seuraavan kanssa
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w=</kbd> - tee kaikista ikkunoista yhtä korkeita ja leveitä
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wh</kbd> - siirrä kursori vasempaan ikkunaan (vertikaalisessa jaossa)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wl</kbd> - siirrä kursori oikeaan ikkunaan (vertikaalisessa jaossa)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wj</kbd> - siirrä kursori alempaan ikkunaan (horisontaalisessa jaossa)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wk</kbd> - siirrä kursori ylempään ikkunaan (horisontaalisessa jaossa)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wH</kbd> - tee nykyisestä ikkunasta koko terminaali-ikkunan korkuinen vasempaan reunaan (vasemmanpuoleisin pystyikkuna)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wL</kbd> - tee nykyisestä ikkunasta koko terminaali-ikkunan korkuinen oikeaan reunaan (oikeanpuoleisin pystyikkuna)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wJ</kbd> - tee nykyisestä ikkunasta koko terminaali-ikkunan levyinen alas (alin vaakaikkuna)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wK</kbd> - tee nykyisestä ikkunasta koko terminaali-ikkunan levyinen ylös (ylin vaakaikkuna)
+          </li>
+        </ul>
+        </ul>
+        </ul>
+        </ul>
+      </div>
+      <div class="grid-lg-1-2">
+        <h2>Diff</h2>
+        <ul>
+          <li>
+            <kbd>zf</kbd> - määrittele taitos manuaalisesti seuraavaan liikkeeseen asti
+          </li>
+          <li>
+            <kbd>zd</kbd> - poista kursorin alla oleva taitos
+          </li>
+          <li>
+            <kbd>za</kbd> - avaa tai sulje kursorin alla oleva taitos
+          </li>
+          <li>
+            <kbd>zo</kbd> - avaa kursorin alla oleva taitos
+          </li>
+          <li>
+            <kbd>zc</kbd> - sulje kursorin alla oleva taitos
+          </li>
+          <li>
+            <kbd>zr</kbd> - avaa kaikkia taitoksia yhdellä tasolla
+          </li>
+          <li>
+            <kbd>zm</kbd> - sulje kaikki taitoksia yhdellä tasolla
+          </li>
+          <li>
+            <kbd>zi</kbd> - vaihda taitto ominaisuus päälle tai pois
+          </li>
+          <li>
+            <kbd>]c</kbd> - hyppää seuraavan muutoksen alkuun
+          </li>
+          <li>
+            <kbd>[c</kbd> - hyppää edellisen muutoksen alkuun
+          </li>
+          <li>
+            <kbd>do</kbd> or <kbd>:diffg[et]</kbd> - hae erot (toisesta bufferista)
+          </li>
+          <li>
+            <kbd>dp</kbd> or <kbd>:diffpu[t]</kbd> - laita erot (toiseen bufferiin)
+          </li>
+          <li>
+            <kbd>:diffthis</kbd> - ota nykyinen ikkuna mukaan diffiin
+          </li>
+          <li>
+            <kbd>:dif[fupdate]</kbd> - päivitä erot
+          </li>
+          <li>
+            <kbd>:diffo[ff]</kbd> - sulje diff-tila nykyisestä ikkunasta
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Taitos komennot (esim. <kbd>za</kbd>) toimivat yhdellä tasolla. Kaikilla tasoilla toimiaksesi, käytä isoja kirjaimia (esim. <kbd>zA</kbd>.
+        </div>
+        <div class="well">
+          <strong>Tip</strong> Katsoaksesi eroja tiedostojen välillä, voit käynnistää Vim:in diff tilassa <kbd>vimdiff</kbd> terminaalista. Tämän asettaa <kbd>git difftool</kbd>:ksi.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+      <div>
+        <div id="footer" class="grid-block">
+          <div class="box">
+            <div class="box-header">
+              <h2>Additional Resources</h2>
+            </div>
+            <div class="box-body">
+              <div class="grid-block">
+                <div class="grid-lg-1-2">
+                  <h3 id="languages">Languages</h3>
+                  <ul>
+                    <li>
+                      <a href="/lang/ar" lang="ar">العربية</a>
+                    </li>
+                    <li>
+                      <a href="/lang/bn" lang="bn">বাংলা</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ca" lang="ca">Català</a>
+                    </li>
+                    <li>
+                      <a href="/lang/cs" lang="cs">Čeština</a>
+                    </li>
+                    <li>
+                      <a href="/lang/da_DK" lang="da">Dansk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/de_de" lang="de">Deutsch</a>
+                    </li>
+                    <li>
+                      <a href="/lang/el_gr" lang="el">Ελληνικά</a>
+                    </li>
+                    <li>
+                      <a href="/lang/en_us" lang="en">English</a>
+                    </li>
+                    <li>
+                      <a href="/lang/eo" lang="eo">Esperanto</a>
+                    </li>
+                    <li>
+                      <a href="/lang/es_es" lang="es">Español</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fa_ir" lang="fa">Persian</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fi" lang="fi">Suomi</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fr_fr" lang="fr">Français</a>
+                    </li>
+                    <li>
+                      <a href="/lang/he" lang="he">עברית</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hr" lang="hr">Hrvatski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hu_hu" lang="hu">Magyar</a>
+                    </li>
+                    <li>
+                      <a href="/lang/id" lang="id">Bahasa Indonesia</a>
+                    </li>
+                    <li>
+                      <a href="/lang/it" lang="it">Italiano</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ja" lang="ja">日本語</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ko" lang="ko">한국어</a>
+                    </li>
+                    <li>
+                      <a href="/lang/my" lang="my">မြန်မာ</a>
+                    </li>
+                    <li>
+                      <a href="/lang/nl_nl" lang="nl">Nederlands</a>
+                    </li>
+                    <li>
+                      <a href="/lang/no_nb" lang="no">Norsk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pl_pl" lang="pl">Polski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_br" lang="pt">Português - Brasil</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_pt" lang="pt">Português - Portugal</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ro" lang="ro">Romana</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ru" lang="ru">Русский</a>
+                    </li>
+                    <li>
+                      <a href="/lang/si_lk" lang="si">සිංහල</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sk" lang="sk">Slovenčina</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sv" lang="sv">Svenska</a>
+                    </li>
+                    <li>
+                      <a href="/lang/th" lang="th">ภาษาไทย</a>
+                    </li>
+                    <li>
+                      <a href="/lang/tr" lang="tr">Türkçe</a>
+                    </li>
+                    <li>
+                      <a href="/lang/uk" lang="uk">Українська</a>
+                    </li>
+                    <li>
+                      <a href="/lang/vi_vn" lang="vi">Tiếng Việt</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_cn" lang="zh">简体中文</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_tw" lang="zh">中文 (台灣)</a>
+                    </li>
+                  </ul>                </div>
+                <div class="grid-lg-1-2">
+                  <h3>About the vim cheat sheet</h3>
+                  <p>
+                    This project aims to be one of the most accessible vim guides available. We
+                    made sure to support mobile, desktop, and other
+                    <a href="#languages" aria-label="Jump to languages section">languages</a>.
+                  </p>
+                  <p>
+                    <a target="_blank" href="https://github.com/sponsors/rtorr" aria-label="Sponsor this project on GitHub">❤️ Please consider sponsoring this
+                      project ❤️</a>!
+                  </p>
+                  <p>
+                    You can read about how to contribute (and help improve) by viewing our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/README.md" target="_blank"
+                      rel="noopener noreferrer" aria-label="Read the README on GitHub">
+                      README
+                    </a>
+                    . There you can see how to set up this project, or how to contribute a new
+                    language. Here is a big thank you to our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/graphs/contributors" target="_blank"
+                      rel="noopener noreferrer" aria-label="View project contributors on GitHub">
+                      contributors!
+                    </a>
+                  </p>
+                  <p>
+                    This project is licensed under
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/License.txt" target="_blank"
+                      rel="noopener noreferrer" aria-label="View the MIT License for this project">
+                      The MIT License (MIT)
+                    </a>
+                    .
+                  </p>
+                  <h3>Other places to find this document</h3>
+                  <p>
+                    This document was embedded in
+                    <a href="https://duckduckgo.com/?q=vim+cheat+sheet" target="_blank" rel="noopener noreferrer" aria-label="Search for this document on DuckDuckGo">
+                      DuckDuckGo
+                    </a>
+                    .
+                  </p>
+                  <h3>More resources</h3>
+                  <p>
+                    Interactive Vim tutorial:
+                    <a href="https://openvim.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Open Vim for an interactive Vim tutorial">
+                      Open Vim
+                    </a>
+                  </p>
+                  <p>
+                    Vim quick reference from Vim help pages:
+                    <a href="https://vimhelp.org/quickref.txt.html" target="_blank" rel="noopener noreferrer" aria-label="Access Vim quick reference"> 
+                      quickref.txt
+                    </a>
+                  </p>
+                  <p>
+                    List of all Vim ex (<kbd>:</kbd>) commands:
+                    <a href="https://vimhelp.org/index.txt.html#ex-cmd-index" target="_blank" rel="noopener noreferrer" aria-label="View list of all Vim ex commands">
+                      ex-cmd-index
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-block link-to-repo">
+          <p>
+            Checkout the source on
+            <a href="https://github.com/rtorr/vim-cheat-sheet" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+          </p>
+          <p>version: 3.2.0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.CACHE_NAME = "3.2.0";
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/javascripts/sw.js?version=3.2.0');
+      });
+    }
+  </script>
+</body>
+
+</html>

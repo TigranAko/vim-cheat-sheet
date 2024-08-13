@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="hr">
+
+<head>
+  <meta charSet="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Vim Cheat Sheet</title>
+  <link rel="shortcut icon" href="/images/icons/icon-48x48.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#FA4949" />
+  <meta http-equiv="cache-control" content="max-age=600" />
+  <meta name="description" content="Explore vim.rtorr.com for an extensive Vim cheat sheet, offering clear, concise commands and shortcuts for Vim users. Whether you're a beginner or an experienced developer, find tips and tricks to enhance your coding efficiency in Vim.">
+  <link rel="apple-touch-icon" sizes="48x48" href="/images/icons/icon-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="/images/icons/icon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/images/icons/icon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="256x256" href="/images/icons/icon-256x256.png" />
+  <link rel="apple-touch-icon" sizes="384x384" href="/images/icons/icon-384x384.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="/images/icons/icon-512x512.png" />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <div class="sponsor">
+    <div class="container">
+      <span>
+        <a target="_blank" href="https://www.warp.dev">
+          <div class="sponsor-logo-container">
+            <span>Sponsor</span>
+            <img class="sponsor-logo" src="/images/svg/warp-logo.svg" alt="Warp logo">
+          </div>
+          <div class="sponsor-tagline"><span>A new terminal focused on developer productivity</span></div>
+      </span>
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid-block">
+      <div class="grid-1">
+        <h1>
+          <a class="site-title" href="/">
+            Vim Cheat Sheet
+          </a>
+        </h1>
+      </div>
+    </div>
+    <div class="container">
+      <main><div class="container">
+  <div class="commands-container">
+    <div class="grid-block">
+      <div class="grid-lg-1-3">
+        <h2>Globalne naredbe</h2>
+        <ul>
+          <li>
+            <kbd>:h[elp] naredba</kbd> - otvori pomoć za naredbu
+          </li>
+          <li>
+            <kbd>:sav[eas] datoteka</kbd> - snimi datoteku kao
+          </li>
+          <li>
+            <kbd>:clo[se]</kbd> - zatvori trenutno aktivni prozor
+          </li>
+          <li>
+            <kbd>:ter[minal]</kbd> - otvori terminal u prozoru
+          </li>
+          <li>
+            <kbd>K</kbd> - otvori &#x27;man&#x27; stranicu za riječ pod kursorom
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Pokrenite <kbd>vimtutor</kbd> u terminalu kako bi naučili osnove korištenja Vim-a.
+        </div>
+        <h2>Pomicanje kursora</h2>
+        <ul>
+          <li>
+            <kbd>h</kbd> - pomakni kursor lijevo
+          </li>
+          <li>
+            <kbd>j</kbd> - pomakni kursor dolje
+          </li>
+          <li>
+            <kbd>k</kbd> - pomakni kursor gore
+          </li>
+          <li>
+            <kbd>l</kbd> - pomakni kursor desno
+          </li>
+          <li>
+            <kbd>gj</kbd> - pomakni kursor dolje (višelinijski tekst)
+          </li>
+          <li>
+            <kbd>gk</kbd> - pomakni kursor gore (višelinijski tekst)
+          </li>
+          <li>
+            <kbd>H</kbd> - pomakni kursor na vrh zaslona
+          </li>
+          <li>
+            <kbd>M</kbd> - pomakni kursor na sredinu zaslona
+          </li>
+          <li>
+            <kbd>L</kbd> - pomakni kursor na dno zaslona
+          </li>
+          <li>
+            <kbd>w</kbd> - idi na početak sljedeće riječi
+          </li>
+          <li>
+            <kbd>W</kbd> - idi na početak sljedeće riječi (riječ može sadržavati znakove interpunkcije)
+          </li>
+          <li>
+            <kbd>e</kbd> - idi na kraj riječi
+          </li>
+          <li>
+            <kbd>E</kbd> - idi na kraj riječi (riječ može sadržavati znakove interpunkcije)
+          </li>
+          <li>
+            <kbd>b</kbd> - idi na početak riječi
+          </li>
+          <li>
+            <kbd>B</kbd> - idi na početak riječi (riječ može sadržavati znakove interpunkcije)
+          </li>
+          <li>
+            <kbd>ge</kbd> - idi na kraj predhodne riječi
+          </li>
+          <li>
+            <kbd>gE</kbd> - idi na kraj predhodne riječi (riječ može sadržavati znakove interpunkcije)
+          </li>
+          <li>
+            <kbd>%</kbd> - idi na sljedeći podudarni znak (podržani zadani parovi: '()', '{}', '[]' - za više informacija koristi Vim naredbu <code>:h matchpairs</code>)
+          </li>
+          <li>
+            <kbd>0</kbd> - idi na početak linije
+          </li>
+          <li>
+            <kbd>^</kbd> - idi na prvi neprazni znak u redu
+          </li>
+          <li>
+            <kbd>$</kbd> - idi na kraj linije
+          </li>
+          <li>
+            <kbd>g_</kbd> - idi na zadnji neprazni znak u redu
+          </li>
+          <li>
+            <kbd>gg</kbd> - idi na prvi red dokumenta
+          </li>
+          <li>
+            <kbd>G</kbd> - idi na zadnji red dokumenta
+          </li>
+          <li>
+            <kbd>5gg</kbd> or <kbd>5G</kbd> - idi na 5. red
+          </li>
+          <li>
+            <kbd>gd</kbd> - idi na lokalnu deklaraciju varijable (programski jezici)
+          </li>
+          <li>
+            <kbd>gD</kbd> - idi na globalnu deklaraciju varijable (programski jezici)
+          </li>
+          <li>
+            <kbd>fx</kbd> - idi na sljedeće pojavljivanje znaka x
+          </li>
+          <li>
+            <kbd>tx</kbd> - idi ispred sljedećeg pojavljivanja znaka x
+          </li>
+          <li>
+            <kbd>Fx</kbd> - idi na predhodno pojavljivanje znaka x
+          </li>
+          <li>
+            <kbd>Tx</kbd> - idi iza predhodnog pojavljivanja znaka x
+          </li>
+          <li>
+            <kbd>;</kbd> - ponovi predhodno f, t, F ili T pomicanje
+          </li>
+          <li>
+            <kbd>,</kbd> - ponovi predhodno f, t, F ili T pomicanje, u suprotnom smjeru
+          </li>
+          <li>
+            <kbd>}</kbd> - idi na sljedeći odjeljak (ili funkciju/blok, kod uređivanja programskog koda)
+          </li>
+          <li>
+            <kbd>{</kbd> - idi na predhodni odjeljak (ili funkciju/blok, kod uređivanja programskog koda)
+          </li>
+          <li>
+            <kbd>zz</kbd> - postavi kursor na sredinu zaslona
+          </li>
+          <li>
+            <kbd>zt</kbd> - postavi kursor na vrh zaslona
+          </li>
+          <li>
+            <kbd>zb</kbd> - postavi kursor na dno zaslona
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>e</kbd> - pomakni zaslon jednu liniju prema dolje (bez pomicanja kursora)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>y</kbd> - pomakni zaslon jednu liniju prema gore (bez pomicanja kursora)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>b</kbd> - pomakni nazad jedan zaslon
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>f</kbd> - pomakni naprijed jedan zaslon
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - pomakni naprijed pola zaslona
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>u</kbd> - pomakni nazad pola zaslona
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong>
+          Prije naredbe za pomicanje kursora upiši broj ponavljanja. Npr. <kbd>4j</kbd> pomiče kursor četiri linje prema dolje.
+        </div>
+        <h2>Uređivanje teksta (insert mode)</h2>
+        <ul>
+          <li>
+            <kbd>i</kbd> - umetni ispred kursora
+          </li>
+          <li>
+            <kbd>I</kbd> - umetni na početak reda
+          </li>
+          <li>
+            <kbd>a</kbd> - umetni iza kursora
+          </li>
+          <li>
+            <kbd>A</kbd> - umetni na kraj reda
+          </li>
+          <li>
+            <kbd>o</kbd> - dodaj (započni) novi red ispod kursora
+          </li>
+          <li>
+            <kbd>O</kbd> - dodaj (započni) novu red iznad kursora
+          </li>
+          <li>
+            <kbd>ea</kbd> - umetni (dodaj) na kraj riječi
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>h</kbd> - obriši znak ispred kursora tijekom uređivanja
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w</kbd> - obriši riječ ispred kursora tijekom uređivanja
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>j</kbd> - idi u novi red tijekom uređivanja
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>t</kbd> - povećaj uvlaku (pomakni udesno) red za zadanu širinu tijekom uređivanja
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - smanji uvlaku (pomakni ulijevo) red za zadanu širinu tijekom uređivanja
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>n</kbd> - umetni (automatsko dovršavanje) sljedeće podudarne riječi ispred kursora tijekom uređivanja
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>p</kbd> - umetni (automatsko dovršavanje) predhodne podudarne riječi ispred kursora tijekom uređivanja
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>rx</kbd> - umetni sadržaj registra x
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ox</kbd> - Privremeno koristi normalni mod za izvršavanje jedne naredbe x.
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - izađi iz uređivanja teksta
+          </li>
+        </ul>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>Uređivanje</h2>
+        <ul>
+          <li>
+            <kbd>r</kbd> - promijeni jedan znak
+          </li>
+          <li>
+            <kbd>R</kbd> - promijeni više od jednog znaka, za kraj promjene koristi <kbd>ESC</kbd>
+          </li>
+          <li>
+            <kbd>J</kbd> - spoji red ispod s trenutnim redom koristeći jedan prazni znak između (razdjelnik)
+          </li>
+          <li>
+            <kbd>gJ</kbd> - spoji red ispod s trenutnim redom bez dodavanja razdjelnika
+          </li>
+          <li>
+            <kbd>gwip</kbd> - preoblikuj odjeljak
+          </li>
+          <li>
+            <kbd>g~</kbd> - zamijeni velika i mala slova koristeći pomicanje kursora
+          </li>
+          <li>
+            <kbd>gu</kbd> - promijeni u mala slova koristeći pomicinje kursora
+          </li>
+          <li>
+            <kbd>gU</kbd> - promijeni u velika slova koristeći pomicinje kursora
+          </li>
+          <li>
+            <kbd>cc</kbd> - promijeni cijeli red
+          </li>
+          <li>
+            <kbd>c$</kbd> or <kbd>C</kbd> - promijeni sve do kraja reda
+          </li>
+          <li>
+            <kbd>ciw</kbd> - promijeni cijelu riječ
+          </li>
+          <li>
+            <kbd>cw</kbd> or <kbd>ce</kbd> - promijeni do kraja riječi
+          </li>
+          <li>
+            <kbd>s</kbd> - izbriši znak i zamijeni s drugim tekstom
+          </li>
+          <li>
+            <kbd>S</kbd> - izbriši red i zamijeni s drugim tekstom (isto kao cc)
+          </li>
+          <li>
+            <kbd>xp</kbd> - zamijeni poredak dva znaka (izbriši i zalijepi)
+          </li>
+          <li>
+            <kbd>u</kbd> - poništi (undo)
+          </li>
+          <li>
+            <kbd>U</kbd> - poništi sve promjene u zadnje izmjenjenom redu
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>r</kbd> - ponovi (redo)
+          </li>
+          <li>
+            <kbd>.</kbd> - ponovi zadnju naredbu
+          </li>
+        </ul>
+        <h2>Označavanje teksta (visual mode)</h2>
+        <ul>
+          <li>
+            <kbd>v</kbd> - započni označavanje teksta, označi tekst, zatim izvrši naredbu (npr. y - kopira označeni tekst)
+          </li>
+          <li>
+            <kbd>V</kbd> - započni označavanje cijelih redova
+          </li>
+          <li>
+            <kbd>o</kbd> - pomakni kursor na suprotni kraj označenog bloka
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>v</kbd> - započni označavanje bloka
+          </li>
+          <li>
+            <kbd>O</kbd> - pomakni kursor na drugu stranu označenog bloka
+          </li>
+          <li>
+            <kbd>aw</kbd> - označi riječ
+          </li>
+          <li>
+            <kbd>ab</kbd> - označi blok sa ()
+          </li>
+          <li>
+            <kbd>aB</kbd> - označi blok sa {}
+          </li>
+          <li>
+            <kbd>at</kbd> - označi blok sa &lt;&gt; tag-ovima
+          </li>
+          <li>
+            <kbd>ib</kbd> - označi blok unutar ()
+          </li>
+          <li>
+            <kbd>iB</kbd> - označi blok unutar {}
+          </li>
+          <li>
+            <kbd>it</kbd> - označi blok unutar &lt;&gt; tag-ova
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - izađi iz označavanja teksta
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Umjesto <kbd>b</kbd> ili <kbd>B</kbd> možemo koristiti <kbd>(</kbd> odnosno <kbd>{</kbd>.
+        </div>
+        <h2>Naredbe tijekom označavanja teksta</h2>
+        <ul>
+          <li>
+            <kbd>&#62;</kbd> - pomakni označeni tekst udesno
+          </li>
+          <li>
+            <kbd>&#60;</kbd> - pomakni označeni tekst ulijevo
+          </li>
+          <li>
+            <kbd>y</kbd> - kopiraj označeni tekst
+          </li>
+          <li>
+            <kbd>d</kbd> - obriši označeni tekst
+          </li>
+          <li>
+            <kbd>~</kbd> - zamijeni mala i velika slova
+          </li>
+          <li>
+            <kbd>u</kbd> - promijeni označeni tekst u mala slova
+          </li>
+          <li>
+            <kbd>U</kbd> - promijeni označeni tekst u velika slova
+          </li>
+        </ul>
+        <h2>Registri</h2>
+        <ul>
+          <li>
+            <kbd>:reg[isters]</kbd> - prikazi sadržaj registara
+          </li>
+          <li>
+            <kbd>"xy</kbd> - kopiraj u registar x
+          </li>
+          <li>
+            <kbd>"xp</kbd> - zalijepi sadržaj registra x
+          </li>
+          <li>
+            <kbd>"+y</kbd> - kopiraj u registar međuspremnika sustava (clipboard)
+          </li>
+          <li>
+            <kbd>"+p</kbd> - zalijepi iz registra međuspremnika sustava (clipboard)
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Sadržaj registara je spremljen u ~/.viminfo i biti će učitan prilikom sljedećeg pokretanja Vim-a.
+        </div>
+        <div class="well">
+          <strong>Tip</strong> Posebni registri:
+          <p>
+            &emsp;<kbd>0</kbd> - zadnje kopirani tekst<br/>
+            &emsp;<kbd>&quot;</kbd> - neoznačeni (bezimeni) registar, posljednje brisanje ili kopiranje<br/>
+            &emsp;<kbd>%</kbd> - naziv trenutne datoteke<br/>
+            &emsp;<kbd>#</kbd> - alternativni naziv datoteke<br/>
+            &emsp;<kbd>*</kbd> - sadržaj međuspremnika (clipboard) (X11 primarno)<br/>
+            &emsp;<kbd>+</kbd> - sadržaj međuspremnika (X11 clipboard)<br/>
+            &emsp;<kbd>/</kbd> - zadnje upotrebljeni izraz (pattern)<br/>
+            &emsp;<kbd>:</kbd> - zadnja naredba<br/>
+            &emsp;<kbd>.</kbd> - zadnje zalijepljeni tekst<br/>
+            &emsp;<kbd>-</kbd> - zadnji manji (manje od jedne linije) obrisani tekst<br/>
+            &emsp;<kbd>=</kbd> - 'izraz' registar<br/>
+            &emsp;<kbd>_</kbd> - 'crna rupa' registar<br/>
+          </p>
+        </div>
+        <h2>Oznake i položaji</h2>
+        <ul>
+          <li>
+            <kbd>:marks</kbd> - lista oznaka
+          </li>
+          <li>
+            <kbd>ma</kbd> - označi trenutni položaj oznakom A
+          </li>
+          <li>
+            <kbd>`a</kbd> - idi na položaj oznake A
+          </li>
+          <li>
+            <kbd>y`a</kbd> - kopiraj sav tekst do položaja oznake A
+          </li>
+          <li>
+            <kbd>`0</kbd> - idi na položaj neposredno prije zatvaranja Vim-a
+          </li>
+          <li>
+            <kbd>`"</kbd> - idi na položaj zadnjeg uređivanja datoteke
+          </li>
+          <li>
+            <kbd>`.</kbd> - idi na položaj zadnje promjene datoteke
+          </li>
+          <li>
+            <kbd>``</kbd> - idi na položaj prije zadnjeg pomaka
+          </li>
+          <li>
+            <kbd>:ju[mps]</kbd> - lista pomaka
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>i</kbd> - idi na sljedeći (skorašnji) položaj u listi pomicanja
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>o</kbd> - idi na predhodni (stariji) položaj u listi pomicanja
+          </li>
+          <li>
+            <kbd>:changes</kbd> - lista izmjena
+          </li>
+          <li>
+            <kbd>g,</kbd> - idi na položaj sljedeće (skorašnje) promjene
+          </li>
+          <li>
+            <kbd>g;</kbd> - idi na položaj predhodne (starije) promjene
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>]</kbd> - idi na tag pod kursorom
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Za pomicanje na oznaku može se koristiti (<kbd>`</kbd>) ili jednostruki apostrof (<kbd>'</kbd>). Ukoliko se koristi jednostruki apostrof kursor se pomiče na prvi neprazni znak u redu koji sadrži oznaku.
+        </div>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>Makro naredbe</h2>
+        <ul>
+          <li>
+            <kbd>qa</kbd> - snimi makro a
+          </li>
+          <li>
+            <kbd>q</kbd> - zaustavi snimanje makro-a
+          </li>
+          <li>
+            <kbd>@a</kbd> - pokreni makro a
+          </li>
+          <li>
+            <kbd>@@</kbd> - ponovo pokreni zadnji makro
+          </li>
+        </ul>
+        <h2>Izreži i zaljepi</h2>
+        <ul>
+          <li>
+            <kbd>yy</kbd> - kopiraj cijeli red
+          </li>
+          <li>
+            <kbd>2yy</kbd> - kopiraj 2 reda
+          </li>
+          <li>
+            <kbd>yw</kbd> - kopiraj znakove u riječi od trenutog položaja kursora do početka sljedeće riječi
+          </li>
+          <li>
+            <kbd>yiw</kbd> - kopiraj cijelu riječ pod kursorom
+          </li>
+          <li>
+            <kbd>yaw</kbd> - kopiraj riječ pod kursorom i razmak prije ili poslije riječi
+          </li>
+          <li>
+            <kbd>y$</kbd> or <kbd>Y</kbd> - kopiraj sve do kraja reda
+          </li>
+          <li>
+            <kbd>p</kbd> - zalijepi sadržaj trenutnog registra iza kursora
+          </li>
+          <li>
+            <kbd>P</kbd> - zalijepi ispred kursora
+          </li>
+          <li>
+            <kbd>gp</kbd> - zalijepi sadržaj trenutnog registra iza kursora i postavi kursor iza novog teksta
+          </li>
+          <li>
+            <kbd>gP</kbd> - zalijepi ispred kursora i postavi kursor iza novog teksta
+          </li>
+          <li>
+            <kbd>dd</kbd> - izbriši čitavi red
+          </li>
+          <li>
+            <kbd>2dd</kbd> - izbriši 2 reda
+          </li>
+          <li>
+            <kbd>dw</kbd> - izbriši znakove u riječi od položaja kursora do početka sljedeće riječi
+          </li>
+          <li>
+            <kbd>diw</kbd> - izbriši cijelu riječ pod kursorom
+          </li>
+          <li>
+            <kbd>daw</kbd> - izbriši riječ pod kursorom i razmak prije ili poslije riječi
+          </li>
+          <li>
+            <kbd>:3,5d</kbd> - izbriši redove počevši od 3. do 5.
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Također je moguće koristiti sljedeće znakove za određivanje raspona: <br>
+          e.g. <br>
+          <p>
+            <kbd>:.,$d</kbd> - Od trenutnog reda do kraja datoteke <br>
+            <kbd>:.,1d</kbd> - Od trenutnog reda do početka datoteke <br>
+            <kbd>:10,1d</kbd> - Od 10. reda do početka datoteke <br>
+          </p>
+        </div>
+        <ul>
+          <li>
+            <kbd>:g/{pattern}/d</kbd> - izbriši sve redove koji sadrže izraz (pattern)
+          </li>
+          <li>
+            <kbd>:g!/{pattern}/d</kbd> - izbriši sve redove koji ne sadrže izraz (pattern)
+          </li>
+          <li>
+            <kbd>d$</kbd> or <kbd>D</kbd> - izbriši sve do kraja reda
+          </li>
+          <li>
+            <kbd>x</kbd> - izbriši znak pod kursorom
+          </li>
+        </ul>
+        <h2>Uvlačenje teksta</h2>
+        <ul>
+          <li>
+            <kbd>&#62;&#62;</kbd> - povećaj uvlaku reda (pomakni udesno) za zadanu širinu
+          </li>
+          <li>
+            <kbd>&#60;&#60;</kbd> - smanji uvlaku reda (pomakni ulijevo) za zadanu širinu
+          </li>
+          <li>
+            <kbd>&#62;%</kbd> - uvuci blok zadan sa () ili {} (kursor na zagradi)
+          </li>
+          <li>
+            <kbd>&#60;%</kbd> - uvuci blok zadan sa () ili {} (kursor na zagradi)
+          </li>
+          <li>
+            <kbd>&#62;ib</kbd> - uvuci unutrašnjost bloka zadanog sa ()
+          </li>
+          <li>
+            <kbd>&#62;at</kbd> - uvuci blok zadan sa &lt;&gt; tag-ovima
+          </li>
+          <li>
+            <kbd>3==</kbd> - ponovi uvlaku 3 reda
+          </li>
+          <li>
+            <kbd>=%</kbd> - ponovi uvlaku bloka zadanog sa () ili {} (kursor na zagradi)
+          </li>
+          <li>
+            <kbd>=iB</kbd> - ponovi uvlaku unutrašnjosti bloka zadanog sa {}
+          </li>
+          <li>
+            <kbd>gg=G</kbd> - ponovo uvuci čitavi međuspremnik
+          </li>
+          <li>
+            <kbd>]p</kbd> - zalijepi i prilagodi uvlaku u trenutnom redu
+          </li>
+        </ul>
+        <h2>Zatvaranje</h2>
+        <ul>
+          <li>
+            <kbd>:w</kbd> - spremi izmjene, ali nemoj zatvoriti datoteku
+          </li>
+          <li>
+            <kbd>:w !sudo tee %</kbd> - spremi izmjene u datoteci koristeći sudo
+          </li>
+          <li>
+            <kbd>:wq</kbd> or <kbd>:x</kbd> or <kbd>ZZ</kbd> - spremi i zatvori
+          </li>
+          <li>
+            <kbd>:q</kbd> - zatvori (neuspješno ukoliko ima nespremljenih izmjena)
+          </li>
+          <li>
+            <kbd>:q!</kbd> or <kbd>ZQ</kbd> - zatvori i nemoj spremiti izmjene
+          </li>
+          <li>
+            <kbd>:wqa</kbd> - spremi i zatvori za sve otvorene datoteke
+          </li>
+        </ul>
+        <h2>Traži i zamijeni</h2>
+        <ul>
+          <li>
+            <kbd>/pattern</kbd> - traži izraz
+          </li>
+          <li>
+            <kbd>?pattern</kbd> - traži izraz unazad
+          </li>
+          <li>
+            <kbd>\vpattern</kbd> - &#x27;very magic&#x27; izraz: znakovi koji nisu alfanumerički se tretiraju kao posebi znakovi regularnog izraza (nije potreban &#x27;escaping&#x27;)
+          </li>
+          <li>
+            <kbd>n</kbd> - ponovi pretragu u istom smjeru
+          </li>
+          <li>
+            <kbd>N</kbd> - ponovi pretragu u suprotnom smjeru
+          </li>
+          <li>
+            <kbd>:%s/old/new/g</kbd> -
+            zamijeni svaku pojavu starog izraza s novim izrazom
+          </li>
+          <li>
+            <kbd>:%s/old/new/gc</kbd> -
+            zamijeni svaku pojavu starog izraza s novim izrazom, ali zahtjevaj potvrdu
+          </li>
+          <li>
+            <kbd>:noh[lsearch]</kbd> - makni prikaz istaknutog pronađenog teksta nakon pretrage
+          </li>
+        </ul>
+        <h2>Pretraga u više datoteka</h2>
+        <ul>
+          <li>
+            <kbd>:vim[grep] /pattern/ {`{file}`}</kbd> -
+            traži izraz u više datoteka
+          </li>
+        </ul>
+        <div class="well">
+          e.g.
+          <kbd>:vim[grep] /foo/ **/*</kbd>
+        </div>
+        <ul>
+          <li>
+            <kbd>:cn[ext]</kbd> - idi na sljedeći pronađeni tekst
+          </li>
+          <li>
+            <kbd>:cp[revious]</kbd> - idi na predhodni pronađeni tekst
+          </li>
+          <li>
+            <kbd>:cope[n]</kbd> - otvori prozor sa pregledom pronađenog teksta
+          </li>
+          <li>
+            <kbd>:ccl[ose]</kbd> - zatvori prozor za brzi popravak
+          </li>
+        </ul>
+        <h2>Kartice (tabs)</h2>
+        <ul>
+          <li>
+            <kbd>:tabnew</kbd> or <kbd>:tabnew {page.words.file}</kbd> -
+            otvori datoteku u novoj kartici
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wT</kbd> - prebaci trenutni podjeljeni prozor u posebnu novu karticu
+          </li>
+          <li>
+            <kbd>gt</kbd> or <kbd>:tabn[ext]</kbd> - idi na sljedeću karticu
+          </li>
+          <li>
+            <kbd>gT</kbd> or <kbd>:tabp[revious]</kbd> - idi na predhodnu karticu
+          </li>
+          <li>
+            <kbd>#gt</kbd> - idi na karticu broj #
+          </li>
+          <li>
+            <kbd>:tabm[ove] #</kbd> - pomakni trenutnu karticu na # mjesto (indeks kreće od 0)
+          </li>
+          <li>
+            <kbd>:tabc[lose]</kbd> - zatvori trenutnu karticu i sve pripadajuće pozore
+          </li>
+          <li>
+            <kbd>:tabo[nly]</kbd> - zatvori sve kartice osim trenutno otvorene
+          </li>
+          <li>
+            <kbd>:tabdo</kbd> command - pokreni naredbu <code>command</code> u svim karticama (npr. <code>:tabdo q</code> - zatvara sve otvorene kartice)
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-block">
+      <div class="grid-lg-1-2">
+        <h2>Rad sa više datoteka</h2>
+        <ul>
+          <li>
+            <kbd>:e[dit] datoteka</kbd> - uredi datoteku u novom međuspremniku (buffer)
+          </li>
+          <li>
+            <kbd>:bn[ext]</kbd> -
+            idi na sljedeći međuspremnik (buffer)
+          </li>
+          <li>
+            <kbd>:bp[revious]</kbd> -
+            idi na predhodni međuspremnik (buffer)
+          </li>
+          <li>
+            <kbd>:bd[elete]</kbd> - izbriši međuspremnik (zatvori datoteku)
+          </li>
+          <li>
+            <kbd>:b[uffer]#</kbd> - otvori međuspremnik s indeksom #
+          </li>
+          <li>
+            <kbd>:b[uffer] file</kbd> - otvori međuspremnik definiran datotekom
+          </li>
+          <li>
+            <kbd>:ls</kbd> or <kbd>:buffers</kbd> - lista svih otvorenih međuspremnika (buffers)
+          </li>
+          <li>
+            <kbd>:sp[lit] datoteka</kbd> - otvori datoteku u novom međuspremniku (buffer) i podijeli zaslon
+          </li>
+          <li>
+            <kbd>:vs[plit] datoteka</kbd> - otvori datoteku u novom međuspremniku (buffer) i podijeli zaslon vertikalno
+          </li>
+          <li>
+            <kbd>:vert[ical] ba[ll]</kbd> - uredi sve međuspremnike u vertikalnim prozorima
+          </li>
+          <li>
+            <kbd>:tab ba[ll]</kbd> - uredi sve međuspremnike (buffer) u karticama (tabs)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ws</kbd> - podijeli prozor
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wv</kbd> - podijeli prozor vertikalno
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ww</kbd> - zamijeni prozore
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wq</kbd> - zatori prozor
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wx</kbd> - promijeni trenutni prozor s sljedećim
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w=</kbd> - postavi sve prozore na jednake dimenzije (sirina i visina)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wh</kbd> - pomakni kursor u prozor lijevo (vertikalna podjela)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wl</kbd> - pomakni kursor u prozor desno (vertikalna podjela)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wj</kbd> - pomakni kursor u prozor ispod (horizontalna podjela)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wk</kbd> - pomakni kursor u prozor iznad (horizontalna podjela)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wH</kbd> - pomakni trenutni prozor skroz ulijevo i podesi na punu visinu zaslona (lijevi vertikalni prozor)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wL</kbd> - pomakni trenutni prozor skroz udesno i podesi na punu visinu zaslona (desni vertikalni prozor)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wJ</kbd> - pomakni trenutni prozor skroz dolje i podesi na punu širinu zaslona (donji horizontalni prozor)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wK</kbd> - pomakni trenutni prozor skroz gore i podesi na punu širinu zaslona (gornji horizontalni prozor)
+          </li>
+        </ul>
+        </ul>
+        </ul>
+        </ul>
+      </div>
+      <div class="grid-lg-1-2">
+        <h2>Razlika (Diff)</h2>
+        <ul>
+          <li>
+            <kbd>zf</kbd> - ručno definiranje grupiranja (skupljanja) teksta
+          </li>
+          <li>
+            <kbd>zd</kbd> - poništi zadano grupiranje teksta pod kursorom
+          </li>
+          <li>
+            <kbd>za</kbd> - izmjenjuj skupljanje/rastvaranje grupiranog teksta pod kursorom
+          </li>
+          <li>
+            <kbd>zo</kbd> - rastvori grupirani tekst pod kursorom
+          </li>
+          <li>
+            <kbd>zc</kbd> - skupi grupirani tekst pod kursorom
+          </li>
+          <li>
+            <kbd>zr</kbd> - rastvori jedan nivo manje u svim grupiranim tekstovima
+          </li>
+          <li>
+            <kbd>zm</kbd> - skupi jedan nivo više u svim grupiranim tekstovima
+          </li>
+          <li>
+            <kbd>zi</kbd> - izmjenjuj skupljanje/rastvaranje grupiranih tekstova
+          </li>
+          <li>
+            <kbd>]c</kbd> - idi na početak sljedeće izmjene
+          </li>
+          <li>
+            <kbd>[c</kbd> - idi na početak predhodne izmjene
+          </li>
+          <li>
+            <kbd>do</kbd> or <kbd>:diffg[et]</kbd> - dohvati razliku (iz drugog buffer-a)
+          </li>
+          <li>
+            <kbd>dp</kbd> or <kbd>:diffpu[t]</kbd> - pošalji razliku (drugom buffer-u)
+          </li>
+          <li>
+            <kbd>:diffthis</kbd> - označi trenutni prozor dijelom razlike
+          </li>
+          <li>
+            <kbd>:dif[fupdate]</kbd> - osvježi razlike
+          </li>
+          <li>
+            <kbd>:diffo[ff]</kbd> - ukloni trenutni prozor iz razlike
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Naredbe za skupljanje/rastvaranje (npr. <kbd>za</kbd>) djeluju na jedan nivo. Za radnje na svim nivoima, koristi velika slova (npr. <kbd>zA</kbd>).
+        </div>
+        <div class="well">
+          <strong>Tip</strong> Za pregled razlika u datotekama, Vim se može pokrenuti u diff modu naredbom u terminalu <kbd>vimdiff</kbd>. Možete čak i definirati kao <kbd>git difftool</kbd>.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+      <div>
+        <div id="footer" class="grid-block">
+          <div class="box">
+            <div class="box-header">
+              <h2>Additional Resources</h2>
+            </div>
+            <div class="box-body">
+              <div class="grid-block">
+                <div class="grid-lg-1-2">
+                  <h3 id="languages">Languages</h3>
+                  <ul>
+                    <li>
+                      <a href="/lang/ar" lang="ar">العربية</a>
+                    </li>
+                    <li>
+                      <a href="/lang/bn" lang="bn">বাংলা</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ca" lang="ca">Català</a>
+                    </li>
+                    <li>
+                      <a href="/lang/cs" lang="cs">Čeština</a>
+                    </li>
+                    <li>
+                      <a href="/lang/da_DK" lang="da">Dansk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/de_de" lang="de">Deutsch</a>
+                    </li>
+                    <li>
+                      <a href="/lang/el_gr" lang="el">Ελληνικά</a>
+                    </li>
+                    <li>
+                      <a href="/lang/en_us" lang="en">English</a>
+                    </li>
+                    <li>
+                      <a href="/lang/eo" lang="eo">Esperanto</a>
+                    </li>
+                    <li>
+                      <a href="/lang/es_es" lang="es">Español</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fa_ir" lang="fa">Persian</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fi" lang="fi">Suomi</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fr_fr" lang="fr">Français</a>
+                    </li>
+                    <li>
+                      <a href="/lang/he" lang="he">עברית</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hr" lang="hr">Hrvatski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hu_hu" lang="hu">Magyar</a>
+                    </li>
+                    <li>
+                      <a href="/lang/id" lang="id">Bahasa Indonesia</a>
+                    </li>
+                    <li>
+                      <a href="/lang/it" lang="it">Italiano</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ja" lang="ja">日本語</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ko" lang="ko">한국어</a>
+                    </li>
+                    <li>
+                      <a href="/lang/my" lang="my">မြန်မာ</a>
+                    </li>
+                    <li>
+                      <a href="/lang/nl_nl" lang="nl">Nederlands</a>
+                    </li>
+                    <li>
+                      <a href="/lang/no_nb" lang="no">Norsk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pl_pl" lang="pl">Polski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_br" lang="pt">Português - Brasil</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_pt" lang="pt">Português - Portugal</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ro" lang="ro">Romana</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ru" lang="ru">Русский</a>
+                    </li>
+                    <li>
+                      <a href="/lang/si_lk" lang="si">සිංහල</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sk" lang="sk">Slovenčina</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sv" lang="sv">Svenska</a>
+                    </li>
+                    <li>
+                      <a href="/lang/th" lang="th">ภาษาไทย</a>
+                    </li>
+                    <li>
+                      <a href="/lang/tr" lang="tr">Türkçe</a>
+                    </li>
+                    <li>
+                      <a href="/lang/uk" lang="uk">Українська</a>
+                    </li>
+                    <li>
+                      <a href="/lang/vi_vn" lang="vi">Tiếng Việt</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_cn" lang="zh">简体中文</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_tw" lang="zh">中文 (台灣)</a>
+                    </li>
+                  </ul>                </div>
+                <div class="grid-lg-1-2">
+                  <h3>About the vim cheat sheet</h3>
+                  <p>
+                    This project aims to be one of the most accessible vim guides available. We
+                    made sure to support mobile, desktop, and other
+                    <a href="#languages" aria-label="Jump to languages section">languages</a>.
+                  </p>
+                  <p>
+                    <a target="_blank" href="https://github.com/sponsors/rtorr" aria-label="Sponsor this project on GitHub">❤️ Please consider sponsoring this
+                      project ❤️</a>!
+                  </p>
+                  <p>
+                    You can read about how to contribute (and help improve) by viewing our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/README.md" target="_blank"
+                      rel="noopener noreferrer" aria-label="Read the README on GitHub">
+                      README
+                    </a>
+                    . There you can see how to set up this project, or how to contribute a new
+                    language. Here is a big thank you to our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/graphs/contributors" target="_blank"
+                      rel="noopener noreferrer" aria-label="View project contributors on GitHub">
+                      contributors!
+                    </a>
+                  </p>
+                  <p>
+                    This project is licensed under
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/License.txt" target="_blank"
+                      rel="noopener noreferrer" aria-label="View the MIT License for this project">
+                      The MIT License (MIT)
+                    </a>
+                    .
+                  </p>
+                  <h3>Other places to find this document</h3>
+                  <p>
+                    This document was embedded in
+                    <a href="https://duckduckgo.com/?q=vim+cheat+sheet" target="_blank" rel="noopener noreferrer" aria-label="Search for this document on DuckDuckGo">
+                      DuckDuckGo
+                    </a>
+                    .
+                  </p>
+                  <h3>More resources</h3>
+                  <p>
+                    Interactive Vim tutorial:
+                    <a href="https://openvim.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Open Vim for an interactive Vim tutorial">
+                      Open Vim
+                    </a>
+                  </p>
+                  <p>
+                    Vim quick reference from Vim help pages:
+                    <a href="https://vimhelp.org/quickref.txt.html" target="_blank" rel="noopener noreferrer" aria-label="Access Vim quick reference"> 
+                      quickref.txt
+                    </a>
+                  </p>
+                  <p>
+                    List of all Vim ex (<kbd>:</kbd>) commands:
+                    <a href="https://vimhelp.org/index.txt.html#ex-cmd-index" target="_blank" rel="noopener noreferrer" aria-label="View list of all Vim ex commands">
+                      ex-cmd-index
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-block link-to-repo">
+          <p>
+            Checkout the source on
+            <a href="https://github.com/rtorr/vim-cheat-sheet" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+          </p>
+          <p>version: 3.2.0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.CACHE_NAME = "3.2.0";
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/javascripts/sw.js?version=3.2.0');
+      });
+    }
+  </script>
+</body>
+
+</html>

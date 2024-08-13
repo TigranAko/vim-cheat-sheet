@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="fa">
+
+<head>
+  <meta charSet="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Vim Cheat Sheet</title>
+  <link rel="shortcut icon" href="/images/icons/icon-48x48.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#FA4949" />
+  <meta http-equiv="cache-control" content="max-age=600" />
+  <meta name="description" content="Explore vim.rtorr.com for an extensive Vim cheat sheet, offering clear, concise commands and shortcuts for Vim users. Whether you're a beginner or an experienced developer, find tips and tricks to enhance your coding efficiency in Vim.">
+  <link rel="apple-touch-icon" sizes="48x48" href="/images/icons/icon-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="/images/icons/icon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/images/icons/icon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="256x256" href="/images/icons/icon-256x256.png" />
+  <link rel="apple-touch-icon" sizes="384x384" href="/images/icons/icon-384x384.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="/images/icons/icon-512x512.png" />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <div class="sponsor">
+    <div class="container">
+      <span>
+        <a target="_blank" href="https://www.warp.dev">
+          <div class="sponsor-logo-container">
+            <span>Sponsor</span>
+            <img class="sponsor-logo" src="/images/svg/warp-logo.svg" alt="Warp logo">
+          </div>
+          <div class="sponsor-tagline"><span>A new terminal focused on developer productivity</span></div>
+      </span>
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid-block">
+      <div class="grid-1">
+        <h1>
+          <a class="site-title" href="/">
+            Vim Cheat Sheet
+          </a>
+        </h1>
+      </div>
+    </div>
+    <div class="container">
+      <main><div class="container">
+  <div class="commands-container">
+    <div class="grid-block">
+      <div class="grid-lg-1-3">
+        <h2>فرمان های کلی</h2>
+        <ul>
+          <li>
+            <kbd>:h[elp] کلید واژه</kbd> - کمک در مورد کلمه کلیدی
+          </li>
+          <li>
+            <kbd>:sav[eas] فایل</kbd> - ذخیره کردن با عنوان
+          </li>
+          <li>
+            <kbd>:clo[se]</kbd> - بستن پنل فعلی
+          </li>
+          <li>
+            <kbd>:ter[minal]</kbd> - یک پنجره ترمینال را باز کن
+          </li>
+          <li>
+            <kbd>K</kbd> - برای کلمه زیر مکان‌نما، یک صفحه راهنما باز کن
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> دستور <kbd>vimtutor</kbd> را در یک ترمینال جدید اجرا کنید تا دستورات ابتدایی را یاد بگیرید.
+        </div>
+        <h2>حرکت مکان نما</h2>
+        <ul>
+          <li>
+            <kbd>h</kbd> - حرکت مکان نما به سمت چپ
+          </li>
+          <li>
+            <kbd>j</kbd> - حرکت مکان نما به سمت پایین
+          </li>
+          <li>
+            <kbd>k</kbd> - حرکت مکان نما به سمت بالا
+          </li>
+          <li>
+            <kbd>l</kbd> - حرکت مکان نما به سمت پایین
+          </li>
+          <li>
+            <kbd>gj</kbd> - move cursor down (multi-line text)
+          </li>
+          <li>
+            <kbd>gk</kbd> - move cursor up (multi-line text)
+          </li>
+          <li>
+            <kbd>H</kbd> - برو به ابتدای نمایشگر
+          </li>
+          <li>
+            <kbd>M</kbd> - برو به وسط نمایشگر
+          </li>
+          <li>
+            <kbd>L</kbd> - برو به آخر نمایشگر
+          </li>
+          <li>
+            <kbd>w</kbd> - برو به ابتدای کلمه
+          </li>
+          <li>
+            <kbd>W</kbd> - برو به ابتدای کلمه(کلمه هایی که  شامل نقطه و علامت)
+          </li>
+          <li>
+            <kbd>e</kbd> - برو به آخر کلمه
+          </li>
+          <li>
+            <kbd>E</kbd> - برو به آخر کلمه (کلمه هایی که شامل نقطه و علامت)
+          </li>
+          <li>
+            <kbd>b</kbd> - برو به ابتدای کلمه
+          </li>
+          <li>
+            <kbd>B</kbd> - برو به ابتدای کلمه(کلمه هایی که شامل نقطه و علامت)
+          </li>
+          <li>
+            <kbd>ge</kbd> - پرش رو به عقب تا انتهای کلمه
+          </li>
+          <li>
+            <kbd>gE</kbd> - پرش رو به عقب تا انتهای کلمه (کلمات می‌توانند شامل نقطه‌گذاری‌ها باشند)
+          </li>
+          <li>
+            <kbd>%</kbd> - برو به براکت بسته(براکت ها می توانند '()','{}','[]' باشند)
+          </li>
+          <li>
+            <kbd>0</kbd> - برو به ابتدای خط
+          </li>
+          <li>
+            <kbd>^</kbd> - برو به اولین کاراکتر با صرف نظر از فضای خالی
+          </li>
+          <li>
+            <kbd>$</kbd> - برو به انتهای خط
+          </li>
+          <li>
+            <kbd>g_</kbd> - برو به آخرین کاراکتر غیر بلاک
+          </li>
+          <li>
+            <kbd>gg</kbd> - برو به اولین خط این فایل
+          </li>
+          <li>
+            <kbd>G</kbd> - برو به آخرین خط این فایل
+          </li>
+          <li>
+            <kbd>5gg</kbd> or <kbd>5G</kbd> - برو به خط شماره 5
+          </li>
+          <li>
+            <kbd>gd</kbd> - حرکت روی تعریف (اعلام) محلی
+          </li>
+          <li>
+            <kbd>gD</kbd> - حرکت روی تعریف (اعلام) سرتاسری
+          </li>
+          <li>
+            <kbd>fx</kbd> - برو به کاراکتر x
+          </li>
+          <li>
+            <kbd>tx</kbd> - برو به یک کاراکتر قبل از x
+          </li>
+          <li>
+            <kbd>Fx</kbd> - برو به کاراکتر x قبل از محل فعلی مکان نما
+          </li>
+          <li>
+            <kbd>Tx</kbd> - برو به  یک کاراکتر بعد از کاراکتر x قبل از محل فعلی مکان نما
+          </li>
+          <li>
+            <kbd>;</kbd> - تکرار عملیات قبلی  اگر این عملیات F,f,T,t  باشد
+          </li>
+          <li>
+            <kbd>,</kbd> - مثل سمی کالمن اما برعکس
+          </li>
+          <li>
+            <kbd>}</kbd> - برو به پاراگراف بعدی( یا تابع بعدی/ یابلاک بعدی)
+          </li>
+          <li>
+            <kbd>{</kbd> - برو به پاراگراف قبلی( یا تابع قبلی/ یا بلاک قبلی)
+          </li>
+          <li>
+            <kbd>zz</kbd> - قرار دادن خط فعلی در مرکز صفحه نمایش
+          </li>
+          <li>
+            <kbd>zt</kbd> - position cursor on top of the screen
+          </li>
+          <li>
+            <kbd>zb</kbd> - position cursor on bottom of the screen
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>e</kbd> - یک خط به پایین
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>y</kbd> - یک خط به بالا
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>b</kbd> - صفحه قبل
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>f</kbd> - صفحه بعد
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - یک نیم صفحه بعد
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>u</kbd> - یک نیم صفحه قبل
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong>
+          برای تکرار دستورهای حرکتی از پیشوند استفاده کنید. برای مثال 4j به 4 خط پایین تر می رود.
+        </div>
+        <h2>افزودن و اضافه کردن</h2>
+        <ul>
+          <li>
+            <kbd>i</kbd> - اضافه کن به قبل از مکان فعلی مکان نما
+          </li>
+          <li>
+            <kbd>I</kbd> - اضافه کن به ابتدای خط
+          </li>
+          <li>
+            <kbd>a</kbd> - اضافه کن بعد از مکان فعلی مکان نما
+          </li>
+          <li>
+            <kbd>A</kbd> - اضافه کن به انتهای خط
+          </li>
+          <li>
+            <kbd>o</kbd> - اضافه کن به خط بعدی
+          </li>
+          <li>
+            <kbd>O</kbd> - اضافه کن به خط قبلی
+          </li>
+          <li>
+            <kbd>ea</kbd> - اضافه کن به انتهای کلمه
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>h</kbd> - حذف کاراکتر قبل مکان‌نما، در مُد درج
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w</kbd> - حذف کلمه قبل مکان‌نما، در مُد درج
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>j</kbd> - ایجاد خط جدید، در مُد درج
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>t</kbd> - indent (move right) line one shiftwidth during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - de-indent (move left) line one shiftwidth during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>n</kbd> - insert (auto-complete) next match before the cursor during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>p</kbd> - insert (auto-complete) previous match before the cursor during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>rx</kbd> - insert the contents of register x
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ox</kbd> - Temporarily enter normal mode to issue one normal-mode command x.
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - از مُد درج خارج شو
+          </li>
+        </ul>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>تصحیح</h2>
+        <ul>
+          <li>
+            <kbd>r</kbd> - یک کاراکتر را جایگزین کن
+          </li>
+          <li>
+            <kbd>R</kbd> - replace more than one character, until <kbd>ESC</kbd> is pressed.
+          </li>
+          <li>
+            <kbd>J</kbd> - خط بعدی را به خط فعلی بچسبان با فاصله
+          </li>
+          <li>
+            <kbd>gJ</kbd> - خط بعدی را بدون فاصله به خط فعلی بچسبان
+          </li>
+          <li>
+            <kbd>gwip</kbd> - جمع کردن پاراگراف
+          </li>
+          <li>
+            <kbd>g~</kbd> - switch case up to motion
+          </li>
+          <li>
+            <kbd>gu</kbd> - change to lowercase up to motion
+          </li>
+          <li>
+            <kbd>gU</kbd> - change to uppercase up to motion
+          </li>
+          <li>
+            <kbd>cc</kbd> - خط فعلی را جایگزین کن
+          </li>
+          <li>
+            <kbd>c$</kbd> or <kbd>C</kbd> - از مکان فعلی تا آخر خط را جایگزین کن
+          </li>
+          <li>
+            <kbd>ciw</kbd> - خط فعلی را جایگزین کن
+          </li>
+          <li>
+            <kbd>cw</kbd> or <kbd>ce</kbd> - کلمه فعلی را جایگزین کن
+          </li>
+          <li>
+            <kbd>s</kbd> - کاراکتر فعلی را جایگزین کن
+          </li>
+          <li>
+            <kbd>S</kbd> - خط فعلی را جایگزین کن(مثل cc)
+          </li>
+          <li>
+            <kbd>xp</kbd> - ترانهادن دو کاراکتر(پاک کردن و چسباندن)
+          </li>
+          <li>
+            <kbd>u</kbd> - بازگرداندن
+          </li>
+          <li>
+            <kbd>U</kbd> - بازگرداندن تغییرات آخرین خط تغییرکرده
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>r</kbd> - دوباره انجام بده
+          </li>
+          <li>
+            <kbd>.</kbd> - فرمان قبلی را تکرار کن
+          </li>
+        </ul>
+        <h2>علامت گذاری(مد بصری)</h2>
+        <ul>
+          <li>
+            <kbd>v</kbd> - ورود به مد بصری
+          </li>
+          <li>
+            <kbd>V</kbd> - ورود به مد بصری برای کار روی خط
+          </li>
+          <li>
+            <kbd>o</kbd> - برو به طرف دیگر ناحیه علامت گذاری شده
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>v</kbd> - ورود به مد بصری برای علامت گذاری یک بلاک
+          </li>
+          <li>
+            <kbd>O</kbd> - برو به گوشه دیگر بلاک انتخاب شده
+          </li>
+          <li>
+            <kbd>aw</kbd> - یک کلمه را علامت گذاری کن
+          </li>
+          <li>
+            <kbd>ab</kbd> - یک بلاکت با ()
+          </li>
+          <li>
+            <kbd>aB</kbd> - یک بلاک با {}
+          </li>
+          <li>
+            <kbd>at</kbd> - a block with &lt;&gt; tags
+          </li>
+          <li>
+            <kbd>ib</kbd> - بلاک داخل ()
+          </li>
+          <li>
+            <kbd>iB</kbd> - بلاک داخل {}
+          </li>
+          <li>
+            <kbd>it</kbd> - inner block with &lt;&gt; tags
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - از مد بصری خارج شو
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Instead of <kbd>b</kbd> or <kbd>B</kbd> one can also use <kbd>(</kbd> or <kbd>{</kbd> respectively.
+        </div>
+        <h2>دستورات مد بصری</h2>
+        <ul>
+          <li>
+            <kbd>&#62;</kbd> - حرکت متن به سمت راست
+          </li>
+          <li>
+            <kbd>&#60;</kbd> - حرکت متن به سمت چپ
+          </li>
+          <li>
+            <kbd>y</kbd> - کپی کردن متن
+          </li>
+          <li>
+            <kbd>d</kbd> - حذف متن
+          </li>
+          <li>
+            <kbd>~</kbd> - تغییر از حرف کوچک به بزرگ یا برعکس
+          </li>
+          <li>
+            <kbd>u</kbd> - تغییر متن مشخص‌شده به حروف کوچک
+          </li>
+          <li>
+            <kbd>U</kbd> - تغییر متن مشخص‌شده به حروف بزرگ
+          </li>
+        </ul>
+        <h2>رجیسترها</h2>
+        <ul>
+          <li>
+            <kbd>:reg[isters]</kbd> - محتوای رجیستر را نمایش بده
+          </li>
+          <li>
+            <kbd>"xy</kbd> - محتوای رجیستر x را پیست کن
+          </li>
+          <li>
+            <kbd>"xp</kbd> - کپی کردن به رجیستر x
+          </li>
+          <li>
+            <kbd>"+y</kbd> - کپی‌کردن (یانک) در رجیستر کلیپ‌بورد سیستم 
+          </li>
+          <li>
+            <kbd>"+p</kbd> - چسباندن به وسیلیه رجیستر کلیپ‌بورد سیستم
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> محتوای رجیستر ها در فایل ~/.viminfo ذخیره می شوند و بعد از ریستارت برنامه به آنها دسترسی دارید.
+        </div>
+        <div class="well">
+          <strong>Tip</strong> ثبات‌های ویژه:
+          <p>
+            &emsp;<kbd>0</kbd> - آخرین یانک (کپی)<br/>
+            &emsp;<kbd>&quot;</kbd> - unnamed register, last delete or yank<br/>
+            &emsp;<kbd>%</kbd> - نام فایل جاری<br/>
+            &emsp;<kbd>#</kbd> - alternate file name<br/>
+            &emsp;<kbd>*</kbd> - clipboard contents (X11 primary)<br/>
+            &emsp;<kbd>+</kbd> - clipboard contents (X11 clipboard)<br/>
+            &emsp;<kbd>/</kbd> - آخرین پترن سرچ<br/>
+            &emsp;<kbd>:</kbd> - آخرین خط دستور<br/>
+            &emsp;<kbd>.</kbd> - آخرین متن درج‌شده<br/>
+            &emsp;<kbd>-</kbd> - آخرین حذف کوچیک (کمتر از یک خط)<br/>
+            &emsp;<kbd>=</kbd> - expression register<br/>
+            &emsp;<kbd>_</kbd> - black hole register<br/>
+          </p>
+        </div>
+        <h2>علامت ها</h2>
+        <ul>
+          <li>
+            <kbd>:marks</kbd> - لیست علامت ها
+          </li>
+          <li>
+            <kbd>ma</kbd> - مکان فعلی را به عنوان علامت a نشان کن
+          </li>
+          <li>
+            <kbd>`a</kbd> - برو به مکانی که به عنوان a نشان شده است
+          </li>
+          <li>
+            <kbd>y`a</kbd> - متن را به مکانی که به عنوان a نشان شده کپی کن
+          </li>
+          <li>
+            <kbd>`0</kbd> - برو به مکانی که قبلا ویم از در آنجا خارج شده است.
+          </li>
+          <li>
+            <kbd>`"</kbd> - go to the position when last editing this file
+          </li>
+          <li>
+            <kbd>`.</kbd> - برو به مکانی که آخرین تغییر در این فایل انجام شده است.
+          </li>
+          <li>
+            <kbd>``</kbd> - برو به مکانی که قبل از آخرین پرش بودی
+          </li>
+          <li>
+            <kbd>:ju[mps]</kbd> - لیست پرش‌ها
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>i</kbd> - برو به مکان جدید‌تر در لیست پرش
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>o</kbd> - برو به مکان قدیمی‌تر در لیست پرش
+          </li>
+          <li>
+            <kbd>:changes</kbd> - لیست تغییرات
+          </li>
+          <li>
+            <kbd>g,</kbd> - برو به مکان جدیدتر در لیست تغییر
+          </li>
+          <li>
+            <kbd>g;</kbd> - برو به مکان قدیمی‌تر در لیست تغییر
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>]</kbd> - پرش به برچسب زیر مکان‌نما
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> To jump to a mark you can either use a backtick (<kbd>`</kbd>) or an apostrophe (<kbd>'</kbd>). Using an apostrophe jumps to the beginning (first non-blank) of the line holding the mark.
+        </div>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>ماکروها</h2>
+        <ul>
+          <li>
+            <kbd>qa</kbd> - ضبط ماکرو &#x27;a&#x27;
+          </li>
+          <li>
+            <kbd>q</kbd> - توقف ضبط ماکرو
+          </li>
+          <li>
+            <kbd>@a</kbd> - اجرای ماکروی &#x27;a&#x27;
+          </li>
+          <li>
+            <kbd>@@</kbd> - اجرای دوباره آخرین ماکروی اجرا شده
+          </li>
+        </ul>
+        <h2>کپی کردن و چسباندن</h2>
+        <ul>
+          <li>
+            <kbd>yy</kbd> - کپی کردن هط
+          </li>
+          <li>
+            <kbd>2yy</kbd> - کپی کردن 2 خط
+          </li>
+          <li>
+            <kbd>yw</kbd> - کپی کردن از مکان فعلی مکان نما تا ابتدای کلمه بعد
+          </li>
+          <li>
+            <kbd>yiw</kbd> - کپی کردن کلمه
+          </li>
+          <li>
+            <kbd>yaw</kbd> - 
+          </li>
+          <li>
+            <kbd>y$</kbd> or <kbd>Y</kbd> - کپی کردن تا آخری خط
+          </li>
+          <li>
+            <kbd>p</kbd> - چسباندن محتوای کلیپ بورد بعد از مکان فعلی مکان نما
+          </li>
+          <li>
+            <kbd>P</kbd> - چسباندن محتوای کلیپ بورد قبل از مکان فعلی مکان نما
+          </li>
+          <li>
+            <kbd>gp</kbd> - put (paste) the clipboard after cursor and leave cursor after the new text
+          </li>
+          <li>
+            <kbd>gP</kbd> - put (paste) before cursor and leave cursor after the new text
+          </li>
+          <li>
+            <kbd>dd</kbd> - کات کردن خط فعلی
+          </li>
+          <li>
+            <kbd>2dd</kbd> - کات کردن دو خط
+          </li>
+          <li>
+            <kbd>dw</kbd> - کات کردن از مکان فعلی مکان نما تا ابتدای کلمه بعدی
+          </li>
+          <li>
+            <kbd>diw</kbd> - 
+          </li>
+          <li>
+            <kbd>daw</kbd> - 
+          </li>
+          <li>
+            <kbd>:3,5d</kbd> - delete lines starting from 3 to 5
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> You can also use the following characters to specify the range: <br>
+          e.g. <br>
+          <p>
+            <kbd>:.,$d</kbd> - From the current line to the end of the file <br>
+            <kbd>:.,1d</kbd> - From the current line to the beginning of the file <br>
+            <kbd>:10,1d</kbd> - From the 10th line to the beginning of the file <br>
+          </p>
+        </div>
+        <ul>
+          <li>
+            <kbd>:g/{pattern}/d</kbd> - delete all lines containing pattern
+          </li>
+          <li>
+            <kbd>:g!/{pattern}/d</kbd> - delete all lines not containing pattern
+          </li>
+          <li>
+            <kbd>d$</kbd> or <kbd>D</kbd> - کات کردن تا انتهای خط
+          </li>
+          <li>
+            <kbd>x</kbd> - کات کردن یک کاراکتر
+          </li>
+        </ul>
+        <h2>تو رفتنگی متن</h2>
+        <ul>
+          <li>
+            <kbd>&#62;&#62;</kbd> - indent (move right) line one shiftwidth
+          </li>
+          <li>
+            <kbd>&#60;&#60;</kbd> - de-indent (move left) line one shiftwidth
+          </li>
+          <li>
+            <kbd>&#62;%</kbd> - indent a block with () or {} (cursor on brace)
+          </li>
+          <li>
+            <kbd>&#60;%</kbd> - de-indent a block with () or {} (cursor on brace)
+          </li>
+          <li>
+            <kbd>&#62;ib</kbd> - indent inner block with ()
+          </li>
+          <li>
+            <kbd>&#62;at</kbd> - indent a block with &lt;&gt; tags
+          </li>
+          <li>
+            <kbd>3==</kbd> - تنظیم مجدد تو رفتگی ۳ خط
+          </li>
+          <li>
+            <kbd>=%</kbd> - re-indent a block with () or {} (cursor on brace)
+          </li>
+          <li>
+            <kbd>=iB</kbd> - re-indent inner block with {}
+          </li>
+          <li>
+            <kbd>gg=G</kbd> - تنظیم مجدد تورفتنگی کل بافر
+          </li>
+          <li>
+            <kbd>]p</kbd> - چسباندن و تنظیم تو رفتگی برای خط کنونی
+          </li>
+        </ul>
+        <h2>خارج شدن</h2>
+        <ul>
+          <li>
+            <kbd>:w</kbd> - ذخیره کن اما خارج نشو
+          </li>
+          <li>
+            <kbd>:w !sudo tee %</kbd> - فایل فعلی را با sudo ذخیره کن
+          </li>
+          <li>
+            <kbd>:wq</kbd> or <kbd>:x</kbd> or <kbd>ZZ</kbd> - ذخیره کن و خارج شو
+          </li>
+          <li>
+            <kbd>:q</kbd> - خارج شو(اگر فایلهای ذخیره نشده باشد) خطا میدهد
+          </li>
+          <li>
+            <kbd>:q!</kbd> or <kbd>ZQ</kbd> - خارج شو و از فایلهای ذخیره نشده صرف نظر کن
+          </li>
+          <li>
+            <kbd>:wqa</kbd> - همه ها فایلها در همه ی تبها را ذخیره کن و خارج شو
+          </li>
+        </ul>
+        <h2>جستجو و جایگذاری</h2>
+        <ul>
+          <li>
+            <kbd>/pattern</kbd> - جستجوی الگو 
+          </li>
+          <li>
+            <kbd>?pattern</kbd> - جستجوی الگو از مکان فعلی مکان نما به قبل
+          </li>
+          <li>
+            <kbd>\vpattern</kbd> - الگوی &#x27;very magic&#x27;: حروف و اعداد غیر به عنوان regex شناخته می شوند
+          </li>
+          <li>
+            <kbd>n</kbd> - تکرار جستجو در جهت یکسان
+          </li>
+          <li>
+            <kbd>N</kbd> - تکرار جستجو در جهت مخالف
+          </li>
+          <li>
+            <kbd>:%s/old/new/g</kbd> -
+            جایگذاری الگوی قدیمی با الگوی جدید
+          </li>
+          <li>
+            <kbd>:%s/old/new/gc</kbd> -
+            جایگذاری الگوی قدیمی با الگوی جدید در تمامی فایل به همراه تایید
+          </li>
+          <li>
+            <kbd>:noh[lsearch]</kbd> - برداشتن هایلایت از نتایج جستجو
+          </li>
+        </ul>
+        <h2>جستجو در چند فایل</h2>
+        <ul>
+          <li>
+            <kbd>:vim[grep] /pattern/ {`{file}`}</kbd> -
+            جستجوی الگو در چند فایل
+          </li>
+        </ul>
+        <div class="well">
+          e.g.
+          <kbd>:vim[grep] /foo/ **/*</kbd>
+        </div>
+        <ul>
+          <li>
+            <kbd>:cn[ext]</kbd> - برو به نتیجه بعدی
+          </li>
+          <li>
+            <kbd>:cp[revious]</kbd> - برو به نتیجه قبلی
+          </li>
+          <li>
+            <kbd>:cope[n]</kbd> - باز کردن یک پنجره که شامل لیست نتایج جستجو باشد
+          </li>
+          <li>
+            <kbd>:ccl[ose]</kbd> - بستن پنجره تعمیر سریع
+          </li>
+        </ul>
+        <h2>تب ها</h2>
+        <ul>
+          <li>
+            <kbd>:tabnew</kbd> or <kbd>:tabnew {page.words.file}</kbd> -
+            باز کردن فایل در تب جدید
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wT</kbd> - انتقال بافر فعلی به تب جدید
+          </li>
+          <li>
+            <kbd>gt</kbd> or <kbd>:tabn[ext]</kbd> - برو به تب بعدی
+          </li>
+          <li>
+            <kbd>gT</kbd> or <kbd>:tabp[revious]</kbd> - برو به تب قبلی
+          </li>
+          <li>
+            <kbd>#gt</kbd> - برو به تب شماره #
+          </li>
+          <li>
+            <kbd>:tabm[ove] #</kbd> - انتقال تب فعلی به موقعیت #
+          </li>
+          <li>
+            <kbd>:tabc[lose]</kbd> - بستن تب فعلی و تمام پنجره های آن
+          </li>
+          <li>
+            <kbd>:tabo[nly]</kbd> - بستن تمامی تبها غیر از تب فعلی
+          </li>
+          <li>
+            <kbd>:tabdo</kbd> command - اجرای دستور روی تمامی تبها
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-block">
+      <div class="grid-lg-1-2">
+        <h2>کار کردن با چند فایل</h2>
+        <ul>
+          <li>
+            <kbd>:e[dit] فایل</kbd> - کار کردن با یک فایل در بافر جدید
+          </li>
+          <li>
+            <kbd>:bn[ext]</kbd> -
+            برو به بافر بعدی
+          </li>
+          <li>
+            <kbd>:bp[revious]</kbd> -
+            برو به بافر قبلی
+          </li>
+          <li>
+            <kbd>:bd[elete]</kbd> - بستن بافر(بسته شدن فایل)
+          </li>
+          <li>
+            <kbd>:b[uffer]#</kbd> - با استفاده از هشتگ (#) به بافر برو
+          </li>
+          <li>
+            <kbd>:b[uffer] file</kbd> - با استفاده از فایل به بافر برو
+          </li>
+          <li>
+            <kbd>:ls</kbd> or <kbd>:buffers</kbd> - لیست تمامی بافرهای باز
+          </li>
+          <li>
+            <kbd>:sp[lit] فایل</kbd> - باز کردن فایل در پنجره جدید و  به دو قسمت کردن پنجره
+          </li>
+          <li>
+            <kbd>:vs[plit] فایل</kbd> - باز کردن فایل در پنجره جدید و به دو قسمت کردن پنجره به صورت عمودی
+          </li>
+          <li>
+            <kbd>:vert[ical] ba[ll]</kbd> - پیرایش تمامی بافرها با استفاده از پنجره‌های عمودی
+          </li>
+          <li>
+            <kbd>:tab ba[ll]</kbd> - ویرایش تمامی بافرها با استفاده از تب‌‌ها
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ws</kbd> - به دو قسمت کردن پنجره
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wv</kbd> - به دو قسمت کردن به صورت عمودی
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ww</kbd> - سوئیچ کردن مابین پنجره ها
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wq</kbd> - خارج شدن از پنجره
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wx</kbd> - تعویض پنجره فعلی با بعدی
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w=</kbd> - مساوی‌کردن طول و عرض تمامی پنجره‌ها
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wh</kbd> - انتقال مکان نما به پنجره سمت چپ
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wl</kbd> - انتقال مکان نما به پنجره سمت راست
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wj</kbd> - انتقال مکان نما به پنجره پایین
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wk</kbd> - انتقال مکان نمابه پنجره بالا
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wH</kbd> - make current window full height at far left (leftmost vertical window)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wL</kbd> - make current window full height at far right (rightmost vertical window)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wJ</kbd> - make current window full width at the very bottom (bottommost horizontal window)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wK</kbd> - make current window full width at the very top (topmost horizontal window)
+          </li>
+        </ul>
+        </ul>
+        </ul>
+        </ul>
+      </div>
+      <div class="grid-lg-1-2">
+        <h2>مقایسه کردن</h2>
+        <ul>
+          <li>
+            <kbd>zf</kbd> - تا آخرین خط انتخابی یک پنهان گر کد بساز
+          </li>
+          <li>
+            <kbd>zd</kbd> - پنهان گر کد زیر مکان نما را حذف من
+          </li>
+          <li>
+            <kbd>za</kbd> - پنهانگر کد زیر مکان نما را باز و بسته کن
+          </li>
+          <li>
+            <kbd>zo</kbd> - پنهانگر کد زیر مکان نما را باز کن
+          </li>
+          <li>
+            <kbd>zc</kbd> - پنهانگر کد زیر مکان نما را ببند
+          </li>
+          <li>
+            <kbd>zr</kbd> - همه پنهانگر های کد را یک مرتبه باز کن
+          </li>
+          <li>
+            <kbd>zm</kbd> - همه پنهانگر های کد را یک مرتبه باز ببند
+          </li>
+          <li>
+            <kbd>zi</kbd> - toggle folding functionality
+          </li>
+          <li>
+            <kbd>]c</kbd> - jump to start of next change
+          </li>
+          <li>
+            <kbd>[c</kbd> - jump to start of previous change
+          </li>
+          <li>
+            <kbd>do</kbd> or <kbd>:diffg[et]</kbd> - obtain (get) difference (from other buffer)
+          </li>
+          <li>
+            <kbd>dp</kbd> or <kbd>:diffpu[t]</kbd> - put difference (to other buffer)
+          </li>
+          <li>
+            <kbd>:diffthis</kbd> - make current window part of diff
+          </li>
+          <li>
+            <kbd>:dif[fupdate]</kbd> - update differences
+          </li>
+          <li>
+            <kbd>:diffo[ff]</kbd> - switch off diff mode for current window
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> The commands for folding (e.g. <kbd>za</kbd>) operate on one level. To operate on all levels, use uppercase letters (e.g. <kbd>zA</kbd>).
+        </div>
+        <div class="well">
+          <strong>Tip</strong> To view the differences of files, one can directly start Vim in diff mode by running <kbd>vimdiff</kbd> in a terminal. One can even set this as <kbd>git difftool</kbd>.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+      <div>
+        <div id="footer" class="grid-block">
+          <div class="box">
+            <div class="box-header">
+              <h2>Additional Resources</h2>
+            </div>
+            <div class="box-body">
+              <div class="grid-block">
+                <div class="grid-lg-1-2">
+                  <h3 id="languages">Languages</h3>
+                  <ul>
+                    <li>
+                      <a href="/lang/ar" lang="ar">العربية</a>
+                    </li>
+                    <li>
+                      <a href="/lang/bn" lang="bn">বাংলা</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ca" lang="ca">Català</a>
+                    </li>
+                    <li>
+                      <a href="/lang/cs" lang="cs">Čeština</a>
+                    </li>
+                    <li>
+                      <a href="/lang/da_DK" lang="da">Dansk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/de_de" lang="de">Deutsch</a>
+                    </li>
+                    <li>
+                      <a href="/lang/el_gr" lang="el">Ελληνικά</a>
+                    </li>
+                    <li>
+                      <a href="/lang/en_us" lang="en">English</a>
+                    </li>
+                    <li>
+                      <a href="/lang/eo" lang="eo">Esperanto</a>
+                    </li>
+                    <li>
+                      <a href="/lang/es_es" lang="es">Español</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fa_ir" lang="fa">Persian</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fi" lang="fi">Suomi</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fr_fr" lang="fr">Français</a>
+                    </li>
+                    <li>
+                      <a href="/lang/he" lang="he">עברית</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hr" lang="hr">Hrvatski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hu_hu" lang="hu">Magyar</a>
+                    </li>
+                    <li>
+                      <a href="/lang/id" lang="id">Bahasa Indonesia</a>
+                    </li>
+                    <li>
+                      <a href="/lang/it" lang="it">Italiano</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ja" lang="ja">日本語</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ko" lang="ko">한국어</a>
+                    </li>
+                    <li>
+                      <a href="/lang/my" lang="my">မြန်မာ</a>
+                    </li>
+                    <li>
+                      <a href="/lang/nl_nl" lang="nl">Nederlands</a>
+                    </li>
+                    <li>
+                      <a href="/lang/no_nb" lang="no">Norsk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pl_pl" lang="pl">Polski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_br" lang="pt">Português - Brasil</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_pt" lang="pt">Português - Portugal</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ro" lang="ro">Romana</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ru" lang="ru">Русский</a>
+                    </li>
+                    <li>
+                      <a href="/lang/si_lk" lang="si">සිංහල</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sk" lang="sk">Slovenčina</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sv" lang="sv">Svenska</a>
+                    </li>
+                    <li>
+                      <a href="/lang/th" lang="th">ภาษาไทย</a>
+                    </li>
+                    <li>
+                      <a href="/lang/tr" lang="tr">Türkçe</a>
+                    </li>
+                    <li>
+                      <a href="/lang/uk" lang="uk">Українська</a>
+                    </li>
+                    <li>
+                      <a href="/lang/vi_vn" lang="vi">Tiếng Việt</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_cn" lang="zh">简体中文</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_tw" lang="zh">中文 (台灣)</a>
+                    </li>
+                  </ul>                </div>
+                <div class="grid-lg-1-2">
+                  <h3>About the vim cheat sheet</h3>
+                  <p>
+                    This project aims to be one of the most accessible vim guides available. We
+                    made sure to support mobile, desktop, and other
+                    <a href="#languages" aria-label="Jump to languages section">languages</a>.
+                  </p>
+                  <p>
+                    <a target="_blank" href="https://github.com/sponsors/rtorr" aria-label="Sponsor this project on GitHub">❤️ Please consider sponsoring this
+                      project ❤️</a>!
+                  </p>
+                  <p>
+                    You can read about how to contribute (and help improve) by viewing our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/README.md" target="_blank"
+                      rel="noopener noreferrer" aria-label="Read the README on GitHub">
+                      README
+                    </a>
+                    . There you can see how to set up this project, or how to contribute a new
+                    language. Here is a big thank you to our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/graphs/contributors" target="_blank"
+                      rel="noopener noreferrer" aria-label="View project contributors on GitHub">
+                      contributors!
+                    </a>
+                  </p>
+                  <p>
+                    This project is licensed under
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/License.txt" target="_blank"
+                      rel="noopener noreferrer" aria-label="View the MIT License for this project">
+                      The MIT License (MIT)
+                    </a>
+                    .
+                  </p>
+                  <h3>Other places to find this document</h3>
+                  <p>
+                    This document was embedded in
+                    <a href="https://duckduckgo.com/?q=vim+cheat+sheet" target="_blank" rel="noopener noreferrer" aria-label="Search for this document on DuckDuckGo">
+                      DuckDuckGo
+                    </a>
+                    .
+                  </p>
+                  <h3>More resources</h3>
+                  <p>
+                    Interactive Vim tutorial:
+                    <a href="https://openvim.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Open Vim for an interactive Vim tutorial">
+                      Open Vim
+                    </a>
+                  </p>
+                  <p>
+                    Vim quick reference from Vim help pages:
+                    <a href="https://vimhelp.org/quickref.txt.html" target="_blank" rel="noopener noreferrer" aria-label="Access Vim quick reference"> 
+                      quickref.txt
+                    </a>
+                  </p>
+                  <p>
+                    List of all Vim ex (<kbd>:</kbd>) commands:
+                    <a href="https://vimhelp.org/index.txt.html#ex-cmd-index" target="_blank" rel="noopener noreferrer" aria-label="View list of all Vim ex commands">
+                      ex-cmd-index
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-block link-to-repo">
+          <p>
+            Checkout the source on
+            <a href="https://github.com/rtorr/vim-cheat-sheet" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+          </p>
+          <p>version: 3.2.0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.CACHE_NAME = "3.2.0";
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/javascripts/sw.js?version=3.2.0');
+      });
+    }
+  </script>
+</body>
+
+</html>

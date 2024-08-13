@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="id">
+
+<head>
+  <meta charSet="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Vim Cheat Sheet</title>
+  <link rel="shortcut icon" href="/images/icons/icon-48x48.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#FA4949" />
+  <meta http-equiv="cache-control" content="max-age=600" />
+  <meta name="description" content="Explore vim.rtorr.com for an extensive Vim cheat sheet, offering clear, concise commands and shortcuts for Vim users. Whether you're a beginner or an experienced developer, find tips and tricks to enhance your coding efficiency in Vim.">
+  <link rel="apple-touch-icon" sizes="48x48" href="/images/icons/icon-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="/images/icons/icon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/images/icons/icon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="256x256" href="/images/icons/icon-256x256.png" />
+  <link rel="apple-touch-icon" sizes="384x384" href="/images/icons/icon-384x384.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="/images/icons/icon-512x512.png" />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <div class="sponsor">
+    <div class="container">
+      <span>
+        <a target="_blank" href="https://www.warp.dev">
+          <div class="sponsor-logo-container">
+            <span>Sponsor</span>
+            <img class="sponsor-logo" src="/images/svg/warp-logo.svg" alt="Warp logo">
+          </div>
+          <div class="sponsor-tagline"><span>A new terminal focused on developer productivity</span></div>
+      </span>
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid-block">
+      <div class="grid-1">
+        <h1>
+          <a class="site-title" href="/">
+            Vim Cheat Sheet
+          </a>
+        </h1>
+      </div>
+    </div>
+    <div class="container">
+      <main><div class="container">
+  <div class="commands-container">
+    <div class="grid-block">
+      <div class="grid-lg-1-3">
+        <h2>Global</h2>
+        <ul>
+          <li>
+            <kbd>:h[elp] keyword</kbd> - open help for keyword
+          </li>
+          <li>
+            <kbd>:sav[eas] file</kbd> - save file as
+          </li>
+          <li>
+            <kbd>:clo[se]</kbd> - close current pane
+          </li>
+          <li>
+            <kbd>:ter[minal]</kbd> - open a terminal window
+          </li>
+          <li>
+            <kbd>K</kbd> - open man page for word under the cursor
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Run <kbd>vimtutor</kbd> in a terminal to learn the first Vim commands.
+        </div>
+        <h2>Pergerakan Kursor</h2>
+        <ul>
+          <li>
+            <kbd>h</kbd> - memindahkan kursor ke kiri
+          </li>
+          <li>
+            <kbd>j</kbd> - memindahkan kursor ke bawah
+          </li>
+          <li>
+            <kbd>k</kbd> - memindahkan kursor ke atas
+          </li>
+          <li>
+            <kbd>l</kbd> - memindahkan kursor ke kanan
+          </li>
+          <li>
+            <kbd>gj</kbd> - move cursor down (multi-line text)
+          </li>
+          <li>
+            <kbd>gk</kbd> - move cursor up (multi-line text)
+          </li>
+          <li>
+            <kbd>H</kbd> - move to top of screen
+          </li>
+          <li>
+            <kbd>M</kbd> - move to middle of screen
+          </li>
+          <li>
+            <kbd>L</kbd> - move to bottom of screen
+          </li>
+          <li>
+            <kbd>w</kbd> - lompat ke awal kata selanjutnya
+          </li>
+          <li>
+            <kbd>W</kbd> - lompat ke awal kata selanjutanya (kata-kata dapat mengandung tanda baca)
+          </li>
+          <li>
+            <kbd>e</kbd> - lompat ke akhir kata selanjutnya
+          </li>
+          <li>
+            <kbd>E</kbd> - lompat ke akhir kata selanjutnya (kata-kata dapat mengandung tanda baca)
+          </li>
+          <li>
+            <kbd>b</kbd> - lompat ke awal kata sebelumnya
+          </li>
+          <li>
+            <kbd>B</kbd> - lompat ke awal kata sebelumnya (kata-kata dapat mengandung tanda baca)
+          </li>
+          <li>
+            <kbd>ge</kbd> - jump backwards to the end of a word
+          </li>
+          <li>
+            <kbd>gE</kbd> - jump backwards to the end of a word (words can contain punctuation)
+          </li>
+          <li>
+            <kbd>%</kbd> - move to matching character (default supported pairs: '()', '{}', '[]' - use <code>:h matchpairs</code> in vim for more info)
+          </li>
+          <li>
+            <kbd>0</kbd> - lompat ke awal baris saat ini
+          </li>
+          <li>
+            <kbd>^</kbd> - lompat ke karakter pertama baris saat ini
+          </li>
+          <li>
+            <kbd>$</kbd> - lompat ke akhir baris saat ini
+          </li>
+          <li>
+            <kbd>g_</kbd> - jump to the last non-blank character of the line
+          </li>
+          <li>
+            <kbd>gg</kbd> - pindah ke baris teratas dokumen
+          </li>
+          <li>
+            <kbd>G</kbd> - pindah ke baris paling akhir dokumen
+          </li>
+          <li>
+            <kbd>5gg</kbd> or <kbd>5G</kbd> - pindah ke baris ke-5
+          </li>
+          <li>
+            <kbd>gd</kbd> - move to local declaration
+          </li>
+          <li>
+            <kbd>gD</kbd> - move to global declaration
+          </li>
+          <li>
+            <kbd>fx</kbd> - lompat tepat pada karakter x
+          </li>
+          <li>
+            <kbd>tx</kbd> - lompat tepat sebelum karakter x
+          </li>
+          <li>
+            <kbd>Fx</kbd> - jump to previous occurence of character x
+          </li>
+          <li>
+            <kbd>Tx</kbd> - jump to after previous occurence of character x
+          </li>
+          <li>
+            <kbd>;</kbd> - repeat previous f, t, F or T movement
+          </li>
+          <li>
+            <kbd>,</kbd> - repeat previous f, t, F or T movement, backwards
+          </li>
+          <li>
+            <kbd>}</kbd> - Lompat ke paragraf berikutnya (atau blok kode, saat mengedit kode)
+          </li>
+          <li>
+            <kbd>{</kbd> - Lompat ke paragraf sebelumnya (atau blok kode, saat mengedit kode)
+          </li>
+          <li>
+            <kbd>zz</kbd> - center cursor on screen
+          </li>
+          <li>
+            <kbd>zt</kbd> - position cursor on top of the screen
+          </li>
+          <li>
+            <kbd>zb</kbd> - position cursor on bottom of the screen
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>e</kbd> - move screen down one line (without moving cursor)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>y</kbd> - move screen up one line (without moving cursor)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>b</kbd> - move back one full screen
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>f</kbd> - move forward one full screen
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - move forward 1/2 a screen
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>u</kbd> - move back 1/2 a screen
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong>
+          Prefix a cursor movement command with a number to repeat it. For example, <kbd>4j</kbd> moves down 4 lines.
+        </div>
+        <h2>Mode Insert - menyisipkan/menambahkan text</h2>
+        <ul>
+          <li>
+            <kbd>i</kbd> - menyisipkan sebelum kursor
+          </li>
+          <li>
+            <kbd>I</kbd> - menyisipkan pada permulaan baris
+          </li>
+          <li>
+            <kbd>a</kbd> - menyisipkan (menambahkan) setelah kursor
+          </li>
+          <li>
+            <kbd>A</kbd> - menyisipkan (menambahkan) pada akhir baris
+          </li>
+          <li>
+            <kbd>o</kbd> - menambahkan (membuka) baris baru dibawah baris saat ini
+          </li>
+          <li>
+            <kbd>O</kbd> - menambahkan (membuka) baris baru diatas baris saat ini
+          </li>
+          <li>
+            <kbd>ea</kbd> - menyisipkan (menambahkan) pada akhir kata
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>h</kbd> - delete the character before the cursor during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w</kbd> - delete word before the cursor during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>j</kbd> - begin new line during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>t</kbd> - indent (move right) line one shiftwidth during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - de-indent (move left) line one shiftwidth during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>n</kbd> - insert (auto-complete) next match before the cursor during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>p</kbd> - insert (auto-complete) previous match before the cursor during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>rx</kbd> - insert the contents of register x
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ox</kbd> - Temporarily enter normal mode to issue one normal-mode command x.
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - berhenti dari mode insert
+          </li>
+        </ul>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>Editing</h2>
+        <ul>
+          <li>
+            <kbd>r</kbd> - mengubah satu karakter
+          </li>
+          <li>
+            <kbd>R</kbd> - replace more than one character, until <kbd>ESC</kbd> is pressed.
+          </li>
+          <li>
+            <kbd>J</kbd> - menyambung baris di bawah dengan baris saat ini
+          </li>
+          <li>
+            <kbd>gJ</kbd> - join line below to the current one without space in between
+          </li>
+          <li>
+            <kbd>gwip</kbd> - reflow paragraph
+          </li>
+          <li>
+            <kbd>g~</kbd> - switch case up to motion
+          </li>
+          <li>
+            <kbd>gu</kbd> - change to lowercase up to motion
+          </li>
+          <li>
+            <kbd>gU</kbd> - change to uppercase up to motion
+          </li>
+          <li>
+            <kbd>cc</kbd> - menghapus isi baris saat ini untuk diganti dengan text lain
+          </li>
+          <li>
+            <kbd>c$</kbd> or <kbd>C</kbd> - menghapus semua karakter setelah kursor hingga akhir baris
+          </li>
+          <li>
+            <kbd>ciw</kbd> - change (replace) entire word
+          </li>
+          <li>
+            <kbd>cw</kbd> or <kbd>ce</kbd> - menghapus satu kata untuk diganti dengan kata lain
+          </li>
+          <li>
+            <kbd>s</kbd> - menghapus karakter dan mengganti text
+          </li>
+          <li>
+            <kbd>S</kbd> - menghapus isi baris saat ini untuk diganti dengan text lain (sama dengan cc)
+          </li>
+          <li>
+            <kbd>xp</kbd> - menukar dua karakter (delete dan paste)
+          </li>
+          <li>
+            <kbd>u</kbd> - undo
+          </li>
+          <li>
+            <kbd>U</kbd> - restore (undo) last changed line
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>r</kbd> - redo
+          </li>
+          <li>
+            <kbd>.</kbd> - ulangi perintah sebelumnya
+          </li>
+        </ul>
+        <h2>Menandai Text (Visual Mode)</h2>
+        <ul>
+          <li>
+            <kbd>v</kbd> - memulai mode visual, menandai baris-baris, lalu jalankan perintah (misal y-yank)
+          </li>
+          <li>
+            <kbd>V</kbd> - memulai mode visual secara per baris
+          </li>
+          <li>
+            <kbd>o</kbd> - pindah ke ke bagian akhir dari area lain yang telah ditandai
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>v</kbd> - memulai mode visual blok
+          </li>
+          <li>
+            <kbd>O</kbd> - pindah ke sudut lain pada sebuah blok
+          </li>
+          <li>
+            <kbd>aw</kbd> - menandai kata
+          </li>
+          <li>
+            <kbd>ab</kbd> - a block with ()
+          </li>
+          <li>
+            <kbd>aB</kbd> - a block with {}
+          </li>
+          <li>
+            <kbd>at</kbd> - a block with &lt;&gt; tags
+          </li>
+          <li>
+            <kbd>ib</kbd> - inner block with ()
+          </li>
+          <li>
+            <kbd>iB</kbd> - inner block with {}
+          </li>
+          <li>
+            <kbd>it</kbd> - inner block with &lt;&gt; tags
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - berhenti dari mode visual
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Instead of <kbd>b</kbd> or <kbd>B</kbd> one can also use <kbd>(</kbd> or <kbd>{</kbd> respectively.
+        </div>
+        <h2>Perintah - perintah visual</h2>
+        <ul>
+          <li>
+            <kbd>&#62;</kbd> - menggeser text ke kanan
+          </li>
+          <li>
+            <kbd>&#60;</kbd> - menggeser text ke kiri
+          </li>
+          <li>
+            <kbd>y</kbd> - yank (menyalin) text yang ditandai
+          </li>
+          <li>
+            <kbd>d</kbd> - menghapus text yang ditandai
+          </li>
+          <li>
+            <kbd>~</kbd> - menukar huruf kapital-kapitil
+          </li>
+          <li>
+            <kbd>u</kbd> - change marked text to lowercase
+          </li>
+          <li>
+            <kbd>U</kbd> - change marked text to uppercase
+          </li>
+        </ul>
+        <h2>Registers</h2>
+        <ul>
+          <li>
+            <kbd>:reg[isters]</kbd> - show registers content
+          </li>
+          <li>
+            <kbd>"xy</kbd> - yank into register x
+          </li>
+          <li>
+            <kbd>"xp</kbd> - paste contents of register x
+          </li>
+          <li>
+            <kbd>"+y</kbd> - yank into the system clipboard register
+          </li>
+          <li>
+            <kbd>"+p</kbd> - paste from the system clipboard register
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Registers are being stored in ~/.viminfo, and will be loaded again on next restart of vim.
+        </div>
+        <div class="well">
+          <strong>Tip</strong> Special registers:
+          <p>
+            &emsp;<kbd>0</kbd> - last yank<br/>
+            &emsp;<kbd>&quot;</kbd> - unnamed register, last delete or yank<br/>
+            &emsp;<kbd>%</kbd> - current file name<br/>
+            &emsp;<kbd>#</kbd> - alternate file name<br/>
+            &emsp;<kbd>*</kbd> - clipboard contents (X11 primary)<br/>
+            &emsp;<kbd>+</kbd> - clipboard contents (X11 clipboard)<br/>
+            &emsp;<kbd>/</kbd> - last search pattern<br/>
+            &emsp;<kbd>:</kbd> - last command-line<br/>
+            &emsp;<kbd>.</kbd> - last inserted text<br/>
+            &emsp;<kbd>-</kbd> - last small (less than a line) delete<br/>
+            &emsp;<kbd>=</kbd> - expression register<br/>
+            &emsp;<kbd>_</kbd> - black hole register<br/>
+          </p>
+        </div>
+        <h2>Marks</h2>
+        <ul>
+          <li>
+            <kbd>:marks</kbd> - list of marks
+          </li>
+          <li>
+            <kbd>ma</kbd> - set current position for mark A
+          </li>
+          <li>
+            <kbd>`a</kbd> - jump to position of mark A
+          </li>
+          <li>
+            <kbd>y`a</kbd> - yank text to position of mark A
+          </li>
+          <li>
+            <kbd>`0</kbd> - go to the position where Vim was previously exited
+          </li>
+          <li>
+            <kbd>`"</kbd> - go to the position when last editing this file
+          </li>
+          <li>
+            <kbd>`.</kbd> - go to the position of the last change in this file
+          </li>
+          <li>
+            <kbd>``</kbd> - go to the position before the last jump
+          </li>
+          <li>
+            <kbd>:ju[mps]</kbd> - list of jumps
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>i</kbd> - go to newer position in jump list
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>o</kbd> - go to older position in jump list
+          </li>
+          <li>
+            <kbd>:changes</kbd> - list of changes
+          </li>
+          <li>
+            <kbd>g,</kbd> - go to newer position in change list
+          </li>
+          <li>
+            <kbd>g;</kbd> - go to older position in change list
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>]</kbd> - jump to the tag under cursor
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> To jump to a mark you can either use a backtick (<kbd>`</kbd>) or an apostrophe (<kbd>'</kbd>). Using an apostrophe jumps to the beginning (first non-blank) of the line holding the mark.
+        </div>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>Macros</h2>
+        <ul>
+          <li>
+            <kbd>qa</kbd> - record macro a
+          </li>
+          <li>
+            <kbd>q</kbd> - stop recording macro
+          </li>
+          <li>
+            <kbd>@a</kbd> - run macro a
+          </li>
+          <li>
+            <kbd>@@</kbd> - rerun last run macro
+          </li>
+        </ul>
+        <h2>Memotong dan menempel</h2>
+        <ul>
+          <li>
+            <kbd>yy</kbd> - menyalin sebaris text
+          </li>
+          <li>
+            <kbd>2yy</kbd> - menyalin dua baris text
+          </li>
+          <li>
+            <kbd>yw</kbd> - menyalin satu kata
+          </li>
+          <li>
+            <kbd>yiw</kbd> - yank (copy) word under the cursor
+          </li>
+          <li>
+            <kbd>yaw</kbd> - yank (copy) word under the cursor and the space after or before it
+          </li>
+          <li>
+            <kbd>y$</kbd> or <kbd>Y</kbd> - menyalin dari posisi sekarang hingga akhir baris saat ini
+          </li>
+          <li>
+            <kbd>p</kbd> - menempelkan salinan dari clipboard setelah kursor
+          </li>
+          <li>
+            <kbd>P</kbd> - menempelkan salinan dari clipboard sebelum kursor
+          </li>
+          <li>
+            <kbd>gp</kbd> - put (paste) the clipboard after cursor and leave cursor after the new text
+          </li>
+          <li>
+            <kbd>gP</kbd> - put (paste) before cursor and leave cursor after the new text
+          </li>
+          <li>
+            <kbd>dd</kbd> - menghapus satu baris
+          </li>
+          <li>
+            <kbd>2dd</kbd> - menghapus (memotong) dua baris
+          </li>
+          <li>
+            <kbd>dw</kbd> - menghapus (memotong) kata
+          </li>
+          <li>
+            <kbd>diw</kbd> - delete (cut) word under the cursor
+          </li>
+          <li>
+            <kbd>daw</kbd> - delete (cut) word under the cursor and the space after or before it
+          </li>
+          <li>
+            <kbd>:3,5d</kbd> - delete lines starting from 3 to 5
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> You can also use the following characters to specify the range: <br>
+          e.g. <br>
+          <p>
+            <kbd>:.,$d</kbd> - From the current line to the end of the file <br>
+            <kbd>:.,1d</kbd> - From the current line to the beginning of the file <br>
+            <kbd>:10,1d</kbd> - From the 10th line to the beginning of the file <br>
+          </p>
+        </div>
+        <ul>
+          <li>
+            <kbd>:g/{pattern}/d</kbd> - delete all lines containing pattern
+          </li>
+          <li>
+            <kbd>:g!/{pattern}/d</kbd> - delete all lines not containing pattern
+          </li>
+          <li>
+            <kbd>d$</kbd> or <kbd>D</kbd> - menghapus (memotong) hingga ke akhir baris saat ini
+          </li>
+          <li>
+            <kbd>x</kbd> - menghapus (memotong) satu karakter
+          </li>
+        </ul>
+        <h2>Indent text</h2>
+        <ul>
+          <li>
+            <kbd>&#62;&#62;</kbd> - indent (move right) line one shiftwidth
+          </li>
+          <li>
+            <kbd>&#60;&#60;</kbd> - de-indent (move left) line one shiftwidth
+          </li>
+          <li>
+            <kbd>&#62;%</kbd> - indent a block with () or {} (cursor on brace)
+          </li>
+          <li>
+            <kbd>&#60;%</kbd> - de-indent a block with () or {} (cursor on brace)
+          </li>
+          <li>
+            <kbd>&#62;ib</kbd> - indent inner block with ()
+          </li>
+          <li>
+            <kbd>&#62;at</kbd> - indent a block with &lt;&gt; tags
+          </li>
+          <li>
+            <kbd>3==</kbd> - re-indent 3 lines
+          </li>
+          <li>
+            <kbd>=%</kbd> - re-indent a block with () or {} (cursor on brace)
+          </li>
+          <li>
+            <kbd>=iB</kbd> - re-indent inner block with {}
+          </li>
+          <li>
+            <kbd>gg=G</kbd> - re-indent entire buffer
+          </li>
+          <li>
+            <kbd>]p</kbd> - paste and adjust indent to current line
+          </li>
+        </ul>
+        <h2>Keluar</h2>
+        <ul>
+          <li>
+            <kbd>:w</kbd> - menulis (menyimpan) ke file, tapi tidak keluar
+          </li>
+          <li>
+            <kbd>:w !sudo tee %</kbd> - menulis (menyimpan) ke file dengan sudo
+          </li>
+          <li>
+            <kbd>:wq</kbd> or <kbd>:x</kbd> or <kbd>ZZ</kbd> - menulis (menyimpan) lalu keluar
+          </li>
+          <li>
+            <kbd>:q</kbd> - keluar (batal jika ada perubahan yang belum disimpan)
+          </li>
+          <li>
+            <kbd>:q!</kbd> or <kbd>ZQ</kbd> - keluar dan abaikan perubahan yang telah dibuat
+          </li>
+          <li>
+            <kbd>:wqa</kbd> - write (save) and quit on all tabs
+          </li>
+        </ul>
+        <h2>Cari dan Tukar</h2>
+        <ul>
+          <li>
+            <kbd>/pattern</kbd> - pencarian dengan pola
+          </li>
+          <li>
+            <kbd>?pattern</kbd> - pencarian ke belakang dengan pola
+          </li>
+          <li>
+            <kbd>\vpattern</kbd> - pola &#x27;magic&#x27;: karakter-karater non alfanumerik diinterpretaskan sebagai sebagai simbol regex khusus (tidak membutuhkan escape)
+          </li>
+          <li>
+            <kbd>n</kbd> - ulangi pencarian ke arah selanjutnya
+          </li>
+          <li>
+            <kbd>N</kbd> - ulangi pencarian ke arah sebaliknya
+          </li>
+          <li>
+            <kbd>:%s/old/new/g</kbd> -
+            tukar yang lama dengan yang baru di keseluruhan file
+          </li>
+          <li>
+            <kbd>:%s/old/new/gc</kbd> -
+            tukar yang lama dengan yang baru di kesluruhan file dengan konfirmasi
+          </li>
+          <li>
+            <kbd>:noh[lsearch]</kbd> - menghilangkan sorotan pada hasil-hasil pencarian
+          </li>
+        </ul>
+        <h2>Pencarian di beberapa file</h2>
+        <ul>
+          <li>
+            <kbd>:vim[grep] /pattern/ {`{file}`}</kbd> -
+            pencarian pola di beberapa file
+          </li>
+        </ul>
+        <div class="well">
+          e.g.
+          <kbd>:vim[grep] /foo/ **/*</kbd>
+        </div>
+        <ul>
+          <li>
+            <kbd>:cn[ext]</kbd> - lompat ke temuan selanjutnya
+          </li>
+          <li>
+            <kbd>:cp[revious]</kbd> - lompat ke temuan sebelumnya
+          </li>
+          <li>
+            <kbd>:cope[n]</kbd> - membuka windows baru yang menampilkan hasil temuan
+          </li>
+          <li>
+            <kbd>:ccl[ose]</kbd> - close the quickfix window
+          </li>
+        </ul>
+        <h2>Tabs</h2>
+        <ul>
+          <li>
+            <kbd>:tabnew</kbd> or <kbd>:tabnew {page.words.file}</kbd> -
+            membuka file di tab baru
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wT</kbd> - move the current split window into its own tab
+          </li>
+          <li>
+            <kbd>gt</kbd> or <kbd>:tabn[ext]</kbd> - pindah ke tab selanjutnya
+          </li>
+          <li>
+            <kbd>gT</kbd> or <kbd>:tabp[revious]</kbd> - pindah ke tab sebelumnya
+          </li>
+          <li>
+            <kbd>#gt</kbd> - pindah ke tab nomor #
+          </li>
+          <li>
+            <kbd>:tabm[ove] #</kbd> - pindahkan tab saat ini ke urutan ke # (urutan mulai dari angka 0)
+          </li>
+          <li>
+            <kbd>:tabc[lose]</kbd> - tutup tab saat ini dan semua jendela di dalamnya
+          </li>
+          <li>
+            <kbd>:tabo[nly]</kbd> - tutup semua tab kecuali tab yang aktif saat ini
+          </li>
+          <li>
+            <kbd>:tabdo</kbd> command - menjalankan perintah <code>command</code> pada semua tab (misal: <code>:tabdo q</code> - akan menutup semua tab)
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-block">
+      <div class="grid-lg-1-2">
+        <h2>Bekerja dengan beberapa file</h2>
+        <ul>
+          <li>
+            <kbd>:e[dit] file</kbd> - mengedit file di dalam buffer baru
+          </li>
+          <li>
+            <kbd>:bn[ext]</kbd> -
+            beralih ke buffer selanjutnya
+          </li>
+          <li>
+            <kbd>:bp[revious]</kbd> -
+            beralih ke buffer sebelumnya
+          </li>
+          <li>
+            <kbd>:bd[elete]</kbd> - menghapus buffer (menutup file)
+          </li>
+          <li>
+            <kbd>:b[uffer]#</kbd> - go to a buffer by #
+          </li>
+          <li>
+            <kbd>:b[uffer] file</kbd> - go to a buffer by file
+          </li>
+          <li>
+            <kbd>:ls</kbd> or <kbd>:buffers</kbd> - daftar buffer yang terbuka
+          </li>
+          <li>
+            <kbd>:sp[lit] file</kbd> - buka file di buffer baru dan split jendela
+          </li>
+          <li>
+            <kbd>:vs[plit] file</kbd> - buka file di buffer baru dan split jendela secara vertikal
+          </li>
+          <li>
+            <kbd>:vert[ical] ba[ll]</kbd> - edit all buffers as vertical windows
+          </li>
+          <li>
+            <kbd>:tab ba[ll]</kbd> - edit all buffers as tabs
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ws</kbd> - split jendela
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wv</kbd> - split jendela secara vertikal
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ww</kbd> - berganti jendela
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wq</kbd> - keluar dari jendela
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wx</kbd> - exchange current window with next one
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w=</kbd> - make all windows equal height &amp; width
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wh</kbd> - memindahkan kursor ke jendela kiri (split vertikal)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wl</kbd> - memindahkan kursor ke jendela kanan (split vertikal)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wj</kbd> - memindahkan kursor ke jendela bawah (split horizontal)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wk</kbd> - mmemindahkan kursor ke jendela atas (split horizontal)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wH</kbd> - make current window full height at far left (leftmost vertical window)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wL</kbd> - make current window full height at far right (rightmost vertical window)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wJ</kbd> - make current window full width at the very bottom (bottommost horizontal window)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wK</kbd> - make current window full width at the very top (topmost horizontal window)
+          </li>
+        </ul>
+        </ul>
+        </ul>
+        </ul>
+      </div>
+      <div class="grid-lg-1-2">
+        <h2>Diff</h2>
+        <ul>
+          <li>
+            <kbd>zf</kbd> - manually define a fold up to motion
+          </li>
+          <li>
+            <kbd>zd</kbd> - delete fold under the cursor
+          </li>
+          <li>
+            <kbd>za</kbd> - toggle fold under the cursor
+          </li>
+          <li>
+            <kbd>zo</kbd> - open fold under the cursor
+          </li>
+          <li>
+            <kbd>zc</kbd> - close fold under the cursor
+          </li>
+          <li>
+            <kbd>zr</kbd> - reduce (open) all folds by one level
+          </li>
+          <li>
+            <kbd>zm</kbd> - fold more (close) all folds by one level
+          </li>
+          <li>
+            <kbd>zi</kbd> - toggle folding functionality
+          </li>
+          <li>
+            <kbd>]c</kbd> - jump to start of next change
+          </li>
+          <li>
+            <kbd>[c</kbd> - jump to start of previous change
+          </li>
+          <li>
+            <kbd>do</kbd> or <kbd>:diffg[et]</kbd> - obtain (get) difference (from other buffer)
+          </li>
+          <li>
+            <kbd>dp</kbd> or <kbd>:diffpu[t]</kbd> - put difference (to other buffer)
+          </li>
+          <li>
+            <kbd>:diffthis</kbd> - make current window part of diff
+          </li>
+          <li>
+            <kbd>:dif[fupdate]</kbd> - update differences
+          </li>
+          <li>
+            <kbd>:diffo[ff]</kbd> - switch off diff mode for current window
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> The commands for folding (e.g. <kbd>za</kbd>) operate on one level. To operate on all levels, use uppercase letters (e.g. <kbd>zA</kbd>).
+        </div>
+        <div class="well">
+          <strong>Tip</strong> To view the differences of files, one can directly start Vim in diff mode by running <kbd>vimdiff</kbd> in a terminal. One can even set this as <kbd>git difftool</kbd>.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+      <div>
+        <div id="footer" class="grid-block">
+          <div class="box">
+            <div class="box-header">
+              <h2>Additional Resources</h2>
+            </div>
+            <div class="box-body">
+              <div class="grid-block">
+                <div class="grid-lg-1-2">
+                  <h3 id="languages">Languages</h3>
+                  <ul>
+                    <li>
+                      <a href="/lang/ar" lang="ar">العربية</a>
+                    </li>
+                    <li>
+                      <a href="/lang/bn" lang="bn">বাংলা</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ca" lang="ca">Català</a>
+                    </li>
+                    <li>
+                      <a href="/lang/cs" lang="cs">Čeština</a>
+                    </li>
+                    <li>
+                      <a href="/lang/da_DK" lang="da">Dansk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/de_de" lang="de">Deutsch</a>
+                    </li>
+                    <li>
+                      <a href="/lang/el_gr" lang="el">Ελληνικά</a>
+                    </li>
+                    <li>
+                      <a href="/lang/en_us" lang="en">English</a>
+                    </li>
+                    <li>
+                      <a href="/lang/eo" lang="eo">Esperanto</a>
+                    </li>
+                    <li>
+                      <a href="/lang/es_es" lang="es">Español</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fa_ir" lang="fa">Persian</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fi" lang="fi">Suomi</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fr_fr" lang="fr">Français</a>
+                    </li>
+                    <li>
+                      <a href="/lang/he" lang="he">עברית</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hr" lang="hr">Hrvatski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hu_hu" lang="hu">Magyar</a>
+                    </li>
+                    <li>
+                      <a href="/lang/id" lang="id">Bahasa Indonesia</a>
+                    </li>
+                    <li>
+                      <a href="/lang/it" lang="it">Italiano</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ja" lang="ja">日本語</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ko" lang="ko">한국어</a>
+                    </li>
+                    <li>
+                      <a href="/lang/my" lang="my">မြန်မာ</a>
+                    </li>
+                    <li>
+                      <a href="/lang/nl_nl" lang="nl">Nederlands</a>
+                    </li>
+                    <li>
+                      <a href="/lang/no_nb" lang="no">Norsk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pl_pl" lang="pl">Polski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_br" lang="pt">Português - Brasil</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_pt" lang="pt">Português - Portugal</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ro" lang="ro">Romana</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ru" lang="ru">Русский</a>
+                    </li>
+                    <li>
+                      <a href="/lang/si_lk" lang="si">සිංහල</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sk" lang="sk">Slovenčina</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sv" lang="sv">Svenska</a>
+                    </li>
+                    <li>
+                      <a href="/lang/th" lang="th">ภาษาไทย</a>
+                    </li>
+                    <li>
+                      <a href="/lang/tr" lang="tr">Türkçe</a>
+                    </li>
+                    <li>
+                      <a href="/lang/uk" lang="uk">Українська</a>
+                    </li>
+                    <li>
+                      <a href="/lang/vi_vn" lang="vi">Tiếng Việt</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_cn" lang="zh">简体中文</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_tw" lang="zh">中文 (台灣)</a>
+                    </li>
+                  </ul>                </div>
+                <div class="grid-lg-1-2">
+                  <h3>About the vim cheat sheet</h3>
+                  <p>
+                    This project aims to be one of the most accessible vim guides available. We
+                    made sure to support mobile, desktop, and other
+                    <a href="#languages" aria-label="Jump to languages section">languages</a>.
+                  </p>
+                  <p>
+                    <a target="_blank" href="https://github.com/sponsors/rtorr" aria-label="Sponsor this project on GitHub">❤️ Please consider sponsoring this
+                      project ❤️</a>!
+                  </p>
+                  <p>
+                    You can read about how to contribute (and help improve) by viewing our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/README.md" target="_blank"
+                      rel="noopener noreferrer" aria-label="Read the README on GitHub">
+                      README
+                    </a>
+                    . There you can see how to set up this project, or how to contribute a new
+                    language. Here is a big thank you to our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/graphs/contributors" target="_blank"
+                      rel="noopener noreferrer" aria-label="View project contributors on GitHub">
+                      contributors!
+                    </a>
+                  </p>
+                  <p>
+                    This project is licensed under
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/License.txt" target="_blank"
+                      rel="noopener noreferrer" aria-label="View the MIT License for this project">
+                      The MIT License (MIT)
+                    </a>
+                    .
+                  </p>
+                  <h3>Other places to find this document</h3>
+                  <p>
+                    This document was embedded in
+                    <a href="https://duckduckgo.com/?q=vim+cheat+sheet" target="_blank" rel="noopener noreferrer" aria-label="Search for this document on DuckDuckGo">
+                      DuckDuckGo
+                    </a>
+                    .
+                  </p>
+                  <h3>More resources</h3>
+                  <p>
+                    Interactive Vim tutorial:
+                    <a href="https://openvim.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Open Vim for an interactive Vim tutorial">
+                      Open Vim
+                    </a>
+                  </p>
+                  <p>
+                    Vim quick reference from Vim help pages:
+                    <a href="https://vimhelp.org/quickref.txt.html" target="_blank" rel="noopener noreferrer" aria-label="Access Vim quick reference"> 
+                      quickref.txt
+                    </a>
+                  </p>
+                  <p>
+                    List of all Vim ex (<kbd>:</kbd>) commands:
+                    <a href="https://vimhelp.org/index.txt.html#ex-cmd-index" target="_blank" rel="noopener noreferrer" aria-label="View list of all Vim ex commands">
+                      ex-cmd-index
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-block link-to-repo">
+          <p>
+            Checkout the source on
+            <a href="https://github.com/rtorr/vim-cheat-sheet" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+          </p>
+          <p>version: 3.2.0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.CACHE_NAME = "3.2.0";
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/javascripts/sw.js?version=3.2.0');
+      });
+    }
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="nl">
+
+<head>
+  <meta charSet="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Vim Cheat Sheet</title>
+  <link rel="shortcut icon" href="/images/icons/icon-48x48.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#FA4949" />
+  <meta http-equiv="cache-control" content="max-age=600" />
+  <meta name="description" content="Explore vim.rtorr.com for an extensive Vim cheat sheet, offering clear, concise commands and shortcuts for Vim users. Whether you're a beginner or an experienced developer, find tips and tricks to enhance your coding efficiency in Vim.">
+  <link rel="apple-touch-icon" sizes="48x48" href="/images/icons/icon-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="/images/icons/icon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/images/icons/icon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="256x256" href="/images/icons/icon-256x256.png" />
+  <link rel="apple-touch-icon" sizes="384x384" href="/images/icons/icon-384x384.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="/images/icons/icon-512x512.png" />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <div class="sponsor">
+    <div class="container">
+      <span>
+        <a target="_blank" href="https://www.warp.dev">
+          <div class="sponsor-logo-container">
+            <span>Sponsor</span>
+            <img class="sponsor-logo" src="/images/svg/warp-logo.svg" alt="Warp logo">
+          </div>
+          <div class="sponsor-tagline"><span>A new terminal focused on developer productivity</span></div>
+      </span>
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid-block">
+      <div class="grid-1">
+        <h1>
+          <a class="site-title" href="/">
+            Vim Cheat Sheet
+          </a>
+        </h1>
+      </div>
+    </div>
+    <div class="container">
+      <main><div class="container">
+  <div class="commands-container">
+    <div class="grid-block">
+      <div class="grid-lg-1-3">
+        <h2>Algemeen</h2>
+        <ul>
+          <li>
+            <kbd>:h[elp] keyword</kbd> - open hulp voor keyword
+          </li>
+          <li>
+            <kbd>:sav[eas] file</kbd> - sla bestand op als
+          </li>
+          <li>
+            <kbd>:clo[se]</kbd> - sluit huidige scherm
+          </li>
+          <li>
+            <kbd>:ter[minal]</kbd> - open a terminal window
+          </li>
+          <li>
+            <kbd>K</kbd> - open handleiding voor woord onder cursor
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Run <kbd>vimtutor</kbd> in a terminal to learn the first Vim commands.
+        </div>
+        <h2>Cursorbewegingen</h2>
+        <ul>
+          <li>
+            <kbd>h</kbd> - verplaats cursor naar links
+          </li>
+          <li>
+            <kbd>j</kbd> - verplaats cursor naar rechts
+          </li>
+          <li>
+            <kbd>k</kbd> - verplaats cursor naar boven
+          </li>
+          <li>
+            <kbd>l</kbd> - verplaats cursor naar beneden
+          </li>
+          <li>
+            <kbd>gj</kbd> - move cursor down (multi-line text)
+          </li>
+          <li>
+            <kbd>gk</kbd> - move cursor up (multi-line text)
+          </li>
+          <li>
+            <kbd>H</kbd> - verplaats cursor naar de bovenkant van het scherm
+          </li>
+          <li>
+            <kbd>M</kbd> - verplaats cursor naar het midden van het scherm
+          </li>
+          <li>
+            <kbd>L</kbd> - verplaats cursor naar de onderkant van het scherm
+          </li>
+          <li>
+            <kbd>w</kbd> - verplaats cursor naar het begin van een woord
+          </li>
+          <li>
+            <kbd>W</kbd> - verplaats cursor naar het begin van een woord (woorden mogen interpunctie bevatten)
+          </li>
+          <li>
+            <kbd>e</kbd> - verplaats cursor naar het einde van een woord
+          </li>
+          <li>
+            <kbd>E</kbd> - verplaats cursor naar het einde van een woord (woorden mogen interpunctie bevatten)
+          </li>
+          <li>
+            <kbd>b</kbd> - verplaats cursor naar het begin van een woord
+          </li>
+          <li>
+            <kbd>B</kbd> - verplaats cursor naar het begin van een woord (woorden mogen interpunctie bevatten)
+          </li>
+          <li>
+            <kbd>ge</kbd> - jump backwards to the end of a word
+          </li>
+          <li>
+            <kbd>gE</kbd> - jump backwards to the end of a word (words can contain punctuation)
+          </li>
+          <li>
+            <kbd>%</kbd> - move to matching character (default supported pairs: '()', '{}', '[]' - use <code>:h matchpairs</code> in vim for more info)
+          </li>
+          <li>
+            <kbd>0</kbd> - verplaats cursor naar het begin van de regel
+          </li>
+          <li>
+            <kbd>^</kbd> - verplaats cursor naar het eerste teken van de regel
+          </li>
+          <li>
+            <kbd>$</kbd> - verplaats cursor naar het einde van de regel
+          </li>
+          <li>
+            <kbd>g_</kbd> - verplaats cursor naar het laatste teken van de regel
+          </li>
+          <li>
+            <kbd>gg</kbd> - verplaats cursor naar de eerste regel van het document
+          </li>
+          <li>
+            <kbd>G</kbd> - verplaats cursor naar de laatste regel van het document
+          </li>
+          <li>
+            <kbd>5gg</kbd> or <kbd>5G</kbd> - ga naar regel 5
+          </li>
+          <li>
+            <kbd>gd</kbd> - move to local declaration
+          </li>
+          <li>
+            <kbd>gD</kbd> - move to global declaration
+          </li>
+          <li>
+            <kbd>fx</kbd> - ga naar het volgende voorkomen van karakter x
+          </li>
+          <li>
+            <kbd>tx</kbd> - ga naar voor het volgende voorkomen van karakter x
+          </li>
+          <li>
+            <kbd>Fx</kbd> - ga naar het vorige voorkomen van karakter x
+          </li>
+          <li>
+            <kbd>Tx</kbd> - ga naar na het vorige voorkomen van karakter x
+          </li>
+          <li>
+            <kbd>;</kbd> - herhaal vorige f, t, F of T commando
+          </li>
+          <li>
+            <kbd>,</kbd> - herhaal vorige f, t, F of T commando, terugwaards
+          </li>
+          <li>
+            <kbd>}</kbd> - ga naar de volgende paragraaf (of functie/blok, tijdens het bewerken van code)
+          </li>
+          <li>
+            <kbd>{</kbd> - ga naar de vorige paragraaf (of functie/blok, tijdens het bewerken van code)
+          </li>
+          <li>
+            <kbd>zz</kbd> - center cursor on screen
+          </li>
+          <li>
+            <kbd>zt</kbd> - position cursor on top of the screen
+          </li>
+          <li>
+            <kbd>zb</kbd> - position cursor on bottom of the screen
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>e</kbd> - beweeg scherm een regel omlaag
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>y</kbd> - beweeg scherm een regel omhoog
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>b</kbd> - ga een volledig scherm terug
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>f</kbd> - ga een volledig scherm vooruit
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - ga 1/2 scherm vooruit
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>u</kbd> - ga 1/2 scherm terug
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong>
+          Prefix een cursorbeweging met een getal om deze te herhalen. bijvoorbeeld, <kbd>4j</kbd> beweegt de cursor 4 regels omlaag.
+        </div>
+        <h2>Insert modus: in- en toevoegen van tekst</h2>
+        <ul>
+          <li>
+            <kbd>i</kbd> - invoegen voor de cursor
+          </li>
+          <li>
+            <kbd>I</kbd> - invoegen aan het begin van de regel
+          </li>
+          <li>
+            <kbd>a</kbd> - invoegen achter de cursor
+          </li>
+          <li>
+            <kbd>A</kbd> - invoegen aan het einde van de regel
+          </li>
+          <li>
+            <kbd>o</kbd> - voeg een nieuwe regel toe onder de cursor
+          </li>
+          <li>
+            <kbd>O</kbd> - voeg een nieuwe regel toe boven de cursor
+          </li>
+          <li>
+            <kbd>ea</kbd> - invoegen aan het einde van het woord
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>h</kbd> - delete the character before the cursor during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w</kbd> - delete word before the cursor during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>j</kbd> - begin new line during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>t</kbd> - indent (move right) line one shiftwidth during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - de-indent (move left) line one shiftwidth during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>n</kbd> - insert (auto-complete) next match before the cursor during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>p</kbd> - insert (auto-complete) previous match before the cursor during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>rx</kbd> - insert the contents of register x
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ox</kbd> - Temporarily enter normal mode to issue one normal-mode command x.
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - verlaat insert modus
+          </li>
+        </ul>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>Bewerken</h2>
+        <ul>
+          <li>
+            <kbd>r</kbd> - vervang één karakter
+          </li>
+          <li>
+            <kbd>R</kbd> - replace more than one character, until <kbd>ESC</kbd> is pressed.
+          </li>
+          <li>
+            <kbd>J</kbd> - voeg onderstaande regel samen met huidige regel met een spatie ertussen
+          </li>
+          <li>
+            <kbd>gJ</kbd> - voeg onderstaande regel samen met huidige regel zonder een spatie ertussen
+          </li>
+          <li>
+            <kbd>gwip</kbd> - formatteer paragraaf
+          </li>
+          <li>
+            <kbd>g~</kbd> - switch case up to motion
+          </li>
+          <li>
+            <kbd>gu</kbd> - change to lowercase up to motion
+          </li>
+          <li>
+            <kbd>gU</kbd> - change to uppercase up to motion
+          </li>
+          <li>
+            <kbd>cc</kbd> - vervang huidige regel
+          </li>
+          <li>
+            <kbd>c$</kbd> or <kbd>C</kbd> - vervang tot einde regel
+          </li>
+          <li>
+            <kbd>ciw</kbd> - vervang woord
+          </li>
+          <li>
+            <kbd>cw</kbd> or <kbd>ce</kbd> - vervang tot einde huidig woord
+          </li>
+          <li>
+            <kbd>s</kbd> - vervang karakter
+          </li>
+          <li>
+            <kbd>S</kbd> - vervang huidige regel (het zelfde als cc)
+          </li>
+          <li>
+            <kbd>xp</kbd> - verwissel twee letters (verwijder en plak)
+          </li>
+          <li>
+            <kbd>u</kbd> - ongedaan maken
+          </li>
+          <li>
+            <kbd>U</kbd> - restore (undo) last changed line
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>r</kbd> - overdoen
+          </li>
+          <li>
+            <kbd>.</kbd> - laatste commando herhalen
+          </li>
+        </ul>
+        <h2>Tekst markeren (Visuele modus)</h2>
+        <ul>
+          <li>
+            <kbd>v</kbd> - start visuele modus, selecteer tekst en voer daarna een commando uit (zoals y-kopieer)
+          </li>
+          <li>
+            <kbd>V</kbd> - start visuele modus (per regel)
+          </li>
+          <li>
+            <kbd>o</kbd> - ga naar het einde van het geselecteerde gebied
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>v</kbd> - begin visuele modus (per blok)
+          </li>
+          <li>
+            <kbd>O</kbd> - ga naar andere hoek van het geselecteerde blok
+          </li>
+          <li>
+            <kbd>aw</kbd> - selecteer een woord
+          </li>
+          <li>
+            <kbd>ab</kbd> - een blok met ()
+          </li>
+          <li>
+            <kbd>aB</kbd> - een blok met {}
+          </li>
+          <li>
+            <kbd>at</kbd> - a block with &lt;&gt; tags
+          </li>
+          <li>
+            <kbd>ib</kbd> - binnenkant blok met ()
+          </li>
+          <li>
+            <kbd>iB</kbd> - binnenkant blok met {}
+          </li>
+          <li>
+            <kbd>it</kbd> - inner block with &lt;&gt; tags
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - verlaat visuele modus
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Instead of <kbd>b</kbd> or <kbd>B</kbd> one can also use <kbd>(</kbd> or <kbd>{</kbd> respectively.
+        </div>
+        <h2>Visuele commando&#x27;s</h2>
+        <ul>
+          <li>
+            <kbd>&#62;</kbd> - verplaats tekst naar rechts
+          </li>
+          <li>
+            <kbd>&#60;</kbd> - verplaats tekst naar links
+          </li>
+          <li>
+            <kbd>y</kbd> - kopieer gemarkeerde tekst
+          </li>
+          <li>
+            <kbd>d</kbd> - verwijder gemarkeerde tekst
+          </li>
+          <li>
+            <kbd>~</kbd> - hoofdletters omwisselen
+          </li>
+          <li>
+            <kbd>u</kbd> - change marked text to lowercase
+          </li>
+          <li>
+            <kbd>U</kbd> - change marked text to uppercase
+          </li>
+        </ul>
+        <h2>Registers</h2>
+        <ul>
+          <li>
+            <kbd>:reg[isters]</kbd> - laat registerinhoud zien
+          </li>
+          <li>
+            <kbd>"xy</kbd> - kopieer naar register x
+          </li>
+          <li>
+            <kbd>"xp</kbd> - plak inhoud van register x
+          </li>
+          <li>
+            <kbd>"+y</kbd> - yank into the system clipboard register
+          </li>
+          <li>
+            <kbd>"+p</kbd> - paste from the system clipboard register
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Registers worden opgeslagen in ~/.viminfo en worden opnieuw geladen na het herstarten van vim.
+        </div>
+        <div class="well">
+          <strong>Tip</strong> Special registers:
+          <p>
+            &emsp;<kbd>0</kbd> - last yank<br/>
+            &emsp;<kbd>&quot;</kbd> - unnamed register, last delete or yank<br/>
+            &emsp;<kbd>%</kbd> - current file name<br/>
+            &emsp;<kbd>#</kbd> - alternate file name<br/>
+            &emsp;<kbd>*</kbd> - clipboard contents (X11 primary)<br/>
+            &emsp;<kbd>+</kbd> - clipboard contents (X11 clipboard)<br/>
+            &emsp;<kbd>/</kbd> - last search pattern<br/>
+            &emsp;<kbd>:</kbd> - last command-line<br/>
+            &emsp;<kbd>.</kbd> - last inserted text<br/>
+            &emsp;<kbd>-</kbd> - last small (less than a line) delete<br/>
+            &emsp;<kbd>=</kbd> - expression register<br/>
+            &emsp;<kbd>_</kbd> - black hole register<br/>
+          </p>
+        </div>
+        <h2>Positiemarkeringen</h2>
+        <ul>
+          <li>
+            <kbd>:marks</kbd> - lijst van positiemarkeringen
+          </li>
+          <li>
+            <kbd>ma</kbd> - Markeer huidige positie als marker A
+          </li>
+          <li>
+            <kbd>`a</kbd> - ga naar positie van marker A
+          </li>
+          <li>
+            <kbd>y`a</kbd> - kopieer tekst naar positie van marker A
+          </li>
+          <li>
+            <kbd>`0</kbd> - go to the position where Vim was previously exited
+          </li>
+          <li>
+            <kbd>`"</kbd> - go to the position when last editing this file
+          </li>
+          <li>
+            <kbd>`.</kbd> - go to the position of the last change in this file
+          </li>
+          <li>
+            <kbd>``</kbd> - go to the position before the last jump
+          </li>
+          <li>
+            <kbd>:ju[mps]</kbd> - list of jumps
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>i</kbd> - go to newer position in jump list
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>o</kbd> - go to older position in jump list
+          </li>
+          <li>
+            <kbd>:changes</kbd> - list of changes
+          </li>
+          <li>
+            <kbd>g,</kbd> - go to newer position in change list
+          </li>
+          <li>
+            <kbd>g;</kbd> - go to older position in change list
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>]</kbd> - jump to the tag under cursor
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> To jump to a mark you can either use a backtick (<kbd>`</kbd>) or an apostrophe (<kbd>'</kbd>). Using an apostrophe jumps to the beginning (first non-blank) of the line holding the mark.
+        </div>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>Macros</h2>
+        <ul>
+          <li>
+            <kbd>qa</kbd> - Neem macro A op
+          </li>
+          <li>
+            <kbd>q</kbd> - stop met opnemen
+          </li>
+          <li>
+            <kbd>@a</kbd> - herhaal macro A
+          </li>
+          <li>
+            <kbd>@@</kbd> - herhaal laatst uitgevoerde macro
+          </li>
+        </ul>
+        <h2>Kopiëren en plakken</h2>
+        <ul>
+          <li>
+            <kbd>yy</kbd> - kopieer één regel
+          </li>
+          <li>
+            <kbd>2yy</kbd> - kopieer twee regels
+          </li>
+          <li>
+            <kbd>yw</kbd> - kopieer de karakters vanaf de cursorpositie tot het begin van het volgende woord
+          </li>
+          <li>
+            <kbd>yiw</kbd> - kopieer woord onder de cursor
+          </li>
+          <li>
+            <kbd>yaw</kbd> - kopieer het woord onder de cursor, inclusief de spatie er voor of er achter
+          </li>
+          <li>
+            <kbd>y$</kbd> or <kbd>Y</kbd> - kopieer tot het einde van de regel
+          </li>
+          <li>
+            <kbd>p</kbd> - plak achter de cursor
+          </li>
+          <li>
+            <kbd>P</kbd> - plak voor de cursor
+          </li>
+          <li>
+            <kbd>gp</kbd> - put (paste) the clipboard after cursor and leave cursor after the new text
+          </li>
+          <li>
+            <kbd>gP</kbd> - put (paste) before cursor and leave cursor after the new text
+          </li>
+          <li>
+            <kbd>dd</kbd> - verwijder (knip) een regel
+          </li>
+          <li>
+            <kbd>2dd</kbd> - verwijder (knip) twee regels
+          </li>
+          <li>
+            <kbd>dw</kbd> - verwijder (knip) de karakters vanaf de cursorpositie tot het begin van het volgende woord
+          </li>
+          <li>
+            <kbd>diw</kbd> - verwijder (knip) woord onder de cursor
+          </li>
+          <li>
+            <kbd>daw</kbd> - verwijder (knip) het woord onder de cursor, inclusief de spatie er voor of er achter
+          </li>
+          <li>
+            <kbd>:3,5d</kbd> - delete lines starting from 3 to 5
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> You can also use the following characters to specify the range: <br>
+          e.g. <br>
+          <p>
+            <kbd>:.,$d</kbd> - From the current line to the end of the file <br>
+            <kbd>:.,1d</kbd> - From the current line to the beginning of the file <br>
+            <kbd>:10,1d</kbd> - From the 10th line to the beginning of the file <br>
+          </p>
+        </div>
+        <ul>
+          <li>
+            <kbd>:g/{pattern}/d</kbd> - delete all lines containing pattern
+          </li>
+          <li>
+            <kbd>:g!/{pattern}/d</kbd> - delete all lines not containing pattern
+          </li>
+          <li>
+            <kbd>d$</kbd> or <kbd>D</kbd> - verwijder (knip) tot het einde van de regel
+          </li>
+          <li>
+            <kbd>x</kbd> - verwijder (knip) huidige karakter
+          </li>
+        </ul>
+        <h2>Indent text</h2>
+        <ul>
+          <li>
+            <kbd>&#62;&#62;</kbd> - indent (move right) line one shiftwidth
+          </li>
+          <li>
+            <kbd>&#60;&#60;</kbd> - de-indent (move left) line one shiftwidth
+          </li>
+          <li>
+            <kbd>&#62;%</kbd> - indent a block with () or {} (cursor on brace)
+          </li>
+          <li>
+            <kbd>&#60;%</kbd> - de-indent a block with () or {} (cursor on brace)
+          </li>
+          <li>
+            <kbd>&#62;ib</kbd> - indent inner block with ()
+          </li>
+          <li>
+            <kbd>&#62;at</kbd> - indent a block with &lt;&gt; tags
+          </li>
+          <li>
+            <kbd>3==</kbd> - re-indent 3 lines
+          </li>
+          <li>
+            <kbd>=%</kbd> - re-indent a block with () or {} (cursor on brace)
+          </li>
+          <li>
+            <kbd>=iB</kbd> - re-indent inner block with {}
+          </li>
+          <li>
+            <kbd>gg=G</kbd> - re-indent entire buffer
+          </li>
+          <li>
+            <kbd>]p</kbd> - paste and adjust indent to current line
+          </li>
+        </ul>
+        <h2>Verlaten</h2>
+        <ul>
+          <li>
+            <kbd>:w</kbd> - sla op maar blijf in vim
+          </li>
+          <li>
+            <kbd>:w !sudo tee %</kbd> - sla op, gebruikmakend van sudo
+          </li>
+          <li>
+            <kbd>:wq</kbd> or <kbd>:x</kbd> or <kbd>ZZ</kbd> - sla op en verlaat vim
+          </li>
+          <li>
+            <kbd>:q</kbd> - verlaat vim (faalt wanneer er niet-opgeslagen aanpassingen zijn)
+          </li>
+          <li>
+            <kbd>:q!</kbd> or <kbd>ZQ</kbd> - verlaat vim en gooi niet-opgeslagen aanpassingen weg
+          </li>
+          <li>
+            <kbd>:wqa</kbd> - sla op en sluit alle tabs
+          </li>
+        </ul>
+        <h2>Zoeken en vervangen</h2>
+        <ul>
+          <li>
+            <kbd>/pattern</kbd> - zoek naar patroon
+          </li>
+          <li>
+            <kbd>?pattern</kbd> - zoek achteruit naar patroon
+          </li>
+          <li>
+            <kbd>\vpattern</kbd> - &#x27;super magisch&#x27; patroon: non-alfanumerieke karakters worden geïnterpreteerd als speciale tekens, escapen niet nodig
+          </li>
+          <li>
+            <kbd>n</kbd> - herhaal zoekopdracht in dezelfe richting
+          </li>
+          <li>
+            <kbd>N</kbd> - herhaal zoekopdracht in tegengestelde richting
+          </li>
+          <li>
+            <kbd>:%s/old/new/g</kbd> -
+            vervang alle &#x27;old&#x27; met &#x27;new&#x27; in het bestand
+          </li>
+          <li>
+            <kbd>:%s/old/new/gc</kbd> -
+            vervang alle &#x27;old&#x27; met &#x27;new&#x27; in het bestand, vraag steeds om bevestiging
+          </li>
+          <li>
+            <kbd>:noh[lsearch]</kbd> - verwijder markering van gevonden stukken tekst
+          </li>
+        </ul>
+        <h2>Zoek in meerdere bestanden</h2>
+        <ul>
+          <li>
+            <kbd>:vim[grep] /pattern/ {`{file}`}</kbd> -
+            zoek voor patroon in meerdere bestanden
+          </li>
+        </ul>
+        <div class="well">
+          e.g.
+          <kbd>:vim[grep] /foo/ **/*</kbd>
+        </div>
+        <ul>
+          <li>
+            <kbd>:cn[ext]</kbd> - ga naar het volgende zoekresultaat
+          </li>
+          <li>
+            <kbd>:cp[revious]</kbd> - ga naar het vorige zoekresultaat
+          </li>
+          <li>
+            <kbd>:cope[n]</kbd> - open een scherm met de lijst van alle zoekresultaten
+          </li>
+          <li>
+            <kbd>:ccl[ose]</kbd> - close the quickfix window
+          </li>
+        </ul>
+        <h2>Tabbladen</h2>
+        <ul>
+          <li>
+            <kbd>:tabnew</kbd> or <kbd>:tabnew {page.words.file}</kbd> -
+            open een bestand in een nieuw tabblad
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wT</kbd> - verplaats het huidige opgesplitste scherm naar een nieuw tabblad
+          </li>
+          <li>
+            <kbd>gt</kbd> or <kbd>:tabn[ext]</kbd> - ga naar het volgende tabblad
+          </li>
+          <li>
+            <kbd>gT</kbd> or <kbd>:tabp[revious]</kbd> - ga naar het vorige tabblad
+          </li>
+          <li>
+            <kbd>#gt</kbd> - ga naar tabblad nummer #
+          </li>
+          <li>
+            <kbd>:tabm[ove] #</kbd> - verplaats huidige tabblad naar positie # (geïndexeerd vanaf 0)
+          </li>
+          <li>
+            <kbd>:tabc[lose]</kbd> - sluit huidige tabblad en alle bijbehorende schermen
+          </li>
+          <li>
+            <kbd>:tabo[nly]</kbd> - sluit alle tabbladen behalve het huidige tabblad
+          </li>
+          <li>
+            <kbd>:tabdo</kbd> command - voer het <code>command</code> uit op alle tabs (bijvoorbeeld <code>:tabdo q</code> - sluit alle geopende tabbladen)
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-block">
+      <div class="grid-lg-1-2">
+        <h2>Werken met meerdere bestanden</h2>
+        <ul>
+          <li>
+            <kbd>:e[dit] file</kbd> - bewerk een bestand in een nieuwe buffer
+          </li>
+          <li>
+            <kbd>:bn[ext]</kbd> -
+            ga naar de volgende buffer
+          </li>
+          <li>
+            <kbd>:bp[revious]</kbd> -
+            ga naar de vorige buffer
+          </li>
+          <li>
+            <kbd>:bd[elete]</kbd> - verwijder buffer (sluit een bestand)
+          </li>
+          <li>
+            <kbd>:b[uffer]#</kbd> - go to a buffer by #
+          </li>
+          <li>
+            <kbd>:b[uffer] file</kbd> - go to a buffer by file
+          </li>
+          <li>
+            <kbd>:ls</kbd> or <kbd>:buffers</kbd> - lijst van alle open buffers
+          </li>
+          <li>
+            <kbd>:sp[lit] file</kbd> - open een bestand in een nieuwe buffer en splits scherm
+          </li>
+          <li>
+            <kbd>:vs[plit] file</kbd> - open een bestand in een nieuwe buffer en splits scherm verticaal
+          </li>
+          <li>
+            <kbd>:vert[ical] ba[ll]</kbd> - edit all buffers as vertical windows
+          </li>
+          <li>
+            <kbd>:tab ba[ll]</kbd> - edit all buffers as tabs
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ws</kbd> - splits scherm
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wv</kbd> - splits scherm verticaal
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ww</kbd> - wissel van scherm
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wq</kbd> - sluit een scherm
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wx</kbd> - exchange current window with next one
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w=</kbd> - make all windows equal height &amp; width
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wh</kbd> - verplaats cursor naar linkse scherm (verticale splitsing)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wl</kbd> - verplaats cursor naar rechtse scherm (verticale splitsing)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wj</kbd> - verplaats cursor naar scherm beneden (horizontale splitsing)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wk</kbd> - verplaats cursor naar scherm boven (horizontale splitsing)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wH</kbd> - make current window full height at far left (leftmost vertical window)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wL</kbd> - make current window full height at far right (rightmost vertical window)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wJ</kbd> - make current window full width at the very bottom (bottommost horizontal window)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wK</kbd> - make current window full width at the very top (topmost horizontal window)
+          </li>
+        </ul>
+        </ul>
+        </ul>
+        </ul>
+      </div>
+      <div class="grid-lg-1-2">
+        <h2>Diff</h2>
+        <ul>
+          <li>
+            <kbd>zf</kbd> - manually define a fold up to motion
+          </li>
+          <li>
+            <kbd>zd</kbd> - delete fold under the cursor
+          </li>
+          <li>
+            <kbd>za</kbd> - toggle fold under the cursor
+          </li>
+          <li>
+            <kbd>zo</kbd> - open fold under the cursor
+          </li>
+          <li>
+            <kbd>zc</kbd> - close fold under the cursor
+          </li>
+          <li>
+            <kbd>zr</kbd> - reduce (open) all folds by one level
+          </li>
+          <li>
+            <kbd>zm</kbd> - fold more (close) all folds by one level
+          </li>
+          <li>
+            <kbd>zi</kbd> - toggle folding functionality
+          </li>
+          <li>
+            <kbd>]c</kbd> - jump to start of next change
+          </li>
+          <li>
+            <kbd>[c</kbd> - jump to start of previous change
+          </li>
+          <li>
+            <kbd>do</kbd> or <kbd>:diffg[et]</kbd> - obtain (get) difference (from other buffer)
+          </li>
+          <li>
+            <kbd>dp</kbd> or <kbd>:diffpu[t]</kbd> - put difference (to other buffer)
+          </li>
+          <li>
+            <kbd>:diffthis</kbd> - make current window part of diff
+          </li>
+          <li>
+            <kbd>:dif[fupdate]</kbd> - update differences
+          </li>
+          <li>
+            <kbd>:diffo[ff]</kbd> - switch off diff mode for current window
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> The commands for folding (e.g. <kbd>za</kbd>) operate on one level. To operate on all levels, use uppercase letters (e.g. <kbd>zA</kbd>).
+        </div>
+        <div class="well">
+          <strong>Tip</strong> To view the differences of files, one can directly start Vim in diff mode by running <kbd>vimdiff</kbd> in a terminal. One can even set this as <kbd>git difftool</kbd>.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+      <div>
+        <div id="footer" class="grid-block">
+          <div class="box">
+            <div class="box-header">
+              <h2>Additional Resources</h2>
+            </div>
+            <div class="box-body">
+              <div class="grid-block">
+                <div class="grid-lg-1-2">
+                  <h3 id="languages">Languages</h3>
+                  <ul>
+                    <li>
+                      <a href="/lang/ar" lang="ar">العربية</a>
+                    </li>
+                    <li>
+                      <a href="/lang/bn" lang="bn">বাংলা</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ca" lang="ca">Català</a>
+                    </li>
+                    <li>
+                      <a href="/lang/cs" lang="cs">Čeština</a>
+                    </li>
+                    <li>
+                      <a href="/lang/da_DK" lang="da">Dansk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/de_de" lang="de">Deutsch</a>
+                    </li>
+                    <li>
+                      <a href="/lang/el_gr" lang="el">Ελληνικά</a>
+                    </li>
+                    <li>
+                      <a href="/lang/en_us" lang="en">English</a>
+                    </li>
+                    <li>
+                      <a href="/lang/eo" lang="eo">Esperanto</a>
+                    </li>
+                    <li>
+                      <a href="/lang/es_es" lang="es">Español</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fa_ir" lang="fa">Persian</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fi" lang="fi">Suomi</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fr_fr" lang="fr">Français</a>
+                    </li>
+                    <li>
+                      <a href="/lang/he" lang="he">עברית</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hr" lang="hr">Hrvatski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hu_hu" lang="hu">Magyar</a>
+                    </li>
+                    <li>
+                      <a href="/lang/id" lang="id">Bahasa Indonesia</a>
+                    </li>
+                    <li>
+                      <a href="/lang/it" lang="it">Italiano</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ja" lang="ja">日本語</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ko" lang="ko">한국어</a>
+                    </li>
+                    <li>
+                      <a href="/lang/my" lang="my">မြန်မာ</a>
+                    </li>
+                    <li>
+                      <a href="/lang/nl_nl" lang="nl">Nederlands</a>
+                    </li>
+                    <li>
+                      <a href="/lang/no_nb" lang="no">Norsk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pl_pl" lang="pl">Polski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_br" lang="pt">Português - Brasil</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_pt" lang="pt">Português - Portugal</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ro" lang="ro">Romana</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ru" lang="ru">Русский</a>
+                    </li>
+                    <li>
+                      <a href="/lang/si_lk" lang="si">සිංහල</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sk" lang="sk">Slovenčina</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sv" lang="sv">Svenska</a>
+                    </li>
+                    <li>
+                      <a href="/lang/th" lang="th">ภาษาไทย</a>
+                    </li>
+                    <li>
+                      <a href="/lang/tr" lang="tr">Türkçe</a>
+                    </li>
+                    <li>
+                      <a href="/lang/uk" lang="uk">Українська</a>
+                    </li>
+                    <li>
+                      <a href="/lang/vi_vn" lang="vi">Tiếng Việt</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_cn" lang="zh">简体中文</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_tw" lang="zh">中文 (台灣)</a>
+                    </li>
+                  </ul>                </div>
+                <div class="grid-lg-1-2">
+                  <h3>About the vim cheat sheet</h3>
+                  <p>
+                    This project aims to be one of the most accessible vim guides available. We
+                    made sure to support mobile, desktop, and other
+                    <a href="#languages" aria-label="Jump to languages section">languages</a>.
+                  </p>
+                  <p>
+                    <a target="_blank" href="https://github.com/sponsors/rtorr" aria-label="Sponsor this project on GitHub">❤️ Please consider sponsoring this
+                      project ❤️</a>!
+                  </p>
+                  <p>
+                    You can read about how to contribute (and help improve) by viewing our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/README.md" target="_blank"
+                      rel="noopener noreferrer" aria-label="Read the README on GitHub">
+                      README
+                    </a>
+                    . There you can see how to set up this project, or how to contribute a new
+                    language. Here is a big thank you to our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/graphs/contributors" target="_blank"
+                      rel="noopener noreferrer" aria-label="View project contributors on GitHub">
+                      contributors!
+                    </a>
+                  </p>
+                  <p>
+                    This project is licensed under
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/License.txt" target="_blank"
+                      rel="noopener noreferrer" aria-label="View the MIT License for this project">
+                      The MIT License (MIT)
+                    </a>
+                    .
+                  </p>
+                  <h3>Other places to find this document</h3>
+                  <p>
+                    This document was embedded in
+                    <a href="https://duckduckgo.com/?q=vim+cheat+sheet" target="_blank" rel="noopener noreferrer" aria-label="Search for this document on DuckDuckGo">
+                      DuckDuckGo
+                    </a>
+                    .
+                  </p>
+                  <h3>More resources</h3>
+                  <p>
+                    Interactive Vim tutorial:
+                    <a href="https://openvim.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Open Vim for an interactive Vim tutorial">
+                      Open Vim
+                    </a>
+                  </p>
+                  <p>
+                    Vim quick reference from Vim help pages:
+                    <a href="https://vimhelp.org/quickref.txt.html" target="_blank" rel="noopener noreferrer" aria-label="Access Vim quick reference"> 
+                      quickref.txt
+                    </a>
+                  </p>
+                  <p>
+                    List of all Vim ex (<kbd>:</kbd>) commands:
+                    <a href="https://vimhelp.org/index.txt.html#ex-cmd-index" target="_blank" rel="noopener noreferrer" aria-label="View list of all Vim ex commands">
+                      ex-cmd-index
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-block link-to-repo">
+          <p>
+            Checkout the source on
+            <a href="https://github.com/rtorr/vim-cheat-sheet" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+          </p>
+          <p>version: 3.2.0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.CACHE_NAME = "3.2.0";
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/javascripts/sw.js?version=3.2.0');
+      });
+    }
+  </script>
+</body>
+
+</html>

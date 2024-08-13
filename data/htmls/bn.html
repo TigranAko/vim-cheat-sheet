@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="bn">
+
+<head>
+  <meta charSet="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Vim Cheat Sheet</title>
+  <link rel="shortcut icon" href="/images/icons/icon-48x48.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#FA4949" />
+  <meta http-equiv="cache-control" content="max-age=600" />
+  <meta name="description" content="Explore vim.rtorr.com for an extensive Vim cheat sheet, offering clear, concise commands and shortcuts for Vim users. Whether you're a beginner or an experienced developer, find tips and tricks to enhance your coding efficiency in Vim.">
+  <link rel="apple-touch-icon" sizes="48x48" href="/images/icons/icon-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="/images/icons/icon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/images/icons/icon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="256x256" href="/images/icons/icon-256x256.png" />
+  <link rel="apple-touch-icon" sizes="384x384" href="/images/icons/icon-384x384.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="/images/icons/icon-512x512.png" />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <div class="sponsor">
+    <div class="container">
+      <span>
+        <a target="_blank" href="https://www.warp.dev">
+          <div class="sponsor-logo-container">
+            <span>Sponsor</span>
+            <img class="sponsor-logo" src="/images/svg/warp-logo.svg" alt="Warp logo">
+          </div>
+          <div class="sponsor-tagline"><span>A new terminal focused on developer productivity</span></div>
+      </span>
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid-block">
+      <div class="grid-1">
+        <h1>
+          <a class="site-title" href="/">
+            Vim Cheat Sheet
+          </a>
+        </h1>
+      </div>
+    </div>
+    <div class="container">
+      <main><div class="container">
+  <div class="commands-container">
+    <div class="grid-block">
+      <div class="grid-lg-1-3">
+        <h2>গ্লোবাল</h2>
+        <ul>
+          <li>
+            <kbd>:h[elp] keyword</kbd> - কীওয়ার্ডের জন্য সাহায্য খুলুন
+          </li>
+          <li>
+            <kbd>:sav[eas] file</kbd> - ফাইল হিসাবে সংরক্ষণ করুন
+          </li>
+          <li>
+            <kbd>:clo[se]</kbd> - বর্তমান ফলক বন্ধ করুন
+          </li>
+          <li>
+            <kbd>:ter[minal]</kbd> - একটি টার্মিনাল উইন্ডো খুলুন
+          </li>
+          <li>
+            <kbd>K</kbd> - কার্সারের নিচে শব্দের জন্য ম্যান পেজ খুলুন
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> ভীম শেখার জন্য টার্মিনালে প্রথমে <kbd>vimtutor</kbd> এই কমান্ডটি রান করুন। 
+        </div>
+        <h2>কার্সার মুভমেন্ট</h2>
+        <ul>
+          <li>
+            <kbd>h</kbd> - বাম দিকে কার্সার সরান
+          </li>
+          <li>
+            <kbd>j</kbd> - নিচের দিকে কার্সার সরান
+          </li>
+          <li>
+            <kbd>k</kbd> - উপর দিকে কার্সার সরান
+          </li>
+          <li>
+            <kbd>l</kbd> - ডান দিকে কার্সার সরান
+          </li>
+          <li>
+            <kbd>gj</kbd> - move cursor down (multi-line text)
+          </li>
+          <li>
+            <kbd>gk</kbd> - move cursor up (multi-line text)
+          </li>
+          <li>
+            <kbd>H</kbd> - স্ক্রিনের শীর্ষে যেতে
+          </li>
+          <li>
+            <kbd>M</kbd> - স্ক্রিনের মাঝখানে যেতে
+          </li>
+          <li>
+            <kbd>L</kbd> - স্ক্রিনের শেষে যেতে
+          </li>
+          <li>
+            <kbd>w</kbd> - একটি শব্দের শুরুতে যেতে
+          </li>
+          <li>
+            <kbd>W</kbd> - একটি শব্দের শুরুতে যেতে (শব্দ বড় হাতের হতে পারে)
+          </li>
+          <li>
+            <kbd>e</kbd> - একটি শব্দের শেষে যেতে
+          </li>
+          <li>
+            <kbd>E</kbd> - একটি শব্দের শেষে যেতে (শব্দ বড় হাতের হতে পারে)
+          </li>
+          <li>
+            <kbd>b</kbd> - একটি শব্দের শুরুতে ফিরে যেতে
+          </li>
+          <li>
+            <kbd>B</kbd> - একটি শব্দের শুরুতে ফিরে যেতে (শব্দ বড় হাতের হতে পারে)
+          </li>
+          <li>
+            <kbd>ge</kbd> - একটি শব্দের শেষে ফিরে যেতে
+          </li>
+          <li>
+            <kbd>gE</kbd> - একটি শব্দের শেষে ফিরে যেতে (শব্দ বড় হাতের হতে পারে)
+          </li>
+          <li>
+            <kbd>%</kbd> - মিলানো অক্ষরে সরান  (default supported pairs: '()', '{}', '[]' - use <code>:h matchpairs</code> আরও তথ্যের জন্য ভিম-এ ব্যবহার করুন)
+          </li>
+          <li>
+            <kbd>0</kbd> - লাইনের শুরুতে যেতে
+          </li>
+          <li>
+            <kbd>^</kbd> - লাইনের প্রথম নন ব্ল্যান্ক অক্ষরে যেতে
+          </li>
+          <li>
+            <kbd>$</kbd> - লাইনের শেষে যেতে
+          </li>
+          <li>
+            <kbd>g_</kbd> - লাইনের শেষ নন ব্ল্যান্ক অক্ষরে যেতে
+          </li>
+          <li>
+            <kbd>gg</kbd> - ডকুমেন্টের প্রথম লাইনে যেতে
+          </li>
+          <li>
+            <kbd>G</kbd> - ডকুমেন্টের শেষ লাইনে যেতে
+          </li>
+          <li>
+            <kbd>5gg</kbd> or <kbd>5G</kbd> - লাইন ৫ এ যেতে
+          </li>
+          <li>
+            <kbd>gd</kbd> - move to local declaration
+          </li>
+          <li>
+            <kbd>gD</kbd> - move to global declaration
+          </li>
+          <li>
+            <kbd>fx</kbd> - x অক্ষরের পরের শব্দে যেতে
+          </li>
+          <li>
+            <kbd>tx</kbd> - x অক্ষরের সামনে শব্দে যেতে
+          </li>
+          <li>
+            <kbd>Fx</kbd> - x অক্ষরের আগের শব্দে যেতে
+          </li>
+          <li>
+            <kbd>Tx</kbd> - x অক্ষরের পূর্ববর্তী শব্দে যেতে
+          </li>
+          <li>
+            <kbd>;</kbd> - আগের পুনরাবৃত্তি f, t, F অথবা T নড়াচড়া
+          </li>
+          <li>
+            <kbd>,</kbd> - আগের পুনরাবৃত্তি f, t, F অথবা T নড়াচড়া, পিছনে
+          </li>
+          <li>
+            <kbd>}</kbd> - পরবর্তী অনুচ্ছেদে যেতে (অথবা ফাংশন/ব্লক, কোড সম্পাদনা করার সময়)
+          </li>
+          <li>
+            <kbd>{</kbd> - আগের অনুচ্ছেদে যেতে (অথবা ফাংশন/ব্লক, কোড সম্পাদনা করার সময়)
+          </li>
+          <li>
+            <kbd>zz</kbd> - কার্সার স্ক্রিনের কেন্দ্রে
+          </li>
+          <li>
+            <kbd>zt</kbd> - position cursor on top of the screen
+          </li>
+          <li>
+            <kbd>zb</kbd> - position cursor on bottom of the screen
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>e</kbd> - স্ক্রিন এক লাইনের নিচে সরানো হচ্ছে (কার্সর না সরিয়ে)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>y</kbd> - স্ক্রিন এক লাইনের উপরে সরানো হচ্ছে (কার্সর না সরিয়ে)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>b</kbd> - একটি পূর্ণস্ক্রীন পিছনে সরান
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>f</kbd> - একটি পূর্ণস্ক্রীন এগিয়ে সরান
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - 1/2 একটি পর্দা এগিয়ে যান
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>u</kbd> - 1/2 একটি পর্দা পিছনে সরান
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong>
+          এটি পুনরাবৃত্তি করতে একটি সংখ্যা সহ একটি কার্সার মুভমেন্ট কমান্ডের প্রিফিক্স। উদাহরণ স্বরূপ, <kbd>4j</kbd>4 লাইন নিচে সরানো। 
+        </div>
+        <h2>টেক্সট সংযোজন (Insert mode)</h2>
+        <ul>
+          <li>
+            <kbd>i</kbd> - কার্সারের আগে ইন্সার্ট করা
+          </li>
+          <li>
+            <kbd>I</kbd> - লাইনের শুরুতে ইন্সার্ট করা
+          </li>
+          <li>
+            <kbd>a</kbd> - কার্সারের পরে ইন্সার্ট (সংযোজন) করুন
+          </li>
+          <li>
+            <kbd>A</kbd> - লাইনের শেষে ইন্সার্ট (সংযোজন) করুন
+          </li>
+          <li>
+            <kbd>o</kbd> - বর্তমান লাইনের নীচে একটি নতুন লাইন যুক্ত করুন (খুলুন)
+          </li>
+          <li>
+            <kbd>O</kbd> - বর্তমান লাইনের উপরে একটি নতুন লাইন যুক্ত (খুলুন)
+          </li>
+          <li>
+            <kbd>ea</kbd> - শব্দের শেষে ইন্সার্ট (সংযোজন)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>h</kbd> - ইন্সার্ট মোডের সময় কার্সারের আগে অক্ষরটি মুছুন
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w</kbd> - ইন্সার্ট মোডের সময় কার্সারের আগে শব্দ মুছুন
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>j</kbd> -  ইন্সার্ট মোড চলাকালীন নতুন লাইন শুরু করুন
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>t</kbd> - ইনসার্ট মোড চলাকালীন ইন্ডেন্ট (ডানে সরান) লাইন এক শিফটউইথ
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> -  ইনসার্ট মোডের সময় ডি-ইন্ডেন্ট (বামে সরান) লাইন এক শিফটউইথ
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>n</kbd> -  ইনসার্ট (স্বয়ংক্রিয়-সম্পূর্ণ) মোড চলাকালীন কার্সারের আগে পরবর্তী মিল
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>p</kbd> - ইনসার্ট মোড চলাকালীন কার্সারের আগে পূর্ববর্তী মিল ইনসার্ট করান (স্বয়ংক্রিয়ভাবে সম্পূর্ণ)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>rx</kbd> - রেজিস্টার x এর বিষয়বস্তু ইনসার্ট করান
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ox</kbd> -  অস্থায়ীভাবে স্বাভাবিক মোডে প্রবেশ করুন যাতে একটি normal-mode কমান্ড x ইস্যু করতে পারেন
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - ইনসার্ট মোড থেকে প্রস্থান করুন
+          </li>
+        </ul>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>সম্পাদনা (Editing)</h2>
+        <ul>
+          <li>
+            <kbd>r</kbd> - একটি একক অক্ষর প্রতিস্থাপন করুন।
+          </li>
+          <li>
+            <kbd>R</kbd> - একাধিক অক্ষর প্রতিস্থাপন করুন, যতক্ষন না <kbd>ESC</kbd> চাপা হচ্ছে.
+          </li>
+          <li>
+            <kbd>J</kbd> - মাঝখানে একটি স্পেস দিয়ে বর্তমানের নিচের লাইনে জোড়া দিন
+          </li>
+          <li>
+            <kbd>gJ</kbd> -  মাঝখানে স্পেস ছাড়াই বর্তমানের নিচের লাইনে জোড়া দিন
+          </li>
+          <li>
+            <kbd>gwip</kbd> - রিফ্লো অনুচ্ছেদ
+          </li>
+          <li>
+            <kbd>g~</kbd> - কেস আপ মোশনে স্যুইচ করুন
+          </li>
+          <li>
+            <kbd>gu</kbd> - আপ টু মোশন ছোট হাতের অক্ষরে পরিবর্তন করুন
+          </li>
+          <li>
+            <kbd>gU</kbd> - আপ টু মোশন বড় হাতের অক্ষরে পরিবর্তন করুন
+          </li>
+          <li>
+            <kbd>cc</kbd> - সম্পূর্ণ লাইন পরিবর্তন (প্রতিস্থাপন)
+          </li>
+          <li>
+            <kbd>c$</kbd> or <kbd>C</kbd> - লাইনের শেষে পরিবর্তন করুন (প্রতিস্থাপন করুন)
+          </li>
+          <li>
+            <kbd>ciw</kbd> - সম্পূর্ণ শব্দ পরিবর্তন (প্রতিস্থাপন)
+          </li>
+          <li>
+            <kbd>cw</kbd> or <kbd>ce</kbd> - শব্দের শেষে পরিবর্তন (প্রতিস্থাপন) করুন
+          </li>
+          <li>
+            <kbd>s</kbd> - অক্ষর মুছুন এবং পাঠ্য(substitute) প্রতিস্থাপন করুন
+          </li>
+          <li>
+            <kbd>S</kbd> - লাইন মুছুন এবং টেক্সট প্রতিস্থাপন করুন (cc এর মতো)
+          </li>
+          <li>
+            <kbd>xp</kbd> -  দুটি অক্ষর স্থানান্তর করুন (ডিলিট এবং পেস্ট করুন)
+          </li>
+          <li>
+            <kbd>u</kbd> - পূর্বাবস্থা (undo)
+          </li>
+          <li>
+            <kbd>U</kbd> - শেষ পরিবর্তিত লাইন পুনরুদ্ধার (undo)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>r</kbd> - পুনরায় করুন (redo)
+          </li>
+          <li>
+            <kbd>.</kbd> - শেষ কমান্ড পুনরাবৃত্তি করুন
+          </li>
+        </ul>
+        <h2>টেক্সট চিহ্নিত করা (ভিজ্যুয়াল মোড)</h2>
+        <ul>
+          <li>
+            <kbd>v</kbd> - ভিজ্যুয়াল মোড শুরু করুন, লাইন চিহ্নিত করুন, তারপর একটি কমান্ড করুন (যেমন y-yank)
+          </li>
+          <li>
+            <kbd>V</kbd> -  লাইনওয়াইজ ভিজ্যুয়াল মোড শুরু করুন
+          </li>
+          <li>
+            <kbd>o</kbd> - চিহ্নিত এলাকার অন্য প্রান্তে যান
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>v</kbd> - ভিজ্যুয়াল ব্লক মোড শুরু করুন
+          </li>
+          <li>
+            <kbd>O</kbd> - ব্লকের অন্য কোণে যান
+          </li>
+          <li>
+            <kbd>aw</kbd> - একটি শব্দ চিহ্নিত করুন
+          </li>
+          <li>
+            <kbd>ab</kbd> -  () সহ একটি ব্লক
+          </li>
+          <li>
+            <kbd>aB</kbd> -  {} সহ একটি ব্লক
+          </li>
+          <li>
+            <kbd>at</kbd> -  &lt;&gt; ট্যাগ সহ একটি ব্লক
+          </li>
+          <li>
+            <kbd>ib</kbd> - ভিতরের ব্লক () সহ
+          </li>
+          <li>
+            <kbd>iB</kbd> - {} সহ ভিতরের ব্লক
+          </li>
+          <li>
+            <kbd>it</kbd> - &lt;&gt; ট্যাগ সহ ভিতরের ব্লক
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - ভিজ্যুয়াল মোড থেকে প্রস্থান করুন
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong>  <kbd>b</kbd> বা <kbd>B</kbd> এর পরিবর্তে চাইলে  <kbd>(</kbd> বা <kbd>{</kbd> ব্যবহার করতে পারেন 
+        </div>
+        <h2>ভিজ্যুয়াল কমান্ড</h2>
+        <ul>
+          <li>
+            <kbd>&#62;</kbd> - টেক্সট ডানদিকে সরান
+          </li>
+          <li>
+            <kbd>&#60;</kbd> - টেক্সট বামে স্থানান্তর করুন
+          </li>
+          <li>
+            <kbd>y</kbd> - ইয়াঙ্ক(yank) (কপি) মার্কড টেক্সট
+          </li>
+          <li>
+            <kbd>d</kbd> - ডিলেট মার্কড টেক্সট
+          </li>
+          <li>
+            <kbd>~</kbd> - স্যুইচ কেস
+          </li>
+          <li>
+            <kbd>u</kbd> - চিহ্নিত টেক্সটকে ছোট হাতের অক্ষরে পরিবর্তন করুন
+          </li>
+          <li>
+            <kbd>U</kbd> - চিহ্নিত টেক্সটকে বড় হাতের অক্ষরে পরিবর্তন করুন
+          </li>
+        </ul>
+        <h2>রেজিস্টার (Registers)</h2>
+        <ul>
+          <li>
+            <kbd>:reg[isters]</kbd> - রেজিস্টার কনটেন্ট দেখান
+          </li>
+          <li>
+            <kbd>"xy</kbd> - রেজিস্টার x এর বিষয়বস্তু পেস্ট করুন
+          </li>
+          <li>
+            <kbd>"xp</kbd> - রেজিস্টার এক্সে ঝাঁপ দাও
+          </li>
+          <li>
+            <kbd>"+y</kbd> - সিস্টেম ক্লিপবোর্ড রেজিস্টারে প্রবেশ করুন
+          </li>
+          <li>
+            <kbd>"+p</kbd> - সিস্টেম ক্লিপবোর্ড রেজিস্টার থেকে পেস্ট করুন
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> রেজিস্টারগুলি ~/.viminfo-এ সংরক্ষণ করা হচ্ছে এবং vim-এর পরবর্তী রিস্টার্টে আবার লোড করা হবে।
+        </div>
+        <div class="well">
+          <strong>Tip</strong> Special registers:
+          <p>
+            &emsp;<kbd>0</kbd> - শেষ ইয়াঙ্ক<br/>
+            &emsp;<kbd>&quot;</kbd> - নামহীন রেজিস্টার, শেষ মুছে ফেলা বা ইয়াঙ্ক<br/>
+            &emsp;<kbd>%</kbd> - বর্তমান ফাইলের নাম<br/>
+            &emsp;<kbd>#</kbd> - বিকল্প ফাইলের নাম<br/>
+            &emsp;<kbd>*</kbd> - ক্লিপবোর্ড বিষয়বস্তু (X11 প্রাথমিক)<br/>
+            &emsp;<kbd>+</kbd> - ক্লিপবোর্ড বিষয়বস্তু (X11 ক্লিপবোর্ড)<br/>
+            &emsp;<kbd>/</kbd> - শেষ অনুসন্ধান প্যাটার্ন<br/>
+            &emsp;<kbd>:</kbd> - শেষ কমান্ড-লাইন<br/>
+            &emsp;<kbd>.</kbd> - সর্বশেষ ইনসার্ট টেক্সট<br/>
+            &emsp;<kbd>-</kbd> - শেষ ছোট ( একটি লাইনের চেয়ে কম) মুছুন<br/>
+            &emsp;<kbd>=</kbd> - এক্সপ্রেশন রেজিস্টার<br/>
+            &emsp;<kbd>_</kbd> - ব্ল্যাক হোল রেজিস্টার<br/>
+          </p>
+        </div>
+        <h2>মার্কস এবং পজিশন্স</h2>
+        <ul>
+          <li>
+            <kbd>:marks</kbd> - চিহ্নের তালিকা
+          </li>
+          <li>
+            <kbd>ma</kbd> - A মার্কের জন্য বর্তমান অবস্থান সেট করুন
+          </li>
+          <li>
+            <kbd>`a</kbd> - মার্ক A এর অবস্থানে ঝাঁপ দাও
+          </li>
+          <li>
+            <kbd>y`a</kbd> - মার্ক A এর অবস্থানে টেক্সট ঝাঁকান
+          </li>
+          <li>
+            <kbd>`0</kbd> - সেই অবস্থানে যান যেখানে ভিম আগে প্রস্থান করা হয়েছিল
+          </li>
+          <li>
+            <kbd>`"</kbd> - এই ফাইলটি শেষ সম্পাদনা করার সময় অবস্থানে যান
+          </li>
+          <li>
+            <kbd>`.</kbd> -  এই ফাইলের সর্বশেষ পরিবর্তনের অবস্থানে যান
+          </li>
+          <li>
+            <kbd>``</kbd> - শেষ লাফের আগে অবস্থানে যান
+          </li>
+          <li>
+            <kbd>:ju[mps]</kbd> - লাফের তালিকা
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>i</kbd> - জাম্প তালিকায় নতুন অবস্থানে যান
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>o</kbd> - জাম্প তালিকায় পুরানো অবস্থানে যান
+          </li>
+          <li>
+            <kbd>:changes</kbd> - পরিবর্তনের তালিকা
+          </li>
+          <li>
+            <kbd>g,</kbd> - পরিবর্তন তালিকায় নতুন অবস্থানে যান
+          </li>
+          <li>
+            <kbd>g;</kbd> - পরিবর্তন তালিকায় পুরানো অবস্থানে যান
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>]</kbd> -  কার্সারের নীচে ট্যাগে যান
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> একটি চিহ্নে লাফানোর জন্য আপনি হয় একটি ব্যাকটিক (<kbd>`</kbd>) বা একটি অ্যাপোস্ট্রফি  (<kbd>'</kbd>) ব্যবহার করতে পারেন। একটি অ্যাপোস্ট্রফি ব্যবহার করে চিহ্নটি ধরে থাকা লাইনের শুরুতে (first non-blank) চলে যায়। 
+        </div>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>ম্যাক্রো</h2>
+        <ul>
+          <li>
+            <kbd>qa</kbd> - রেকর্ড ম্যাক্রো a
+          </li>
+          <li>
+            <kbd>q</kbd> - ম্যাক্রো রেকর্ডিং বন্ধ করুন
+          </li>
+          <li>
+            <kbd>@a</kbd> - a ম্যাক্রো চালান
+          </li>
+          <li>
+            <kbd>@@</kbd> - শেষ রান ম্যাক্রো পুনরায় চালান
+          </li>
+        </ul>
+        <h2>কাটা এবং পেস্ট</h2>
+        <ul>
+          <li>
+            <kbd>yy</kbd> - ইয়াঙ্ক (কপি) একটি লাইন
+          </li>
+          <li>
+            <kbd>2yy</kbd> - ইয়াঙ্ক (কপি) 2 লাইন
+          </li>
+          <li>
+            <kbd>yw</kbd> - কার্সার অবস্থান থেকে পরবর্তী শব্দের শুরু পর্যন্ত শব্দের অক্ষরগুলিকে ইয়াঙ্ক (কপি) করুন
+          </li>
+          <li>
+            <kbd>yiw</kbd> - কার্সারের নিচে শব্দ (কপি) করুন
+          </li>
+          <li>
+            <kbd>yaw</kbd> - কার্সারের নীচে শব্দ এবং এর পরে বা আগে স্থানটি (কপি) করুন
+          </li>
+          <li>
+            <kbd>y$</kbd> or <kbd>Y</kbd> - লাইনের শেষে (কপি) করুন
+          </li>
+          <li>
+            <kbd>p</kbd> - কার্সারের পরে ক্লিপবোর্ডটি রাখুন (পেস্ট করুন)
+          </li>
+          <li>
+            <kbd>P</kbd> - কার্সারের আগে (পেস্ট) করুন
+          </li>
+          <li>
+            <kbd>gp</kbd> - কার্সারের পরে ক্লিপবোর্ড রাখুন (পেস্ট করুন) এবং নতুন শব্দের পরে কার্সার ছেড়ে দিন
+          </li>
+          <li>
+            <kbd>gP</kbd> - কার্সারের আগে (পেস্ট) করুন এবং নতুন শব্দের পরে কার্সার ছেড়ে দিন
+          </li>
+          <li>
+            <kbd>dd</kbd> - একটি লাইন মুছুন (cut)
+          </li>
+          <li>
+            <kbd>2dd</kbd> - ২ টি লাইন মুছুন (cut)
+          </li>
+          <li>
+            <kbd>dw</kbd> - কার্সার অবস্থান থেকে পরবর্তী শব্দের শুরু পর্যন্ত শব্দের অক্ষরগুলি মুছুন (cut)
+          </li>
+          <li>
+            <kbd>diw</kbd> - কার্সারের নীচে শব্দটি মুছুন (cut)
+          </li>
+          <li>
+            <kbd>daw</kbd> - কার্সারের নিচে (cut) শব্দ এবং এর পরে বা আগে স্পেস মুছুন
+          </li>
+          <li>
+            <kbd>:3,5d</kbd> - delete lines starting from 3 to 5
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> You can also use the following characters to specify the range: <br>
+          e.g. <br>
+          <p>
+            <kbd>:.,$d</kbd> - From the current line to the end of the file <br>
+            <kbd>:.,1d</kbd> - From the current line to the beginning of the file <br>
+            <kbd>:10,1d</kbd> - From the 10th line to the beginning of the file <br>
+          </p>
+        </div>
+        <ul>
+          <li>
+            <kbd>:g/{pattern}/d</kbd> - delete all lines containing pattern
+          </li>
+          <li>
+            <kbd>:g!/{pattern}/d</kbd> - delete all lines not containing pattern
+          </li>
+          <li>
+            <kbd>d$</kbd> or <kbd>D</kbd> - লাইনের শেষে মুছুন (cut)
+          </li>
+          <li>
+            <kbd>x</kbd> - অক্ষর মুছুন (cut)
+          </li>
+        </ul>
+        <h2>ইন্ডেন্ট টেক্সট</h2>
+        <ul>
+          <li>
+            <kbd>&#62;&#62;</kbd> -  ইন্ডেন্ট (ডানে সরান) লাইন এক শিফটউইথ
+          </li>
+          <li>
+            <kbd>&#60;&#60;</kbd> - ডি-ইন্ডেন্ট (বামে সরান) লাইন এক শিফটউইথ
+          </li>
+          <li>
+            <kbd>&#62;%</kbd> - () বা {} (বন্ধনীতে কার্সার)  দিয়ে একটি ব্লক ইন্ডেন্ট করুন
+          </li>
+          <li>
+            <kbd>&#60;%</kbd> - de-indent a block with () or {} (cursor on brace)
+          </li>
+          <li>
+            <kbd>&#62;ib</kbd> - () সহ ভিতরের ব্লক ইন্ডেন্ট
+          </li>
+          <li>
+            <kbd>&#62;at</kbd> - &lt;&gt; ট্যাগ সহ একটি ব্লক ইন্ডেন্ট করুন
+          </li>
+          <li>
+            <kbd>3==</kbd> - 3 লাইন পুনরায় ইন্ডেন্ট করুন
+          </li>
+          <li>
+            <kbd>=%</kbd> - () বা {} (বন্ধনীতে কার্সার) দিয়ে একটি ব্লক পুনরায় ইন্ডেন্ট করুন
+          </li>
+          <li>
+            <kbd>=iB</kbd> - {} দিয়ে ভিতরের ব্লক পুনরায় ইন্ডেন্ট করুন
+          </li>
+          <li>
+            <kbd>gg=G</kbd> - সম্পূর্ণ বাফার পুনরায় ইন্ডেন্ট
+          </li>
+          <li>
+            <kbd>]p</kbd> - পেস্ট করুন এবং বর্তমান লাইনে ইন্ডেন্ট সামঞ্জস্য(adjust) করুন
+          </li>
+        </ul>
+        <h2>প্রস্থান (Exiting)</h2>
+        <ul>
+          <li>
+            <kbd>:w</kbd> - ফাইলটি লিখুন (সংরক্ষণ করুন), কিন্তু প্রস্থান করবেন না
+          </li>
+          <li>
+            <kbd>:w !sudo tee %</kbd> - sudo ব্যবহার করে বর্তমান ফাইল লিখুন
+          </li>
+          <li>
+            <kbd>:wq</kbd> or <kbd>:x</kbd> or <kbd>ZZ</kbd> - লিখুন (সংরক্ষণ করুন) এবং প্রস্থান করুন
+          </li>
+          <li>
+            <kbd>:q</kbd> - প্রস্থান করুন (অসংরক্ষিত পরিবর্তন থাকলে ব্যর্থ হয়)
+          </li>
+          <li>
+            <kbd>:q!</kbd> or <kbd>ZQ</kbd> - প্রস্থান করুন এবং অসংরক্ষিত পরিবর্তনগুলি ফেলে দিন(unsave) 
+          </li>
+          <li>
+            <kbd>:wqa</kbd> - লিখুন (সংরক্ষণ করুন) এবং সমস্ত ট্যাবে প্রস্থান করুন
+          </li>
+        </ul>
+        <h2>অনুসন্ধান এবং প্রতিস্থাপন</h2>
+        <ul>
+          <li>
+            <kbd>/pattern</kbd> -  প্যাটার্ন অনুসন্ধান করুন
+          </li>
+          <li>
+            <kbd>?pattern</kbd> -  প্যাটার্নের জন্য পিছনের দিকে অনুসন্ধান করুন
+          </li>
+          <li>
+            <kbd>\vpattern</kbd> - &#x27;very magic&#x27; প্যাটার্ন: অ-আলফানিউমেরিক অক্ষরগুলিকে বিশেষ রেজেক্স চিহ্ন হিসাবে ব্যাখ্যা করা হয় (no escaping needed)
+          </li>
+          <li>
+            <kbd>n</kbd> - একই দিকে অনুসন্ধান পুনরাবৃত্তি করুন
+          </li>
+          <li>
+            <kbd>N</kbd> - বিপরীত দিকে অনুসন্ধান পুনরাবৃত্তি করুন
+          </li>
+          <li>
+            <kbd>:%s/old/new/g</kbd> -
+            সমস্ত পুরানো ফাইল জুড়ে নতুন দিয়ে প্রতিস্থাপন করুন
+          </li>
+          <li>
+            <kbd>:%s/old/new/gc</kbd> -
+            নিশ্চিতকরণ সহ সমস্ত পুরানো ফাইলটি নতুন দিয়ে প্রতিস্থাপন করুন
+          </li>
+          <li>
+            <kbd>:noh[lsearch]</kbd> - সার্চ ম্যাচ হাইলাইটিং অপসারণ
+          </li>
+        </ul>
+        <h2>একাধিক ফাইল অনুসন্ধান করুন</h2>
+        <ul>
+          <li>
+            <kbd>:vim[grep] /pattern/ {`{file}`}</kbd> -
+            একাধিক ফাইলে প্যাটার্ন অনুসন্ধান করুন
+          </li>
+        </ul>
+        <div class="well">
+          e.g.
+          <kbd>:vim[grep] /foo/ **/*</kbd>
+        </div>
+        <ul>
+          <li>
+            <kbd>:cn[ext]</kbd> - পরের মিলটিতে যাও
+          </li>
+          <li>
+            <kbd>:cp[revious]</kbd> - আগের মিলটিতে যাও
+          </li>
+          <li>
+            <kbd>:cope[n]</kbd> - ম্যাচের তালিকা সম্বলিত একটি উইন্ডো খুলুন
+          </li>
+          <li>
+            <kbd>:ccl[ose]</kbd> - কুইকফিক্স উইন্ডোটি বন্ধ করুন
+          </li>
+        </ul>
+        <h2>ট্যাব</h2>
+        <ul>
+          <li>
+            <kbd>:tabnew</kbd> or <kbd>:tabnew {page.words.file}</kbd> -
+            একটি নতুন ট্যাবে একটি ফাইল খুলুন
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wT</kbd> - বর্তমান বিভক্ত উইন্ডোটিকে তার নিজস্ব ট্যাবে সরান
+          </li>
+          <li>
+            <kbd>gt</kbd> or <kbd>:tabn[ext]</kbd> - পরবর্তী ট্যাবে যান
+          </li>
+          <li>
+            <kbd>gT</kbd> or <kbd>:tabp[revious]</kbd> - পূর্ববর্তী ট্যাবে যান
+          </li>
+          <li>
+            <kbd>#gt</kbd> - ট্যাব নম্বর # এ যান
+          </li>
+          <li>
+            <kbd>:tabm[ove] #</kbd> - বর্তমান ট্যাবটিকে #তম অবস্থানে নিয়ে যান (0 থেকে সূচীকৃত/indexed)
+          </li>
+          <li>
+            <kbd>:tabc[lose]</kbd> - বর্তমান ট্যাব এবং এর সমস্ত উইন্ডো বন্ধ করুন
+          </li>
+          <li>
+            <kbd>:tabo[nly]</kbd> - বর্তমান একটি ছাড়া সব ট্যাব বন্ধ করুন
+          </li>
+          <li>
+            <kbd>:tabdo</kbd> command - এই <code>command</code> কমান্ডটি সমস্ত ট্যাবে চালান (যেমন: <code>:tabdo q</code> - এটি সমস্ত খোলা ট্যাব বন্ধ করে)
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-block">
+      <div class="grid-lg-1-2">
+        <h2>একাধিক ফাইল নিয়ে কাজ করা</h2>
+        <ul>
+          <li>
+            <kbd>:e[dit] file</kbd> - একটি নতুন বাফারে একটি ফাইল সম্পাদনা করুন
+          </li>
+          <li>
+            <kbd>:bn[ext]</kbd> -
+            পরবর্তী বাফারে যান
+          </li>
+          <li>
+            <kbd>:bp[revious]</kbd> -
+            আগের বাফারে যান
+          </li>
+          <li>
+            <kbd>:bd[elete]</kbd> - একটি বাফার মুছুন (একটি ফাইল বন্ধ করুন)
+          </li>
+          <li>
+            <kbd>:b[uffer]#</kbd> - সূচক(index) # দ্বারা একটি বাফারে যান
+          </li>
+          <li>
+            <kbd>:b[uffer] file</kbd> - ফাইল দ্বারা একটি বাফার যান
+          </li>
+          <li>
+            <kbd>:ls</kbd> or <kbd>:buffers</kbd> - সব খোলা বাফারের তালিকা
+          </li>
+          <li>
+            <kbd>:sp[lit] file</kbd> - একটি নতুন বাফার এবং বিভক্ত উইন্ডোতে একটি ফাইল খুলুন
+          </li>
+          <li>
+            <kbd>:vs[plit] file</kbd> - একটি নতুন বাফার এবং উল্লম্বভাবে বিভক্ত উইন্ডোতে একটি ফাইল খুলুন
+          </li>
+          <li>
+            <kbd>:vert[ical] ba[ll]</kbd> - উল্লম্ব উইন্ডো (vertical windows) হিসাবে সমস্ত বাফার সম্পাদনা করুন
+          </li>
+          <li>
+            <kbd>:tab ba[ll]</kbd> - ট্যাব হিসাবে সমস্ত বাফার সম্পাদনা করুন
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ws</kbd> - বিভক্ত উইন্ডো
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wv</kbd> -  উল্লম্বভাবে (vertically) উইন্ডো বিভক্ত করুন
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ww</kbd> - উইন্ডো সুইচ করুন
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wq</kbd> - একটি উইন্ডো বন্ধ করুন
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wx</kbd> - পরেরটির সাথে বর্তমান উইন্ডো বিনিময় করুন
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w=</kbd> - make all windows equal height &amp; width
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wh</kbd> -  বাম উইন্ডোতে কার্সার সরান (vertical split)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wl</kbd> - ডান উইন্ডোতে কার্সার সরান (vertical split)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wj</kbd> - নীচের উইন্ডোতে কার্সার সরান (অনুভূমিক/ horizontal split)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wk</kbd> - উপরের উইন্ডোতে কার্সার সরান (অনুভূমিক/horizontal split)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wH</kbd> - বর্তমান উইন্ডোকে পূর্ণ উচ্চতা বাম দিকে করুন (সর্ববামে উল্লম্ব/vertical উইন্ডো)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wL</kbd> - বর্তমান উইন্ডোটিকে ডানদিকে পূর্ণ উচ্চতা করুন (ডানদিকে উল্লম্ব/vertical উইন্ডো)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wJ</kbd> - খুব নীচে বর্তমান উইন্ডোটি সম্পূর্ণ প্রস্থ করুন (নিচের অনুভূমিক/horizontal উইন্ডো)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wK</kbd> - বর্তমান উইন্ডোটিকে একেবারে শীর্ষে পূর্ণ প্রস্থ করুন (সর্বোচ্চ অনুভূমিক/horizontal উইন্ডো)
+          </li>
+        </ul>
+        </ul>
+        </ul>
+        </ul>
+      </div>
+      <div class="grid-lg-1-2">
+        <h2>পার্থক্য</h2>
+        <ul>
+          <li>
+            <kbd>zf</kbd> - ম্যানুয়ালি একটি মোশন ফোল্ডআপ করুন 
+          </li>
+          <li>
+            <kbd>zd</kbd> -  কার্সারের নীচে অংশ মুছুন
+          </li>
+          <li>
+            <kbd>za</kbd> - কার্সারের নিচে অংশ টগল করুন
+          </li>
+          <li>
+            <kbd>zo</kbd> - কার্সারের নীচে অংশ খুলুন
+          </li>
+          <li>
+            <kbd>zc</kbd> - কার্সারের নিচের অংশ বন্ধ করুন
+          </li>
+          <li>
+            <kbd>zr</kbd> - সমস্ত খোলা (open) অংশ এক লেভেল পর্যন্ত ভাঁজ করুন
+          </li>
+          <li>
+            <kbd>zm</kbd> - সব অংশকে এক স্তরে আরও (বন্ধ) ভাঁজ করুন
+          </li>
+          <li>
+            <kbd>zi</kbd> - ভাঁজ (folding) কার্যকারিতা টগল করুন
+          </li>
+          <li>
+            <kbd>]c</kbd> - পরবর্তী পরিবর্তনের শুরুতে যাও
+          </li>
+          <li>
+            <kbd>[c</kbd> - আগের পরিবর্তনের শুরুতে যাও
+          </li>
+          <li>
+            <kbd>do</kbd> or <kbd>:diffg[et]</kbd> - প্রাপ্ত (get) পার্থক্য (অন্যান্য বাফার থেকে)
+          </li>
+          <li>
+            <kbd>dp</kbd> or <kbd>:diffpu[t]</kbd> - পার্থক্য রাখুন (অন্যান্য বাফারে)
+          </li>
+          <li>
+            <kbd>:diffthis</kbd> - বর্তমান উইন্ডো ডিফের অংশ করুন
+          </li>
+          <li>
+            <kbd>:dif[fupdate]</kbd> - আপডেট পার্থক্য (differences)
+          </li>
+          <li>
+            <kbd>:diffo[ff]</kbd> - বর্তমান উইন্ডোর জন্য ডিফ মোড বন্ধ করুন
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> কমান্ডগুলি folding করার জন্য (যেমন: <kbd>za</kbd>) এক স্তরে কাজ করে। সমস্ত স্তরে কাজ করতে, বড় হাতের অক্ষর ব্যবহার করুন (যেমন: <kbd>zA</kbd>).
+        </div>
+        <div class="well">
+          <strong>Tip</strong> ফাইলের পার্থক্য দেখতে,<kbd>vimdiff</kbd> একটি টার্মিনালে চালানোর মাধ্যমে কেউ সরাসরি ডিফ মোডে ভিম শুরু করতে পারে। এক এমনকি এটি হিসাবে সেট করতে পারেন <kbd>git difftool</kbd>.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+      <div>
+        <div id="footer" class="grid-block">
+          <div class="box">
+            <div class="box-header">
+              <h2>Additional Resources</h2>
+            </div>
+            <div class="box-body">
+              <div class="grid-block">
+                <div class="grid-lg-1-2">
+                  <h3 id="languages">Languages</h3>
+                  <ul>
+                    <li>
+                      <a href="/lang/ar" lang="ar">العربية</a>
+                    </li>
+                    <li>
+                      <a href="/lang/bn" lang="bn">বাংলা</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ca" lang="ca">Català</a>
+                    </li>
+                    <li>
+                      <a href="/lang/cs" lang="cs">Čeština</a>
+                    </li>
+                    <li>
+                      <a href="/lang/da_DK" lang="da">Dansk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/de_de" lang="de">Deutsch</a>
+                    </li>
+                    <li>
+                      <a href="/lang/el_gr" lang="el">Ελληνικά</a>
+                    </li>
+                    <li>
+                      <a href="/lang/en_us" lang="en">English</a>
+                    </li>
+                    <li>
+                      <a href="/lang/eo" lang="eo">Esperanto</a>
+                    </li>
+                    <li>
+                      <a href="/lang/es_es" lang="es">Español</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fa_ir" lang="fa">Persian</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fi" lang="fi">Suomi</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fr_fr" lang="fr">Français</a>
+                    </li>
+                    <li>
+                      <a href="/lang/he" lang="he">עברית</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hr" lang="hr">Hrvatski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hu_hu" lang="hu">Magyar</a>
+                    </li>
+                    <li>
+                      <a href="/lang/id" lang="id">Bahasa Indonesia</a>
+                    </li>
+                    <li>
+                      <a href="/lang/it" lang="it">Italiano</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ja" lang="ja">日本語</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ko" lang="ko">한국어</a>
+                    </li>
+                    <li>
+                      <a href="/lang/my" lang="my">မြန်မာ</a>
+                    </li>
+                    <li>
+                      <a href="/lang/nl_nl" lang="nl">Nederlands</a>
+                    </li>
+                    <li>
+                      <a href="/lang/no_nb" lang="no">Norsk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pl_pl" lang="pl">Polski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_br" lang="pt">Português - Brasil</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_pt" lang="pt">Português - Portugal</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ro" lang="ro">Romana</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ru" lang="ru">Русский</a>
+                    </li>
+                    <li>
+                      <a href="/lang/si_lk" lang="si">සිංහල</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sk" lang="sk">Slovenčina</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sv" lang="sv">Svenska</a>
+                    </li>
+                    <li>
+                      <a href="/lang/th" lang="th">ภาษาไทย</a>
+                    </li>
+                    <li>
+                      <a href="/lang/tr" lang="tr">Türkçe</a>
+                    </li>
+                    <li>
+                      <a href="/lang/uk" lang="uk">Українська</a>
+                    </li>
+                    <li>
+                      <a href="/lang/vi_vn" lang="vi">Tiếng Việt</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_cn" lang="zh">简体中文</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_tw" lang="zh">中文 (台灣)</a>
+                    </li>
+                  </ul>                </div>
+                <div class="grid-lg-1-2">
+                  <h3>About the vim cheat sheet</h3>
+                  <p>
+                    This project aims to be one of the most accessible vim guides available. We
+                    made sure to support mobile, desktop, and other
+                    <a href="#languages" aria-label="Jump to languages section">languages</a>.
+                  </p>
+                  <p>
+                    <a target="_blank" href="https://github.com/sponsors/rtorr" aria-label="Sponsor this project on GitHub">❤️ Please consider sponsoring this
+                      project ❤️</a>!
+                  </p>
+                  <p>
+                    You can read about how to contribute (and help improve) by viewing our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/README.md" target="_blank"
+                      rel="noopener noreferrer" aria-label="Read the README on GitHub">
+                      README
+                    </a>
+                    . There you can see how to set up this project, or how to contribute a new
+                    language. Here is a big thank you to our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/graphs/contributors" target="_blank"
+                      rel="noopener noreferrer" aria-label="View project contributors on GitHub">
+                      contributors!
+                    </a>
+                  </p>
+                  <p>
+                    This project is licensed under
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/License.txt" target="_blank"
+                      rel="noopener noreferrer" aria-label="View the MIT License for this project">
+                      The MIT License (MIT)
+                    </a>
+                    .
+                  </p>
+                  <h3>Other places to find this document</h3>
+                  <p>
+                    This document was embedded in
+                    <a href="https://duckduckgo.com/?q=vim+cheat+sheet" target="_blank" rel="noopener noreferrer" aria-label="Search for this document on DuckDuckGo">
+                      DuckDuckGo
+                    </a>
+                    .
+                  </p>
+                  <h3>More resources</h3>
+                  <p>
+                    Interactive Vim tutorial:
+                    <a href="https://openvim.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Open Vim for an interactive Vim tutorial">
+                      Open Vim
+                    </a>
+                  </p>
+                  <p>
+                    Vim quick reference from Vim help pages:
+                    <a href="https://vimhelp.org/quickref.txt.html" target="_blank" rel="noopener noreferrer" aria-label="Access Vim quick reference"> 
+                      quickref.txt
+                    </a>
+                  </p>
+                  <p>
+                    List of all Vim ex (<kbd>:</kbd>) commands:
+                    <a href="https://vimhelp.org/index.txt.html#ex-cmd-index" target="_blank" rel="noopener noreferrer" aria-label="View list of all Vim ex commands">
+                      ex-cmd-index
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-block link-to-repo">
+          <p>
+            Checkout the source on
+            <a href="https://github.com/rtorr/vim-cheat-sheet" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+          </p>
+          <p>version: 3.2.0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.CACHE_NAME = "3.2.0";
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/javascripts/sw.js?version=3.2.0');
+      });
+    }
+  </script>
+</body>
+
+</html>

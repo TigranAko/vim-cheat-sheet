@@ -1,0 +1,1188 @@
+{
+    "Global": {
+        "wells": [
+            "Run vimtutor in a terminal to learn the first Vim commands."
+        ],
+        "item_1": {
+            "keys": ":h[elp] keyword",
+            "description": "open help for keyword"
+        },
+        "item_2": {
+            "keys": ":sav[eas] file",
+            "description": "save file as"
+        },
+        "item_3": {
+            "keys": ":clo[se]",
+            "description": "close current pane"
+        },
+        "item_4": {
+            "keys": ":ter[minal]",
+            "description": "open a terminal window"
+        },
+        "item_5": {
+            "keys": "K",
+            "description": "open man page for word under the cursor"
+        }
+    },
+    "Cursor_movement": {
+        "wells": [
+            "Prefix a cursor movement command with a number to repeat it. For example, 4j moves down 4 lines."
+        ],
+        "item_1": {
+            "keys": "h",
+            "description": "move cursor left"
+        },
+        "item_2": {
+            "keys": "j",
+            "description": "move cursor down"
+        },
+        "item_3": {
+            "keys": "k",
+            "description": "move cursor up"
+        },
+        "item_4": {
+            "keys": "l",
+            "description": "move cursor right"
+        },
+        "item_5": {
+            "keys": "gj",
+            "description": "move cursor down (multi"
+        },
+        "item_6": {
+            "keys": "gk",
+            "description": "move cursor up (multi"
+        },
+        "item_7": {
+            "keys": "H",
+            "description": "move to top of screen"
+        },
+        "item_8": {
+            "keys": "M",
+            "description": "move to middle of screen"
+        },
+        "item_9": {
+            "keys": "L",
+            "description": "move to bottom of screen"
+        },
+        "item_10": {
+            "keys": "w",
+            "description": "jump forwards to the start of a word"
+        },
+        "item_11": {
+            "keys": "W",
+            "description": "jump forwards to the start of a word (words can contain punctuation)"
+        },
+        "item_12": {
+            "keys": "e",
+            "description": "jump forwards to the end of a word"
+        },
+        "item_13": {
+            "keys": "E",
+            "description": "jump forwards to the end of a word (words can contain punctuation)"
+        },
+        "item_14": {
+            "keys": "b",
+            "description": "jump backwards to the start of a word"
+        },
+        "item_15": {
+            "keys": "B",
+            "description": "jump backwards to the start of a word (words can contain punctuation)"
+        },
+        "item_16": {
+            "keys": "ge",
+            "description": "jump backwards to the end of a word"
+        },
+        "item_17": {
+            "keys": "gE",
+            "description": "jump backwards to the end of a word (words can contain punctuation)"
+        },
+        "item_18": {
+            "keys": "%",
+            "description": "move cursor to matching character (default supported pairs: '()', '{}', '[]' "
+        },
+        "item_19": {
+            "keys": "0",
+            "description": "jump to the start of the line"
+        },
+        "item_20": {
+            "keys": "^",
+            "description": "jump to the first non"
+        },
+        "item_21": {
+            "keys": "$",
+            "description": "jump to the end of the line"
+        },
+        "item_22": {
+            "keys": "g_",
+            "description": "jump to the last non"
+        },
+        "item_23": {
+            "keys": "gg",
+            "description": "go to the first line of the document"
+        },
+        "item_24": {
+            "keys": "G",
+            "description": "go to the last line of the document"
+        },
+        "item_25": {
+            "keys": "5gg or 5G",
+            "description": "go to line 5"
+        },
+        "item_26": {
+            "keys": "gd",
+            "description": "move to local declaration"
+        },
+        "item_27": {
+            "keys": "gD",
+            "description": "move to global declaration"
+        },
+        "item_28": {
+            "keys": "fx",
+            "description": "jump to next occurrence of character x"
+        },
+        "item_29": {
+            "keys": "tx",
+            "description": "jump to before next occurrence of character x"
+        },
+        "item_30": {
+            "keys": "Fx",
+            "description": "jump to the previous occurrence of character x"
+        },
+        "item_31": {
+            "keys": "Tx",
+            "description": "jump to after previous occurrence of character x"
+        },
+        "item_32": {
+            "keys": ";",
+            "description": "repeat previous f, t, F or T movement"
+        },
+        "item_33": {
+            "keys": ",",
+            "description": "repeat previous f, t, F or T movement, backwards"
+        },
+        "item_34": {
+            "keys": "}",
+            "description": "jump to next paragraph (or function/block, when editing code)"
+        },
+        "item_35": {
+            "keys": "{",
+            "description": "jump to previous paragraph (or function/block, when editing code)"
+        },
+        "item_36": {
+            "keys": "zz",
+            "description": "center cursor on screen"
+        },
+        "item_37": {
+            "keys": "zt",
+            "description": "position cursor on top of the screen"
+        },
+        "item_38": {
+            "keys": "zb",
+            "description": "position cursor on bottom of the screen"
+        },
+        "item_39": {
+            "keys": "Ctrl + e",
+            "description": "move screen down one line (without moving cursor)"
+        },
+        "item_40": {
+            "keys": "Ctrl + y",
+            "description": "move screen up one line (without moving cursor)"
+        },
+        "item_41": {
+            "keys": "Ctrl + b",
+            "description": "move screen up one page (cursor to last line)"
+        },
+        "item_42": {
+            "keys": "Ctrl + f",
+            "description": "move screen down one page (cursor to first line)"
+        },
+        "item_43": {
+            "keys": "Ctrl + d",
+            "description": "move cursor and screen down 1/2 page"
+        },
+        "item_44": {
+            "keys": "Ctrl + u",
+            "description": "move cursor and screen up 1/2 page"
+        }
+    },
+    "Insert_mode_inserting_appending_text": {
+        "item_1": {
+            "keys": "i",
+            "description": "insert before the cursor"
+        },
+        "item_2": {
+            "keys": "I",
+            "description": "insert at the beginning of the line"
+        },
+        "item_3": {
+            "keys": "a",
+            "description": "insert (append) after the cursor"
+        },
+        "item_4": {
+            "keys": "A",
+            "description": "insert (append) at the end of the line"
+        },
+        "item_5": {
+            "keys": "o",
+            "description": "append (open) a new line below the current line"
+        },
+        "item_6": {
+            "keys": "O",
+            "description": "append (open) a new line above the current line"
+        },
+        "item_7": {
+            "keys": "ea",
+            "description": "insert (append) at the end of the word"
+        },
+        "item_8": {
+            "keys": "Ctrl + h",
+            "description": "delete the character before the cursor during insert mode"
+        },
+        "item_9": {
+            "keys": "Ctrl + w",
+            "description": "delete word before the cursor during insert mode"
+        },
+        "item_10": {
+            "keys": "Ctrl + j",
+            "description": "add a line break at the cursor position during insert mode"
+        },
+        "item_11": {
+            "keys": "Ctrl + t",
+            "description": "indent (move right) line one shiftwidth during insert mode"
+        },
+        "item_12": {
+            "keys": "Ctrl + d",
+            "description": "de"
+        },
+        "item_13": {
+            "keys": "Ctrl + n",
+            "description": "insert (auto"
+        },
+        "item_14": {
+            "keys": "Ctrl + p",
+            "description": "insert (auto"
+        },
+        "item_15": {
+            "keys": "Ctrl + rx",
+            "description": "insert the contents of register x"
+        },
+        "item_16": {
+            "keys": "Ctrl + ox",
+            "description": "Temporarily enter normal mode to issue one normal"
+        },
+        "item_17": {
+            "keys": "Esc or Ctrl + c",
+            "description": "exit insert mode"
+        }
+    },
+    "Editing": {
+        "wells": [
+            "Marking text (visual mode)"
+        ],
+        "item_1": {
+            "keys": "r",
+            "description": "replace a single character."
+        },
+        "item_2": {
+            "keys": "R",
+            "description": "replace more than one character, until ESC is pressed."
+        },
+        "item_3": {
+            "keys": "J",
+            "description": "join line below to the current one with one space in between"
+        },
+        "item_4": {
+            "keys": "gJ",
+            "description": "join line below to the current one without space in between"
+        },
+        "item_5": {
+            "keys": "gwip",
+            "description": "reflow paragraph"
+        },
+        "item_6": {
+            "keys": "g~",
+            "description": "switch case up to motion"
+        },
+        "item_7": {
+            "keys": "gu",
+            "description": "change to lowercase up to motion"
+        },
+        "item_8": {
+            "keys": "gU",
+            "description": "change to uppercase up to motion"
+        },
+        "item_9": {
+            "keys": "cc",
+            "description": "change (replace) entire line"
+        },
+        "item_10": {
+            "keys": "c$ or C",
+            "description": "change (replace) to the end of the line"
+        },
+        "item_11": {
+            "keys": "ciw",
+            "description": "change (replace) entire word"
+        },
+        "item_12": {
+            "keys": "cw or ce",
+            "description": "change (replace) to the end of the word"
+        },
+        "item_13": {
+            "keys": "s",
+            "description": "delete character and substitute text (same as cl)"
+        },
+        "item_14": {
+            "keys": "S",
+            "description": "delete line and substitute text (same as cc)"
+        },
+        "item_15": {
+            "keys": "xp",
+            "description": "transpose two letters (delete and paste)"
+        },
+        "item_16": {
+            "keys": "u",
+            "description": "undo"
+        },
+        "item_17": {
+            "keys": "U",
+            "description": "restore (undo) last changed line"
+        },
+        "item_18": {
+            "keys": "Ctrl + r",
+            "description": "redo"
+        },
+        "item_19": {
+            "keys": ".",
+            "description": "repeat last command"
+        },
+        "item_20": {
+            "keys": "v",
+            "description": "start visual mode, mark lines, then do a command (like y"
+        },
+        "item_21": {
+            "keys": "V",
+            "description": "start linewise visual mode"
+        },
+        "item_22": {
+            "keys": "o",
+            "description": "move to other end of marked area"
+        },
+        "item_23": {
+            "keys": "Ctrl + v",
+            "description": "start visual block mode"
+        },
+        "item_24": {
+            "keys": "O",
+            "description": "move to other corner of block"
+        },
+        "item_25": {
+            "keys": "aw",
+            "description": "mark a word"
+        },
+        "item_26": {
+            "keys": "ab",
+            "description": "a block with ()"
+        },
+        "item_27": {
+            "keys": "aB",
+            "description": "a block with {}"
+        },
+        "item_28": {
+            "keys": "at",
+            "description": "a block with <> tags"
+        },
+        "item_29": {
+            "keys": "ib",
+            "description": "inner block with ()"
+        },
+        "item_30": {
+            "keys": "iB",
+            "description": "inner block with {}"
+        },
+        "item_31": {
+            "keys": "it",
+            "description": "inner block with <> tags"
+        },
+        "item_32": {
+            "keys": "Esc or Ctrl + c",
+            "description": "exit visual mode"
+        }
+    },
+    "Marking_text_visual_mode": {
+        "wells": [
+            "Instead of b or B one can also use ( or { respectively."
+        ],
+        "item_1": {
+            "keys": "v",
+            "description": "start visual mode, mark lines, then do a command (like y"
+        },
+        "item_2": {
+            "keys": "V",
+            "description": "start linewise visual mode"
+        },
+        "item_3": {
+            "keys": "o",
+            "description": "move to other end of marked area"
+        },
+        "item_4": {
+            "keys": "Ctrl + v",
+            "description": "start visual block mode"
+        },
+        "item_5": {
+            "keys": "O",
+            "description": "move to other corner of block"
+        },
+        "item_6": {
+            "keys": "aw",
+            "description": "mark a word"
+        },
+        "item_7": {
+            "keys": "ab",
+            "description": "a block with ()"
+        },
+        "item_8": {
+            "keys": "aB",
+            "description": "a block with {}"
+        },
+        "item_9": {
+            "keys": "at",
+            "description": "a block with <> tags"
+        },
+        "item_10": {
+            "keys": "ib",
+            "description": "inner block with ()"
+        },
+        "item_11": {
+            "keys": "iB",
+            "description": "inner block with {}"
+        },
+        "item_12": {
+            "keys": "it",
+            "description": "inner block with <> tags"
+        },
+        "item_13": {
+            "keys": "Esc or Ctrl + c",
+            "description": "exit visual mode"
+        }
+    },
+    "Visual_commands": {
+        "wells": [
+            "Registers"
+        ],
+        "item_1": {
+            "keys": ">",
+            "description": "shift text right"
+        },
+        "item_2": {
+            "keys": "<",
+            "description": "shift text left"
+        },
+        "item_3": {
+            "keys": "y",
+            "description": "yank (copy) marked text"
+        },
+        "item_4": {
+            "keys": "d",
+            "description": "delete marked text"
+        },
+        "item_5": {
+            "keys": "~",
+            "description": "switch case"
+        },
+        "item_6": {
+            "keys": "u",
+            "description": "change marked text to lowercase"
+        },
+        "item_7": {
+            "keys": "U",
+            "description": "change marked text to uppercase"
+        },
+        "item_8": {
+            "keys": ":reg[isters]",
+            "description": "show registers content"
+        },
+        "item_9": {
+            "keys": "\"xy",
+            "description": "yank into register x"
+        },
+        "item_10": {
+            "keys": "\"xp",
+            "description": "paste contents of register x"
+        },
+        "item_11": {
+            "keys": "\"+y",
+            "description": "yank into the system clipboard register"
+        },
+        "item_12": {
+            "keys": "\"+p",
+            "description": "paste from the system clipboard register"
+        }
+    },
+    "Registers": {
+        "wells": [
+            "Registers are being stored in ~/.viminfo, and will be loaded again on next restart of vim.",
+            "Special registers:\n          \n             0 - last yank\n             \" - unnamed register, last delete or yank\n             % - current file name\n             # - alternate file name\n             * - clipboard contents (X11 primary)\n             + - clipboard contents (X11 clipboard)\n             / - last search pattern\n             : - last command-line\n             . - last inserted text\n             - - last small (less than a line) delete\n             = - expression register\n             _ - black hole register"
+        ],
+        "item_1": {
+            "keys": ":reg[isters]",
+            "description": "show registers content"
+        },
+        "item_2": {
+            "keys": "\"xy",
+            "description": "yank into register x"
+        },
+        "item_3": {
+            "keys": "\"xp",
+            "description": "paste contents of register x"
+        },
+        "item_4": {
+            "keys": "\"+y",
+            "description": "yank into the system clipboard register"
+        },
+        "item_5": {
+            "keys": "\"+p",
+            "description": "paste from the system clipboard register"
+        }
+    },
+    "Marks_and_positions": {
+        "wells": [
+            "To jump to a mark you can either use a backtick (`) or an apostrophe ('). Using an apostrophe jumps to the beginning (first non-blank) of the line holding the mark."
+        ],
+        "item_1": {
+            "keys": ":marks",
+            "description": "list of marks"
+        },
+        "item_2": {
+            "keys": "ma",
+            "description": "set current position for mark A"
+        },
+        "item_3": {
+            "keys": "`a",
+            "description": "jump to position of mark A"
+        },
+        "item_4": {
+            "keys": "y`a",
+            "description": "yank text to position of mark A"
+        },
+        "item_5": {
+            "keys": "`0",
+            "description": "go to the position where Vim was previously exited"
+        },
+        "item_6": {
+            "keys": "`\"",
+            "description": "go to the position when last editing this file"
+        },
+        "item_7": {
+            "keys": "`.",
+            "description": "go to the position of the last change in this file"
+        },
+        "item_8": {
+            "keys": "``",
+            "description": "go to the position before the last jump"
+        },
+        "item_9": {
+            "keys": ":ju[mps]",
+            "description": "list of jumps"
+        },
+        "item_10": {
+            "keys": "Ctrl + i",
+            "description": "go to newer position in jump list"
+        },
+        "item_11": {
+            "keys": "Ctrl + o",
+            "description": "go to older position in jump list"
+        },
+        "item_12": {
+            "keys": ":changes",
+            "description": "list of changes"
+        },
+        "item_13": {
+            "keys": "g,",
+            "description": "go to newer position in change list"
+        },
+        "item_14": {
+            "keys": "g;",
+            "description": "go to older position in change list"
+        },
+        "item_15": {
+            "keys": "Ctrl + ]",
+            "description": "jump to the tag under cursor"
+        }
+    },
+    "Macros": {
+        "wells": [
+            "Cut and paste"
+        ],
+        "item_1": {
+            "keys": "qa",
+            "description": "record macro a"
+        },
+        "item_2": {
+            "keys": "q",
+            "description": "stop recording macro"
+        },
+        "item_3": {
+            "keys": "@a",
+            "description": "run macro a"
+        },
+        "item_4": {
+            "keys": "@@",
+            "description": "rerun last run macro"
+        },
+        "item_5": {
+            "keys": "yy",
+            "description": "yank (copy) a line"
+        },
+        "item_6": {
+            "keys": "2yy",
+            "description": "yank (copy) 2 lines"
+        },
+        "item_7": {
+            "keys": "yw",
+            "description": "yank (copy) the characters of the word from the cursor position to the start of the next word"
+        },
+        "item_8": {
+            "keys": "yiw",
+            "description": "yank (copy) word under the cursor"
+        },
+        "item_9": {
+            "keys": "yaw",
+            "description": "yank (copy) word under the cursor and the space after or before it"
+        },
+        "item_10": {
+            "keys": "y$ or Y",
+            "description": "yank (copy) to end of line"
+        },
+        "item_11": {
+            "keys": "p",
+            "description": "put (paste) the clipboard after cursor"
+        },
+        "item_12": {
+            "keys": "P",
+            "description": "put (paste) before cursor"
+        },
+        "item_13": {
+            "keys": "gp",
+            "description": "put (paste) the clipboard after cursor and leave cursor after the new text"
+        },
+        "item_14": {
+            "keys": "gP",
+            "description": "put (paste) before cursor and leave cursor after the new text"
+        },
+        "item_15": {
+            "keys": "dd",
+            "description": "delete (cut) a line"
+        },
+        "item_16": {
+            "keys": "2dd",
+            "description": "delete (cut) 2 lines"
+        },
+        "item_17": {
+            "keys": "dw",
+            "description": "delete (cut) the characters of the word from the cursor position to the start of the next word"
+        },
+        "item_18": {
+            "keys": "diw",
+            "description": "delete (cut) word under the cursor"
+        },
+        "item_19": {
+            "keys": "daw",
+            "description": "delete (cut) word under the cursor and the space after or before it"
+        },
+        "item_20": {
+            "keys": ":3,5d",
+            "description": "delete lines starting from 3 to 5"
+        }
+    },
+    "Cut_and_paste": {
+        "wells": [
+            "You can also use the following characters to specify the range: \n          e.g. \n\n:.,$d - From the current line to the end of the file \n:.,1d - From the current line to the beginning of the file \n:10,1d - From the 10th line to the beginning of the file"
+        ],
+        "item_1": {
+            "keys": "yy",
+            "description": "yank (copy) a line"
+        },
+        "item_2": {
+            "keys": "2yy",
+            "description": "yank (copy) 2 lines"
+        },
+        "item_3": {
+            "keys": "yw",
+            "description": "yank (copy) the characters of the word from the cursor position to the start of the next word"
+        },
+        "item_4": {
+            "keys": "yiw",
+            "description": "yank (copy) word under the cursor"
+        },
+        "item_5": {
+            "keys": "yaw",
+            "description": "yank (copy) word under the cursor and the space after or before it"
+        },
+        "item_6": {
+            "keys": "y$ or Y",
+            "description": "yank (copy) to end of line"
+        },
+        "item_7": {
+            "keys": "p",
+            "description": "put (paste) the clipboard after cursor"
+        },
+        "item_8": {
+            "keys": "P",
+            "description": "put (paste) before cursor"
+        },
+        "item_9": {
+            "keys": "gp",
+            "description": "put (paste) the clipboard after cursor and leave cursor after the new text"
+        },
+        "item_10": {
+            "keys": "gP",
+            "description": "put (paste) before cursor and leave cursor after the new text"
+        },
+        "item_11": {
+            "keys": "dd",
+            "description": "delete (cut) a line"
+        },
+        "item_12": {
+            "keys": "2dd",
+            "description": "delete (cut) 2 lines"
+        },
+        "item_13": {
+            "keys": "dw",
+            "description": "delete (cut) the characters of the word from the cursor position to the start of the next word"
+        },
+        "item_14": {
+            "keys": "diw",
+            "description": "delete (cut) word under the cursor"
+        },
+        "item_15": {
+            "keys": "daw",
+            "description": "delete (cut) word under the cursor and the space after or before it"
+        },
+        "item_16": {
+            "keys": ":3,5d",
+            "description": "delete lines starting from 3 to 5"
+        },
+        "item_17": {
+            "keys": ":g/{pattern}/d",
+            "description": "delete all lines containing pattern"
+        },
+        "item_18": {
+            "keys": ":g!/{pattern}/d",
+            "description": "delete all lines not containing pattern"
+        },
+        "item_19": {
+            "keys": "d$ or D",
+            "description": "delete (cut) to the end of the line"
+        },
+        "item_20": {
+            "keys": "x",
+            "description": "delete (cut) character"
+        }
+    },
+    "Indent_text": {
+        "wells": [
+            "Exiting"
+        ],
+        "item_1": {
+            "keys": ">>",
+            "description": "indent (move right) line one shiftwidth"
+        },
+        "item_2": {
+            "keys": "<<",
+            "description": "de"
+        },
+        "item_3": {
+            "keys": ">%",
+            "description": "indent a block with () or {} (cursor on brace)"
+        },
+        "item_4": {
+            "keys": "<%",
+            "description": "de"
+        },
+        "item_5": {
+            "keys": ">ib",
+            "description": "indent inner block with ()"
+        },
+        "item_6": {
+            "keys": ">at",
+            "description": "indent a block with <> tags"
+        },
+        "item_7": {
+            "keys": "3==",
+            "description": "re"
+        },
+        "item_8": {
+            "keys": "=%",
+            "description": "re"
+        },
+        "item_9": {
+            "keys": "=iB",
+            "description": "re"
+        },
+        "item_10": {
+            "keys": "gg=G",
+            "description": "re"
+        },
+        "item_11": {
+            "keys": "]p",
+            "description": "paste and adjust indent to current line"
+        },
+        "item_12": {
+            "keys": ":w",
+            "description": "write (save) the file, but don't exit"
+        },
+        "item_13": {
+            "keys": ":w !sudo tee %",
+            "description": "write out the current file using sudo"
+        },
+        "item_14": {
+            "keys": ":wq or :x or ZZ",
+            "description": "write (save) and quit"
+        },
+        "item_15": {
+            "keys": ":q",
+            "description": "quit (fails if there are unsaved changes)"
+        },
+        "item_16": {
+            "keys": ":q! or ZQ",
+            "description": "quit and throw away unsaved changes"
+        },
+        "item_17": {
+            "keys": ":wqa",
+            "description": "write (save) and quit on all tabs"
+        }
+    },
+    "Exiting": {
+        "wells": [
+            "Search and replace"
+        ],
+        "item_1": {
+            "keys": ":w",
+            "description": "write (save) the file, but don't exit"
+        },
+        "item_2": {
+            "keys": ":w !sudo tee %",
+            "description": "write out the current file using sudo"
+        },
+        "item_3": {
+            "keys": ":wq or :x or ZZ",
+            "description": "write (save) and quit"
+        },
+        "item_4": {
+            "keys": ":q",
+            "description": "quit (fails if there are unsaved changes)"
+        },
+        "item_5": {
+            "keys": ":q! or ZQ",
+            "description": "quit and throw away unsaved changes"
+        },
+        "item_6": {
+            "keys": ":wqa",
+            "description": "write (save) and quit on all tabs"
+        },
+        "item_7": {
+            "keys": "/pattern",
+            "description": "search for pattern"
+        },
+        "item_8": {
+            "keys": "?pattern",
+            "description": "search backward for pattern"
+        },
+        "item_9": {
+            "keys": "\\vpattern",
+            "description": "'very magic' pattern: non"
+        },
+        "item_10": {
+            "keys": "n",
+            "description": "repeat search in same direction"
+        },
+        "item_11": {
+            "keys": "N",
+            "description": "repeat search in opposite direction"
+        },
+        "item_12": {
+            "keys": ":%s/old/new/g",
+            "description": "replace all old with new throughout file"
+        },
+        "item_13": {
+            "keys": ":%s/old/new/gc",
+            "description": "replace all old with new throughout file with confirmations"
+        },
+        "item_14": {
+            "keys": ":noh[lsearch]",
+            "description": "remove highlighting of search matches"
+        }
+    },
+    "Search_and_replace": {
+        "wells": [
+            "Search in multiple files"
+        ],
+        "item_1": {
+            "keys": "/pattern",
+            "description": "search for pattern"
+        },
+        "item_2": {
+            "keys": "?pattern",
+            "description": "search backward for pattern"
+        },
+        "item_3": {
+            "keys": "\\vpattern",
+            "description": "'very magic' pattern: non"
+        },
+        "item_4": {
+            "keys": "n",
+            "description": "repeat search in same direction"
+        },
+        "item_5": {
+            "keys": "N",
+            "description": "repeat search in opposite direction"
+        },
+        "item_6": {
+            "keys": ":%s/old/new/g",
+            "description": "replace all old with new throughout file"
+        },
+        "item_7": {
+            "keys": ":%s/old/new/gc",
+            "description": "replace all old with new throughout file with confirmations"
+        },
+        "item_8": {
+            "keys": ":noh[lsearch]",
+            "description": "remove highlighting of search matches"
+        },
+        "item_9": {
+            "keys": ":vim[grep] /pattern/ {`{file}`}",
+            "description": "search for pattern in multiple files"
+        }
+    },
+    "Search_in_multiple_files": {
+        "wells": [
+            "e.g.\n          :vim[grep] /foo/ **/*"
+        ],
+        "item_1": {
+            "keys": ":vim[grep] /pattern/ {`{file}`}",
+            "description": "search for pattern in multiple files"
+        },
+        "item_2": {
+            "keys": ":cn[ext]",
+            "description": "jump to the next match"
+        },
+        "item_3": {
+            "keys": ":cp[revious]",
+            "description": "jump to the previous match"
+        },
+        "item_4": {
+            "keys": ":cope[n]",
+            "description": "open a window containing the list of matches"
+        },
+        "item_5": {
+            "keys": ":ccl[ose]",
+            "description": "close the quickfix window"
+        }
+    },
+    "Tabs": {
+        "item_1": {
+            "keys": ":tabnew or :tabnew {page.words.file}",
+            "description": "open a file in a new tab"
+        },
+        "item_2": {
+            "keys": "Ctrl + wT",
+            "description": "move the current split window into its own tab"
+        },
+        "item_3": {
+            "keys": "gt or :tabn[ext]",
+            "description": "move to the next tab"
+        },
+        "item_4": {
+            "keys": "gT or :tabp[revious]",
+            "description": "move to the previous tab"
+        },
+        "item_5": {
+            "keys": "#gt",
+            "description": "move to tab number #"
+        },
+        "item_6": {
+            "keys": ":tabm[ove] #",
+            "description": "move current tab to the #th position (indexed from 0)"
+        },
+        "item_7": {
+            "keys": ":tabc[lose]",
+            "description": "close the current tab and all its windows"
+        },
+        "item_8": {
+            "keys": ":tabo[nly]",
+            "description": "close all tabs except for the current one"
+        },
+        "item_9": {
+            "keys": ":tabdo command",
+            "description": "run the command on all tabs (e.g. :tabdo q "
+        }
+    },
+    "Working_with_multiple_files": {
+        "item_1": {
+            "keys": ":e[dit] file",
+            "description": "edit a file in a new buffer"
+        },
+        "item_2": {
+            "keys": ":bn[ext]",
+            "description": "go to the next buffer"
+        },
+        "item_3": {
+            "keys": ":bp[revious]",
+            "description": "go to the previous buffer"
+        },
+        "item_4": {
+            "keys": ":bd[elete]",
+            "description": "delete a buffer (close a file)"
+        },
+        "item_5": {
+            "keys": ":b[uffer]#",
+            "description": "go to a buffer by index #"
+        },
+        "item_6": {
+            "keys": ":b[uffer] file",
+            "description": "go to a buffer by file"
+        },
+        "item_7": {
+            "keys": ":ls or :buffers",
+            "description": "list all open buffers"
+        },
+        "item_8": {
+            "keys": ":sp[lit] file",
+            "description": "open a file in a new buffer and split window"
+        },
+        "item_9": {
+            "keys": ":vs[plit] file",
+            "description": "open a file in a new buffer and vertically split window"
+        },
+        "item_10": {
+            "keys": ":vert[ical] ba[ll]",
+            "description": "edit all buffers as vertical windows"
+        },
+        "item_11": {
+            "keys": ":tab ba[ll]",
+            "description": "edit all buffers as tabs"
+        },
+        "item_12": {
+            "keys": "Ctrl + ws",
+            "description": "split window"
+        },
+        "item_13": {
+            "keys": "Ctrl + wv",
+            "description": "split window vertically"
+        },
+        "item_14": {
+            "keys": "Ctrl + ww",
+            "description": "switch windows"
+        },
+        "item_15": {
+            "keys": "Ctrl + wq",
+            "description": "quit a window"
+        },
+        "item_16": {
+            "keys": "Ctrl + wx",
+            "description": "exchange current window with next one"
+        },
+        "item_17": {
+            "keys": "Ctrl + w=",
+            "description": "make all windows equal height & width"
+        },
+        "item_18": {
+            "keys": "Ctrl + wh",
+            "description": "move cursor to the left window (vertical split)"
+        },
+        "item_19": {
+            "keys": "Ctrl + wl",
+            "description": "move cursor to the right window (vertical split)"
+        },
+        "item_20": {
+            "keys": "Ctrl + wj",
+            "description": "move cursor to the window below (horizontal split)"
+        },
+        "item_21": {
+            "keys": "Ctrl + wk",
+            "description": "move cursor to the window above (horizontal split)"
+        },
+        "item_22": {
+            "keys": "Ctrl + wH",
+            "description": "make current window full height at far left (leftmost vertical window)"
+        },
+        "item_23": {
+            "keys": "Ctrl + wL",
+            "description": "make current window full height at far right (rightmost vertical window)"
+        },
+        "item_24": {
+            "keys": "Ctrl + wJ",
+            "description": "make current window full width at the very bottom (bottommost horizontal window)"
+        },
+        "item_25": {
+            "keys": "Ctrl + wK",
+            "description": "make current window full width at the very top (topmost horizontal window)"
+        }
+    },
+    "Diff": {
+        "wells": [
+            "The commands for folding (e.g. za) operate on one level. To operate on all levels, use uppercase letters (e.g. zA).",
+            "To view the differences of files, one can directly start Vim in diff mode by running vimdiff in a terminal. One can even set this as git difftool."
+        ],
+        "item_1": {
+            "keys": "zf",
+            "description": "manually define a fold up to motion"
+        },
+        "item_2": {
+            "keys": "zd",
+            "description": "delete fold under the cursor"
+        },
+        "item_3": {
+            "keys": "za",
+            "description": "toggle fold under the cursor"
+        },
+        "item_4": {
+            "keys": "zo",
+            "description": "open fold under the cursor"
+        },
+        "item_5": {
+            "keys": "zc",
+            "description": "close fold under the cursor"
+        },
+        "item_6": {
+            "keys": "zr",
+            "description": "reduce (open) all folds by one level"
+        },
+        "item_7": {
+            "keys": "zm",
+            "description": "fold more (close) all folds by one level"
+        },
+        "item_8": {
+            "keys": "zi",
+            "description": "toggle folding functionality"
+        },
+        "item_9": {
+            "keys": "]c",
+            "description": "jump to start of next change"
+        },
+        "item_10": {
+            "keys": "[c",
+            "description": "jump to start of previous change"
+        },
+        "item_11": {
+            "keys": "do or :diffg[et]",
+            "description": "obtain (get) difference (from other buffer)"
+        },
+        "item_12": {
+            "keys": "dp or :diffpu[t]",
+            "description": "put difference (to other buffer)"
+        },
+        "item_13": {
+            "keys": ":diffthis",
+            "description": "make current window part of diff"
+        },
+        "item_14": {
+            "keys": ":dif[fupdate]",
+            "description": "update differences"
+        },
+        "item_15": {
+            "keys": ":diffo[ff]",
+            "description": "switch off diff mode for current window"
+        }
+    }
+}

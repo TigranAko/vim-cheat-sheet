@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+  <meta charSet="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Vim Cheat Sheet</title>
+  <link rel="shortcut icon" href="/images/icons/icon-48x48.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#FA4949" />
+  <meta http-equiv="cache-control" content="max-age=600" />
+  <meta name="description" content="Explore vim.rtorr.com for an extensive Vim cheat sheet, offering clear, concise commands and shortcuts for Vim users. Whether you're a beginner or an experienced developer, find tips and tricks to enhance your coding efficiency in Vim.">
+  <link rel="apple-touch-icon" sizes="48x48" href="/images/icons/icon-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="/images/icons/icon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/images/icons/icon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="256x256" href="/images/icons/icon-256x256.png" />
+  <link rel="apple-touch-icon" sizes="384x384" href="/images/icons/icon-384x384.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="/images/icons/icon-512x512.png" />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <div class="sponsor">
+    <div class="container">
+      <span>
+        <a target="_blank" href="https://www.warp.dev">
+          <div class="sponsor-logo-container">
+            <span>Sponsor</span>
+            <img class="sponsor-logo" src="/images/svg/warp-logo.svg" alt="Warp logo">
+          </div>
+          <div class="sponsor-tagline"><span>A new terminal focused on developer productivity</span></div>
+      </span>
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid-block">
+      <div class="grid-1">
+        <h1>
+          <a class="site-title" href="/">
+            Vim Cheat Sheet
+          </a>
+        </h1>
+      </div>
+    </div>
+    <div class="container">
+      <main><div class="container">
+  <div class="commands-container">
+    <div class="grid-block">
+      <div class="grid-lg-1-3">
+        <h2>Globale kommandoer</h2>
+        <ul>
+          <li>
+            <kbd>:h[elp] søkeord</kbd> - åpne hjelp for søkeord
+          </li>
+          <li>
+            <kbd>:sav[eas] fil</kbd> - lagre fil som
+          </li>
+          <li>
+            <kbd>:clo[se]</kbd> - lukk gjeldende rute
+          </li>
+          <li>
+            <kbd>:ter[minal]</kbd> - åpne et terminalvindu
+          </li>
+          <li>
+            <kbd>K</kbd> - åpne man-side for ord under markøren
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Kjør <kbd>vimtutor</kbd> i en terminal for å lære de første Vim-kommandoene.
+        </div>
+        <h2>Markørbevegelser</h2>
+        <ul>
+          <li>
+            <kbd>h</kbd> - flytt markøren til venstre
+          </li>
+          <li>
+            <kbd>j</kbd> - flytt markøren ned
+          </li>
+          <li>
+            <kbd>k</kbd> - flytt markøren opp
+          </li>
+          <li>
+            <kbd>l</kbd> - flytt markøren til høyre
+          </li>
+          <li>
+            <kbd>gj</kbd> - move cursor down (multi-line text)
+          </li>
+          <li>
+            <kbd>gk</kbd> - move cursor up (multi-line text)
+          </li>
+          <li>
+            <kbd>H</kbd> - flytt til toppen av skjermen
+          </li>
+          <li>
+            <kbd>M</kbd> - flytt til midten av skjermen
+          </li>
+          <li>
+            <kbd>L</kbd> - flytt til bunnen av skjermen
+          </li>
+          <li>
+            <kbd>w</kbd> - hopp frem til begynnelsen av et ord
+          </li>
+          <li>
+            <kbd>W</kbd> - hopp frem til begynnelsen av et ord (ord kan inneholde tegnsetting)
+          </li>
+          <li>
+            <kbd>e</kbd> - hopp fremover til slutten av et ord
+          </li>
+          <li>
+            <kbd>E</kbd> - hopp frem til slutten av et ord (ord kan inneholde tegnsetting)
+          </li>
+          <li>
+            <kbd>b</kbd> - hopp bakover til begynnelsen av et ord
+          </li>
+          <li>
+            <kbd>B</kbd> - hopp bakover til begynnelsen av et ord (ord kan inneholde tegnsetting)
+          </li>
+          <li>
+            <kbd>ge</kbd> - hopp bakover til slutten av et ord
+          </li>
+          <li>
+            <kbd>gE</kbd> - hopp bakover til slutten av et ord (ord kan inneholde tegnsetting)
+          </li>
+          <li>
+            <kbd>%</kbd> - flytt til samsvarende tegn (standard støttede par: '()', '{}', '[]' - bruk <code>:h matchpairs</code> i vim for mer informasjon)
+          </li>
+          <li>
+            <kbd>0</kbd> - hopp til begynnelsen av linjen
+          </li>
+          <li>
+            <kbd>^</kbd> - hopp til det første ikke-blanke tegnet på linjen
+          </li>
+          <li>
+            <kbd>$</kbd> - hopp til slutten av linjen
+          </li>
+          <li>
+            <kbd>g_</kbd> - hopp til det siste ikke-blanke tegnet på linjen
+          </li>
+          <li>
+            <kbd>gg</kbd> - gå til den første linjen i dokumentet
+          </li>
+          <li>
+            <kbd>G</kbd> - gå til siste linje i dokumentet
+          </li>
+          <li>
+            <kbd>5gg</kbd> or <kbd>5G</kbd> - gå til linje 5
+          </li>
+          <li>
+            <kbd>gd</kbd> - flytt til lokal erklæring
+          </li>
+          <li>
+            <kbd>gD</kbd> - flytt til global erklæring
+          </li>
+          <li>
+            <kbd>fx</kbd> - hopp til neste forekomst av tegnet x
+          </li>
+          <li>
+            <kbd>tx</kbd> - hopp til før neste forekomst av tegnet x
+          </li>
+          <li>
+            <kbd>Fx</kbd> - hopp til forrige forekomst av tegnet x
+          </li>
+          <li>
+            <kbd>Tx</kbd> - hopp til etter forrige forekomst av tegnet x
+          </li>
+          <li>
+            <kbd>;</kbd> - gjenta forrige f-, t-, F- eller T-bevegelse
+          </li>
+          <li>
+            <kbd>,</kbd> - gjenta forrige f-, t-, F- eller T-bevegelse, bakover
+          </li>
+          <li>
+            <kbd>}</kbd> - hopp til neste avsnitt (eller funksjon/blokk, når du redigerer kode)
+          </li>
+          <li>
+            <kbd>{</kbd> - hopp til forrige avsnitt (eller funksjon/blokk, når du redigerer kode)
+          </li>
+          <li>
+            <kbd>zz</kbd> - sentermarkør på skjermen
+          </li>
+          <li>
+            <kbd>zt</kbd> - position cursor on top of the screen
+          </li>
+          <li>
+            <kbd>zb</kbd> - position cursor on bottom of the screen
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>e</kbd> - flytt skjermen én linje ned (uten å flytte markøren)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>y</kbd> - flytt skjermen opp en linje (uten å flytte markøren)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>b</kbd> - flytt tilbake en fullskjerm
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>f</kbd> - flytt én fullskjerm fremover
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - flytt frem 1/2 en skjerm
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>u</kbd> - flytt tilbake 1/2 en skjerm
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong>
+          Prefiks en markørbevegelseskommando med et tall for å gjenta den. For eksempel flytter <kbd>4j</kbd> fire linjer ned.
+        </div>
+        <h2>Innsettingsmodus - innsetting/legg til tekst</h2>
+        <ul>
+          <li>
+            <kbd>i</kbd> - sett inn før markøren
+          </li>
+          <li>
+            <kbd>I</kbd> - sett inn på begynnelsen av linjen
+          </li>
+          <li>
+            <kbd>a</kbd> - sett inn (legg til) etter markøren
+          </li>
+          <li>
+            <kbd>A</kbd> - sett inn (legg til) på slutten av linjen
+          </li>
+          <li>
+            <kbd>o</kbd> - legg til (åpne) en ny linje under gjeldende linje
+          </li>
+          <li>
+            <kbd>O</kbd> - legg til (åpne) en ny linje over gjeldende linje
+          </li>
+          <li>
+            <kbd>ea</kbd> - sett inn (legg til) på slutten av ordet
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>h</kbd> - slett tegnet før markøren under innsettingsmodus
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w</kbd> - slett ord før markøren under innsettingsmodus
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>j</kbd> - begynn ny linje under innsettingsmodus
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>t</kbd> - rykk inn (flytt til høyre) linje én skiftbredde under innsettingsmodus
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - fjern innrykk (flytt til venstre) linje én skiftbredde under innsettingsmodus
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>n</kbd> - sett inn (autofullfør) neste treff før markøren under innsettingsmodus
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>p</kbd> - sett inn (autofullfør) forrige treff før markøren under innsettingsmodus
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>rx</kbd> - sett inn innholdet i register x
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ox</kbd> - Gå midlertidig inn i normalmodus for å gi en normalmoduskommando x.
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - avslutt innsettingsmodus
+          </li>
+        </ul>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>Editering</h2>
+        <ul>
+          <li>
+            <kbd>r</kbd> - erstatt et enkelt tegn.
+          </li>
+          <li>
+            <kbd>R</kbd> - erstatt mer enn ett tegn, til <kbd>ESC</kbd> trykkes.
+          </li>
+          <li>
+            <kbd>J</kbd> - føy linjen under til den gjeldende med ett mellomrom
+          </li>
+          <li>
+            <kbd>gJ</kbd> - føy linjen under til den gjeldende uten mellomrom
+          </li>
+          <li>
+            <kbd>gwip</kbd> - flyt avsnitt
+          </li>
+          <li>
+            <kbd>g~</kbd> - switch opp til bevegelse
+          </li>
+          <li>
+            <kbd>gu</kbd> - endre til små bokstaver opp til bevegelse
+          </li>
+          <li>
+            <kbd>gU</kbd> - endre til store bokstaver opp til bevegelse
+          </li>
+          <li>
+            <kbd>cc</kbd> - endre (erstatt) hele linjen
+          </li>
+          <li>
+            <kbd>c$</kbd> or <kbd>C</kbd> - endre (erstatt) til slutten av linjen
+          </li>
+          <li>
+            <kbd>ciw</kbd> - endre (erstatt) hele ordet
+          </li>
+          <li>
+            <kbd>cw</kbd> or <kbd>ce</kbd> - endre (erstatt) til slutten av ordet
+          </li>
+          <li>
+            <kbd>s</kbd> - slett tegn og erstatt tekst
+          </li>
+          <li>
+            <kbd>S</kbd> - slett linje og erstatt tekst (samme som cc)
+          </li>
+          <li>
+            <kbd>xp</kbd> - transponer to bokstaver (slett og lim inn)
+          </li>
+          <li>
+            <kbd>u</kbd> - angre
+          </li>
+          <li>
+            <kbd>U</kbd> - gjenopprett (angre) sist endrede linje
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>r</kbd> - gjør om
+          </li>
+          <li>
+            <kbd>.</kbd> - gjenta siste kommando
+          </li>
+        </ul>
+        <h2>Markere tekst (visuell modus)</h2>
+        <ul>
+          <li>
+            <kbd>v</kbd> - start visuell modus, merk linjer, og utfør deretter en kommando (som y-yank)
+          </li>
+          <li>
+            <kbd>V</kbd> - start linjevis visuell modus
+          </li>
+          <li>
+            <kbd>o</kbd> - flytt til andre enden av markert område
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>v</kbd> - start visuell blokkeringsmodus
+          </li>
+          <li>
+            <kbd>O</kbd> - flytt til et annet hjørne av blokken
+          </li>
+          <li>
+            <kbd>aw</kbd> - merk et ord
+          </li>
+          <li>
+            <kbd>ab</kbd> - en blokk med ()
+          </li>
+          <li>
+            <kbd>aB</kbd> - en blokk med {}
+          </li>
+          <li>
+            <kbd>at</kbd> - en blokk med &lt;&gt;-tagger
+          </li>
+          <li>
+            <kbd>ib</kbd> - indre blokk med ()
+          </li>
+          <li>
+            <kbd>iB</kbd> - indre blokk med {}
+          </li>
+          <li>
+            <kbd>it</kbd> - indre blokk med &lt;&gt;-tagger
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - avslutt visuell modus
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong>  stedet for <kbd>b</kbd> eller <kbd>B</kbd> kan man også bruke henholdsvis <kbd>(</kbd> eller <kbd>{</kbd>).
+        </div>
+        <h2>Visuelle kommandoer</h2>
+        <ul>
+          <li>
+            <kbd>&#62;</kbd> - skift tekst til høyre
+          </li>
+          <li>
+            <kbd>&#60;</kbd> - skift tekst til venstre
+          </li>
+          <li>
+            <kbd>y</kbd> - kopier merket tekst
+          </li>
+          <li>
+            <kbd>d</kbd> - slett merket tekst
+          </li>
+          <li>
+            <kbd>~</kbd> - bytte sak
+          </li>
+          <li>
+            <kbd>u</kbd> - endre markert tekst til små bokstaver
+          </li>
+          <li>
+            <kbd>U</kbd> - endre merket tekst til store bokstaver
+          </li>
+        </ul>
+        <h2>Register</h2>
+        <ul>
+          <li>
+            <kbd>:reg[isters]</kbd> - vis registrer innhold
+          </li>
+          <li>
+            <kbd>"xy</kbd> - kopier inn i register x
+          </li>
+          <li>
+            <kbd>"xp</kbd> - lim inn innholdet i register x
+          </li>
+          <li>
+            <kbd>"+y</kbd> - kopier inn i systemets utklippstavleregister
+          </li>
+          <li>
+            <kbd>"+p</kbd> - lim inn fra systemets utklippstavleregister
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Registrene blir lagret i ~/.viminfo, og vil bli lastet inn igjen ved neste omstart av vim.
+        </div>
+        <div class="well">
+          <strong>Tip</strong> Spesielle registre:
+          <p>
+            &emsp;<kbd>0</kbd> - siste kopiering<br/>
+            &emsp;<kbd>&quot;</kbd> - ikke navngitte register, siste sletting eller kopi<br/>
+            &emsp;<kbd>%</kbd> - nåværende filnavn<br/>
+            &emsp;<kbd>#</kbd> - alternativt filnavn<br/>
+            &emsp;<kbd>*</kbd> - utklippstavleinnhold (X11 primær)<br/>
+            &emsp;<kbd>+</kbd> - utklippstavleinnhold (X11 utklippstavle)<br/>
+            &emsp;<kbd>/</kbd> - siste søkemønster<br/>
+            &emsp;<kbd>:</kbd> - siste kommandolinje<br/>
+            &emsp;<kbd>.</kbd> - sist innsatt tekst<br/>
+            &emsp;<kbd>-</kbd> - siste liten (mindre enn en linje) sletting<br/>
+            &emsp;<kbd>=</kbd> - uttrykksregister<br/>
+            &emsp;<kbd>_</kbd> - svart hull register<br/>
+          </p>
+        </div>
+        <h2>Merker og posisjoner</h2>
+        <ul>
+          <li>
+            <kbd>:marks</kbd> - liste over merker
+          </li>
+          <li>
+            <kbd>ma</kbd> - sett gjeldende posisjon for merke A
+          </li>
+          <li>
+            <kbd>`a</kbd> - hopp til posisjonen til merke A
+          </li>
+          <li>
+            <kbd>y`a</kbd> - kopier tekst fra posisjonen til merke A
+          </li>
+          <li>
+            <kbd>`0</kbd> - gå til posisjonen der Vim tidligere ble avsluttet
+          </li>
+          <li>
+            <kbd>`"</kbd> - gå til posisjonen da du sist redigerte denne filen
+          </li>
+          <li>
+            <kbd>`.</kbd> - gå til posisjonen til den siste endringen i denne filen
+          </li>
+          <li>
+            <kbd>``</kbd> - gå til posisjonen før siste hopp
+          </li>
+          <li>
+            <kbd>:ju[mps]</kbd> - liste over hopp
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>i</kbd> - gå til nyere posisjon i hoppeoversikten
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>o</kbd> - gå til eldre posisjon i hoppeoversikten
+          </li>
+          <li>
+            <kbd>:changes</kbd> - liste over endringer
+          </li>
+          <li>
+            <kbd>g,</kbd> - gå til nyere posisjon i endringslisten
+          </li>
+          <li>
+            <kbd>g;</kbd> - gå til eldre posisjon i endringslisten
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>]</kbd> - hopp til taggen under markøren
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> For å hoppe til et merke kan du enten bruke en backtick (<kbd>`</kbd>) eller en apostrof (<kbd>'</kbd>). Ved å bruke en apostrof hopper du til begynnelsen (første ikke-blank) av linjen som holder merket.
+        </div>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>Makroer</h2>
+        <ul>
+          <li>
+            <kbd>qa</kbd> - ta opp makro a
+          </li>
+          <li>
+            <kbd>q</kbd> - stopp opptak av makro
+          </li>
+          <li>
+            <kbd>@a</kbd> - kjør makro a
+          </li>
+          <li>
+            <kbd>@@</kbd> - kjør siste kjøring makro
+          </li>
+        </ul>
+        <h2>Klipp og lim</h2>
+        <ul>
+          <li>
+            <kbd>yy</kbd> - kopier en linje
+          </li>
+          <li>
+            <kbd>2yy</kbd> - kopier 2 linjer
+          </li>
+          <li>
+            <kbd>yw</kbd> - kopier tegnene i ordet fra markørposisjonen til begynnelsen av neste ord
+          </li>
+          <li>
+            <kbd>yiw</kbd> - kopier ordet under markøren
+          </li>
+          <li>
+            <kbd>yaw</kbd> - kopier ordet under markøren og mellomrommet etter eller før det
+          </li>
+          <li>
+            <kbd>y$</kbd> or <kbd>Y</kbd> - kopier til slutten av linjen
+          </li>
+          <li>
+            <kbd>p</kbd> - lim inn utklippstavlen etter markøren
+          </li>
+          <li>
+            <kbd>P</kbd> - lim inn før markøren
+          </li>
+          <li>
+            <kbd>gp</kbd> - lim inn utklippstavlen etter markøren og la markøren stå etter den nye teksten
+          </li>
+          <li>
+            <kbd>gP</kbd> - lim inn før markøren og la markøren stå etter den nye teksten
+          </li>
+          <li>
+            <kbd>dd</kbd> - slett (klipp ut) en linje
+          </li>
+          <li>
+            <kbd>2dd</kbd> - slett (klipp ut) 2 linjer
+          </li>
+          <li>
+            <kbd>dw</kbd> - slett (klipp ut) tegnene i ordet fra markørposisjonen til begynnelsen av neste ord
+          </li>
+          <li>
+            <kbd>diw</kbd> - slett (klipp ut) ord under markøren
+          </li>
+          <li>
+            <kbd>daw</kbd> - slett (klipp ut) ord under markøren og mellomrommet etter eller før det
+          </li>
+          <li>
+            <kbd>:3,5d</kbd> - delete lines starting from 3 to 5
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> You can also use the following characters to specify the range: <br>
+          e.g. <br>
+          <p>
+            <kbd>:.,$d</kbd> - From the current line to the end of the file <br>
+            <kbd>:.,1d</kbd> - From the current line to the beginning of the file <br>
+            <kbd>:10,1d</kbd> - From the 10th line to the beginning of the file <br>
+          </p>
+        </div>
+        <ul>
+          <li>
+            <kbd>:g/{pattern}/d</kbd> - delete all lines containing pattern
+          </li>
+          <li>
+            <kbd>:g!/{pattern}/d</kbd> - delete all lines not containing pattern
+          </li>
+          <li>
+            <kbd>d$</kbd> or <kbd>D</kbd> - slett (klipp) til slutten av linjen
+          </li>
+          <li>
+            <kbd>x</kbd> - slett (klipp ut) tegn
+          </li>
+        </ul>
+        <h2>Innrykk av tekst</h2>
+        <ul>
+          <li>
+            <kbd>&#62;&#62;</kbd> - rykk inn (flytt til høyre) linje én skiftbredde
+          </li>
+          <li>
+            <kbd>&#60;&#60;</kbd> - fjern innrykk (flytt til venstre) linje én skiftbredde
+          </li>
+          <li>
+            <kbd>&#62;%</kbd> - rykk inn en blokk med () eller {} (markør på klammeparentes)
+          </li>
+          <li>
+            <kbd>&#60;%</kbd> - de-indent a block with () or {} (cursor on brace)
+          </li>
+          <li>
+            <kbd>&#62;ib</kbd> - innrykk indre blokk med ()
+          </li>
+          <li>
+            <kbd>&#62;at</kbd> - rykk inn en blokk med &lt;&gt;-tagger
+          </li>
+          <li>
+            <kbd>3==</kbd> - rykk inn 3 linjer på nytt
+          </li>
+          <li>
+            <kbd>=%</kbd> - re-indent a block with () or {} (cursor on brace)
+          </li>
+          <li>
+            <kbd>=iB</kbd> - rykk inn indre blokk på nytt med {}
+          </li>
+          <li>
+            <kbd>gg=G</kbd> - innrykk hele bufferen på nytt
+          </li>
+          <li>
+            <kbd>]p</kbd> - lim inn og juster innrykk til gjeldende linje
+          </li>
+        </ul>
+        <h2>Avslutt</h2>
+        <ul>
+          <li>
+            <kbd>:w</kbd> - skriv (lagre) filen, men ikke avslutt
+          </li>
+          <li>
+            <kbd>:w !sudo tee %</kbd> - skriv ut gjeldende fil med sudo
+          </li>
+          <li>
+            <kbd>:wq</kbd> or <kbd>:x</kbd> or <kbd>ZZ</kbd> - skriv (lagre) og avslutt
+          </li>
+          <li>
+            <kbd>:q</kbd> - avslutt (mislykkes hvis det er ulagrede endringer)
+          </li>
+          <li>
+            <kbd>:q!</kbd> or <kbd>ZQ</kbd> - avslutt og kast ulagrede endringer
+          </li>
+          <li>
+            <kbd>:wqa</kbd> - skriv (lagre) og avslutt på alle faner
+          </li>
+        </ul>
+        <h2>Søk og erstatt</h2>
+        <ul>
+          <li>
+            <kbd>/pattern</kbd> - søk etter mønster
+          </li>
+          <li>
+            <kbd>?pattern</kbd> - søk bakover etter mønster
+          </li>
+          <li>
+            <kbd>\vpattern</kbd> - &#x27;veldig magisk&#x27; mønster: ikke-alfanumeriske tegn tolkes som spesielle regex-symboler (ingen unnslipping nødvendig)
+          </li>
+          <li>
+            <kbd>n</kbd> - gjenta søk i samme retning
+          </li>
+          <li>
+            <kbd>N</kbd> - gjenta søk i motsatt retning
+          </li>
+          <li>
+            <kbd>:%s/old/new/g</kbd> -
+            erstatt alle gamle med nye gjennom hele filen
+          </li>
+          <li>
+            <kbd>:%s/old/new/gc</kbd> -
+            erstatt alle gamle med nye gjennom hele filen med bekreftelser
+          </li>
+          <li>
+            <kbd>:noh[lsearch]</kbd> - fjern utheving av søketreff
+          </li>
+        </ul>
+        <h2>Søk i flere filer</h2>
+        <ul>
+          <li>
+            <kbd>:vim[grep] /pattern/ {`{file}`}</kbd> -
+            søk etter mønster i flere filer
+          </li>
+        </ul>
+        <div class="well">
+          e.g.
+          <kbd>:vim[grep] /foo/ **/*</kbd>
+        </div>
+        <ul>
+          <li>
+            <kbd>:cn[ext]</kbd> - hopp til neste kamp
+          </li>
+          <li>
+            <kbd>:cp[revious]</kbd> - hopp til forrige kamp
+          </li>
+          <li>
+            <kbd>:cope[n]</kbd> - åpne et vindu som inneholder listen over treff
+          </li>
+          <li>
+            <kbd>:ccl[ose]</kbd> - lukk hurtigreparasjonsvinduet
+          </li>
+        </ul>
+        <h2>Faner</h2>
+        <ul>
+          <li>
+            <kbd>:tabnew</kbd> or <kbd>:tabnew {page.words.file}</kbd> -
+            åpne en fil i en ny fane
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wT</kbd> - flytt det gjeldende delte vinduet til sin egen fane
+          </li>
+          <li>
+            <kbd>gt</kbd> or <kbd>:tabn[ext]</kbd> - flytt til neste fane
+          </li>
+          <li>
+            <kbd>gT</kbd> or <kbd>:tabp[revious]</kbd> - flytt til forrige fane
+          </li>
+          <li>
+            <kbd>#gt</kbd> - flytt til fanenummer #
+          </li>
+          <li>
+            <kbd>:tabm[ove] #</kbd> - flytt gjeldende fane til #. posisjon (indeksert fra 0)
+          </li>
+          <li>
+            <kbd>:tabc[lose]</kbd> - lukk gjeldende fane og alle dens vinduer
+          </li>
+          <li>
+            <kbd>:tabo[nly]</kbd> - lukk alle faner bortsett fra den gjeldende
+          </li>
+          <li>
+            <kbd>:tabdo</kbd> command - kjør <code>kommandoen</code> på alle faner (f.eks. <code>:tabdo q</code> - lukker alle åpne faner)
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-block">
+      <div class="grid-lg-1-2">
+        <h2>Arbeid med flere filer</h2>
+        <ul>
+          <li>
+            <kbd>:e[dit] fil</kbd> - rediger en fil i en ny buffer
+          </li>
+          <li>
+            <kbd>:bn[ext]</kbd> -
+            gå til neste buffer
+          </li>
+          <li>
+            <kbd>:bp[revious]</kbd> -
+            gå til forrige buffer
+          </li>
+          <li>
+            <kbd>:bd[elete]</kbd> - slett en buffer (lukk en fil)
+          </li>
+          <li>
+            <kbd>:b[uffer]#</kbd> - gå til en buffer etter indeks #
+          </li>
+          <li>
+            <kbd>:b[uffer] file</kbd> - gå til en buffer etter fil
+          </li>
+          <li>
+            <kbd>:ls</kbd> or <kbd>:buffers</kbd> - liste opp alle åpne buffere
+          </li>
+          <li>
+            <kbd>:sp[lit] fil</kbd> - åpne en fil i en ny buffer og delt vindu
+          </li>
+          <li>
+            <kbd>:vs[plit] fil</kbd> - åpne en fil i en ny buffer og vertikalt delt vindu
+          </li>
+          <li>
+            <kbd>:vert[ical] ba[ll]</kbd> - rediger alle buffere som vertikale vinduer
+          </li>
+          <li>
+            <kbd>:tab ba[ll]</kbd> - rediger alle buffere som faner
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ws</kbd> - delt vindu
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wv</kbd> - delt vindu vertikalt
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ww</kbd> - bytt vinduer
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wq</kbd> - avslutt et vindu
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wx</kbd> - bytt gjeldende vindu med neste
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w=</kbd> - gjør alle vinduer like høyde og bredde
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wh</kbd> - flytt markøren til venstre vindu (vertikal delt)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wl</kbd> - flytt markøren til høyre vindu (vertikal delt)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wj</kbd> - flytt markøren til vinduet under (horisontal delt)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wk</kbd> - flytt markøren til vinduet over (horisontal delt)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wH</kbd> - gjør gjeldende vindu i full høyde helt til venstre (vertikalt vindu lengst til venstre)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wL</kbd> - gjør gjeldende vindu i full høyde helt til høyre (vertikalt vindu lengst til høyre)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wJ</kbd> - gjør gjeldende vindu i full bredde helt nederst (nederste horisontale vindu)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wK</kbd> - gjør gjeldende vindu i full bredde helt øverst (øverste horisontale vindu)
+          </li>
+        </ul>
+        </ul>
+        </ul>
+        </ul>
+      </div>
+      <div class="grid-lg-1-2">
+        <h2>Diff</h2>
+        <ul>
+          <li>
+            <kbd>zf</kbd> - definer manuelt en fold opp til bevegelse
+          </li>
+          <li>
+            <kbd>zd</kbd> - slett fold under markøren
+          </li>
+          <li>
+            <kbd>za</kbd> - skift fold under markøren
+          </li>
+          <li>
+            <kbd>zo</kbd> - åpne fold under markøren
+          </li>
+          <li>
+            <kbd>zc</kbd> - lukk fold under markøren
+          </li>
+          <li>
+            <kbd>zr</kbd> - reduser (åpne) alle folder med ett nivå
+          </li>
+          <li>
+            <kbd>zm</kbd> - fold mer (lukk) alle folder med ett nivå
+          </li>
+          <li>
+            <kbd>zi</kbd> - bytte brettefunksjonalitet
+          </li>
+          <li>
+            <kbd>]c</kbd> - hopp til starten av neste endring
+          </li>
+          <li>
+            <kbd>[c</kbd> - hopp til starten av forrige endring
+          </li>
+          <li>
+            <kbd>do</kbd> or <kbd>:diffg[et]</kbd> - få (få) forskjell (fra annen buffer)
+          </li>
+          <li>
+            <kbd>dp</kbd> or <kbd>:diffpu[t]</kbd> - sett forskjell (til annen buffer)
+          </li>
+          <li>
+            <kbd>:diffthis</kbd> - gjør gjeldende vindu til en del av diff
+          </li>
+          <li>
+            <kbd>:dif[fupdate]</kbd> - oppdateringsforskjeller
+          </li>
+          <li>
+            <kbd>:diffo[ff]</kbd> - slå av diff-modus for gjeldende vindu
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Kommandoene for bretting (f.eks. <kbd>za</kbd>) fungerer på ett nivå. For å operere på alle nivåer, bruk store bokstaver (f.eks. <kbd>zA</kbd>).
+        </div>
+        <div class="well">
+          <strong>Tip</strong> For å se forskjellene på filer, kan man starte Vim direkte i diff-modus ved å kjøre <kbd>vimdiff</kbd> i en terminal. Man kan til og med sette dette som <kbd>git difftool</kbd>.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+      <div>
+        <div id="footer" class="grid-block">
+          <div class="box">
+            <div class="box-header">
+              <h2>Additional Resources</h2>
+            </div>
+            <div class="box-body">
+              <div class="grid-block">
+                <div class="grid-lg-1-2">
+                  <h3 id="languages">Languages</h3>
+                  <ul>
+                    <li>
+                      <a href="/lang/ar" lang="ar">العربية</a>
+                    </li>
+                    <li>
+                      <a href="/lang/bn" lang="bn">বাংলা</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ca" lang="ca">Català</a>
+                    </li>
+                    <li>
+                      <a href="/lang/cs" lang="cs">Čeština</a>
+                    </li>
+                    <li>
+                      <a href="/lang/da_DK" lang="da">Dansk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/de_de" lang="de">Deutsch</a>
+                    </li>
+                    <li>
+                      <a href="/lang/el_gr" lang="el">Ελληνικά</a>
+                    </li>
+                    <li>
+                      <a href="/lang/en_us" lang="en">English</a>
+                    </li>
+                    <li>
+                      <a href="/lang/eo" lang="eo">Esperanto</a>
+                    </li>
+                    <li>
+                      <a href="/lang/es_es" lang="es">Español</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fa_ir" lang="fa">Persian</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fi" lang="fi">Suomi</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fr_fr" lang="fr">Français</a>
+                    </li>
+                    <li>
+                      <a href="/lang/he" lang="he">עברית</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hr" lang="hr">Hrvatski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hu_hu" lang="hu">Magyar</a>
+                    </li>
+                    <li>
+                      <a href="/lang/id" lang="id">Bahasa Indonesia</a>
+                    </li>
+                    <li>
+                      <a href="/lang/it" lang="it">Italiano</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ja" lang="ja">日本語</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ko" lang="ko">한국어</a>
+                    </li>
+                    <li>
+                      <a href="/lang/my" lang="my">မြန်မာ</a>
+                    </li>
+                    <li>
+                      <a href="/lang/nl_nl" lang="nl">Nederlands</a>
+                    </li>
+                    <li>
+                      <a href="/lang/no_nb" lang="no">Norsk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pl_pl" lang="pl">Polski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_br" lang="pt">Português - Brasil</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_pt" lang="pt">Português - Portugal</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ro" lang="ro">Romana</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ru" lang="ru">Русский</a>
+                    </li>
+                    <li>
+                      <a href="/lang/si_lk" lang="si">සිංහල</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sk" lang="sk">Slovenčina</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sv" lang="sv">Svenska</a>
+                    </li>
+                    <li>
+                      <a href="/lang/th" lang="th">ภาษาไทย</a>
+                    </li>
+                    <li>
+                      <a href="/lang/tr" lang="tr">Türkçe</a>
+                    </li>
+                    <li>
+                      <a href="/lang/uk" lang="uk">Українська</a>
+                    </li>
+                    <li>
+                      <a href="/lang/vi_vn" lang="vi">Tiếng Việt</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_cn" lang="zh">简体中文</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_tw" lang="zh">中文 (台灣)</a>
+                    </li>
+                  </ul>                </div>
+                <div class="grid-lg-1-2">
+                  <h3>About the vim cheat sheet</h3>
+                  <p>
+                    This project aims to be one of the most accessible vim guides available. We
+                    made sure to support mobile, desktop, and other
+                    <a href="#languages" aria-label="Jump to languages section">languages</a>.
+                  </p>
+                  <p>
+                    <a target="_blank" href="https://github.com/sponsors/rtorr" aria-label="Sponsor this project on GitHub">❤️ Please consider sponsoring this
+                      project ❤️</a>!
+                  </p>
+                  <p>
+                    You can read about how to contribute (and help improve) by viewing our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/README.md" target="_blank"
+                      rel="noopener noreferrer" aria-label="Read the README on GitHub">
+                      README
+                    </a>
+                    . There you can see how to set up this project, or how to contribute a new
+                    language. Here is a big thank you to our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/graphs/contributors" target="_blank"
+                      rel="noopener noreferrer" aria-label="View project contributors on GitHub">
+                      contributors!
+                    </a>
+                  </p>
+                  <p>
+                    This project is licensed under
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/License.txt" target="_blank"
+                      rel="noopener noreferrer" aria-label="View the MIT License for this project">
+                      The MIT License (MIT)
+                    </a>
+                    .
+                  </p>
+                  <h3>Other places to find this document</h3>
+                  <p>
+                    This document was embedded in
+                    <a href="https://duckduckgo.com/?q=vim+cheat+sheet" target="_blank" rel="noopener noreferrer" aria-label="Search for this document on DuckDuckGo">
+                      DuckDuckGo
+                    </a>
+                    .
+                  </p>
+                  <h3>More resources</h3>
+                  <p>
+                    Interactive Vim tutorial:
+                    <a href="https://openvim.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Open Vim for an interactive Vim tutorial">
+                      Open Vim
+                    </a>
+                  </p>
+                  <p>
+                    Vim quick reference from Vim help pages:
+                    <a href="https://vimhelp.org/quickref.txt.html" target="_blank" rel="noopener noreferrer" aria-label="Access Vim quick reference"> 
+                      quickref.txt
+                    </a>
+                  </p>
+                  <p>
+                    List of all Vim ex (<kbd>:</kbd>) commands:
+                    <a href="https://vimhelp.org/index.txt.html#ex-cmd-index" target="_blank" rel="noopener noreferrer" aria-label="View list of all Vim ex commands">
+                      ex-cmd-index
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-block link-to-repo">
+          <p>
+            Checkout the source on
+            <a href="https://github.com/rtorr/vim-cheat-sheet" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+          </p>
+          <p>version: 3.2.0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.CACHE_NAME = "3.2.0";
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/javascripts/sw.js?version=3.2.0');
+      });
+    }
+  </script>
+</body>
+
+</html>

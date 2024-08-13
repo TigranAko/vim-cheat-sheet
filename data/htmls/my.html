@@ -1,0 +1,1080 @@
+<!DOCTYPE html>
+<html lang="my">
+
+<head>
+  <meta charSet="utf-8" />
+  <meta http-equiv="x-ua-compatible" content="ie=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Vim Cheat Sheet</title>
+  <link rel="shortcut icon" href="/images/icons/icon-48x48.png" />
+  <link rel="manifest" href="/manifest.webmanifest" />
+  <meta name="theme-color" content="#FA4949" />
+  <meta http-equiv="cache-control" content="max-age=600" />
+  <meta name="description" content="Explore vim.rtorr.com for an extensive Vim cheat sheet, offering clear, concise commands and shortcuts for Vim users. Whether you're a beginner or an experienced developer, find tips and tricks to enhance your coding efficiency in Vim.">
+  <link rel="apple-touch-icon" sizes="48x48" href="/images/icons/icon-48x48.png" />
+  <link rel="apple-touch-icon" sizes="72x72" href="/images/icons/icon-72x72.png" />
+  <link rel="apple-touch-icon" sizes="96x96" href="/images/icons/icon-96x96.png" />
+  <link rel="apple-touch-icon" sizes="144x144" href="/images/icons/icon-144x144.png" />
+  <link rel="apple-touch-icon" sizes="192x192" href="/images/icons/icon-192x192.png" />
+  <link rel="apple-touch-icon" sizes="256x256" href="/images/icons/icon-256x256.png" />
+  <link rel="apple-touch-icon" sizes="384x384" href="/images/icons/icon-384x384.png" />
+  <link rel="apple-touch-icon" sizes="512x512" href="/images/icons/icon-512x512.png" />
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
+
+<body>
+  <div class="sponsor">
+    <div class="container">
+      <span>
+        <a target="_blank" href="https://www.warp.dev">
+          <div class="sponsor-logo-container">
+            <span>Sponsor</span>
+            <img class="sponsor-logo" src="/images/svg/warp-logo.svg" alt="Warp logo">
+          </div>
+          <div class="sponsor-tagline"><span>A new terminal focused on developer productivity</span></div>
+      </span>
+      </a>
+    </div>
+  </div>
+  <div class="container">
+    <div class="grid-block">
+      <div class="grid-1">
+        <h1>
+          <a class="site-title" href="/">
+            Vim Cheat Sheet
+          </a>
+        </h1>
+      </div>
+    </div>
+    <div class="container">
+      <main><div class="container">
+  <div class="commands-container">
+    <div class="grid-block">
+      <div class="grid-lg-1-3">
+        <h2>Global</h2>
+        <ul>
+          <li>
+            <kbd>:h[elp] keyword</kbd> - ရှာလိုသော keyword အတွက် help ဖွင့်သည် 
+          </li>
+          <li>
+            <kbd>:sav[eas] file</kbd> - ဖိုင်အသစ် save သည်
+          </li>
+          <li>
+            <kbd>:clo[se]</kbd> - လက်ရှိ window ကိုပိတ်သည်
+          </li>
+          <li>
+            <kbd>:ter[minal]</kbd> - terminal window ဖွင့်သည်
+          </li>
+          <li>
+            <kbd>K</kbd> - cursor ထောက်ထားသော စာလုံးသည် vim command ဖြစ်ခဲ့သော် ထိုစာလုံးနှင့်သက်ဆိုင်သော help file ကိုဖွင့်သည်
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Run <kbd>vimtutor</kbd> in a terminal to learn the first Vim commands.
+        </div>
+        <h2>Cursor ရွှေ့ခြင်း</h2>
+        <ul>
+          <li>
+            <kbd>h</kbd> - ဘယ်ဘက်သို့ cursor တစ်ချက်ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>j</kbd> - အောက်သို့ cursor တစ်ချက်ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>k</kbd> - အပေါ်သို့ cursor တစ်ချက်ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>l</kbd> - ညာဘက်သို့ cursor တစ်ချက်ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>gj</kbd> - move cursor down (multi-line text)
+          </li>
+          <li>
+            <kbd>gk</kbd> - move cursor up (multi-line text)
+          </li>
+          <li>
+            <kbd>H</kbd> - screen ၏ထိပ်ဆုံးသို့ ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>M</kbd> - screen ၏အလယ်သို့ ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>L</kbd> - screen ၏အောက်ဆုံးသို့ ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>w</kbd> - နောက်စာလုံးတစ်လုံး၏ ထိပ်ဆုံးအက္ခရာသို့ ရွှေ့သည် (punctuation များကို စာလုံးတစ်လုံးအနေနှင့် ထည့်တွက်သည်)
+          </li>
+          <li>
+            <kbd>W</kbd> - နောက်စာလုံးတစ်လုံး၏ ထိပ်ဆုံးအက္ခရာသို့ ရွှေ့သည် (စာလုံး + punctuations ကို စာလုံးတစ်လုံးအနေနှင့် ထည့်တွက်သည်)
+          </li>
+          <li>
+            <kbd>e</kbd> - နောက်စာလုံးတစ်လုံး၏ နောက်ဆုံးအက္ခရာသို့ ရွှေ့သည် (punctuation များကို စာလုံးတစ်လုံးအနေနှင့် ထည့်တွက်သည်)
+          </li>
+          <li>
+            <kbd>E</kbd> - နောက်စာလုံးတစ်လုံး၏ နောက်ဆုံးအက္ခရာသို့ ရွှေ့သည် (စာလုံး + punctuations ကို စာလုံးတစ်လုံးအနေနှင့် ထည့်တွက်သည်)
+          </li>
+          <li>
+            <kbd>b</kbd> - ရှေ့စာလုံးတစ်လုံး၏ ထိပ်ဆုံးအက္ခရာသို့ ရွှေ့သည် (punctuation များကို စာလုံးတစ်လုံးအနေနှင့် ထည့်တွက်သည်)
+          </li>
+          <li>
+            <kbd>B</kbd> - ရှေ့စာလုံးတစ်လုံး၏ ထိပ်ဆုံးအက္ခရာသို့ ရွှေ့သည် (စာလုံး + punctuations ကို စာလုံးတစ်လုံးအနေနှင့် ထည့်တွက်သည်)
+          </li>
+          <li>
+            <kbd>ge</kbd> - ရှေ့စာလုံးတစ်လုံး၏ နောက်ဆုံးအက္ခရာသို့ ရွှေ့သည် (punctuation များကို စာလုံးတစ်လုံးအနေနှင့် ထည့်တွက်သည်)
+          </li>
+          <li>
+            <kbd>gE</kbd> - ရှေ့စာလုံးတစ်လုံး၏ နောက်ဆုံးအက္ခရာသို့ ရွှေ့သည် (စာလုံး + punctuations ကို စာလုံးတစ်လုံးအနေနှင့် ထည့်တွက်သည်)
+          </li>
+          <li>
+            <kbd>%</kbd> - သက်ဆိုင်ရာ character သို့ cursor ရွှေ့သည် (default supported pairs: '()', '{}', '[]' - use <code>:h matchpairs</code> in vim for more info)
+          </li>
+          <li>
+            <kbd>0</kbd> - စာကြောင်းတစ်ကြောင်း၏ အရှေ့ဆုံး သို့ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>^</kbd> - စာကြောင်းတစ်ကြောင်း၏ ပထမဆုံး non-blank character သို့ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>$</kbd> - စာကြောင်းတစ်ကြောင်း၏ အနောက်ဆုံး သို့ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>g_</kbd> - စာကြောင်းတစ်ကြောင်း၏ နောက်ဆုံး non-blank character သို့ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>gg</kbd> - document တစ်ခု၏ ထိပ်ဆုံးစာကြောင်း သို့ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>G</kbd> - document တစ်ခု၏ နောက်ဆုံးစာကြောင်း သို့ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>5gg</kbd> or <kbd>5G</kbd> - line နံပါတ် ၅ သို့ရွှေ့သည်(၅ အစား ကြိုက်ရာဂဏန်း အသုံးပြုနိုင်သည်)
+          </li>
+          <li>
+            <kbd>gd</kbd> - move to local declaration
+          </li>
+          <li>
+            <kbd>gD</kbd> - move to global declaration
+          </li>
+          <li>
+            <kbd>fx</kbd> - cursor ၏အနောက်ပိုင်းတွင် character x ကိုရှာပြီး x မရောက်ခင် ရှေ့အက္ခရာသို့ cursor ရွှေ့သည် (x အစား ရှာလိုရာစကားလုံး ထည့်နိုင်သည်)
+          </li>
+          <li>
+            <kbd>tx</kbd> - cursor  ၏အနောက်ပိုင်းတွင် character x ကိုရှာပြီး x ၏နောက်အက္ခရာသို့ cursor ရွှေ့သည် (x အစား ရှာလိုရာစကားလုံး ထည့်နိုင်သည်)
+          </li>
+          <li>
+            <kbd>Fx</kbd> - cursor ၏အရှေ့ပိုင်းတွင် character x ကိုရှာပြီး x မရောက်ခင် ရှေ့အက္ခရာသို့ cursor ရွှေ့သည် (x အစား ရှာလိုရာစကားလုံး ထည့်နိုင်သည်)
+          </li>
+          <li>
+            <kbd>Tx</kbd> - cursor  ၏အရှေ့ပိုင်းတွင် character x ကိုရှာပြီး x ၏နောက်အက္ခရာသို့ cursor ရွှေ့သည် (x အစား ရှာလိုရာစကားလုံး ထည့်နိုင်သည်)
+          </li>
+          <li>
+            <kbd>;</kbd> - f, t, F or T movement ကိုပြန်သုံးသည်
+          </li>
+          <li>
+            <kbd>,</kbd> - f, t, F or T movement ကိုပြန်သုံးသည် (backwards)
+          </li>
+          <li>
+            <kbd>}</kbd> - နောက် paragraph သို့ cursor ကိုရွှေ့သည် (or function/block, when editing code)
+          </li>
+          <li>
+            <kbd>{</kbd> - ရှေ့ paragraph သို့ cursor ကိုရွှေ့သည် (or function/block, when editing code)
+          </li>
+          <li>
+            <kbd>zz</kbd> - cursor ကို screen ၏အလယ်သို့ ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>zt</kbd> - position cursor on top of the screen
+          </li>
+          <li>
+            <kbd>zb</kbd> - position cursor on bottom of the screen
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>e</kbd> - cursor မရွှေ့ဘဲ screen ကိုအောက်တစ်ကြောင်း ဆင်းသည်
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>y</kbd> - cursor မရွှေ့ဘဲ screen ကိုအပေါ်တစ်ကြောင်း တက်သည်
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>b</kbd> - screen တစ်ခုစာ အပေါ်တက်သည်
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>f</kbd> - screen တစ်ခုစာ အောက်ဆင်းသည်
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - screen တစ်ဝက်စာ အောက်ဆင်းသည်
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>u</kbd> - screen တစ်ဝက်စာ အပေါ်တက်သည်
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong>
+          Prefix a cursor movement command with a number to repeat it. For example, <kbd>4j</kbd> moves down 4 lines.
+        </div>
+        <h2>Insert mode - စာရိုက်ခြင်း</h2>
+        <ul>
+          <li>
+            <kbd>i</kbd> - cursor ၏ ရှေ့တစ်နေရာတွင် insert mode ပြောင်းသည်
+          </li>
+          <li>
+            <kbd>I</kbd> - လက်ရှိစာကြောင်း၏ ရှေ့ဆုံးတွင် insert mode ပြောင်းသည်
+          </li>
+          <li>
+            <kbd>a</kbd> - cursor ၏နောက်အက္ခရာတွင် insert mode ပြောင်းသည်
+          </li>
+          <li>
+            <kbd>A</kbd> - လက်ရှိစာကြောင်း၏ နောက်ဆုံးတွင် insert mode ပြောင်းသည်
+          </li>
+          <li>
+            <kbd>o</kbd> - လက်ရှိစာကြောင်း၏ အောက်တစ်ကြောင်းသို့ ဆင်း၍ insert mode ပြောင်းသည်
+          </li>
+          <li>
+            <kbd>O</kbd> - လက်ရှိစာကြောင်း၏ အပေါ်တစ်ကြောင်းသို့ တက်၍ insert mode ပြောင်းသည်
+          </li>
+          <li>
+            <kbd>ea</kbd> - စကားလုံးတစ်လုံး၏‌ နောက်အက္ခရာတွင် insert mode ပြောင်းသည်
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>h</kbd> - insert mode ပြောင်းထားချိန်တွင် cursor ၏ ရှေ့အက္ခရာတစ်လုံးကို ဖျက်သည်
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w</kbd> - insert mode ပြောင်းထားချိန်တွင် cursor ၏ ရှေ့စာလုံးတစ်လုံးကို ဖျက်သည်
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>j</kbd> - insert mode ပြောင်းထားချိန်တွင် စာကြောင်းအသစ်ယူသည်
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>t</kbd> - insert mode ပြောင်းထားချိန်တွင် ညာဘက်သို့ Tab တစ်ခု ခုန်သည်
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>d</kbd> - insert mode ပြောင်းထားချိန်တွင် ဘယ်ဘက်သို့ Tab တစ်ခု ဆုတ်သည်
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>n</kbd> - insert (auto-complete) next match before the cursor during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>p</kbd> - insert (auto-complete) previous match before the cursor during insert mode
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>rx</kbd> - register x မှ contents များကိုထည့်သည်
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ox</kbd> - Temporarily enter normal mode to issue one normal-mode command x.
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - insert mode မှထွက်သည်
+          </li>
+        </ul>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>စာပြင်ခြင်း</h2>
+        <ul>
+          <li>
+            <kbd>r</kbd> - အက္ခရာတစ်လုံး အစားထိုးသည်
+          </li>
+          <li>
+            <kbd>R</kbd> - replace more than one character, until <kbd>ESC</kbd> is pressed.
+          </li>
+          <li>
+            <kbd>J</kbd> - စာတစ်ကြောင်းလုံးကို အပေါ်တစ်ကြောင်းသို့ တင်သည်
+          </li>
+          <li>
+            <kbd>gJ</kbd> - စာတစ်ကြောင်းလုံးကို အောက်တစ်ကြောင်းသို့ ဆင်းသည်
+          </li>
+          <li>
+            <kbd>gwip</kbd> - reflow paragraph
+          </li>
+          <li>
+            <kbd>g~</kbd> - switch case up to motion
+          </li>
+          <li>
+            <kbd>gu</kbd> - Lowercase ပြောင်းသည်
+          </li>
+          <li>
+            <kbd>gU</kbd> - Uppercase ပြောင်းသည်
+          </li>
+          <li>
+            <kbd>cc</kbd> - စာကြောင်းတစ်ကြောင်းလုံး ဖျက်၍ အသစ်ပြင်သည်
+          </li>
+          <li>
+            <kbd>c$</kbd> or <kbd>C</kbd> - စာကြောင်း၏ နောက်ဆုံးနေရာတွင် ပြင်သည်(C နှင့် လုပ်ဆောင်ပုံ တူညီသည်)
+          </li>
+          <li>
+            <kbd>ciw</kbd> - စကားလုံး တစ်လုံးစာပြင်သည်
+          </li>
+          <li>
+            <kbd>cw</kbd> or <kbd>ce</kbd> - စကားလုံး၏ နောက်ဆုံးအက္ခရာ ၏အနောက်တွင် insert mode ပြောင်းသည်
+          </li>
+          <li>
+            <kbd>s</kbd> - စကားလုံးတစ်လုံးစာ ဖျက်၍ အသစ်အစားထိုးသည်
+          </li>
+          <li>
+            <kbd>S</kbd> - တစ်ကြောင်းလုံး ဖျက်၍ အသစ်ပြင်သည်(cc နှင့် လုပ်ဆောင်ပုံ တူညီသည်)
+          </li>
+          <li>
+            <kbd>xp</kbd> - အက္ခရာ နှစ်ခုကို ရှေ့နောက်ပြောင်းသည်
+          </li>
+          <li>
+            <kbd>u</kbd> - undo
+          </li>
+          <li>
+            <kbd>U</kbd> - restore (undo) last changed line
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>r</kbd> - redo
+          </li>
+          <li>
+            <kbd>.</kbd> - နောက်ဆုံးလုပ်ဆောင်ခဲ့သော command ကိုပြန်လည်လုပ်ဆောင်သည်
+          </li>
+        </ul>
+        <h2>စာလုံးများကို select မှတ်ခြင်း (visual mode)</h2>
+        <ul>
+          <li>
+            <kbd>v</kbd> - visual mode သို့ပြောင်းသည်
+          </li>
+          <li>
+            <kbd>V</kbd> - visual mode သို့ပြောင်းပြီး cursor ရှိရာ စာကြောင်းတစ်ကြောင်းလုံး select မှတ်သည်
+          </li>
+          <li>
+            <kbd>o</kbd> - cursor အား select မှတ်ထားသော စာပိုဒ်၏ ထိပ်ဆုံး (သို့) နောက်ဆုံး သို့ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>v</kbd> - visualသို့ရွှေ့သည်ပြောင်းသည်
+          </li>
+          <li>
+            <kbd>O</kbd> - move to other corner of block
+          </li>
+          <li>
+            <kbd>aw</kbd> - စာလုံးတစ်လုံးစာ select မှတ်သည်
+          </li>
+          <li>
+            <kbd>ab</kbd> - () တစ်ခုလုံးကို select မှတ်သည်
+          </li>
+          <li>
+            <kbd>aB</kbd> - {} တစ်ခုလုံးကို select မှတ်သည်
+          </li>
+          <li>
+            <kbd>at</kbd> - &lt;&gt; တစ်ခုလုံးကို select မှတ်သည်
+          </li>
+          <li>
+            <kbd>ib</kbd> - () အတွင်းရှိစာများကို select မှတ်သည်
+          </li>
+          <li>
+            <kbd>iB</kbd> - {} အတွင်းရှိစာများကို select မှတ်သည်
+          </li>
+          <li>
+            <kbd>it</kbd> - &lt;&gt; အတွင်းရှိစာများကို select မှတ်သည်
+          </li>
+          <li>
+            <kbd>Esc</kbd> or <kbd>Ctrl</kbd> + <kbd>c</kbd> - visual mode မှထွက်သည်
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Instead of <kbd>b</kbd> or <kbd>B</kbd> one can also use <kbd>(</kbd> or <kbd>{</kbd> respectively.
+        </div>
+        <h2>Visual commands</h2>
+        <ul>
+          <li>
+            <kbd>&#62;</kbd> - visual mode တွင် မှတ်ထားသော စာများကို ညာဘက်သို့ ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>&#60;</kbd> - visual mode တွင် မှတ်ထားသော စာများကို ဘယ်ဘက်သို့ ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>y</kbd> - visual mode တွင် မှတ်ထားသော စာများကို copy လုပ်သည်
+          </li>
+          <li>
+            <kbd>d</kbd> - visual mode တွင် မှတ်ထားသော စာများကို ဖျက်သည်
+          </li>
+          <li>
+            <kbd>~</kbd> - switch case
+          </li>
+          <li>
+            <kbd>u</kbd> - မှတ်ထားသော စာများကို lowercase ပြောင်းသည်
+          </li>
+          <li>
+            <kbd>U</kbd> - မှတ်ထားသော စာများကို uppercase ပြောင်းသည်
+          </li>
+        </ul>
+        <h2>Registers</h2>
+        <ul>
+          <li>
+            <kbd>:reg[isters]</kbd> - registers content များကိုပြသည် 
+          </li>
+          <li>
+            <kbd>"xy</kbd> - register x ထဲသို့ yank (copy) လုပ်သည်
+          </li>
+          <li>
+            <kbd>"xp</kbd> - register x မှ contents များကို paste သည်
+          </li>
+          <li>
+            <kbd>"+y</kbd> - system clipboard register ထဲသို့ yank (copy) လုပ်သည်
+          </li>
+          <li>
+            <kbd>"+p</kbd> - system clipboard register မှ contents များကို paste သည်
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> Registers are being stored in ~/.viminfo, and will be loaded again on next restart of vim.
+        </div>
+        <div class="well">
+          <strong>Tip</strong> Special registers:
+          <p>
+            &emsp;<kbd>0</kbd> - last yank<br/>
+            &emsp;<kbd>&quot;</kbd> - unnamed register, last delete or yank<br/>
+            &emsp;<kbd>%</kbd> - current file name<br/>
+            &emsp;<kbd>#</kbd> - alternate file name<br/>
+            &emsp;<kbd>*</kbd> - clipboard contents (X11 primary)<br/>
+            &emsp;<kbd>+</kbd> - clipboard contents (X11 clipboard)<br/>
+            &emsp;<kbd>/</kbd> - last search pattern<br/>
+            &emsp;<kbd>:</kbd> - last command-line<br/>
+            &emsp;<kbd>.</kbd> - last inserted text<br/>
+            &emsp;<kbd>-</kbd> - last small (less than a line) delete<br/>
+            &emsp;<kbd>=</kbd> - expression register<br/>
+            &emsp;<kbd>_</kbd> - black hole register<br/>
+          </p>
+        </div>
+        <h2>Marks and positions</h2>
+        <ul>
+          <li>
+            <kbd>:marks</kbd> - list of marks
+          </li>
+          <li>
+            <kbd>ma</kbd> - အမှတ် A ၏ တည်နေရာကို သတ်မှတ်သည်
+          </li>
+          <li>
+            <kbd>`a</kbd> - cursor ကို အမှတ် A ရှိရာသို့ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>y`a</kbd> -  လက်ရှိ cursor ရှိရာနေရာမှ အမှတ် A ရှိရာနေရာထိ yank(copy) လုပ်သည်
+          </li>
+          <li>
+            <kbd>`0</kbd> - go to the position where Vim was previously exited
+          </li>
+          <li>
+            <kbd>`"</kbd> - လက်ရှိဖိုင်၏ နောက်ဆုံးပြင်ခဲ့သော နေရာသို့ cursor အား ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>`.</kbd> - go to the position of the last change in this file
+          </li>
+          <li>
+            <kbd>``</kbd> - go to the position before the last jump
+          </li>
+          <li>
+            <kbd>:ju[mps]</kbd> - list of jumps
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>i</kbd> - go to newer position in jump list
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>o</kbd> - go to older position in jump list
+          </li>
+          <li>
+            <kbd>:changes</kbd> - list of changes
+          </li>
+          <li>
+            <kbd>g,</kbd> - go to newer position in change list
+          </li>
+          <li>
+            <kbd>g;</kbd> - go to older position in change list
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>]</kbd> - jump to the tag under cursor
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> To jump to a mark you can either use a backtick (<kbd>`</kbd>) or an apostrophe (<kbd>'</kbd>). Using an apostrophe jumps to the beginning (first non-blank) of the line holding the mark.
+        </div>
+      </div>
+      <div class="grid-lg-1-3">
+        <h2>Macros</h2>
+        <ul>
+          <li>
+            <kbd>qa</kbd> - macro a ကို record စလုပ်သည်
+          </li>
+          <li>
+            <kbd>q</kbd> - record ရပ်သည်
+          </li>
+          <li>
+            <kbd>@a</kbd> - macro a ကို run သည်
+          </li>
+          <li>
+            <kbd>@@</kbd> - နောက်ဆုံး run ခဲ့သော macro ကိုပြန် run သည်
+          </li>
+        </ul>
+        <h2>Cut and paste</h2>
+        <ul>
+          <li>
+            <kbd>yy</kbd> -  စာကြောင်းတစ်ကြောင်းစာ yank (copy) သည် 
+          </li>
+          <li>
+            <kbd>2yy</kbd> - စာကြောင်းနှစ်ကြောင်းစာ yank (copy) သည်
+          </li>
+          <li>
+            <kbd>yw</kbd> - cursor ရှိရာ စကားလုံးမှစ၍ စာလုံး၏ နောက်ဆုံး အက္ခရာအထိ yank (copy) လုပ်သည်
+          </li>
+          <li>
+            <kbd>yiw</kbd> - cursor  ရှိရာ စကားလုံးတစ်ခုလုံးကို yank (copy) လုပ်သည်
+          </li>
+          <li>
+            <kbd>yaw</kbd> - cursor  ရှိရာ စကားလုံးတစ်ခုလုံးကို yank (copy) လုပ်၍ cursor ကို ထိပ်ဆုံးအက္ခရာသို့ ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>y$</kbd> or <kbd>Y</kbd> - cursor ရှိရာ စကားလုံးမှစ၍ စာကြောင်း၏ နောက်ဆုံး အက္ခရာအထိ yank (copy) လုပ်သည် 
+          </li>
+          <li>
+            <kbd>p</kbd> - cursor ထောက်ထားသောအက္ခရာ၏ နောက်တစ်နေရာတွင် put (paste) လုပ်သည်
+          </li>
+          <li>
+            <kbd>P</kbd> - cursor ထောက်ထားသောအက္ခရာ၏ ရှေ့တစ်နေရာတွင် put (paste) လုပ်သည်
+          </li>
+          <li>
+            <kbd>gp</kbd> - put (paste) the clipboard after cursor and leave cursor after the new text
+          </li>
+          <li>
+            <kbd>gP</kbd> - put (paste) before cursor and leave cursor after the new text
+          </li>
+          <li>
+            <kbd>dd</kbd> - စာကြောင်းတစ်ကြောင်းကို delete (cut) သည် 
+          </li>
+          <li>
+            <kbd>2dd</kbd> - စာကြောင်းနှစ်ကြောင်းကို delete (cut) သည်
+          </li>
+          <li>
+            <kbd>dw</kbd> - cursor ရှိရာ စကားလုံးမှစ၍ နောက်စာလုံး၏ ရှေ့ဆုံးအက္ခရာအထိ delete (cut) သည်
+          </li>
+          <li>
+            <kbd>diw</kbd> - cursor  ရှိရာ စကားလုံးတစ်ခုလုံးကို delete (cut) လုပ်သည်
+          </li>
+          <li>
+            <kbd>daw</kbd> - cursor  ရှိရာ စကားလုံးတစ်ခုလုံးကို delete (cut) လုပ်၍ cursor ကို ထိပ်ဆုံးအက္ခရာသို့ ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>:3,5d</kbd> - delete lines starting from 3 to 5
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> You can also use the following characters to specify the range: <br>
+          e.g. <br>
+          <p>
+            <kbd>:.,$d</kbd> - From the current line to the end of the file <br>
+            <kbd>:.,1d</kbd> - From the current line to the beginning of the file <br>
+            <kbd>:10,1d</kbd> - From the 10th line to the beginning of the file <br>
+          </p>
+        </div>
+        <ul>
+          <li>
+            <kbd>:g/{pattern}/d</kbd> - delete all lines containing pattern
+          </li>
+          <li>
+            <kbd>:g!/{pattern}/d</kbd> - delete all lines not containing pattern
+          </li>
+          <li>
+            <kbd>d$</kbd> or <kbd>D</kbd> - cursor ရှိရာ စကားလုံးမှစ၍ စာကြောင်း၏ နောက်ဆုံး အက္ခရာအထိ delete (cut) လုပ်သည်
+          </li>
+          <li>
+            <kbd>x</kbd> - အက္ခရာ တစ်လုံးစာ delete (cut) လုပ်သည်
+          </li>
+        </ul>
+        <h2>Indent text</h2>
+        <ul>
+          <li>
+            <kbd>&#62;&#62;</kbd> - စာကြောင်းကို ညာဘက်သို့ shiftwidth တစ်ခုစာ ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>&#60;&#60;</kbd> - စာကြောင်းကို ဘယ်ဘက်သို့ shiftwidth တစ်ခုစာ ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>&#62;%</kbd> -  cursor ထောက်ထားသော () (သို့) {} block တစ်ခုလုံးစာကို ညာဘက်သို့ shiftwidth တစ်ခုစာ ရွှေ့သည် 
+          </li>
+          <li>
+            <kbd>&#60;%</kbd> - de-indent a block with () or {} (cursor on brace)
+          </li>
+          <li>
+            <kbd>&#62;ib</kbd> - cursor ထောက်ထားသော () အတွင်းရှိစာများကို ညာဘက်သို့ shiftwidth တစ်ခုစာ ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>&#62;at</kbd> - cursor ထောက်ထားသော &lt;&gt; block တစ်ခုလုံးစာကို ညာဘက်သို့ shiftwidth တစ်ခုစာ ရွှေ့သည်
+          </li>
+          <li>
+            <kbd>3==</kbd> - re-indent 3 lines
+          </li>
+          <li>
+            <kbd>=%</kbd> - re-indent a block with () or {} (cursor on brace)
+          </li>
+          <li>
+            <kbd>=iB</kbd> - re-indent inner block with {}
+          </li>
+          <li>
+            <kbd>gg=G</kbd> - re-indent entire buffer
+          </li>
+          <li>
+            <kbd>]p</kbd> - paste and adjust indent to current line
+          </li>
+        </ul>
+        <h2>VIM မှထွက်ခြင်း</h2>
+        <ul>
+          <li>
+            <kbd>:w</kbd> - လက်ရှိဖိုင် ကို write (save) သည် (VIM မှမထွက်ပါ)
+          </li>
+          <li>
+            <kbd>:w !sudo tee %</kbd> - လက်ရှိဖိုင် ကို sudo (with admin privileges)  ဖြင့် write (save) သည်
+          </li>
+          <li>
+            <kbd>:wq</kbd> or <kbd>:x</kbd> or <kbd>ZZ</kbd> - လက်ရှိဖိုင် ကို write (save) ပြီး VIM မှထွက်သည်
+          </li>
+          <li>
+            <kbd>:q</kbd> - VIM မှထွက်သည် (save မလုပ်လျှင် ထွက်၍မရပါ)
+          </li>
+          <li>
+            <kbd>:q!</kbd> or <kbd>ZQ</kbd> - save မလုပ်ဘဲ VIM မှထွက်သည်
+          </li>
+          <li>
+            <kbd>:wqa</kbd> - save လုပ်ပြီး tabs အကုန်ပိတ်သည်
+          </li>
+        </ul>
+        <h2>Search and replace</h2>
+        <ul>
+          <li>
+            <kbd>/pattern</kbd> - ဖိုင်ထဲတွင် pattern ကိုရှာသည် (forward)
+          </li>
+          <li>
+            <kbd>?pattern</kbd> - ဖိုင်ထဲတွင် pattern ကိုရှာသည် (backward)
+          </li>
+          <li>
+            <kbd>\vpattern</kbd> - &#x27;very magic&#x27; pattern: non-alphanumeric characters are interpreted as special regex symbols (no escaping needed)
+          </li>
+          <li>
+            <kbd>n</kbd> - ရှေ့ဘက်သို့ဆက်၍ တူညီသော ရှာဖွေမှုကို ထပ်မံပြုလုပ်သည်
+          </li>
+          <li>
+            <kbd>N</kbd> - နောက်သို့ပြန်၍ တူညီသော ရှာဖွေမှုကို ထပ်မံပြုလုပ်သည်
+          </li>
+          <li>
+            <kbd>:%s/old/new/g</kbd> -
+            ဖိုင်တစ်ခုလုံးတွင် ရှာလိုသောစကားလုံးအားလုံး ကိုရှာ၍ စကားလုံးအသစ်ဖြင့် အစားထိုးသည်( &#x27;old&#x27; နေရာတွင် ရှာလိုသော စကားလုံးထည့်၍ &#x27;new&#x27; နေရာတွင်အစားထိုးလိုသောစကားလုံးကိုထည့်ရမည်)
+          </li>
+          <li>
+            <kbd>:%s/old/new/gc</kbd> -
+            ဖိုင်တစ်ခုလုံးတွင် ရှာလိုသောစကားလုံးအားလုံး ကိုရှာ၍ စကားလုံးအသစ်ဖြင့် အစားထိုးသည်( အစားမထိုးခင် ရှာတွေ့ထားသောစာလုံးတစ်လုံးချင်းစီကို အစားထိုးမည် မထိုးမည် ကို confirm အရင်လုပ်သည်)
+          </li>
+          <li>
+            <kbd>:noh[lsearch]</kbd> - ရှာတွေ့ထားသော စကားလုံးများကို highlight ပြန်ဖျောက်သည်
+          </li>
+        </ul>
+        <h2>Search in multiple files</h2>
+        <ul>
+          <li>
+            <kbd>:vim[grep] /pattern/ {`{file}`}</kbd> -
+            ရှာလိုသော pattern ကို ဖိုင်များတွင် ရှာသည်
+          </li>
+        </ul>
+        <div class="well">
+          e.g.
+          <kbd>:vim[grep] /foo/ **/*</kbd>
+        </div>
+        <ul>
+          <li>
+            <kbd>:cn[ext]</kbd> - jump to the next match
+          </li>
+          <li>
+            <kbd>:cp[revious]</kbd> - jump to the previous match
+          </li>
+          <li>
+            <kbd>:cope[n]</kbd> - ရှာတွေ့ထားသမျှ list ကို windows အသစ်ဖြင့်ကြည့်သည်
+          </li>
+          <li>
+            <kbd>:ccl[ose]</kbd> - quickfix window ပြန်ပိတ်သည်
+          </li>
+        </ul>
+        <h2>Tabs</h2>
+        <ul>
+          <li>
+            <kbd>:tabnew</kbd> or <kbd>:tabnew {page.words.file}</kbd> -
+            Tab အသစ်ယူ၍ ဖိုင်ဖွင့်သည်
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wT</kbd> - move the current split window into its own tab
+          </li>
+          <li>
+            <kbd>gt</kbd> or <kbd>:tabn[ext]</kbd> - ညာဘက် tab သို့သွားသည်
+          </li>
+          <li>
+            <kbd>gT</kbd> or <kbd>:tabp[revious]</kbd> - ဘယ်ဘက် tab သို့သွားသည်
+          </li>
+          <li>
+            <kbd>#gt</kbd> - Tab number # သို့သွားသည်
+          </li>
+          <li>
+            <kbd>:tabm[ove] #</kbd> - လက်ရှိ tab ကို #th position သိုရွှေ့သည် (tab number သည် သုညမှ စသည်)
+          </li>
+          <li>
+            <kbd>:tabc[lose]</kbd> - လက်ရှိ tab ကိုပိတ်သည်
+          </li>
+          <li>
+            <kbd>:tabo[nly]</kbd> - လက်ရှိ tab မှလွဲ၍ ကျန် tab အားလုံးကိုပိတ်သည်
+          </li>
+          <li>
+            <kbd>:tabdo</kbd> command - run the <code>command</code> on all tabs (e.g. <code>:tabdo q</code> - closes all opened tabs)
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="grid-block">
+      <div class="grid-lg-1-2">
+        <h2>Working with multiple files</h2>
+        <ul>
+          <li>
+            <kbd>:e[dit] file</kbd> - edit a file in a new buffer
+          </li>
+          <li>
+            <kbd>:bn[ext]</kbd> -
+            go to the next buffer
+          </li>
+          <li>
+            <kbd>:bp[revious]</kbd> -
+            go to the previous buffer
+          </li>
+          <li>
+            <kbd>:bd[elete]</kbd> - delete a buffer (close a file)
+          </li>
+          <li>
+            <kbd>:b[uffer]#</kbd> - go to a buffer by index #
+          </li>
+          <li>
+            <kbd>:b[uffer] file</kbd> - go to a buffer by file
+          </li>
+          <li>
+            <kbd>:ls</kbd> or <kbd>:buffers</kbd> - list all open buffers
+          </li>
+          <li>
+            <kbd>:sp[lit] file</kbd> - open a file in a new buffer and split window
+          </li>
+          <li>
+            <kbd>:vs[plit] file</kbd> - open a file in a new buffer and vertically split window
+          </li>
+          <li>
+            <kbd>:vert[ical] ba[ll]</kbd> - edit all buffers as vertical windows
+          </li>
+          <li>
+            <kbd>:tab ba[ll]</kbd> - edit all buffers as tabs
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ws</kbd> - split window
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wv</kbd> - split window vertically
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>ww</kbd> - switch windows
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wq</kbd> - quit a window
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wx</kbd> - exchange current window with next one
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>w=</kbd> - make all windows equal height &amp; width
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wh</kbd> - move cursor to the left window (vertical split)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wl</kbd> - move cursor to the right window (vertical split)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wj</kbd> - move cursor to the window below (horizontal split)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wk</kbd> - move cursor to the window above (horizontal split)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wH</kbd> - make current window full height at far left (leftmost vertical window)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wL</kbd> - make current window full height at far right (rightmost vertical window)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wJ</kbd> - make current window full width at the very bottom (bottommost horizontal window)
+          </li>
+          <li>
+            <kbd>Ctrl</kbd> + <kbd>wK</kbd> - make current window full width at the very top (topmost horizontal window)
+          </li>
+        </ul>
+        </ul>
+        </ul>
+        </ul>
+      </div>
+      <div class="grid-lg-1-2">
+        <h2>Diff</h2>
+        <ul>
+          <li>
+            <kbd>zf</kbd> - manually define a fold up to motion
+          </li>
+          <li>
+            <kbd>zd</kbd> - delete fold under the cursor
+          </li>
+          <li>
+            <kbd>za</kbd> - toggle fold under the cursor
+          </li>
+          <li>
+            <kbd>zo</kbd> - open fold under the cursor
+          </li>
+          <li>
+            <kbd>zc</kbd> - close fold under the cursor
+          </li>
+          <li>
+            <kbd>zr</kbd> - reduce (open) all folds by one level
+          </li>
+          <li>
+            <kbd>zm</kbd> - fold more (close) all folds by one level
+          </li>
+          <li>
+            <kbd>zi</kbd> - toggle folding functionality
+          </li>
+          <li>
+            <kbd>]c</kbd> - jump to start of next change
+          </li>
+          <li>
+            <kbd>[c</kbd> - jump to start of previous change
+          </li>
+          <li>
+            <kbd>do</kbd> or <kbd>:diffg[et]</kbd> - obtain (get) difference (from other buffer)
+          </li>
+          <li>
+            <kbd>dp</kbd> or <kbd>:diffpu[t]</kbd> - put difference (to other buffer)
+          </li>
+          <li>
+            <kbd>:diffthis</kbd> - make current window part of diff
+          </li>
+          <li>
+            <kbd>:dif[fupdate]</kbd> - update differences
+          </li>
+          <li>
+            <kbd>:diffo[ff]</kbd> - switch off diff mode for current window
+          </li>
+        </ul>
+        <div class="well">
+          <strong>Tip</strong> The commands for folding (e.g. <kbd>za</kbd>) operate on one level. To operate on all levels, use uppercase letters (e.g. <kbd>zA</kbd>).
+        </div>
+        <div class="well">
+          <strong>Tip</strong> To view the differences of files, one can directly start Vim in diff mode by running <kbd>vimdiff</kbd> in a terminal. One can even set this as <kbd>git difftool</kbd>.
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+</main>
+      <div>
+        <div id="footer" class="grid-block">
+          <div class="box">
+            <div class="box-header">
+              <h2>Additional Resources</h2>
+            </div>
+            <div class="box-body">
+              <div class="grid-block">
+                <div class="grid-lg-1-2">
+                  <h3 id="languages">Languages</h3>
+                  <ul>
+                    <li>
+                      <a href="/lang/ar" lang="ar">العربية</a>
+                    </li>
+                    <li>
+                      <a href="/lang/bn" lang="bn">বাংলা</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ca" lang="ca">Català</a>
+                    </li>
+                    <li>
+                      <a href="/lang/cs" lang="cs">Čeština</a>
+                    </li>
+                    <li>
+                      <a href="/lang/da_DK" lang="da">Dansk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/de_de" lang="de">Deutsch</a>
+                    </li>
+                    <li>
+                      <a href="/lang/el_gr" lang="el">Ελληνικά</a>
+                    </li>
+                    <li>
+                      <a href="/lang/en_us" lang="en">English</a>
+                    </li>
+                    <li>
+                      <a href="/lang/eo" lang="eo">Esperanto</a>
+                    </li>
+                    <li>
+                      <a href="/lang/es_es" lang="es">Español</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fa_ir" lang="fa">Persian</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fi" lang="fi">Suomi</a>
+                    </li>
+                    <li>
+                      <a href="/lang/fr_fr" lang="fr">Français</a>
+                    </li>
+                    <li>
+                      <a href="/lang/he" lang="he">עברית</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hr" lang="hr">Hrvatski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/hu_hu" lang="hu">Magyar</a>
+                    </li>
+                    <li>
+                      <a href="/lang/id" lang="id">Bahasa Indonesia</a>
+                    </li>
+                    <li>
+                      <a href="/lang/it" lang="it">Italiano</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ja" lang="ja">日本語</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ko" lang="ko">한국어</a>
+                    </li>
+                    <li>
+                      <a href="/lang/my" lang="my">မြန်မာ</a>
+                    </li>
+                    <li>
+                      <a href="/lang/nl_nl" lang="nl">Nederlands</a>
+                    </li>
+                    <li>
+                      <a href="/lang/no_nb" lang="no">Norsk</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pl_pl" lang="pl">Polski</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_br" lang="pt">Português - Brasil</a>
+                    </li>
+                    <li>
+                      <a href="/lang/pt_pt" lang="pt">Português - Portugal</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ro" lang="ro">Romana</a>
+                    </li>
+                    <li>
+                      <a href="/lang/ru" lang="ru">Русский</a>
+                    </li>
+                    <li>
+                      <a href="/lang/si_lk" lang="si">සිංහල</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sk" lang="sk">Slovenčina</a>
+                    </li>
+                    <li>
+                      <a href="/lang/sv" lang="sv">Svenska</a>
+                    </li>
+                    <li>
+                      <a href="/lang/th" lang="th">ภาษาไทย</a>
+                    </li>
+                    <li>
+                      <a href="/lang/tr" lang="tr">Türkçe</a>
+                    </li>
+                    <li>
+                      <a href="/lang/uk" lang="uk">Українська</a>
+                    </li>
+                    <li>
+                      <a href="/lang/vi_vn" lang="vi">Tiếng Việt</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_cn" lang="zh">简体中文</a>
+                    </li>
+                    <li>
+                      <a href="/lang/zh_tw" lang="zh">中文 (台灣)</a>
+                    </li>
+                  </ul>                </div>
+                <div class="grid-lg-1-2">
+                  <h3>About the vim cheat sheet</h3>
+                  <p>
+                    This project aims to be one of the most accessible vim guides available. We
+                    made sure to support mobile, desktop, and other
+                    <a href="#languages" aria-label="Jump to languages section">languages</a>.
+                  </p>
+                  <p>
+                    <a target="_blank" href="https://github.com/sponsors/rtorr" aria-label="Sponsor this project on GitHub">❤️ Please consider sponsoring this
+                      project ❤️</a>!
+                  </p>
+                  <p>
+                    You can read about how to contribute (and help improve) by viewing our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/README.md" target="_blank"
+                      rel="noopener noreferrer" aria-label="Read the README on GitHub">
+                      README
+                    </a>
+                    . There you can see how to set up this project, or how to contribute a new
+                    language. Here is a big thank you to our
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/graphs/contributors" target="_blank"
+                      rel="noopener noreferrer" aria-label="View project contributors on GitHub">
+                      contributors!
+                    </a>
+                  </p>
+                  <p>
+                    This project is licensed under
+                    <a href="https://github.com/rtorr/vim-cheat-sheet/blob/master/License.txt" target="_blank"
+                      rel="noopener noreferrer" aria-label="View the MIT License for this project">
+                      The MIT License (MIT)
+                    </a>
+                    .
+                  </p>
+                  <h3>Other places to find this document</h3>
+                  <p>
+                    This document was embedded in
+                    <a href="https://duckduckgo.com/?q=vim+cheat+sheet" target="_blank" rel="noopener noreferrer" aria-label="Search for this document on DuckDuckGo">
+                      DuckDuckGo
+                    </a>
+                    .
+                  </p>
+                  <h3>More resources</h3>
+                  <p>
+                    Interactive Vim tutorial:
+                    <a href="https://openvim.com/" target="_blank" rel="noopener noreferrer" aria-label="Visit Open Vim for an interactive Vim tutorial">
+                      Open Vim
+                    </a>
+                  </p>
+                  <p>
+                    Vim quick reference from Vim help pages:
+                    <a href="https://vimhelp.org/quickref.txt.html" target="_blank" rel="noopener noreferrer" aria-label="Access Vim quick reference"> 
+                      quickref.txt
+                    </a>
+                  </p>
+                  <p>
+                    List of all Vim ex (<kbd>:</kbd>) commands:
+                    <a href="https://vimhelp.org/index.txt.html#ex-cmd-index" target="_blank" rel="noopener noreferrer" aria-label="View list of all Vim ex commands">
+                      ex-cmd-index
+                    </a>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="grid-block link-to-repo">
+          <p>
+            Checkout the source on
+            <a href="https://github.com/rtorr/vim-cheat-sheet" target="_blank" rel="noopener noreferrer">
+              Github
+            </a>
+          </p>
+          <p>version: 3.2.0</p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script>
+    window.CACHE_NAME = "3.2.0";
+
+    if ('serviceWorker' in navigator) {
+      window.addEventListener('load', function () {
+        navigator.serviceWorker.register('/javascripts/sw.js?version=3.2.0');
+      });
+    }
+  </script>
+</body>
+
+</html>

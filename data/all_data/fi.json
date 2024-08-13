@@ -1,0 +1,1188 @@
+{
+    "Yleiset": {
+        "wells": [
+            "Aja vimtutor terminaalissa oppiaksesti ensimmäiset Vim komennot."
+        ],
+        "item_1": {
+            "keys": ":h[elp] avainsana",
+            "description": "näytä apu avainsanalle"
+        },
+        "item_2": {
+            "keys": ":sav[eas] tiedosto",
+            "description": "tallenna nimellä"
+        },
+        "item_3": {
+            "keys": ":clo[se]",
+            "description": "sulje nykyinen paneeeli"
+        },
+        "item_4": {
+            "keys": ":ter[minal]",
+            "description": "avaa terminaali ikkuna"
+        },
+        "item_5": {
+            "keys": "K",
+            "description": "avaa man"
+        }
+    },
+    "Kursorin_liike": {
+        "wells": [
+            "Anna kursorin liike komentoa ennen numero toistaaksesi sen useasti. Esimerkiksi, 4j siirtyy alas 4 riviä."
+        ],
+        "item_1": {
+            "keys": "h",
+            "description": "siirrä kursori vasemmalle"
+        },
+        "item_2": {
+            "keys": "j",
+            "description": "siirrä kursori alas"
+        },
+        "item_3": {
+            "keys": "k",
+            "description": "siirrä kursori ylös"
+        },
+        "item_4": {
+            "keys": "l",
+            "description": "siirrä kursori oikealle"
+        },
+        "item_5": {
+            "keys": "gj",
+            "description": "siirrä kursori alas (monirivinen teksti)"
+        },
+        "item_6": {
+            "keys": "gk",
+            "description": "siirrä kursori ylös (monirivinen teksti)"
+        },
+        "item_7": {
+            "keys": "H",
+            "description": "siirry näytön yläosaan"
+        },
+        "item_8": {
+            "keys": "M",
+            "description": "siirry näytön keskelle"
+        },
+        "item_9": {
+            "keys": "L",
+            "description": "siirry näytön alaosaan"
+        },
+        "item_10": {
+            "keys": "w",
+            "description": "hyppää eteenpäin sanan alkuun"
+        },
+        "item_11": {
+            "keys": "W",
+            "description": "hyppää eteenpäin sanan alkuun (sanat voivat sisältää välimerkkejä)"
+        },
+        "item_12": {
+            "keys": "e",
+            "description": "hyppää eteenpäin sanan loppuun"
+        },
+        "item_13": {
+            "keys": "E",
+            "description": "hyppää eteenpäin sanan loppuun (sanat voivat sisältää välimerkkejä)"
+        },
+        "item_14": {
+            "keys": "b",
+            "description": "hyppää taaksepäin sanan alkuun"
+        },
+        "item_15": {
+            "keys": "B",
+            "description": "hyppää taaksepäin sanan alkuun (sanat voivat sisältää välimerkkejä)"
+        },
+        "item_16": {
+            "keys": "ge",
+            "description": "hyppää taaksepäin sanan loppuun"
+        },
+        "item_17": {
+            "keys": "gE",
+            "description": "hyppää taaksepäin sanan loppuun (sanat voivat sisältää välimerkkejä)"
+        },
+        "item_18": {
+            "keys": "%",
+            "description": "siirrä kursori merkin pariin (oletuksena tuetut parit: '()', '{}', '[]' "
+        },
+        "item_19": {
+            "keys": "0",
+            "description": "hyppää rivin alkuun"
+        },
+        "item_20": {
+            "keys": "^",
+            "description": "hyppää rivin ensimmäiseen ei"
+        },
+        "item_21": {
+            "keys": "$",
+            "description": "hyppää rivin loppuun"
+        },
+        "item_22": {
+            "keys": "g_",
+            "description": "hyppää rivin viimeiseen ei"
+        },
+        "item_23": {
+            "keys": "gg",
+            "description": "mene tiedoston ensimmäiselle riville"
+        },
+        "item_24": {
+            "keys": "G",
+            "description": "mene tiedoston viimeiselle riville"
+        },
+        "item_25": {
+            "keys": "5gg or 5G",
+            "description": "mene riville 5"
+        },
+        "item_26": {
+            "keys": "gd",
+            "description": "mene paikalliseen määrittelyyn"
+        },
+        "item_27": {
+            "keys": "gD",
+            "description": "mene globaaliin määrittelyyn"
+        },
+        "item_28": {
+            "keys": "fx",
+            "description": "hyppää seuraavaan merkin x esiintymään"
+        },
+        "item_29": {
+            "keys": "tx",
+            "description": "hyppää merkin x seuraavaa esiintymää edeltävään merkkiin"
+        },
+        "item_30": {
+            "keys": "Fx",
+            "description": "hyppää edelliseen merkin x esiintymään"
+        },
+        "item_31": {
+            "keys": "Tx",
+            "description": "hyppää merkin x edellistä esiintymää seuraavaan merkkiin"
+        },
+        "item_32": {
+            "keys": ";",
+            "description": "toista edellinen f, t, F tai T liike"
+        },
+        "item_33": {
+            "keys": ",",
+            "description": "toista edellinen f, t, F tai T liike, takaperin"
+        },
+        "item_34": {
+            "keys": "}",
+            "description": "hyppää seuraavaan kappaleeseen (tai funktioon/lohkoon koodia editoidessa))"
+        },
+        "item_35": {
+            "keys": "{",
+            "description": "hyppää edelliseen kappaleeseen (tai funktioon/lohkoon koodia editoidessa))"
+        },
+        "item_36": {
+            "keys": "zz",
+            "description": "keskitä näyttö kursoriin"
+        },
+        "item_37": {
+            "keys": "zt",
+            "description": "sijoita kursori sivun yläosaan"
+        },
+        "item_38": {
+            "keys": "zb",
+            "description": "sijoita kursori sivun alaosaan"
+        },
+        "item_39": {
+            "keys": "Ctrl + e",
+            "description": "liikuta näyttöä yksi rivi alas (ilman että kursori liikkuu)"
+        },
+        "item_40": {
+            "keys": "Ctrl + y",
+            "description": "liikuta näyttöä yksi rivi ylös (ilman että kursori liikkuu)"
+        },
+        "item_41": {
+            "keys": "Ctrl + b",
+            "description": "siirrä näyttöä yksi sivu ylös (kursori viimeiselle riville)"
+        },
+        "item_42": {
+            "keys": "Ctrl + f",
+            "description": "siirrä näyttöä yksi sivu alas (kursori ensimmäiselle riville)"
+        },
+        "item_43": {
+            "keys": "Ctrl + d",
+            "description": "siirrä kursoria ja näyttöä 1/2 sivu alas"
+        },
+        "item_44": {
+            "keys": "Ctrl + u",
+            "description": "siirrä kursoria ja näyttöä 1/2 sivu ylös"
+        }
+    },
+    "Syöttötila_tekstin_syöttäminen_lisääminen": {
+        "item_1": {
+            "keys": "i",
+            "description": "syötä kursorin eteen"
+        },
+        "item_2": {
+            "keys": "I",
+            "description": "syötä rivin alkuun"
+        },
+        "item_3": {
+            "keys": "a",
+            "description": "syötä (lisää) kursorin jälkeen"
+        },
+        "item_4": {
+            "keys": "A",
+            "description": "syötä (lisää) rivin loppuun"
+        },
+        "item_5": {
+            "keys": "o",
+            "description": "lisää (avaa) uusi rivi nykyisen rivin alle"
+        },
+        "item_6": {
+            "keys": "O",
+            "description": "lisää (avaa) uusi rivi nykyisen rivin yläpuolelle"
+        },
+        "item_7": {
+            "keys": "ea",
+            "description": "syötä (lisää) sanan loppuun"
+        },
+        "item_8": {
+            "keys": "Ctrl + h",
+            "description": "poista kursoria edeltävä merkki syöttytilassa ollessa"
+        },
+        "item_9": {
+            "keys": "Ctrl + w",
+            "description": "poista kursoria edeltävä sana syöttötilassa ollessa"
+        },
+        "item_10": {
+            "keys": "Ctrl + j",
+            "description": "lisää rivinvaihto kursin sijaintiin syöttytilassa ollessa"
+        },
+        "item_11": {
+            "keys": "Ctrl + t",
+            "description": "sisennä (siirrä oikealle) yhdellä shiftwidth"
+        },
+        "item_12": {
+            "keys": "Ctrl + d",
+            "description": "vähennä sisennystä (siirrä vasemmalle) yhdellä shiftwidth"
+        },
+        "item_13": {
+            "keys": "Ctrl + n",
+            "description": "syötä (täydennä automaattisesti) seuraava osuma ennen kursoria syöttötilassa ollessa"
+        },
+        "item_14": {
+            "keys": "Ctrl + p",
+            "description": "syötä (täydennä automaattisesti) edellinen osuma ennen kursoria syöttötilassa ollessa"
+        },
+        "item_15": {
+            "keys": "Ctrl + rx",
+            "description": "syötä rekisterin x sisältö"
+        },
+        "item_16": {
+            "keys": "Ctrl + ox",
+            "description": "Siirry väliaikaisesti normaalitilaan ja syötä yksi normaalin tilan komento x."
+        },
+        "item_17": {
+            "keys": "Esc or Ctrl + c",
+            "description": "poistu syöttötilasta"
+        }
+    },
+    "Muokkaaminen": {
+        "wells": [
+            "Tekstin merkintä (visuaalinen tila)"
+        ],
+        "item_1": {
+            "keys": "r",
+            "description": "korvaa yksi merkki."
+        },
+        "item_2": {
+            "keys": "R",
+            "description": "korvaa useampi kuin yksi merkki, kunnes ESC on painettu."
+        },
+        "item_3": {
+            "keys": "J",
+            "description": "liitä alla oleva rivi nykyiseen välilyönnillä"
+        },
+        "item_4": {
+            "keys": "gJ",
+            "description": "liitä alla oleva rivi nykyiseen ilman välilyöntiä"
+        },
+        "item_5": {
+            "keys": "gwip",
+            "description": "formatoi kappale"
+        },
+        "item_6": {
+            "keys": "g~",
+            "description": "muuta kirjaimien koko liikkeen loppuun asti"
+        },
+        "item_7": {
+            "keys": "gu",
+            "description": "muuta pieniksi kirjaimiksi liikkeen loppuun asti"
+        },
+        "item_8": {
+            "keys": "gU",
+            "description": "muuta isoiksi kirjaimiksi liikeen loppuun asti"
+        },
+        "item_9": {
+            "keys": "cc",
+            "description": "muuta (korvaa) koko rivi"
+        },
+        "item_10": {
+            "keys": "c$ or C",
+            "description": "muuta (korvaa) rivin loppun asti"
+        },
+        "item_11": {
+            "keys": "ciw",
+            "description": "muuta (korvaa) koko sana"
+        },
+        "item_12": {
+            "keys": "cw or ce",
+            "description": "muuta (korvaa) sanan loppuun asti"
+        },
+        "item_13": {
+            "keys": "s",
+            "description": "poista merkki ja korvaa tekstillä"
+        },
+        "item_14": {
+            "keys": "S",
+            "description": "poista rivi ja kovaa tekstillä (sama kuin cc)"
+        },
+        "item_15": {
+            "keys": "xp",
+            "description": "vaihda kahden kirjaimen paikkaa (leikkaa ja liitä)"
+        },
+        "item_16": {
+            "keys": "u",
+            "description": "peru"
+        },
+        "item_17": {
+            "keys": "U",
+            "description": "palauta (peru) viimeksi muutettu rivi"
+        },
+        "item_18": {
+            "keys": "Ctrl + r",
+            "description": "tee uudelleen"
+        },
+        "item_19": {
+            "keys": ".",
+            "description": "toista viimeisin komento"
+        },
+        "item_20": {
+            "keys": "v",
+            "description": "käynnistä visuaalinen tila, merkitse alue, sitten aja komento (esim. y"
+        },
+        "item_21": {
+            "keys": "V",
+            "description": "käynnistä rivikohtainen visuaalinen tila"
+        },
+        "item_22": {
+            "keys": "o",
+            "description": "siirry merkityn alueen toiseen päähän"
+        },
+        "item_23": {
+            "keys": "Ctrl + v",
+            "description": "käynnistä lohkokohtainen visuaalinen tila"
+        },
+        "item_24": {
+            "keys": "O",
+            "description": "siirry lohkon toiseen kulmaan"
+        },
+        "item_25": {
+            "keys": "aw",
+            "description": "merkitse sana"
+        },
+        "item_26": {
+            "keys": "ab",
+            "description": "merkitse () lohko"
+        },
+        "item_27": {
+            "keys": "aB",
+            "description": "merkitse {} lohko"
+        },
+        "item_28": {
+            "keys": "at",
+            "description": "merkitse <> lohko"
+        },
+        "item_29": {
+            "keys": "ib",
+            "description": "merkitse () sisempi lohko"
+        },
+        "item_30": {
+            "keys": "iB",
+            "description": "merkitse {} sisempi lohko"
+        },
+        "item_31": {
+            "keys": "it",
+            "description": "merkitse <> sisempi lohko"
+        },
+        "item_32": {
+            "keys": "Esc or Ctrl + c",
+            "description": "poistu visuaalisesta tilasta"
+        }
+    },
+    "Tekstin_merkintä_visuaalinen_tila": {
+        "wells": [
+            "b:n tai B:n sijasta voit myös käyttää (:a tai {:a."
+        ],
+        "item_1": {
+            "keys": "v",
+            "description": "käynnistä visuaalinen tila, merkitse alue, sitten aja komento (esim. y"
+        },
+        "item_2": {
+            "keys": "V",
+            "description": "käynnistä rivikohtainen visuaalinen tila"
+        },
+        "item_3": {
+            "keys": "o",
+            "description": "siirry merkityn alueen toiseen päähän"
+        },
+        "item_4": {
+            "keys": "Ctrl + v",
+            "description": "käynnistä lohkokohtainen visuaalinen tila"
+        },
+        "item_5": {
+            "keys": "O",
+            "description": "siirry lohkon toiseen kulmaan"
+        },
+        "item_6": {
+            "keys": "aw",
+            "description": "merkitse sana"
+        },
+        "item_7": {
+            "keys": "ab",
+            "description": "merkitse () lohko"
+        },
+        "item_8": {
+            "keys": "aB",
+            "description": "merkitse {} lohko"
+        },
+        "item_9": {
+            "keys": "at",
+            "description": "merkitse <> lohko"
+        },
+        "item_10": {
+            "keys": "ib",
+            "description": "merkitse () sisempi lohko"
+        },
+        "item_11": {
+            "keys": "iB",
+            "description": "merkitse {} sisempi lohko"
+        },
+        "item_12": {
+            "keys": "it",
+            "description": "merkitse <> sisempi lohko"
+        },
+        "item_13": {
+            "keys": "Esc or Ctrl + c",
+            "description": "poistu visuaalisesta tilasta"
+        }
+    },
+    "Visuaaliset_komennot": {
+        "wells": [
+            "Rekisterit"
+        ],
+        "item_1": {
+            "keys": ">",
+            "description": "siirrä tekstiä oikealle"
+        },
+        "item_2": {
+            "keys": "<",
+            "description": "siirrä tekstiä vasemmalle"
+        },
+        "item_3": {
+            "keys": "y",
+            "description": "nykäise (kopioi) merkitty teksti"
+        },
+        "item_4": {
+            "keys": "d",
+            "description": "poista merkitty teksti"
+        },
+        "item_5": {
+            "keys": "~",
+            "description": "vaihda kirjaimien koko"
+        },
+        "item_6": {
+            "keys": "u",
+            "description": "muuta merkityn tekstin kirjaimet pieneksi"
+        },
+        "item_7": {
+            "keys": "U",
+            "description": "muuta merkityn tekstin kirjaimet isoiksi"
+        },
+        "item_8": {
+            "keys": ":reg[isters]",
+            "description": "näytä rekisterien sisältö"
+        },
+        "item_9": {
+            "keys": "\"xy",
+            "description": "nykäisen rekisteriin x"
+        },
+        "item_10": {
+            "keys": "\"xp",
+            "description": "liitä rekisterin x sisältö"
+        },
+        "item_11": {
+            "keys": "\"+y",
+            "description": "nykäisen järjestelmän leikepöydän rekisteriin"
+        },
+        "item_12": {
+            "keys": "\"+p",
+            "description": "liitä järjestelmän leikepöydän rekisteristä"
+        }
+    },
+    "Rekisterit": {
+        "wells": [
+            "Rekisterit ovat tallessa ~/.viminfo-tiedostossa ja ladataan uudestaan seuraavan käynnistyksen yhteydessä.",
+            "Erikois rekisterit:\n          \n             0 - viimeisin nykäsy\n             \" - nimeämätön rekisteri, viimeisin poisto tai nykäsy\n             % - nykyisen tiedoston nimi\n             # - vaihtoehtoinen tiedoston nimi\n             * - leikepöydän sisältö (X11 ensisijainen)\n             + - leikepöydän sisältö (X11 leikepöytä)\n             / - viimeisin haku kaava\n             : - viimeisin komento\n             . - viimeisin syötetty teksti\n             - - viimeisin pieni (alle rivin) poisto\n             = - yhtälö rekisteri\n             _ - musta aukko rekisteri"
+        ],
+        "item_1": {
+            "keys": ":reg[isters]",
+            "description": "näytä rekisterien sisältö"
+        },
+        "item_2": {
+            "keys": "\"xy",
+            "description": "nykäisen rekisteriin x"
+        },
+        "item_3": {
+            "keys": "\"xp",
+            "description": "liitä rekisterin x sisältö"
+        },
+        "item_4": {
+            "keys": "\"+y",
+            "description": "nykäisen järjestelmän leikepöydän rekisteriin"
+        },
+        "item_5": {
+            "keys": "\"+p",
+            "description": "liitä järjestelmän leikepöydän rekisteristä"
+        }
+    },
+    "Merkit_ja_sijainnit": {
+        "wells": [
+            "Voit käyttää backtick- (`) tai heittomerkkiä (') hypätäksesi merkkiin. Heittomerkki hyppää merkin sisältämän rivin alkuun (ensimmäinen ei-tyhjä merkki)."
+        ],
+        "item_1": {
+            "keys": ":marks",
+            "description": "lista merkeistä"
+        },
+        "item_2": {
+            "keys": "ma",
+            "description": "aseta nykyisen sijainti merkkiin A"
+        },
+        "item_3": {
+            "keys": "`a",
+            "description": "hyppää merkin A sijantiin"
+        },
+        "item_4": {
+            "keys": "y`a",
+            "description": "nykäise teksti merkin A sijaintiin asti"
+        },
+        "item_5": {
+            "keys": "`0",
+            "description": "mene sijaintiin, jossa Vim edellisen kerran suljettiin"
+        },
+        "item_6": {
+            "keys": "`\"",
+            "description": "mene sijaintiin, jossa viimeksi lähdit tiedostosta"
+        },
+        "item_7": {
+            "keys": "`.",
+            "description": "mene sijaintiin, jossa viimeisin muutos tehtiin tähän tiedostoon"
+        },
+        "item_8": {
+            "keys": "``",
+            "description": "mene edellistä hyppyä edeltävään sijaintiin"
+        },
+        "item_9": {
+            "keys": ":ju[mps]",
+            "description": "listaa hypyt"
+        },
+        "item_10": {
+            "keys": "Ctrl + i",
+            "description": "mene uusimpaan sijaintiin hyppy listalla"
+        },
+        "item_11": {
+            "keys": "Ctrl + o",
+            "description": "mene vanhempaan sijantiin hyppy listalla"
+        },
+        "item_12": {
+            "keys": ":changes",
+            "description": "muutoslista"
+        },
+        "item_13": {
+            "keys": "g,",
+            "description": "mene uudempaan sijantiin muutoslistalla"
+        },
+        "item_14": {
+            "keys": "g;",
+            "description": "mene vanhempaan sijaintiin muutoslistalla"
+        },
+        "item_15": {
+            "keys": "Ctrl + ]",
+            "description": "hyppää kursorin alla olevaan tägiin"
+        }
+    },
+    "Makrot": {
+        "wells": [
+            "Leikkaa ja liitä"
+        ],
+        "item_1": {
+            "keys": "qa",
+            "description": "tallenna makro a"
+        },
+        "item_2": {
+            "keys": "q",
+            "description": "lopeta makron tallennus"
+        },
+        "item_3": {
+            "keys": "@a",
+            "description": "aja makro a"
+        },
+        "item_4": {
+            "keys": "@@",
+            "description": "aja viimeisin makro uudelleen"
+        },
+        "item_5": {
+            "keys": "yy",
+            "description": "nykäise (kopioi) rivi"
+        },
+        "item_6": {
+            "keys": "2yy",
+            "description": "nykäise (kopioi) 2 riviä"
+        },
+        "item_7": {
+            "keys": "yw",
+            "description": "nykäise (kopioi) sanan merkit kursorin tämän hetkisestä sijainnista seuraavan sanan alkuun"
+        },
+        "item_8": {
+            "keys": "yiw",
+            "description": "nykäise (kopioi) kursorin alla oleva sana"
+        },
+        "item_9": {
+            "keys": "yaw",
+            "description": "nykäise (kopioi) kursorin alla oleva sana ja väliluönnit sen edessä ja takana"
+        },
+        "item_10": {
+            "keys": "y$ or Y",
+            "description": "nykäise (kopioi) rivin loppuun"
+        },
+        "item_11": {
+            "keys": "p",
+            "description": "laita (liitä) kursorin jälkeen"
+        },
+        "item_12": {
+            "keys": "P",
+            "description": "laita (liitä) kursoria ennen"
+        },
+        "item_13": {
+            "keys": "gp",
+            "description": "laita (liitä) kursorin jälkeen ja jätä kursori uuden tekstin perään"
+        },
+        "item_14": {
+            "keys": "gP",
+            "description": "laita (liitä) kursorin eteen ja jätä kursori uuden tekstin perään"
+        },
+        "item_15": {
+            "keys": "dd",
+            "description": "poista (leikkaa) rivi"
+        },
+        "item_16": {
+            "keys": "2dd",
+            "description": "poista (leikkaa) 2 riviä"
+        },
+        "item_17": {
+            "keys": "dw",
+            "description": "poista (leikkaa) sanan merkit kursorin sijainnista seuraavan sanan alkuun"
+        },
+        "item_18": {
+            "keys": "diw",
+            "description": "poista (leikkaa) kursorin alla oleva sana"
+        },
+        "item_19": {
+            "keys": "daw",
+            "description": "poista (leikkaa) kursoin alla oleva sana ja välilyönti sen edestä tai takaa"
+        },
+        "item_20": {
+            "keys": ":3,5d",
+            "description": "poista rivit kolme "
+        }
+    },
+    "Leikkaa_ja_liitä": {
+        "wells": [
+            "Voit myös käyttää seuraavia merkkejä määritelläksesi alueen: \n          e.g. \n\n:.,$d - Nykyiseltä riviltä tiedoston loppuun \n:.,1d - Nykyiseltä riviltä tiedoston alkuun \n:10,1d - Kymmenenneltä rivilä tiedoston alkuun"
+        ],
+        "item_1": {
+            "keys": "yy",
+            "description": "nykäise (kopioi) rivi"
+        },
+        "item_2": {
+            "keys": "2yy",
+            "description": "nykäise (kopioi) 2 riviä"
+        },
+        "item_3": {
+            "keys": "yw",
+            "description": "nykäise (kopioi) sanan merkit kursorin tämän hetkisestä sijainnista seuraavan sanan alkuun"
+        },
+        "item_4": {
+            "keys": "yiw",
+            "description": "nykäise (kopioi) kursorin alla oleva sana"
+        },
+        "item_5": {
+            "keys": "yaw",
+            "description": "nykäise (kopioi) kursorin alla oleva sana ja väliluönnit sen edessä ja takana"
+        },
+        "item_6": {
+            "keys": "y$ or Y",
+            "description": "nykäise (kopioi) rivin loppuun"
+        },
+        "item_7": {
+            "keys": "p",
+            "description": "laita (liitä) kursorin jälkeen"
+        },
+        "item_8": {
+            "keys": "P",
+            "description": "laita (liitä) kursoria ennen"
+        },
+        "item_9": {
+            "keys": "gp",
+            "description": "laita (liitä) kursorin jälkeen ja jätä kursori uuden tekstin perään"
+        },
+        "item_10": {
+            "keys": "gP",
+            "description": "laita (liitä) kursorin eteen ja jätä kursori uuden tekstin perään"
+        },
+        "item_11": {
+            "keys": "dd",
+            "description": "poista (leikkaa) rivi"
+        },
+        "item_12": {
+            "keys": "2dd",
+            "description": "poista (leikkaa) 2 riviä"
+        },
+        "item_13": {
+            "keys": "dw",
+            "description": "poista (leikkaa) sanan merkit kursorin sijainnista seuraavan sanan alkuun"
+        },
+        "item_14": {
+            "keys": "diw",
+            "description": "poista (leikkaa) kursorin alla oleva sana"
+        },
+        "item_15": {
+            "keys": "daw",
+            "description": "poista (leikkaa) kursoin alla oleva sana ja välilyönti sen edestä tai takaa"
+        },
+        "item_16": {
+            "keys": ":3,5d",
+            "description": "poista rivit kolme "
+        },
+        "item_17": {
+            "keys": ":g/{pattern}/d",
+            "description": "poista kaikki rivit, joissa kaava esiintyy"
+        },
+        "item_18": {
+            "keys": ":g!/{pattern}/d",
+            "description": "poista kaikki rivit, joilla kaava ei esiinny"
+        },
+        "item_19": {
+            "keys": "d$ or D",
+            "description": "poista (leikkaa) rivin loppuun asti"
+        },
+        "item_20": {
+            "keys": "x",
+            "description": "poista (leikkaa) merkki"
+        }
+    },
+    "Tekstin_sisennys": {
+        "wells": [
+            "Poistuminen"
+        ],
+        "item_1": {
+            "keys": ">>",
+            "description": "sisennä (siirrä oikealle) yhdellä shiftwidth"
+        },
+        "item_2": {
+            "keys": "<<",
+            "description": "vähennä sisennystä (siirrä vasemmalle) yhdellä shiftwidth"
+        },
+        "item_3": {
+            "keys": ">%",
+            "description": "sisennä () tai {} lohko (kursori sulkeella)"
+        },
+        "item_4": {
+            "keys": "<%",
+            "description": "vähennä sisennystä () tai {} lohkolle (kursori sulkeella)"
+        },
+        "item_5": {
+            "keys": ">ib",
+            "description": "sisennä sisempi () lohko"
+        },
+        "item_6": {
+            "keys": ">at",
+            "description": "sisennä lohko <> tägeillä"
+        },
+        "item_7": {
+            "keys": "3==",
+            "description": "uudelleen sisennä kolme riviä"
+        },
+        "item_8": {
+            "keys": "=%",
+            "description": "uudelleen sisennä () tai {} lohko (kursori sulkeella)"
+        },
+        "item_9": {
+            "keys": "=iB",
+            "description": "uudelleen sisennä sisempi {} lohko"
+        },
+        "item_10": {
+            "keys": "gg=G",
+            "description": "uudelleen sisennä koko bufferi"
+        },
+        "item_11": {
+            "keys": "]p",
+            "description": "liitä ja muokkaa sisennystä nykyiselle riville"
+        },
+        "item_12": {
+            "keys": ":w",
+            "description": "kirjoita (tallenna) tiedosto, mutta älä poistu"
+        },
+        "item_13": {
+            "keys": ":w !sudo tee %",
+            "description": "kirjoite tiedosto sudolla"
+        },
+        "item_14": {
+            "keys": ":wq or :x or ZZ",
+            "description": "kirjoita (tallenna) ja poistu"
+        },
+        "item_15": {
+            "keys": ":q",
+            "description": "poistu (epäonnistuu, jos tiedostossa on tallentamattomia muutoksia)"
+        },
+        "item_16": {
+            "keys": ":q! or ZQ",
+            "description": "poiustu ja hylkää tallentamattomat muutokset"
+        },
+        "item_17": {
+            "keys": ":wqa",
+            "description": "kirjoita (tallenna) ja poistu kaikista välilehdistä"
+        }
+    },
+    "Poistuminen": {
+        "wells": [
+            "Etsi ja korvaa"
+        ],
+        "item_1": {
+            "keys": ":w",
+            "description": "kirjoita (tallenna) tiedosto, mutta älä poistu"
+        },
+        "item_2": {
+            "keys": ":w !sudo tee %",
+            "description": "kirjoite tiedosto sudolla"
+        },
+        "item_3": {
+            "keys": ":wq or :x or ZZ",
+            "description": "kirjoita (tallenna) ja poistu"
+        },
+        "item_4": {
+            "keys": ":q",
+            "description": "poistu (epäonnistuu, jos tiedostossa on tallentamattomia muutoksia)"
+        },
+        "item_5": {
+            "keys": ":q! or ZQ",
+            "description": "poiustu ja hylkää tallentamattomat muutokset"
+        },
+        "item_6": {
+            "keys": ":wqa",
+            "description": "kirjoita (tallenna) ja poistu kaikista välilehdistä"
+        },
+        "item_7": {
+            "keys": "/pattern",
+            "description": "etsi kaavaa"
+        },
+        "item_8": {
+            "keys": "?pattern",
+            "description": "etsi kaavaa taaksepäin"
+        },
+        "item_9": {
+            "keys": "\\vpattern",
+            "description": "'very magic' kaava: ei"
+        },
+        "item_10": {
+            "keys": "n",
+            "description": "toista haku samaan suuntaan"
+        },
+        "item_11": {
+            "keys": "N",
+            "description": "toista haku toiseen suuntaan"
+        },
+        "item_12": {
+            "keys": ":%s/old/new/g",
+            "description": "korvaa kaikki old → new koko tiedostossa"
+        },
+        "item_13": {
+            "keys": ":%s/old/new/gc",
+            "description": "korvaa kaikki old → new koko tiedostossa varmistuksella"
+        },
+        "item_14": {
+            "keys": ":noh[lsearch]",
+            "description": "poista korostus haku osumista"
+        }
+    },
+    "Etsi_ja_korvaa": {
+        "wells": [
+            "Etsi useasta tiedostosta"
+        ],
+        "item_1": {
+            "keys": "/pattern",
+            "description": "etsi kaavaa"
+        },
+        "item_2": {
+            "keys": "?pattern",
+            "description": "etsi kaavaa taaksepäin"
+        },
+        "item_3": {
+            "keys": "\\vpattern",
+            "description": "'very magic' kaava: ei"
+        },
+        "item_4": {
+            "keys": "n",
+            "description": "toista haku samaan suuntaan"
+        },
+        "item_5": {
+            "keys": "N",
+            "description": "toista haku toiseen suuntaan"
+        },
+        "item_6": {
+            "keys": ":%s/old/new/g",
+            "description": "korvaa kaikki old → new koko tiedostossa"
+        },
+        "item_7": {
+            "keys": ":%s/old/new/gc",
+            "description": "korvaa kaikki old → new koko tiedostossa varmistuksella"
+        },
+        "item_8": {
+            "keys": ":noh[lsearch]",
+            "description": "poista korostus haku osumista"
+        },
+        "item_9": {
+            "keys": ":vim[grep] /pattern/ {`{file}`}",
+            "description": "etsi kaavaa useasta tiedostosta"
+        }
+    },
+    "Etsi_useasta_tiedostosta": {
+        "wells": [
+            "e.g.\n          :vim[grep] /foo/ **/*"
+        ],
+        "item_1": {
+            "keys": ":vim[grep] /pattern/ {`{file}`}",
+            "description": "etsi kaavaa useasta tiedostosta"
+        },
+        "item_2": {
+            "keys": ":cn[ext]",
+            "description": "hyppää seuraavaan osumaan"
+        },
+        "item_3": {
+            "keys": ":cp[revious]",
+            "description": "hyppää edelliseen osumaan"
+        },
+        "item_4": {
+            "keys": ":cope[n]",
+            "description": "avaa ikkuna nähdäksesi listan osumista"
+        },
+        "item_5": {
+            "keys": ":ccl[ose]",
+            "description": "sulje quickfix ikkuna"
+        }
+    },
+    "Välilehdet": {
+        "item_1": {
+            "keys": ":tabnew or :tabnew {page.words.file}",
+            "description": "avaa tiedosto uudessa välilehdessä"
+        },
+        "item_2": {
+            "keys": "Ctrl + wT",
+            "description": "siirrä nykyinen jaettu ikkuna omaan välilehteen"
+        },
+        "item_3": {
+            "keys": "gt or :tabn[ext]",
+            "description": "siirry seuraavaan välilehteen"
+        },
+        "item_4": {
+            "keys": "gT or :tabp[revious]",
+            "description": "siirry edelliseen välilehteen"
+        },
+        "item_5": {
+            "keys": "#gt",
+            "description": "siirry välilehteen numero #"
+        },
+        "item_6": {
+            "keys": ":tabm[ove] #",
+            "description": "siirrä nykyinen välilehti #:teen sijaintiin (alkaen nollasta)"
+        },
+        "item_7": {
+            "keys": ":tabc[lose]",
+            "description": "sulje nykyinen välilehti ja sen kaikki ikkunat"
+        },
+        "item_8": {
+            "keys": ":tabo[nly]",
+            "description": "sulje kaikki muut paitsi nykyinen välilehti"
+        },
+        "item_9": {
+            "keys": ":tabdo command",
+            "description": "aja komento kaikissa välilehdissä (esim. :tabdo q "
+        }
+    },
+    "Usean_tiedoston_työstäminen": {
+        "item_1": {
+            "keys": ":e[dit] tiedosto",
+            "description": "muokkaa tiedostoa uudessa bufferissa"
+        },
+        "item_2": {
+            "keys": ":bn[ext]",
+            "description": "mene seuraavaan bufferiin"
+        },
+        "item_3": {
+            "keys": ":bp[revious]",
+            "description": "mene edelliseen bufferiin"
+        },
+        "item_4": {
+            "keys": ":bd[elete]",
+            "description": "poista bufferi (sulje tiedosto)"
+        },
+        "item_5": {
+            "keys": ":b[uffer]#",
+            "description": "mene bufferiin numero #"
+        },
+        "item_6": {
+            "keys": ":b[uffer] file",
+            "description": "mene bufferiin tiedostonimellä"
+        },
+        "item_7": {
+            "keys": ":ls or :buffers",
+            "description": "listaa kaikki avoimet bufferit"
+        },
+        "item_8": {
+            "keys": ":sp[lit] tiedosto",
+            "description": "avaa tiedosto uudessa bufferissa ja jaa ikkuna"
+        },
+        "item_9": {
+            "keys": ":vs[plit] tiedosto",
+            "description": "avaa tiedosto uudessa bufferissa ja jaa ikkuna vertikaalisesti"
+        },
+        "item_10": {
+            "keys": ":vert[ical] ba[ll]",
+            "description": "muokkaa kaikkia buffereita vertikaalisina ikkunoina"
+        },
+        "item_11": {
+            "keys": ":tab ba[ll]",
+            "description": "muokkaa kaikki buffereita välilehtinä"
+        },
+        "item_12": {
+            "keys": "Ctrl + ws",
+            "description": "jaa ikkuna"
+        },
+        "item_13": {
+            "keys": "Ctrl + wv",
+            "description": "jaa ikkuna vertikaalisesti"
+        },
+        "item_14": {
+            "keys": "Ctrl + ww",
+            "description": "vaihda ikkunaa"
+        },
+        "item_15": {
+            "keys": "Ctrl + wq",
+            "description": "sulje ikkuna"
+        },
+        "item_16": {
+            "keys": "Ctrl + wx",
+            "description": "vaihda nykyinen ikkuna seuraavan kanssa"
+        },
+        "item_17": {
+            "keys": "Ctrl + w=",
+            "description": "tee kaikista ikkunoista yhtä korkeita ja leveitä"
+        },
+        "item_18": {
+            "keys": "Ctrl + wh",
+            "description": "siirrä kursori vasempaan ikkunaan (vertikaalisessa jaossa)"
+        },
+        "item_19": {
+            "keys": "Ctrl + wl",
+            "description": "siirrä kursori oikeaan ikkunaan (vertikaalisessa jaossa)"
+        },
+        "item_20": {
+            "keys": "Ctrl + wj",
+            "description": "siirrä kursori alempaan ikkunaan (horisontaalisessa jaossa)"
+        },
+        "item_21": {
+            "keys": "Ctrl + wk",
+            "description": "siirrä kursori ylempään ikkunaan (horisontaalisessa jaossa)"
+        },
+        "item_22": {
+            "keys": "Ctrl + wH",
+            "description": "tee nykyisestä ikkunasta koko terminaali"
+        },
+        "item_23": {
+            "keys": "Ctrl + wL",
+            "description": "tee nykyisestä ikkunasta koko terminaali"
+        },
+        "item_24": {
+            "keys": "Ctrl + wJ",
+            "description": "tee nykyisestä ikkunasta koko terminaali"
+        },
+        "item_25": {
+            "keys": "Ctrl + wK",
+            "description": "tee nykyisestä ikkunasta koko terminaali"
+        }
+    },
+    "Diff": {
+        "wells": [
+            "Taitos komennot (esim. za) toimivat yhdellä tasolla. Kaikilla tasoilla toimiaksesi, käytä isoja kirjaimia (esim. zA.",
+            "Katsoaksesi eroja tiedostojen välillä, voit käynnistää Vim:in diff tilassa vimdiff terminaalista. Tämän asettaa git difftool:ksi."
+        ],
+        "item_1": {
+            "keys": "zf",
+            "description": "määrittele taitos manuaalisesti seuraavaan liikkeeseen asti"
+        },
+        "item_2": {
+            "keys": "zd",
+            "description": "poista kursorin alla oleva taitos"
+        },
+        "item_3": {
+            "keys": "za",
+            "description": "avaa tai sulje kursorin alla oleva taitos"
+        },
+        "item_4": {
+            "keys": "zo",
+            "description": "avaa kursorin alla oleva taitos"
+        },
+        "item_5": {
+            "keys": "zc",
+            "description": "sulje kursorin alla oleva taitos"
+        },
+        "item_6": {
+            "keys": "zr",
+            "description": "avaa kaikkia taitoksia yhdellä tasolla"
+        },
+        "item_7": {
+            "keys": "zm",
+            "description": "sulje kaikki taitoksia yhdellä tasolla"
+        },
+        "item_8": {
+            "keys": "zi",
+            "description": "vaihda taitto ominaisuus päälle tai pois"
+        },
+        "item_9": {
+            "keys": "]c",
+            "description": "hyppää seuraavan muutoksen alkuun"
+        },
+        "item_10": {
+            "keys": "[c",
+            "description": "hyppää edellisen muutoksen alkuun"
+        },
+        "item_11": {
+            "keys": "do or :diffg[et]",
+            "description": "hae erot (toisesta bufferista)"
+        },
+        "item_12": {
+            "keys": "dp or :diffpu[t]",
+            "description": "laita erot (toiseen bufferiin)"
+        },
+        "item_13": {
+            "keys": ":diffthis",
+            "description": "ota nykyinen ikkuna mukaan diffiin"
+        },
+        "item_14": {
+            "keys": ":dif[fupdate]",
+            "description": "päivitä erot"
+        },
+        "item_15": {
+            "keys": ":diffo[ff]",
+            "description": "sulje diff"
+        }
+    }
+}
